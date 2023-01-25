@@ -6,6 +6,9 @@ def d10():
 def d100():
     return rand.randint(1,100)
 
+def d1000():
+    return rand.randint(1,1000)
+
 def r20_2d10():
     return 20 + d10() + d10() 
 
@@ -95,17 +98,117 @@ def execute_ability_modifiers(ability_set, main_attribute_dict, secondary_attrib
         secondary_attribute_dict['Żyw'] += 1
 
 def roll_random_profession(race, roll):
-    profession = 'None'
-    if race == 'human':
-        match roll:
-            case 1 | 2:
-                profession = 'Akolita'
-            case 3 | 4:
-                profession = 'Banita'
-            case 5:
-                profession = 'Berserker z Norski'
-            # ...
-    return profession
+    human_mapping = {
+        (1,16): 'Akolita',
+        (17,28): 'Aptekarz',
+        (29,32): 'Bagiennik',
+        (33,44): 'Bajarz',
+        (45,48): 'Balsamista',
+        (49,64): 'Banita',
+        (65,68): 'Berserker z Norski',
+        (69,80): 'Błędny rycerz',
+        (81,88): 'Były więzień',
+        (89,92): 'Cenobita',
+        (93,104): 'Chłop',
+        (105,112): 'Ciura obozowa',
+        (113,128): 'Cyrkowiec',
+        (129,140): 'Cyrulik',
+        (141,144): 'Czekista',
+        (145,148): 'Doker',
+        (149,160): 'Dyletant',
+        (161,164): 'Fanatyk',
+        (165,180): 'Flisak',
+        (181,184): 'Gazeciarz',
+        (185,192): 'Giermek',
+        (193,204): 'Gladiator',
+        (205,212): 'Górnik',
+        (213,220): 'Grabarz',
+        (221,224): 'Grabieżca',
+        (225,236): 'Guślarz',
+        (237,244): 'Handlarz końmi',
+        (245,256): 'Hiena cmentarna',
+        (257,260): 'Kadet',
+        (261,276): 'Kanciarz',
+        (277,284): 'Kartograf',
+        (285,288): 'Koczownik',
+        (289,300): 'Kominiarz',
+        (301,304): 'Korsarz',
+        (305,312): 'Kozak kislevski',
+        (313,320): 'Latarnik',
+        (321,332): 'Leśnik',
+        (333,344): 'Łowca',
+        (345,356): 'Łowca nagród',
+        (357,368): 'Mieszczanin',
+        (369,372): 'Mytnik',
+        (373,388): 'Najemnik',
+        (389,392): 'Niewolnik',
+        (393,404): 'Ochotnik',
+        (405,420): 'Ochroniarz',
+        (421,432): 'Oprych',
+        (433,444): 'Pachołek',
+        (445,448): 'Pasterz z Carcasonne',
+        (449,456): 'Paź',
+        (457,468): 'Pielgrzym',
+        (469,476): 'Pielgrzym Graala',
+        (477,480): 'Pirat rzeczny',
+        (481,492): 'Podżegacz',
+        (493,500): 'Poganiacz bydła',
+        (501,508): 'Poganiacz mułów',
+        (509,516): 'Pogranicznik',
+        (517,520): 'Pokutnik',
+        (521,528): 'Porywacz zwłok',
+        (529,536): 'Poskramiacz niedźwiedzi',
+        (537,544): 'Posłaniec',
+        (545,548): 'Prawnik',
+        (549,556): 'Przemytnik',
+        (557,564): 'Przepatrywacz',
+        (565,572): 'Przewoźnik',
+        (573,576): 'Pustelnik',
+        (577,580): 'Rogaty łowca',
+        (581,592): 'Rolnik',
+        (593,596): 'Rozjemca',
+        (597,608): 'Rybak',
+        (609,624): 'Rzemieślnik',
+        (625,636): 'Rzezimieszek',
+        (637,640): 'Skald',
+        (641,652): 'Skarbnik',
+        (653,664): 'Skryba',
+        (665,672): 'Sługa',
+        (673,684): 'Strażnik',
+        (685,700): 'Strażnik dróg',
+        (701,708): 'Strażnik kanałów',
+        (709,716): 'Strażnik rzeczny',
+        (717,720): 'Strażnik świątynny',
+        (721,724): 'Strażnik tuneli',
+        (725,732): 'Strażnik więzienny',
+        (733,736): 'Streltsi',
+        (737,740): 'Strzygański mistyk',
+        (741,760): 'Szczurołap',
+        (761,772): 'Szeptucha',
+        (773,776): 'Szermierz estalijski',
+        (777,792): 'Szlachcic',
+        (793,796): 'Szperacz',
+        (797,808): 'Szuler',
+        (809,816): 'Śmieciarz',
+        (817,824): 'Uczennica lodowej wiedźmy',
+        (825,840): 'Uczeń czarodzieja',
+        (841,848): 'Uczeń guślarza',
+        (849,856): 'Węglarz',
+        (857,864): 'Wielorybnik',
+        (865,872): 'Włóczykij',
+        (873,876): 'Woj',
+        (877,888): 'Woźnica',
+        (889,896): 'Wróżbita',
+        (897,904): 'Zakapturzony',
+        (905,916): 'Zarządca',
+        (917,924): 'Zbieracz łajna',
+        (925,940): 'Złodziej',
+        (941,948): 'Żabiarka',
+        (949,960): 'Żak',
+        (961,972): 'Żeglarz',
+        (973,984): 'Żołnierz',
+        (985,1000): 'Żołnierz okrętowy'
+    }
 
 def random_race(roll):
     if roll == 1:
@@ -131,6 +234,7 @@ def race_translate(race):
 
 race = random_race(d100())
 race = race.lower()
+race = 'dwarf'
 if race != 'elf' and race != 'dwarf' and race != 'human' and race != 'halfling':
     print('Wyjątek: nie podano właściwej rasy!')
     exit()
@@ -153,6 +257,8 @@ elif zyw_roll < 10:
     secondary_attribute_dict['Żyw'] = 12
 else:
     secondary_attribute_dict['Żyw'] = 13
+secondary_attribute_dict['S'] = 0
+secondary_attribute_dict['Wt'] = 0
 secondary_attribute_dict['Sz'] = 4
 secondary_attribute_dict['Mag'] = 0
 secondary_attribute_dict['PO'] = 0
