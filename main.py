@@ -1,4 +1,5 @@
 import random as rand
+from character import Character
 
 def d10():
     return rand.randint(1,10)
@@ -488,9 +489,14 @@ execute_ability_modifiers(ability_set,main_attribute_dict,secondary_attribute_di
 secondary_attribute_dict['S'] = main_attribute_dict['K']//10
 secondary_attribute_dict['Wt'] = main_attribute_dict['Odp']//10
 
-print(f"Rasa: {race_translate(race)}")
-print(profession)
-print(main_attribute_dict)
-print(secondary_attribute_dict)
-print(skill_list)
-print(ability_set)
+# print(f"Rasa: {race_translate(race)}")
+# print(profession)
+# print(main_attribute_dict)
+# print(secondary_attribute_dict)
+# print(skill_list)
+# print(ability_set)
+npc = Character()
+npc.roll_race()
+npc.roll_profession()
+npc.print_character()
+

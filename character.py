@@ -1,3 +1,18 @@
+import random as rand
+import constants
+
+def d10():
+    return rand.randint(1,10)
+
+def d100():
+    return rand.randint(1,100)
+
+def d1000():
+    return rand.randint(1,1000)
+
+def r20_2d10():
+    return 20 + d10() + d10() 
+
 class Character(object):
     def __init__(self):
         self.race = None
@@ -34,4 +49,38 @@ class Character(object):
         }
         self.skills = {}
         self.abilities = {}
+    
+    def roll_race(self):
+        roll = d100()
+        if roll == 1:
+            output = 'elf'
+        elif roll < 6:
+            output = 'dwarf'
+        elif roll < 11:
+            output = 'halfling'
+        else: 
+            output = 'human'
+        self.race = output
+    
+    def roll_profession(self):
+        if self.race == 'elf':
+            mapping = constants.elf_profession_mapping
+        elif self.race == 'dwarf':
+            mapping = constants.dwarf_profession_mapping
+        elif self.race == 'halfling':
+            mapping = constants.halfling_profession_mapping
+        elif self.race == 'human':
+            mapping = constants.human_profession_mapping
+        else:
+            raise Exception("Wrong race in roll_profession")
         
+        keys = mapping.keys()
+        roll = d1000()
+        for key in keys:
+            minimum, maximum = key
+            if roll >= minimum and roll <= maximum:
+                self.profession = mapping[key]
+
+    def print_character(self):
+        print(self.race)
+        print(self.profession)
