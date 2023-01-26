@@ -316,7 +316,58 @@ def roll_random_profession(race, roll):
         (965,972): 'Żeglarz',
         (973,1000): 'Żołnierz'
     }
+    elf_mapping = {
+        (1,7): 'Aptekarz',
+        (8,64): 'Uczeń czarodzieja',
+        (65,78): 'Ochroniarz',
+        (79,99): 'Łowca nagród',
+        (100,113): 'Kartograf',
+        (114,141): 'Dyletant',
+        (142,176): 'Cyrkowiec',
+        (177,218): 'Rzecznik rodu',
+        (219,222): 'Szuler',
+        (223,278): 'Łowca',
+        (279,292): 'Akolita',
+        (293,342): 'Wojownik klanowy',
+        (343,377): 'Żołnierz okrętowy',
+        (378,412): 'Najemnik',
+        (413,450): 'Posłaniec',
+        (451,464): 'Szlachcic',
+        (465,494): 'Banita',
+        (495,534): 'Przepatrywacz',
+        (535,548): 'Pielgrzym',
+        (549,562): 'Gladiator',
+        (563,600): 'Bajarz',
+        (601,625): 'Strażnik rzeczny',
+        (626,665): 'Kanciarz',
+        (666,705): 'Skryba',
+        (706,745): 'Żeglarz',
+        (746,752): 'Niewolnik',
+        (753,780): 'Przemytnik',
+        (781,815): 'Żak',
+        (816,856): 'Złodziej',
+        (857,869): 'Oprych',
+        (870,919): 'Rzemieślnik',
+        (920,961): 'Włóczykij',
+        (962,1000): 'Leśnik'
+    }
 
+    if race == 'halfling':
+        mapping = halfling_mapping
+    elif race == 'human':
+        mapping = human_mapping
+    elif race == 'dwarf':
+        mapping = dwarf_mapping
+    elif race == 'elf':
+        mapping = elf_mapping
+    else:
+        raise Exception("Wrong race in roll_random_profession")
+
+    keys = mapping.keys()
+    for key in keys:
+        minimum, maximum = key
+        if roll >= minimum and roll <= maximum:
+            return mapping[key]
 
 def random_race(roll):
     if roll == 1:
@@ -325,8 +376,7 @@ def random_race(roll):
         return 'dwarf'
     elif roll < 11:
         return 'halfling'
-    else:
-        return 'human'
+    return 'human'
 
 def race_translate(race):
     if race == 'human':
@@ -337,12 +387,11 @@ def race_translate(race):
         return 'krasnolud'
     elif race == 'elf':
         return race
-    else:
-        return 'Wyjątek: Problem z rasą'
+    return 'Wyjątek: Problem z rasą'
 
 race = random_race(d100())
 race = race.lower()
-race = 'human'
+profession = roll_random_profession(race,d1000())
 if race != 'elf' and race != 'dwarf' and race != 'human' and race != 'halfling':
     print('Wyjątek: nie podano właściwej rasy!')
     exit()
@@ -440,6 +489,7 @@ secondary_attribute_dict['S'] = main_attribute_dict['K']//10
 secondary_attribute_dict['Wt'] = main_attribute_dict['Odp']//10
 
 print(f"Rasa: {race_translate(race)}")
+print(profession)
 print(main_attribute_dict)
 print(secondary_attribute_dict)
 print(skill_list)
