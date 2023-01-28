@@ -301,14 +301,42 @@ human_ability_mapping = {
     (96,100): 'Widzenie w ciemności'
 }
 ability_modify_attr = {
-    'Urodzony wojownik': ['WW', 5],
-    'Strzelec wyborowy': ['US', 5],
-    'Bardzo silny': ['K', 5],
-    'Niezywkle odporny': ['Odp', 5],
-    'Szybki refleks': ['Zr', 5],
-    'Błyskotliwość': ['Int', 5],
-    'Opanowanie': ['SW', 5],
-    'Charyzmatyczny': ['Ogd', 5],
-    'Twardziel': ['Żyw', 1],
-    'Bardzo szybki': ['Sz', 1],
+    'Urodzony wojownik': 'WW',
+    'Strzelec wyborowy': 'US',
+    'Bardzo silny': 'K',
+    'Niezywkle odporny': 'Odp',
+    'Szybki refleks': 'Zr',
+    'Błyskotliwość': 'Int',
+    'Opanowanie': 'SW',
+    'Charyzmatyczny': 'Ogd',
+    'Twardziel': 'Żyw',
+    'Bardzo szybki': 'Sz',
+}
+common_weight_mapping = { # (dwarf)
+    (1,1): 45,
+    (2,10): 50,
+    (11,20): 55,
+    (21,30): 60,
+    (31,40): 65,
+    (41,50): 70,
+    (51,60): 75,
+    (61,70): 80,
+    (71,80): 85,
+    (81,90): 90,
+    (91,99): 95,
+    (100,100): 100
+}
+halfling_weight_mapping = { 
+    (1,1): 35,
+    (2,10): 35,
+    (11,20): 40,
+    (21,30): 40,
+    (31,40): 45,
+    (41,50): 45,
+    (51,60): 50,
+    (61,70): 50,
+    (71,80): 55,
+    (81,90): 60,
+    (91,99): 65,
+    (100,100): 70
 }

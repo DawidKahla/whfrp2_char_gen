@@ -113,7 +113,9 @@ class Character(object):
                 self.profession = mapping[key]
     
     def roll_attributes(self):
-        self.attributes_main = {attr: r20_2d10() for attr in self.attributes_main}
+        #self.attributes_main = {attr: r20_2d10() for attr in self.attributes_main}
+        # fixed values for tests
+        self.attributes_main = {attr: 25 for attr in self.attributes_main}
         self.attributes_sec['A'] = 1
         self.attributes_sec['Sz'] = 4
 
@@ -161,9 +163,6 @@ class Character(object):
             self.attributes_sec['Żyw'] -= 1
             self.attributes_sec['PP'] -= 1
             self.attributes_sec['Sz'] = 5
-        
-        self.attributes_sec['S'] = self.attributes_main['K']//10
-        self.attributes_sec['Wt'] = self.attributes_main['Odp']//10
 
     def set_default_skills_and_abilities(self):
         if self.race == 'human':
@@ -189,14 +188,91 @@ class Character(object):
         self.skills = skills
         self.abilities = abilities
 
+    def update(self):
+        self.update_attr_by_abilities()
+        self.set_S_Wt()
+
+
     def update_attr_by_abilities(self):
         # self.attributes_main = {constants.ability_modify_attr[key][0]: constants.ability_modify_attr.values[key][1] + self.attributes_main[constants.ability_modify_attr[key][0]] for key in constants.ability_modify_attr if key in self.abilities}
-        pass
+        # czy można to zapisać prościej? czy takie wykorzystanie try except jest poprawne?
+        for ability in self.abilities:
+            for key in constants.ability_modify_attr:
+                if key == ability:
+                    try:
+                        self.attributes_main[constants.ability_modify_attr[key]] += 5 
+                    except:
+                        self.attributes_sec[constants.ability_modify_attr[key]] += 1
+
+    def set_S_Wt(self):
+        self.attributes_sec['S'] = self.attributes_main['K']//10
+        self.attributes_sec['Wt'] = self.attributes_main['Odp']//10
+    
+    def roll_sex(self):
+        if self.sex == None:
+            if d10() < 6:
+                self.sex = 'Mężczyzna'
+            else:
+                self.sex = 'Kobieta'
+
+    def roll_height(self):
+        self.height = 100 + d10() + d10()
+        if self.sex == 'Mężczyzna':
+            self.height += 10
+        if self.race == 'dwarf':
+            self.height += 30
+            if self.sex == 'Mężczyzna':
+                self.height += 5
+        if self.race == 'human':
+            self.height += 50
+        if self.race == 'elf':
+            self.height += 60   
+    
+    def roll_weight(self):
+        roll = d100()
+        if self.race == 'halfling':
+            mapping = constants.halfling_weight_mapping
+        else:
+            mapping = constants.common_weight_mapping
+        keys = mapping.keys()
+        for key in keys:
+            minimum, maximum = key
+            if roll >= minimum and roll <= maximum:
+                self.weight = mapping[key]
+        if self.race == 'elf':
+            self.weight -= 5
+        if self.race == 'human':
+            self.weight += 5
+            if roll == 100:
+                self.weight = 110
+
+    
+    def roll_all(self):
+        self.roll_race()
+        self.roll_profession()
+        self.roll_sex()
+        self.roll_height()
+        self.roll_weight()
+        self.roll_attributes()
+        self.set_default_skills_and_abilities()
+        self.update()
 
     def print_character(self):
+        # print(self.name)
         print(race_translate(self.race))
-        print(self.profession)
-        print(self.skills)
-        print(self.abilities)
-        print(self.attributes_main)
-        print(self.attributes_sec)
+        # print(self.profession)
+        print(self.sex)
+        # print(self.age) 
+        # print(self.eye) 
+        # print(self.hair) 
+        # print(self.star) 
+        print(f"{self.weight} kg") 
+        print(f"{self.height} cm") 
+        # print(self.siblings)
+        # print(self.birthplace)
+        # print(self.special)
+        # print(self.skills)
+        # print(self.abilities)
+        # print(self.attributes_main)
+        # print(self.attributes_sec)
+        
