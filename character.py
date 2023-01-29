@@ -118,7 +118,7 @@ class Character(object):
         self.attributes_main = {attr: 25 for attr in self.attributes_main}
         self.attributes_sec['A'] = 1
         self.attributes_sec['Sz'] = 4
-
+        
         roll = d10()
         if roll < 4:
             self.attributes_sec['Żyw'] = 10
@@ -246,13 +246,44 @@ class Character(object):
             if roll == 100:
                 self.weight = 110
 
+    def roll_hair(self):
+        pass
+
+    def roll_eye(self):
+        pass
+
+    def roll_special(self):
+        pass
+
+    def roll_siblings(self):
+        pass
+
+    def roll_star(self):
+        pass
+
+    def roll_age(self):
+        pass
+
+    def roll_birthplace(self):
+        pass
+
+    def roll_name(self):
+        pass
     
     def roll_all(self):
         self.roll_race()
         self.roll_profession()
         self.roll_sex()
+        self.roll_name()
         self.roll_height()
         self.roll_weight()
+        self.roll_hair()
+        self.roll_eye()
+        self.roll_special()
+        self.roll_siblings()
+        self.roll_star()
+        self.roll_age()
+        self.roll_birthplace()
         self.roll_attributes()
         self.set_default_skills_and_abilities()
         self.update()
