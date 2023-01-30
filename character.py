@@ -16,17 +16,8 @@ def r20_2d10():
 def random_choose(list):
     return list[rand.randint(0, len(list)-1)]
 
-def roll_ability(race):
-    if race == 'halfling':
-        mapping = constants.halfling_ability_mapping
-    elif race == 'human':
-        mapping = constants.human_ability_mapping
-    else:
-        raise Exception(f"Wrong race in roll_ability {race}")
-    
-    keys = mapping.keys()
-    roll = d100()
-    for key in keys:
+def mapping_roll(roll, mapping):
+    for key in mapping.keys():
         minimum, maximum = key
         if roll >= minimum and roll <= maximum:
             return mapping[key]
@@ -83,11 +74,11 @@ class Character(object):
     
     def roll_race(self):
         roll = d100()
-        if roll == 1:
+        if roll < 26:# == 1:  
             output = 'elf'
-        elif roll < 6:
+        elif roll < 51:#6:
             output = 'dwarf'
-        elif roll < 11:
+        elif roll < 76:#11:
             output = 'halfling'
         else: 
             output = 'human'
@@ -105,17 +96,13 @@ class Character(object):
         else:
             raise Exception(f"Wrong race in roll_profession {self.race}")
         
-        keys = mapping.keys()
         roll = d1000()
-        for key in keys:
-            minimum, maximum = key
-            if roll >= minimum and roll <= maximum:
-                self.profession = mapping[key]
+        self.profession = mapping_roll(roll, mapping)
     
     def roll_attributes(self):
-        #self.attributes_main = {attr: r20_2d10() for attr in self.attributes_main}
+        self.attributes_main = {attr: r20_2d10() for attr in self.attributes_main}
         # fixed values for tests
-        self.attributes_main = {attr: 25 for attr in self.attributes_main}
+        # self.attributes_main = {attr: 25 for attr in self.attributes_main}
         self.attributes_sec['A'] = 1
         self.attributes_sec['Sz'] = 4
         
@@ -163,19 +150,28 @@ class Character(object):
             self.attributes_sec['Żyw'] -= 1
             self.attributes_sec['PP'] -= 1
             self.attributes_sec['Sz'] = 5
-
+          
+    def roll_ability(self):
+      if self.race == 'halfling':
+        mapping = constants.halfling_ability_mapping
+      elif self.race == 'human':
+        mapping = constants.human_ability_mapping
+      else:
+        raise Exception(f"Wrong race in roll_ability {self.race}")
+      return mapping_roll(d100(),mapping)
+          
     def set_default_skills_and_abilities(self):
         if self.race == 'human':
             skills = ['Plotkowanie', 'Wiedza(Imperium)', 'Znajomość języka(staroświatowy)']
-            ab1 = roll_ability(self.race)
-            ab2 = roll_ability(self.race)
+            ab1 = self.roll_ability()
+            ab2 = self.roll_ability()
             while ab1 == ab2:
-                ab2 = roll_ability(self.race)
+                ab2 = self.roll_ability()
             abilities = [ab1, ab2]
         
         if self.race == 'halfling':
             skills = ['Plotkowanie', 'Wiedza (niziołki))', 'Znajomość języka (staroświatowy)', 'Znajomość języka( niziołków)', 'Nauka (genealogia/heraldyka)', random_choose(['Rzemiosło (gotowanie)','Rzemiosło (uprawa ziemi)'])]
-            abilities = ['Broń specjalna (proca)', 'Odporność na Chaos', 'Widzenie w ciemności', roll_ability(self.race)]
+            abilities = ['Broń specjalna (proca)', 'Odporność na Chaos', 'Widzenie w ciemności', self.roll_ability()]
 
         if self.race == 'dwarf':
             skills = ['Wiedza (krasnoludy)', 'Znajomość języka (khazalid)', 'Znajomość języka (staroświatowy)', random_choose(['Rzemiosło (górnictwo)','Rzemiosło (kamieniarstwo)','Rzemiosło (kowalstwo)'])]
@@ -234,11 +230,7 @@ class Character(object):
             mapping = constants.halfling_weight_mapping
         else:
             mapping = constants.common_weight_mapping
-        keys = mapping.keys()
-        for key in keys:
-            minimum, maximum = key
-            if roll >= minimum and roll <= maximum:
-                self.weight = mapping[key]
+        self.weight = mapping_roll(roll,mapping)
         if self.race == 'elf':
             self.weight -= 5
         if self.race == 'human':
@@ -247,29 +239,113 @@ class Character(object):
                 self.weight = 110
 
     def roll_hair(self):
-        pass
-
+        if self.race == 'human':
+          hair_list = constants.human_hair_list
+        if self.race == 'dwarf':
+          hair_list = constants.dwarf_hair_list
+        if self.race == 'halfling':
+          hair_list = constants.halfling_hair_list
+        if self.race == 'elf':
+          hair_list = constants.elf_hair_list
+        self.hair = hair_list[d10()-1]
+      
     def roll_eye(self):
-        pass
+        if self.race == 'human':
+          eye_list = constants.human_eye_list
+        if self.race == 'dwarf':
+          eye_list = constants.dwarf_eye_list
+        if self.race == 'halfling':
+          eye_list = constants.halfling_eye_list
+        if self.race == 'elf':
+          eye_list = constants.elf_eye_list
+        self.eye = eye_list[d10()-1]
 
     def roll_special(self):
-        pass
+        roll = d100()
+        self.special = mapping_roll(roll,constants.special_mapping)
 
     def roll_siblings(self):
-        pass
+        roll = d10()
+        if self.race == 'dwarf':
+          mapping = constants.siblings_dwarf_mapping
+        elif self.race == 'elf':
+          mapping = constants.siblings_elf_mapping
+        else:
+          mapping = constants.siblings_human_mapping
+        self.siblings = mapping_roll(roll,mapping)
+        if self.race == 'halfling':
+          self.siblings += 1
 
     def roll_star(self):
-        pass
-
+        roll = d100()
+        self.star = mapping_roll(roll,constants.star_mapping)
+      
     def roll_age(self):
-        pass
-
+        roll = d100()
+        x = (roll-1)//5
+        if self.race == 'human':
+          self.age = 16 + x
+        elif self.race == 'halfling':
+          self.age = 20 + 2*x
+          if roll > 70: 
+            self.age += 2
+        else:
+          self.age = 20 + 5*x #dwarf
+          if self.race == 'elf':
+            self.age += 10
+      
     def roll_birthplace(self):
-        pass
+        if self.race == 'dwarf':
+          if d100() > 30:
+            self.birthplace = random_choose(constants.dwarf_birthplace_list)
+        elif self.race == 'elf':
+          self.birthplace = mapping_roll(d100(),constants.elf_birthplace_dict)
+        elif self.race == 'halfling':
+          if d100() < 50:
+            self.birthplace = 'Kraina Zgromadzenia'
+        if self.birthplace == None:
+          province = random_choose(list(constants.town_dict.keys()))
+          town = mapping_roll(d100(), constants.town_dict[province])
+          self.birthplace = f"{province}, {town}"
 
     def roll_name(self):
-        pass
-    
+        if self.race == 'human':
+          surname = random_choose(constants.human_surname_list)
+          if self.sex == 'Mężczyzna':
+            firstname = random_choose(constants.human_male_name_list)
+          else:
+            firstname = random_choose(constants.human_female_name_list)
+        if self.race == 'dwarf':
+          if self.sex == 'Mężczyzna':
+            firstname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}"
+            if d10() < 6:
+              surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}son"
+            else:
+              surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}son"
+          else:
+            firstname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}"
+            if d10() < 6:
+              surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}sdotr"
+            else:
+              surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}sdotr"
+        if self.race == 'elf':
+          surname = random_choose(constants.elf_surname_list)
+          if d10() < 6:
+            connector = random_choose(constants.elf_name_connector_list)
+          else:
+            connector = ""
+          if self.sex == 'Mężczyzna':
+            firstname = f"{random_choose(constants.elf_name1_list)}{connector}{random_choose(constants.elf_male_name2_list)}"
+          else:
+            firstname = f"{random_choose(constants.elf_name1_list)}{connector}{random_choose(constants.elf_female_name2_list)}"
+        if self.race == 'halfling':
+          surname = random_choose(constants.halfling_surname_list)
+          if self.sex == 'Mężczyzna':
+            firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_male_name2_list)}"
+          else:
+            firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_female_name2_list)}"
+
+        self.name = f"{firstname} {surname}"
     def roll_all(self):
         self.roll_race()
         self.roll_profession()
@@ -289,21 +365,21 @@ class Character(object):
         self.update()
 
     def print_character(self):
-        # print(self.name)
-        print(race_translate(self.race))
-        # print(self.profession)
-        print(self.sex)
-        # print(self.age) 
-        # print(self.eye) 
-        # print(self.hair) 
-        # print(self.star) 
-        print(f"{self.weight} kg") 
-        print(f"{self.height} cm") 
-        # print(self.siblings)
-        # print(self.birthplace)
-        # print(self.special)
-        # print(self.skills)
-        # print(self.abilities)
-        # print(self.attributes_main)
-        # print(self.attributes_sec)
-        
+        print(f"Imię i nazwisko/przydomek: {self.name}")
+        print(f"Rasa: {race_translate(self.race)}")
+        print(f"Profesja: {self.profession}")
+        print(f"Płeć: {self.sex}")
+        print(f"Wiek: {self.age}") 
+        print(f"Kolor oczu: {self.eye}") 
+        print(f"Kolor włosów: {self.hair}") 
+        print(f"Znak gwiezdny: {self.star}") 
+        print(f"Masa: {self.weight} kg") 
+        print(f"Wzrost: {self.height} cm") 
+        print(f"Ilość rodzeństwa: {self.siblings}")
+        print(f"Miejsce urodzenia: {self.birthplace}")
+        print(f"Znaki szczególne: {self.special}")
+        print(self.skills)
+        print(self.abilities)
+        print(self.attributes_main)
+        print(self.attributes_sec)
+    
