@@ -1,6 +1,7 @@
 import random as rand
 import constants
 import professions
+from dataclasses import dataclass
 
 def d10():
     return rand.randint(1,10)
@@ -24,15 +25,21 @@ def mapping_roll(roll, mapping):
             return mapping[key]
 
 def race_translate(race):
-    if race == 'human':
-        return 'Człowiek'
-    elif race == 'halfling':
-        return 'Niziołek'
-    elif race == 'dwarf':
-        return 'Krasnolud'
-    elif race == 'elf':
-        return 'Elf'
-    raise Exception(f"Wrong race in translation {race}")
+    mapping = {
+      'human': 'Człowiek',
+      'halfling': 'Niziołek',
+      'dwarf': 'Krasnolud',
+      'elf': 'Elf'
+    }
+    if race not in mapping:
+      raise Exception(f"Wrong race in translation: {race}")
+    return mapping[race]
+
+@dataclass
+class atrribute:
+  initial: int
+  potential: int
+  final: int
 
 class Character(object):
     def __init__(self):
@@ -51,24 +58,24 @@ class Character(object):
         self.special = None
         self.xp = None 
         self.attributes_main = { 
-            'WW': [0, 0, 0],    # [start_value, potential_growth, final_value]
-            'US': [0, 0, 0],
-            'K': [0, 0, 0],
-            'Odp': [0, 0, 0],
-            'Zr': [0, 0, 0],
-            'Int': [0, 0, 0],
-            'SW': [0, 0, 0],
-            'Ogd': [0, 0, 0]
+            'WW': atrribute(0, 0, 0),    # [start_value, potential_growth, final_value]
+            'US': atrribute(0, 0, 0),
+            'K': atrribute(0, 0, 0),
+            'Odp': atrribute(0, 0, 0),
+            'Zr': atrribute(0, 0, 0),
+            'Int': atrribute(0, 0, 0),
+            'SW': atrribute(0, 0, 0),
+            'Ogd': atrribute(0, 0, 0)
         }
         self.attributes_sec = {
-            'A': [0, 0, 0],
-            'Żyw': [0, 0, 0],
-            'S': [0, 0, 0],
-            'Wt': [0, 0, 0],
-            'Sz': [0, 0, 0],
-            'Mag': [0, 0, 0],
-            'PO': [0, 0, 0],
-            'PP': [0, 0, 0]
+            'A': atrribute(0, 0, 0),
+            'Żyw': atrribute(0, 0, 0),
+            'S': atrribute(0, 0, 0),
+            'Wt': atrribute(0, 0, 0),
+            'Sz': atrribute(0, 0, 0),
+            'Mag': atrribute(0, 0, 0),
+            'PO': atrribute(0, 0, 0),
+            'PP': atrribute(0, 0, 0)
         }        
         self.skills = {} # 'skill_name' : 0 | 1 | 2 -> 'skill_name' : bought | +10 | +20
         self.abilities = []
@@ -83,6 +90,7 @@ class Character(object):
             output = 'halfling'
         else: 
             output = 'human'
+        output = 'human'
         self.race = output
     
     def roll_profession(self):
@@ -100,58 +108,58 @@ class Character(object):
         roll = d1000()
         #self.profession = mapping_roll(roll, mapping)
         self.profession = 'Akolita'
-    
+
     def roll_attributes(self):
-        self.attributes_main = {attr: [r20_2d10(), 0, 0] for attr in self.attributes_main}
+        self.attributes_main = {attr: atrribute(r20_2d10(), 0, 0) for attr in self.attributes_main}
         # fixed values for tests
         # self.attributes_main = {attr: [25, 0, 0] for attr in self.attributes_main}
-        self.attributes_sec['A'][0] = 1
-        self.attributes_sec['Sz'][0] = 4
+        self.attributes_sec['A'].initial = 1
+        self.attributes_sec['Sz'].initial = 4
         
         roll = d10()
         if roll < 4:
-            self.attributes_sec['Żyw'][0] = 10
+            self.attributes_sec['Żyw'].initial = 10
         elif roll < 7:
-            self.attributes_sec['Żyw'][0] = 11
+            self.attributes_sec['Żyw'].initial = 11
         elif roll < 10:
-            self.attributes_sec['Żyw'][0] = 12
+            self.attributes_sec['Żyw'].initial = 12
         else:
-            self.attributes_sec['Żyw'][0] = 13
+            self.attributes_sec['Żyw'].initial = 13
 
         pp_roll = d10()
         if pp_roll < 5:
-            self.attributes_sec['PP'][0] = 2
+            self.attributes_sec['PP'].initial = 2
         else:
-            self.attributes_sec['PP'][0] = 3
+            self.attributes_sec['PP'].initial = 3
 
         if self.race == 'halfling':
             # Czy można to zrobić list comperhension 
-            self.attributes_main['WW'][0] -= 10
-            self.attributes_main['K'][0] -= 10
-            self.attributes_main['Odp'][0] -= 10
-            self.attributes_main['Ogd'][0] += 10
-            self.attributes_main['US'][0] += 10
-            self.attributes_main['Zr'][0] += 10
-            self.attributes_sec['Żyw'][0] -= 2
+            self.attributes_main['WW'].initial -= 10
+            self.attributes_main['K'].initial -= 10
+            self.attributes_main['Odp'].initial -= 10
+            self.attributes_main['Ogd'].initial += 10
+            self.attributes_main['US'].initial += 10
+            self.attributes_main['Zr'].initial += 10
+            self.attributes_sec['Żyw'].initial -= 2
             if pp_roll < 8:
-                self.attributes_sec['PP'][0] = 2
+                self.attributes_sec['PP'].initial = 2
         
         if self.race == 'dwarf':
-            self.attributes_main['WW'][0] += 10
-            self.attributes_main['Zr'][0] -= 10
-            self.attributes_main['Ogd'][0] -= 10
-            self.attributes_main['Odp'][0] += 10
-            self.attributes_sec['Żyw'][0] += 1
-            self.attributes_sec['Sz'][0] = 3
+            self.attributes_main['WW'].initial += 10
+            self.attributes_main['Zr'].initial -= 10
+            self.attributes_main['Ogd'].initial -= 10
+            self.attributes_main['Odp'].initial += 10
+            self.attributes_sec['Żyw'].initial += 1
+            self.attributes_sec['Sz'].initial = 3
             if pp_roll < 8:
-                self.attributes_sec['PP'][0] -= 1
+                self.attributes_sec['PP'].initial -= 1
         
         if self.race == 'elf':
-            self.attributes_main['US'][0] += 10
-            self.attributes_main['Zr'][0] += 10
-            self.attributes_sec['Żyw'][0] -= 1
-            self.attributes_sec['PP'][0] -= 1
-            self.attributes_sec['Sz'][0] = 5
+            self.attributes_main['US'].initial += 10
+            self.attributes_main['Zr'].initial += 10
+            self.attributes_sec['Żyw'].initial -= 1
+            self.attributes_sec['PP'].initial -= 1
+            self.attributes_sec['Sz'].initial = 5
           
     def roll_ability(self):
       if self.race == 'halfling':
@@ -205,31 +213,29 @@ class Character(object):
     
     def set_starting_profession(self):
         for atrr in professions.professions[self.profession]['atrributes_main']:
-          i, e, f = self.attributes_main[atrr]  # czy można to rozpakowanie zrealizować lepiej, jeśli nie wykorzystuje drugiego parametru?
-          self.attributes_main[atrr] = [i, professions.professions[self.profession]['atrributes_main'][atrr], f]
+          self.attributes_main[atrr].potential = professions.professions[self.profession]['atrributes_main'][atrr]
         for atrr in professions.professions[self.profession]['atrributes_sec']:
-          i, e, f = self.attributes_sec[atrr]  
-          self.attributes_sec[atrr] = [i, professions.professions[self.profession]['atrributes_sec'][atrr], f]
+          self.attributes_sec[atrr].potential = professions.professions[self.profession]['atrributes_sec'][atrr]
         pass
 
     def update(self):
         self.update_attr_by_abilities()
-        self.set_S_Wt(0)
+        self.set_S_Wt()
 
     def update_attr_by_abilities(self):
-        # self.attributes_main = {constants.ability_modify_attr[key][0]: constants.ability_modify_attr.values[key][1] + self.attributes_main[constants.ability_modify_attr[key][0]] for key in constants.ability_modify_attr if key in self.abilities}
-        # czy można to zapisać prościej? czy takie wykorzystanie try except jest poprawne?
         for ability in self.abilities:
             for key in constants.ability_modify_attr:
                 if key == ability:
-                    try:
-                        self.attributes_main[constants.ability_modify_attr[key]][0] += 5 
-                    except:
-                        self.attributes_sec[constants.ability_modify_attr[key]][0] += 1
+                    if constants.ability_modify_attr[key] in self.attributes_main.keys(): 
+                        self.attributes_main[constants.ability_modify_attr[key]].initial += 5 
+                    if constants.ability_modify_attr[key] in self.attributes_sec.keys():
+                        self.attributes_sec[constants.ability_modify_attr[key]].initial += 1
 
-    def set_S_Wt(self,index):
-        self.attributes_sec['S'][index] = self.attributes_main['K'][index]//10
-        self.attributes_sec['Wt'][index] = self.attributes_main['Odp'][index]//10
+    def set_S_Wt(self):
+        self.attributes_sec['S'].initial = self.attributes_main['K'].initial//10
+        self.attributes_sec['Wt'].initial = self.attributes_main['Odp'].initial//10
+        self.attributes_sec['S'].final = self.attributes_main['K'].final//10
+        self.attributes_sec['Wt'].final = self.attributes_main['Odp'].final//10
     
     def roll_sex(self):
         if self.sex == None:
@@ -373,6 +379,7 @@ class Character(object):
             firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_female_name2_list)}"
 
         self.name = f"{firstname} {surname}"
+        
     def roll_all(self):
         self.roll_race()
         self.roll_profession()
