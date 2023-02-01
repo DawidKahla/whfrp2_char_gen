@@ -29,7 +29,7 @@ professions = {
     'trappings' : [
       'Szaty kapłańskie',
       'Symbol boga' 
-    ]
+    ],
     'next' : [
       'Cyrulik',
       'Demagog',
