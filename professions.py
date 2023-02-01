@@ -2,7 +2,7 @@ professions = {
   'Akolita' : {
     'atrributes_main' : {
       'WW': 5,
-      'Us': 5,
+      'US': 5,
       'Odp': 5,
       'Int': 10,
       'SW': 10,

@@ -1,5 +1,6 @@
 import random as rand
 import constants
+import professions
 
 def d10():
     return rand.randint(1,10)
@@ -97,7 +98,8 @@ class Character(object):
             raise Exception(f"Wrong race in roll_profession {self.race}")
         
         roll = d1000()
-        self.profession = mapping_roll(roll, mapping)
+        #self.profession = mapping_roll(roll, mapping)
+        self.profession = 'Akolita'
     
     def roll_attributes(self):
         self.attributes_main = {attr: [r20_2d10(), 0, 0] for attr in self.attributes_main}
@@ -123,7 +125,7 @@ class Character(object):
             self.attributes_sec['PP'][0] = 3
 
         if self.race == 'halfling':
-            # Czy można to zrobić list comperhension
+            # Czy można to zrobić list comperhension 
             self.attributes_main['WW'][0] -= 10
             self.attributes_main['K'][0] -= 10
             self.attributes_main['Odp'][0] -= 10
@@ -162,7 +164,7 @@ class Character(object):
           
     def set_default_skills_and_abilities(self):
         if self.race == 'human':
-            skills = ['Plotkowanie', 'Wiedza(Imperium)', 'Znajomość języka(staroświatowy)']
+            skills = {'Plotkowanie', 'Wiedza(Imperium)', 'Znajomość języka(staroświatowy)'}
             
             ab1 = self.roll_ability()
             ab2 = self.roll_ability()
@@ -185,10 +187,34 @@ class Character(object):
         self.skills = {skill: 0 for skill in skills}
         self.abilities = abilities
 
+    def add_skill(self, new_skill):
+        if new_skill in self.skills.keys():
+          if self.skills[new_skill] < 2:
+            self.skills[new_skill] += 1
+          else:
+            return False # skill is maxed operation failed
+        else:
+          self.skills[new_skill] = 0
+        return True
+    
+    def add_ability(self, new_ability):
+        if new_ability in self.abilities:
+          return False 
+        else:
+          self.abilities.append(new_ability)
+    
+    def set_starting_profession(self):
+        for atrr in professions.professions[self.profession]['atrributes_main']:
+          i, e, f = self.attributes_main[atrr]  # czy można to rozpakowanie zrealizować lepiej, jeśli nie wykorzystuje drugiego parametru?
+          self.attributes_main[atrr] = [i, professions.professions[self.profession]['atrributes_main'][atrr], f]
+        for atrr in professions.professions[self.profession]['atrributes_sec']:
+          i, e, f = self.attributes_sec[atrr]  
+          self.attributes_sec[atrr] = [i, professions.professions[self.profession]['atrributes_sec'][atrr], f]
+        pass
+
     def update(self):
         self.update_attr_by_abilities()
         self.set_S_Wt(0)
-
 
     def update_attr_by_abilities(self):
         # self.attributes_main = {constants.ability_modify_attr[key][0]: constants.ability_modify_attr.values[key][1] + self.attributes_main[constants.ability_modify_attr[key][0]] for key in constants.ability_modify_attr if key in self.abilities}
@@ -363,6 +389,7 @@ class Character(object):
         self.roll_birthplace()
         self.roll_attributes()
         self.set_default_skills_and_abilities()
+        self.set_starting_profession()
         self.update()
 
     def print_character(self):
