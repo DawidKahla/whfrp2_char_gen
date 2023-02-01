@@ -295,7 +295,10 @@ class Character(object):
 
     def roll_special(self):
         roll = d100()
-        self.special = mapping_roll(roll,constants.special_mapping)
+        for key in constants.special_mapping.keys():
+          minimum, maximum = key
+          if roll >= minimum and roll <= maximum:
+            self.special = constants.special_mapping[key]
 
     def roll_siblings(self):
         roll = d10()
@@ -305,13 +308,19 @@ class Character(object):
           mapping = constants.siblings_elf_mapping
         else:
           mapping = constants.siblings_human_mapping
-        self.siblings = mapping_roll(roll,mapping)
+        for key in mapping:
+          minimum, maximum = key
+          if roll >= minimum and roll <= maximum:
+            self.siblings = mapping[key]
         if self.race == 'halfling':
           self.siblings += 1
 
     def roll_star(self):
         roll = d100()
-        self.star = mapping_roll(roll,constants.star_mapping)
+        for key in constants.star_mapping.keys():
+          minimum, maximum = key
+          if roll >= minimum and roll <= maximum:
+            self.star = constants.star_mapping[key]
       
     def roll_age(self):
         roll = d100()
@@ -343,7 +352,7 @@ class Character(object):
 
     def roll_name(self):
         if self.race == 'human':
-          surname = random_choose(constants.human_surname_list)
+          surname = ''
           if self.sex == 'Mężczyzna':
             firstname = random_choose(constants.human_male_name_list)
           else:
@@ -351,18 +360,12 @@ class Character(object):
         if self.race == 'dwarf':
           if self.sex == 'Mężczyzna':
             firstname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}"
-            if d10() < 6:
-              surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}son"
-            else:
-              surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}son"
+            surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}son"
           else:
             firstname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}"
-            if d10() < 6:
-              surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}sdotr"
-            else:
-              surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}sdotr"
+            surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}sdotr"
         if self.race == 'elf':
-          surname = random_choose(constants.elf_surname_list)
+          surname = ''
           if d10() < 6:
             connector = random_choose(constants.elf_name_connector_list)
           else:
@@ -372,7 +375,7 @@ class Character(object):
           else:
             firstname = f"{random_choose(constants.elf_name1_list)}{connector}{random_choose(constants.elf_female_name2_list)}"
         if self.race == 'halfling':
-          surname = random_choose(constants.halfling_surname_list)
+          surname = ''
           if self.sex == 'Mężczyzna':
             firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_male_name2_list)}"
           else:
@@ -400,7 +403,7 @@ class Character(object):
         self.update()
 
     def print_character(self):
-        print(f"Imię i nazwisko/przydomek: {self.name}")
+        print(self.name)
         print(f"Rasa: {race_translate(self.race)}")
         print(f"Profesja: {self.profession}")
         print(f"Płeć: {self.sex}")
@@ -411,10 +414,10 @@ class Character(object):
         print(f"Masa: {self.weight} kg") 
         print(f"Wzrost: {self.height} cm") 
         print(f"Ilość rodzeństwa: {self.siblings}")
-        print(f"Miejsce urodzenia: {self.birthplace}")
+        # print(self.birthplace)
         print(f"Znaki szczególne: {self.special}")
         print(self.skills)
         print(self.abilities)
         print(self.attributes_main)
         print(self.attributes_sec)
-    
+        
