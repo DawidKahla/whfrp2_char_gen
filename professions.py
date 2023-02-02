@@ -21,7 +21,7 @@ professions = {
       'Znajomość języka (staroświatowy)',
     ],
     'optional_skills' : [ ['Nauka (astronomia)', 'Nauka (historia)'] ],
-    'abbilities': [ 'Przemawianie' ],
+    'abilities': [ 'Przemawianie' ],
     'optional_abilities': [
       ['Bardzo silny', 'Szybki refleks'],
       ['Charyzmatyczny', 'Urodzony wojownik']
@@ -29,14 +29,6 @@ professions = {
     'trappings' : [
       'Szaty kapłańskie',
       'Symbol boga' 
-    ],
-    'next' : [
-      'Cyrulik',
-      'Demagog',
-      'Fanatyk',
-      'Kapłan',
-      'Skryba',
-      'Zakonnik'
     ]
   }
 }
