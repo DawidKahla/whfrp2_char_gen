@@ -421,7 +421,7 @@ class Character(object):
         print(f"Masa: {self.weight} kg") 
         print(f"Wzrost: {self.height} cm") 
         print(f"Ilość rodzeństwa: {self.siblings}")
-        # print(self.birthplace)
+        print(f"Miejsce urodzenia: {self.birthplace}")
         print(f"Znaki szczególne: {self.special}")
         print(self.skills)
         print(self.abilities)
