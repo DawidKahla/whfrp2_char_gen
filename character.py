@@ -107,7 +107,7 @@ class Character(object):
         
         roll = d1000()
         #self.profession = mapping_roll(roll, mapping)
-        self.profession = 'Akolita'
+        self.profession = 'AKOLITA'
 
     def roll_attributes(self):
         self.attributes_main = {attr: atrribute(r20_2d10(), 0, 0) for attr in self.attributes_main}
@@ -172,7 +172,7 @@ class Character(object):
           
     def set_default_skills_and_abilities(self):
         if self.race == 'human':
-            skills = {'Plotkowanie', 'Wiedza(Imperium)', 'Znajomość języka (staroświatowy)'}
+            skills = {'plotkowanie', 'wiedza (Imperium)', 'znajomość języka (staroświatowy)'}
             
             ab1 = self.roll_ability()
             ab2 = self.roll_ability()
@@ -181,16 +181,16 @@ class Character(object):
             abilities = [ab1, ab2]
         
         if self.race == 'halfling':
-            skills = ['Plotkowanie', 'Wiedza (niziołki))', 'Znajomość języka (staroświatowy)', 'Znajomość języka (niziołków)', 'Nauka (genealogia/heraldyka)', random_choose(['Rzemiosło (gotowanie)','Rzemiosło (uprawa ziemi)'])]
-            abilities = ['Broń specjalna (proca)', 'Odporność na Chaos', 'Widzenie w ciemności', self.roll_ability()]
+            skills = ['plotkowanie', 'wiedza (niziołki)', 'znajomość języka (staroświatowy)', 'znajomość języka (niziołków)', 'nauka (genealogia/heraldyka)', random_choose(['rzemiosło (gotowanie)','rzemiosło (uprawa ziemi)'])]
+            abilities = ['broń specjalna (proca)', 'odporność na Chaos', 'widzenie w ciemności', self.roll_ability()]
 
         if self.race == 'dwarf':
-            skills = ['Wiedza (krasnoludy)', 'Znajomość języka (khazalid)', 'Znajomość języka (staroświatowy)', random_choose(['Rzemiosło (górnictwo)','Rzemiosło (kamieniarstwo)','Rzemiosło (kowalstwo)'])]
-            abilities = ['Krasnoludzki fach', 'Krzepki', 'Odporność na magię', 'Odwaga', 'Widzenie w ciemności', 'Zapiekła nienawiść']
+            skills = ['wiedza (krasnoludy)', 'znajomość języka (khazalid)', 'znajomość języka (staroświatowy)', random_choose(['rzemiosło (górnictwo)','rzemiosło (kamieniarstwo)','rzemiosło (kowalstwo)'])]
+            abilities = ['krasnoludzki fach', 'krzepki', 'odporność na magię', 'odwaga', 'widzenie w ciemności', 'zapiekła nienawiść']
 
         if self.race == 'elf':
-            skills = ['Wiedza (elfy)', 'Znajomość języka (eltharin)', 'Znajomość języka (staroświatowy)']
-            abilities = ['Bystry wzrok', 'Widzenie w ciemności', random_choose(['Broń specjalna (długi łuk)','Zmysł magii']), random_choose(['Opanowanie','Błyskotliwość'])]
+            skills = ['wiedza (elfy)', 'znajomość języka (eltharin)', 'znajomość języka (staroświatowy)']
+            abilities = ['bystry wzrok', 'widzenie w ciemności', random_choose(['broń specjalna (długi łuk)','zmysł magii']), random_choose(['opanowanie','błyskotliwość'])]
         
         self.skills = {skill: 'Wykupione' for skill in skills}
         self.abilities = abilities
