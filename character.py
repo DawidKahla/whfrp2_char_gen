@@ -79,7 +79,8 @@ class Character(object):
         }        
         self.skills = {} # 'skill_name' : 0 | 1 | 2 -> 'skill_name' : bought | +10 | +20
         self.abilities = []
-    
+        self.trappings = []
+        
     def roll_race(self):
         roll = d100()
         if roll < 26:# == 1:  
@@ -215,15 +216,43 @@ class Character(object):
         else:
           self.abilities.append(new_ability)
     
+    def add_optional_skill(self, new_skills):
+        temp_skills = list()
+        for skill in self.skills:
+          if skill in new_skills:
+            temp_skills.append(skill)
+            new_skills.remove(skill)
+            if self.skills[skill] == '+20':
+              temp_skills.remove(skill)
+        if new_skills == []:
+          new_skills = temp_skills
+        if new_skills == []:
+          return False
+        return self.add_skill(random_choose(new_skills))
+
+    def add_optional_ability(self, new_abilities):
+        for ability in self.abilities:
+          if ability in new_abilities:
+            new_abilities.remove(ability)
+        if new_abilities == []:
+          return False
+        return self.add_ability(random_choose(new_abilities))
+    
     def set_starting_profession(self):
         for atrr in professions.professions[self.profession]['atrributes_main']:
           self.attributes_main[atrr].potential = professions.professions[self.profession]['atrributes_main'][atrr]
         for atrr in professions.professions[self.profession]['atrributes_sec']:
           self.attributes_sec[atrr].potential = professions.professions[self.profession]['atrributes_sec'][atrr]
         for skill in professions.professions[self.profession]['skills']:
-          self.add_skill(skill)
+          self.add_skill(skill) # return False here doesn't have effect
         for ability in professions.professions[self.profession]['abilities']:
-          self.add_ability(ability)
+          self.add_ability(ability) # return False here doesn't have effect
+        for skills in professions.professions[self.profession]['optional_skills']:
+          self.add_optional_skill(skills)
+        for abilities in professions.professions[self.profession]['optional_abilities']:   
+          self.add_optional_ability(abilities)
+        for trapping in professions.professions[self.profession]['trappings']:
+          self.trappings.append(trapping)
 
     def update(self):
         self.update_attr_by_abilities()
@@ -427,4 +456,5 @@ class Character(object):
         print(self.abilities)
         print(self.attributes_main)
         print(self.attributes_sec)
+        print(self.trappings)
         
