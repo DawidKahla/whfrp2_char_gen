@@ -1,5 +1,5 @@
 professions = {
-  'Akolita' : {
+  'AKOLITA' : {
     'atrributes_main' : {
       'WW': 5,
       'US': 5,
@@ -18,25 +18,17 @@ professions = {
       'Przekonywanie',
       'Spostrzegawczość',
       'Znajomość języka (klasyczny)',
-      'Znajomość języka (staroświatowy)',
+      'znajomość języka (staroświatowy)',
     ],
     'optional_skills' : [ ['Nauka (astronomia)', 'Nauka (historia)'] ],
-    'abbilities': [ 'Przemawianie' ],
+    'abilities': [ 'Przemawianie' ],
     'optional_abilities': [
       ['Bardzo silny', 'Szybki refleks'],
       ['Charyzmatyczny', 'Urodzony wojownik']
     ],
     'trappings' : [
       'Szaty kapłańskie',
-      'Symbol boga' 
-    ],
-    'next' : [
-      'Cyrulik',
-      'Demagog',
-      'Fanatyk',
-      'Kapłan',
-      'Skryba',
-      'Zakonnik'
+      'Symbol boga', 
     ]
   }
 }
