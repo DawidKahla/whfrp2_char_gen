@@ -107,8 +107,7 @@ class Character(object):
             raise Exception(f"Wrong race in roll_profession {self.race}")
         
         roll = d1000()
-        #self.profession = mapping_roll(roll, mapping)
-        self.profession = 'AKOLITA'
+        self.profession = mapping_roll(roll, mapping)
 
     def roll_attributes(self):
         self.attributes_main = {attr: atrribute(r20_2d10(), 0, 0) for attr in self.attributes_main}
