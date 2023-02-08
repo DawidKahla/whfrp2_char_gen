@@ -2318,3 +2318,18 @@ elf_birthplace_dict = {
     (71, 85): "Wielki Las",
     (86, 100): "Las Reikwald",
 }
+any_skills = {
+  'wiedza (dowolna)': ['wiedza (Imperium)','wiedza (Bretonia)','wiedza (Estalia)','wiedza (Jałowa Kraina)','wiedza (Kislev)','wiedza (Księstwa Graniczne)','wiedza (Norska)','wiedza (Tilea)','wiedza (elfy)','wiedza (niziołki)','wiedza (krasnoludy)','wiedza (ogry)'],
+  'kuglarstwo (dowolne)': ['kuglarstwo (akrobatyka)','kuglarstwo (aktorstwo)','kuglarstwo (błaznowanie)','kuglarstwo (gawędziarstwo)','kuglarstwo (komedianctwo)','kuglarstwo (mimika)','kuglarstwo (muzykalność)','kuglarstwo (połykanie ognia)','kuglarstwo (śpiew)','kuglarstwo (taniec)','kuglarstwo (wróżenie z dłoni)','kuglarstwo (żonglerka)'],
+  'nauka (dowolna)': ['nauka (alchemia)','nauka (astronomia)','nauka (demonologia)','nauka (filozofia)','nauka (genealogia/heraldyka)','nauka (historia)','nauka (inżynieria)','nauka (magia)','nauka (matematyka)','nauka (nekromancja)','nauka (prawo)','nauka (runy)','nauka (strategia/taktyka)','nauka (sztuka)','nauka (teologia)'],
+  'rzemiosło (dowolne)': ['rzemiosło (aptekarstwo)','rzemiosło (bednarstwo)','rzemiosło (garbarstwo)','rzemiosło (gotowanie)','rzemiosło (górnictwo)','rzemiosło (handel)','rzemiosło (jubilerstwo)','rzemiosło (kaligrafia)','rzemiosło (kamieniarstwo)','rzemiosło (kartografia)','rzemiosło (kowalstwo)','rzemiosło (krawiectwo)','rzemiosło (młynarstwo)','rzemiosło (piwowarstwo)','rzemiosło (płatnerstwo)','rzemiosło (rusznikarstwo)','rzemiosło (rymarstwo)','rzemiosło (stolarstwo)','rzemiosło (szkutnictwo)','rzemiosło (szewstwo)','rzemiosło (sztuka)','rzemiosło (świecarstwo)','rzemiosło (uprawa ziemi)','rzemiosło (wyrób łuków)','rzemiosło (zielarstwo)','rzemiosło (złotnictwo)'],
+  'znajomość języka (dowolny)': ['znajomość języka (bretoński)','znajomość języka (eltharin)','znajomość języka (estalijski)','znajomość języka (khazalid)','znajomość języka (kislevski)','znajomość języka (norski)','znajomość języka (tileański)','znajomość języka (staroświatowy)','znajomość języka (niziołków)','znajomość języka (klasyczny)','znajomość języka (gobliński)','znajomość języka (grumbarth)','znajomość języka (mroczna mowa)'],
+  'sekretne znaki (dowolne)': ['sekretne znaki (łowców)','sekretne znaki (rycerzy zakonnych)','sekretne znaki (złodziei)','sekretne znaki (zwiadowców)','sekretne znaki (gildii)'],
+  'sekretny język (dowolny)': ['sekretny język (bitweny)','sekretny język (łowców)','sekretny język (złodziei)','sekretny język (gildii)']
+}
+any_ability = {
+  'runa (dowolna<10)':['runa szybkości','runa ciosu','runa ochrony','runa kamienia'],
+  'runa (dowolna<10)2':['runa szybkości','runa ciosu','runa ochrony','runa kamienia'], # handle 2nd same ability expection rune dwarf
+  'broń specjalna (dowolna)': ['broń specjalna (dwuręczna)','broń specjalna (kawaleryjska)','broń specjalna (mechaniczna)','broń specjalna (palna)','broń specjalna (parująca)','broń specjalna (rzucana)','broń specjalna (szermiercza)','broń specjalna (unieruchamiająca)','broń specjalna (korbacze)','broń specjalna (kusze)','broń specjalna (długi łuk)','broń specjalna (proca)'],
+  'magia powszechna (dowolna)' : ['magia powszechna (dotyk na odległość)','magia powszechna (magicnzy alarm)','magia powszechna (magiczna broń)','magia powszechna (magiczny zamek)','magia powszechna (pancerz Eteru)','magia powszechna (podniebny chód)','magia powszechna (rozproszenie magii)','magia powszechna (uciszenie)']
+}

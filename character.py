@@ -77,7 +77,7 @@ class Character(object):
             'PO': atrribute(0, 0, 0),
             'PP': atrribute(0, 0, 0)
         }        
-        self.skills = {} # 'skill_name' : 0 | 1 | 2 -> 'skill_name' : bought | +10 | +20
+        self.skills = {} 
         self.abilities = []
         self.trappings = []
         
@@ -91,7 +91,6 @@ class Character(object):
             output = 'halfling'
         else: 
             output = 'human'
-        output = 'human'
         self.race = output
     
     def roll_profession(self):
@@ -111,8 +110,6 @@ class Character(object):
 
     def roll_attributes(self):
         self.attributes_main = {attr: atrribute(r20_2d10(), 0, 0) for attr in self.attributes_main}
-        # fixed values for tests
-        # self.attributes_main = {attr: [25, 0, 0] for attr in self.attributes_main}
         self.attributes_sec['A'].initial = 1
         self.attributes_sec['Sz'].initial = 4
         
@@ -133,7 +130,6 @@ class Character(object):
             self.attributes_sec['PP'].initial = 3
 
         if self.race == 'halfling':
-            # Czy można to zrobić list comperhension 
             self.attributes_main['WW'].initial -= 10
             self.attributes_main['K'].initial -= 10
             self.attributes_main['Odp'].initial -= 10
@@ -212,8 +208,8 @@ class Character(object):
     def add_ability(self, new_ability):
         if new_ability in self.abilities:
           return False 
-        else:
-          self.abilities.append(new_ability)
+        self.abilities.append(new_ability)
+        return True
     
     def add_optional_skill(self, new_skills):
         temp_skills = list()
@@ -236,6 +232,28 @@ class Character(object):
         if new_abilities == []:
           return False
         return self.add_ability(random_choose(new_abilities))
+
+    def update_any_skill(self):
+        for skill in constants.any_skills.keys():
+          if skill in self.skills:
+            if self.skills[skill] == '+20':
+                self.add_skill(random_choose(constants.any_skills[skill]))
+                self.add_skill(random_choose(constants.any_skills[skill]))
+                self.add_skill(random_choose(constants.any_skills[skill]))
+            elif self.skills[skill] == '+10':
+                self.add_skill(random_choose(constants.any_skills[skill]))
+                self.add_skill(random_choose(constants.any_skills[skill]))
+            else:
+                self.add_skill(random_choose(constants.any_skills[skill]))
+            self.skills.pop(skill) 
+
+    def update_any_ability(self):
+        for ability in constants.any_ability.keys():
+          if ability in self.abilities:
+            while True:
+              if self.add_ability(random_choose(constants.any_ability[ability])):
+                self.abilities.remove(ability)
+                break
     
     def set_starting_profession(self):
         for atrr in professions.professions[self.profession]['atrributes_main']:
@@ -387,7 +405,7 @@ class Character(object):
 
     def roll_name(self):
         if self.race == 'human':
-          surname = ''
+          surname = random_choose(constants.human_surname_list)
           if self.sex == 'Mężczyzna':
             firstname = random_choose(constants.human_male_name_list)
           else:
@@ -400,7 +418,7 @@ class Character(object):
             firstname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}"
             surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}sdotr"
         if self.race == 'elf':
-          surname = ''
+          surname = random_choose(constants.elf_surname_list)
           if d10() < 6:
             connector = random_choose(constants.elf_name_connector_list)
           else:
@@ -410,7 +428,7 @@ class Character(object):
           else:
             firstname = f"{random_choose(constants.elf_name1_list)}{connector}{random_choose(constants.elf_female_name2_list)}"
         if self.race == 'halfling':
-          surname = ''
+          surname = random_choose(constants.halfling_surname_list)
           if self.sex == 'Mężczyzna':
             firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_male_name2_list)}"
           else:
@@ -435,10 +453,12 @@ class Character(object):
         self.roll_attributes()
         self.set_default_skills_and_abilities()
         self.set_starting_profession()
+        self.update_any_skill()
+        self.update_any_ability()
         self.update()
 
     def print_character(self):
-        print(self.name)
+        print(f"Imię i nazwisko/przydomek: {self.name}")
         print(f"Rasa: {race_translate(self.race)}")
         print(f"Profesja: {self.profession}")
         print(f"Płeć: {self.sex}")

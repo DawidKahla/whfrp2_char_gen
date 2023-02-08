@@ -27,24 +27,24 @@ professions = {
 			'przekonywanie',
 			'spostrzegawczość',
 			'znajomość języka (klasyczny)',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
-			'nauka (astronomia',
-			'historia)',],
+			'nauka (astronomia)',
+			'nauka (historia)'],
 		],
 		'abilities' : [
-			'przemawianie ',
+			'przemawianie',
 		],
 		'optional_abilities' : [[
 			'bardzo silny',
-			'szybki refleks',],[
+			'szybki refleks'],[
 			'charyzmatyczny',
-			'urodzony wojownik',],
+			'urodzony wojownik'],
 		],
 		'trappings' : [
 			'szaty kapłańskie',
-			'symbol boga (rodzaje symboli znajdziesz w Rozdziale VIII: Religie i wierzenia (Księga Zasad)) ',
+			'symbol boga',
 		],
 	},
 	'APTEKARZ' : {
@@ -74,24 +74,24 @@ professions = {
 			'rzemiosło (aptekarstwo)',
 			'sekretny język (gildii)',
 			'targowanie się',
-			'znajomość języka (klasyczny) ',
+			'znajomość języka (klasyczny)',
 		],
 		'optional_skills' : [[
 			'leczenie',
-			'warzenie trucizn',],
+			'warzenie trucizn'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'etykieta',
-			'odporność na trucizny ',],[
+			'odporność na trucizny'],[
 			'charyzmatyczny',
-			'niezwykle odporny',],
+			'niezwykle odporny'],
 		],
 		'trappings' : [
 			'mikstura lecznicza',
 			'lekki pancerz (skórzany kaftan)',
-			'narzędzia (aptekarza) ',
+			'narzędzia (aptekarza)',
 		],
 	},
 	'BAGIENNIK' : {
@@ -121,7 +121,7 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwania',
 			'ukrywanie się',
-			'zastawianie pułapek ',
+			'zastawianie pułapek',
 		],
 		'optional_skills' : [
 		],
@@ -129,18 +129,18 @@ professions = {
 			'broń specjalna (unieruchamiająca)',
 			'strzelec wyborowy',
 			'twardziel',
-			'wędrowiec ',
+			'wędrowiec',
 		],
 		'optional_abilities' : [[
 			'niezwykle odporny',
-			'szybki refleks',],
+			'szybki refleks'],
 		],
 		'trappings' : [
 			'sieć',
 			'włócznia',
 			'worek',
 			'1k10 kurzajek',
-			'zezwolenie od lokalnego szlachcica ',
+			'zezwolenie od lokalnego szlachcica',
 		],
 	},
 	'BAJARZ' : {
@@ -172,21 +172,21 @@ professions = {
 			'plotkowanie',
 			'przekonywanie',
 			'wiedza (dowolna)',
-			'znajomość języka (dowolny) ',
+			'znajomość języka (dowolny)',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'obieżyświat',
-			'przemawianie ',
+			'przemawianie',
 		],
 		'optional_abilities' : [[
 			'etykieta',
-			'twardziel',],
+			'twardziel'],
 		],
 		'trappings' : [
 			'ubranie najlepszej jakości',
-			'ekstrawagancki kapelusz ',
+			'ekstrawagancki kapelusz',
 		],
 	},
 	'BALSAMISTA' : {
@@ -220,24 +220,24 @@ professions = {
 			'targowanie',
 			'wycena',
 			'znajomość języka (klasyczny)',
-			'zwinne palce ',
+			'zwinne palce',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'chirurgia',
-			'odporność na choroby ',
+			'odporność na choroby',
 		],
 		'optional_abilities' : [[
 			'łotrzyk',
-			'żyłka handlowa',],
+			'żyłka handlowa'],
 		],
 		'trappings' : [
 			'dodatkowa para rąk do pomocy',
 			'liczydło',
 			'narzędzia (cyrulika)',
 			'nasączony eterem fartuch',
-			'przybory do pisania ',
+			'przybory do pisania',
 		],
 	},
 	'BANITA' : {
@@ -270,26 +270,26 @@ professions = {
 		],
 		'optional_skills' : [[
 			'powożenie',
-			'jeździectwo',],[
+			'jeździectwo'],[
 			'opieka nad zwierzętami',
-			'wiedza (Imperium)',],[
+			'wiedza (Imperium)'],[
 			'zastawianie pułapek',
-			'pływanie ',],[
+			'pływanie'],[
 			'plotkowanie',
-			'sekretne znaki (złodziei)',],
+			'sekretne znaki (złodziei)'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'strzał mierzony',
-			'ogłuszanie',],[
+			'ogłuszanie'],[
 			'wędrowiec',
-			'łotrzyk ',],
+			'łotrzyk'],
 		],
 		'trappings' : [
 			'łuk i 10 strzał',
 			'lekki pancerz (skórzany kaftan)',
-			'tarcza ',
+			'tarcza',
 		],
 	},
 	'BERSERKER Z NORSKI' : {
@@ -319,7 +319,7 @@ professions = {
 			'pływanie',
 			'wiedza (Norska)',
 			'zastraszanie',
-			'znajomość języka (norski) ',
+			'znajomość języka (norski)',
 		],
 		'optional_skills' : [
 		],
@@ -327,17 +327,17 @@ professions = {
 			'broń specjalna (dwuręczna)',
 			'groźny',
 			'szał bojowy',
-			'szybkie wyciągnięcie ',
+			'szybkie wyciągnięcie',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'broń dwuręczna albo tarcza',
 			'lekki pancerz (skórzany kaftan)',
-			'butelka gorzałki ',
+			'butelka gorzałki',
 		],
 	},
-	'B��DNY RYCERZ' : {
+	'BŁĘDNY RYCERZ' : {
 		'atrributes_main' : {
 			'WW': 15, 
 			'US': 0, 
@@ -366,7 +366,7 @@ professions = {
 			'tresura',
 			'unik',
 			'wiedza (dowolna)',
-			'znajomość języka (dowolny) ',
+			'znajomość języka (dowolny)',
 		],
 		'optional_skills' : [
 		],
@@ -375,7 +375,7 @@ professions = {
 			'cnota rycerskości',
 			'etykieta',
 			'obieżyświat',
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [
 		],
@@ -386,10 +386,10 @@ professions = {
 			'hełm)',
 			'kopia',
 			'tarcza',
-			'lekki koń bojowy z siodłem i uprzężą ',
+			'lekki koń bojowy z siodłem i uprzężą',
 		],
 	},
-	'BY�Y WI�ZIE�' : {
+	'BYŁY WIĘZIEŃ' : {
 		'atrributes_main' : {
 			'WW': 10, 
 			'US': 0, 
@@ -414,7 +414,7 @@ professions = {
 			'sekretny język (więzienny)',
 			'ukrywanie się',
 			'unik',
-			'zwinne palce ',
+			'zwinne palce',
 		],
 		'optional_skills' : [
 		],
@@ -423,15 +423,15 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'bijatyka',
-			'zapasy',],[
+			'zapasy'],[
 			'człowiek guma',
-			'odporność na choroby ',],
+			'odporność na choroby'],
 		],
 		'trappings' : [
 			'biedne ubranie',
 			'broń improwizowana dobrej jakości',
 			'kostka z kości',
-			'wszy ',
+			'wszy',
 		],
 	},
 	'CENOBITA' : {
@@ -461,7 +461,7 @@ professions = {
 			'nauka (teologia)',
 			'spostrzegawczość',
 			'torturowanie',
-			'wiedza (Księstwa Graniczne) ',
+			'wiedza (Księstwa Graniczne)',
 		],
 		'optional_skills' : [
 		],
@@ -469,15 +469,15 @@ professions = {
 			'odporność na trucizny',
 			'odporność psychiczna',
 			'odwaga',
-			'twardziel ',
+			'twardziel',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
-			'brudna włosienica i tunika ',
+			'brudna włosienica i tunika',
 		],
 	},
-	'CH�OP' : {
+	'CHŁOP' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 5, 
@@ -503,33 +503,34 @@ professions = {
 		],
 		'optional_skills' : [[
 			'oswajanie',
-			'rzemiosło (gotowanie)',],[
+			'rzemiosło (gotowanie)'],[
 			'tresura',
-			'pływanie',],[
+			'pływanie'],[
 			'wspinaczka',
-			'skradanie się ',],[
+			'skradanie się'],[
 			'wioślarstwo',
-			'zastawianie pułapek',],[
+			'zastawianie pułapek'],[
 			'opieka nad zwierzętami',
-			'przekonywanie',],[
+			'przekonywanie'],[
 			'sztuka przetrwania',
-			'rzemiosło (uprawa ziemi)',],[
+			'rzemiosło (uprawa ziemi)'],[
 			'powożenie',
-			'rzemiosło (wyrób łuków)',],[
+			'rzemiosło (wyrób łuków)'],[
 			'hazard',
-			'kuglarstwo (taniec',
-			'śpiew)',],
+			'kuglarstwo (taniec)',
+			'kuglarstwo (śpiew)'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'twardziel',
-			'wędrowiec ',],[
-			'chodu! albo broń specjalna (proca)',],
+			'wędrowiec'],[
+			'chodu!', 
+    'broń specjalna (proca)'],
 		],
 		'trappings' : [
 			'proca albo kij',
-			'skórzany bukłak ',
+			'skórzany bukłak',
 		],
 	},
 	'CIURA OBOZOWA' : {
@@ -556,43 +557,44 @@ professions = {
 		'skills' : [
 			'plotkowanie',
 			'przeszukiwanie',
-			'rzemiosło (jedno z: gotowanie',
-			'handel',
-			'kartografia',
-			'kowalstwo',
-			'krawiectwo',
-			'płatnerstwo',
-			'rusznikarstwo',
-			'wyrób łuków',
-			'zielarstwo)',
 			'spostrzegawczość',
 			'targowanie',
-			'znajomość języka (bretoński',
-			'zwinne palce ',
+			'zwinne palce',
 		],
 		'optional_skills' : [[
-			'kislevski',
-			'tileański)',],[
+    		'znajomość języka (bretoński)',
+			'znajomość języka (kislevski)',
+			'znajomość języka (tileański)'],[
 			'opieka nad zwierzętami',
-			'powożenie',],[
+			'powożenie'],[
 			'przekonywanie',
-			'wycena',],
+			'wycena'],[
+    		'rzemiosło (gotowanie)',
+			'rzemiosło (handel)',
+			'rzemiosło (kartografia)',
+			'rzemiosło (kowalstwo)',
+			'rzemiosło (krawiectwo)',
+			'rzemiosło (płatnerstwo)',
+			'rzemiosło (rusznikarstwo)',
+			'rzemiosło (wyrób łuków)',
+			'rzemiosło (zielarstwo)',
+      ]
 		],
 		'abilities' : [
 			'chodu!',
 		],
 		'optional_abilities' : [[
 			'odporność na choroby',
-			'obieżyświat',],[
+			'obieżyświat'],[
 			'żyłka handlowa',
-			'bijatyka ',],[
+			'bijatyka'],[
 			'twardziel',
-			'charyzmatyczny',],
+			'charyzmatyczny'],
 		],
 		'trappings' : [
 			'talizman szczęścia albo narzędzia (rzemieślnika)',
 			'sakiewka',
-			'namiot ',
+			'namiot',
 		],
 	},
 	'CYRKOWIEC' : {
@@ -617,27 +619,32 @@ professions = {
 			'PP': 0, 
 		},
 		'skills' : [
-			'kuglarstwo (dowolne dwa)',
+			'kuglarstwo (dowolne)',
+    		'kuglarstwo (dowolne)',
 			'przekonywanie',
 			'spostrzegawczość',
 			'wiedza (Imperium)',
-			'znajomość języka (staroświatowy) oraz jedna umiejętność do wyboru spośród: brzuchomówstwo',
+			'znajomość języka (staroświatowy)',  
+		],
+		'optional_skills' : [[
+			'opieka nad zwierzętami',
+			'pływanie'],[
+			'wycena',
+			'plotkowanie'],[
+    		'brzuchomówstwo',
 			'gadanina',
 			'hipnoza',
 			'jeździectwo',
 			'oswajanie',
 			'tresura',
 			'wspinaczka',
-			'zwinne palce ',
-		],
-		'optional_skills' : [[
-			'opieka nad zwierzętami',
-			'pływanie',],[
-			'wycena',
-			'plotkowanie',],
+			'zwinne palce',
+      ]
 		],
 		'abilities' : [
-			'dwie zdolności do wyboru spośród: bardzo silny',
+		],
+		'optional_abilities' : [
+      		['bardzo silny',
 			'broń specjalna (rzucana)',
 			'naśladowca',
 			'przemawianie',
@@ -645,17 +652,21 @@ professions = {
 			'szybki refleks',
 			'szybkie wyciągnięcie',
 			'woltyżerka',
-			'zapasy ',
-		],
-		'optional_abilities' : [
+			'zapasy'],
+      		['bardzo silny',
+			'broń specjalna (rzucana)',
+			'naśladowca',
+			'przemawianie',
+			'strzał mierzony',
+			'szybki refleks',
+			'szybkie wyciągnięcie',
+			'woltyżerka',
+			'zapasy']
 		],
 		'trappings' : [
 			'lekki pancerz (skórzany kaftan)',
-			'jeden przedmiot spośród: 3 noże do rzucania',
-			'2 topory do rzucania',
-			'instrument muzyczny (dowolny)',
-			'narzędzia (kuglarza)',
-			'jeden przedmiot spośród: kostium cyrkowca (dowolny) albo ubranie dobrej jakości. ',
+			'3 noże do rzucania albo 2 topory do rzucania albo instrument muzyczny (dowolny) albo narzędzia (kuglarza)',
+			'kostium cyrkowca (dowolny) albo ubranie dobrej jakości',
 		],
 	},
 	'CYRULIK' : {
@@ -685,25 +696,25 @@ professions = {
 			'przekonywanie',
 			'rzemiosło (aptekarstwo)',
 			'targowanie',
-			'znajomość języka (bretoński',
 		],
 		'optional_skills' : [[
-			'staroświatowy',
-			'tileański) ',],[
+    		'znajomość języka (bretoński)',
+			'znajomość języka (staroświatowy)',
+			'znajomość języka (tileański)'],[
 			'powożenie',
-			'pływanie',],
+			'pływanie'],
 		],
 		'abilities' : [
 			'chirurgia',
 		],
 		'optional_abilities' : [[
 			'odporność na choroby',
-			'błyskotliwość ',],[
+			'błyskotliwość'],[
 			'charyzmatyczny',
-			'niezwykle odporny',],
+			'niezwykle odporny'],
 		],
 		'trappings' : [
-			'narzędzia (cyrulika) ',
+			'narzędzia (cyrulika)',
 		],
 	},
 	'CZCICIEL ZARAZY' : {
@@ -734,7 +745,7 @@ professions = {
 			'ukrywanie się',
 			'unik',
 			'wiedza (skaveny)',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
@@ -742,7 +753,7 @@ professions = {
 			'grotołaz',
 			'nieustraszony',
 			'odporność na choroby',
-			'szał bojowy ',
+			'szał bojowy',
 		],
 		'optional_abilities' : [
 		],
@@ -750,7 +761,7 @@ professions = {
 			'2 sztuki broni jednoręcznej',
 			'choroba (wybór MG)',
 			'larwy',
-			'3k10 much ',
+			'3k10 much',
 		],
 	},
 	'CZEKISTA' : {
@@ -784,23 +795,25 @@ professions = {
 		],
 		'optional_skills' : [[
 			'nauka (prawo)',
-			'zastraszanie',],[
+			'zastraszanie'],[
 			'śledzenie',
-			'unik ',],
+			'unik'],
 		],
 		'abilities' : [
 			'groźny',
 		],
 		'optional_abilities' : [[
 			'ogłuszanie',
-			'silny cios ',],[
+			'silny cios'],[
 			'broń specjalna (palna)',
-			'broń specjalna (rozbrajanie)',],
+			'rozbrajanie'],
 		],
 		'trappings' : [
-			'Czekiści noszą wyróżniające się czarne skórzane mundury (kurta',
-			'spodnie) i specjalne hełmy. Są uzbrojeni w okute brązem maczugi (broń jednoręczna) oraz jeżdżą na czarnych kislevskich rumakach wyposażonych w siodło',
-			'uprząż i juki. ',
+			'czarny skórzany mundur (kurta i spodnie)',
+     		'okuta brązem maczuga (broń jednoręczna)',
+     		'czarny kislevski rumak',
+     		'siodło',
+			'uprząż i juki',
 		],
 	},
 	'CZELADNIK RUN' : {
@@ -832,30 +845,30 @@ professions = {
 			'rzemiosło (płatnerstwo)',
 			'spostrzegawczość',
 			'wycena',
-			'wykuwanie run ',
+			'wykuwanie run',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
-			'runa (dowolne dwie o wymaganym poziomie trudności 10 lub mniejszym) ',
+			'runa (dowolna<10)',
+     		'runa (dowolna<10)2'
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
-			'średni pancerz (skórzana kurta',
-			'kaftan kolczy)',
-			'narzędzia (kowala run) ',
+			'średni pancerz (skórzana kurta, kaftan kolczy)',
+			'narzędzia (kowala run)',
 		],
 	},
 	'DOKER' : {
 		'atrributes_main' : {
-			'WW': 5, 
-			'US': 0, 
-			'K': 5, 
-			'Odp': 0, 
-			'Zr': 0, 
-			'Int': 10, 
-			'SW': 15, 
+			'WW': 0, 
+			'US': 5, 
+			'K': 10, 
+			'Odp': 10, 
+			'Zr': 5, 
+			'Int': 0, 
+			'SW': 5, 
 			'Ogd': 0, 
 		},
 		'atrributes_sec' : {
@@ -864,7 +877,7 @@ professions = {
 			'S': 0, 
 			'Wt': 0, 
 			'Sz': 0, 
-			'Mag': 1, 
+			'Mag': 0, 
 			'PO': 0, 
 			'PP': 0, 
 		},
@@ -876,24 +889,24 @@ professions = {
 		],
 		'optional_skills' : [[
 			'unik',
-			'wspinaczka ',],[
+			'wspinaczka'],[
 			'hazard',
-			'mocna głowa',],[
+			'mocna głowa'],[
 			'przesłuchiwanie',
-			'spostrzegawczość',],
+			'spostrzegawczość'],
 		],
 		'abilities' : [
 			'bardzo silny',
 		],
 		'optional_abilities' : [[
 			'krzepki',
-			'szybki refleks ',],
+			'szybki refleks'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'czapka w kolorach gangu',
-			'IO metrów liny',
-			'1k10 drewnianych kołków ',
+			'1O metrów liny',
+			'1k10 drewnianych kołków',
 		],
 	},
 	'DYLETANT' : {
@@ -922,28 +935,30 @@ professions = {
 			'gadanina',
 			'nauka (dowolna)',
 			'nawigacja',
-			'rzemiosło (sztuka',
 			'spostrzegawczość',
-			'wiedza (dowolne dwie)',
-			'znajomość języka (dowolne dwa) ',
+			'wiedza (dowolna)',
+     		'wiedza (dowolna)',
+			'znajomość języka (dowolny)',
+     		'znajomość języka (dowolny)',
 		],
 		'optional_skills' : [[
 			'sekretny język (dowolny)',
-			'sekretne znaki (dowolne)',],[
+			'sekretne znaki (dowolne)'],[
 			'plotkowanie',
-			'wycena',],[
-			'kaligrafia',
-			'kartografia)',],
+			'wycena'],[
+     		'rzemiosło (sztuka)',
+			'rzemiosło (kaligrafia)',
+			'rzemiosło (kartografia)'],
 		],
 		'abilities' : [
-			'etykieta ',
+			'etykieta',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'3 książki',
 			'narzędzia rzemieślnicze',
-			'przybory do pisania ',
+			'przybory do pisania',
 		],
 	},
 	'FANATYK' : {
@@ -972,7 +987,7 @@ professions = {
 			'nauka (teologia)',
 			'przekonywanie',
 			'wiedza (Imperium)',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
@@ -982,14 +997,14 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'twardziel',
-			'charyzmatyczny ',],[
+			'charyzmatyczny'],[
 			'opanowanie',
-			'bardzo silny',],
+			'bardzo silny'],
 		],
 		'trappings' : [
 			'korbacz albo morgensztern',
 			'lekki pancerz (skórzana kurta)',
-			'butelka spirytusu lub gorzałki dobrej jakości ',
+			'butelka spirytusu lub gorzałki dobrej jakości',
 		],
 	},
 	'FLISAK' : {
@@ -1019,25 +1034,25 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwania',
 			'wioślarstwo',
-			'żeglarstwo ',
+			'żeglarstwo',
 		],
 		'optional_skills' : [[
-			'wiedza (Imperium',
-			'Kislev)',],[
+			'wiedza (Imperium)',
+			'wiedza (Kislev)'],[
 			'sekretny język (łowców)',
-			'znajomość języka (kislevski)',],[
+			'znajomość języka (kislevski)'],[
 			'mocna głowa',
-			'plotkowanie',],
+			'plotkowanie'],
 		],
 		'abilities' : [
 			'obieżyświat',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
-			'łódź wiosłowa ',
+			'łódź wiosłowa',
 		],
 	},
 	'GAZECIARZ' : {
@@ -1068,23 +1083,23 @@ professions = {
 			'przekonywanie',
 			'spostrzegawczość',
 			'targowanie',
-			'wiedza (Imperium) ',
+			'wiedza (Imperium)',
 		],
 		'optional_skills' : [[
 			'gadanina',
-			'zwinne palce',],
+			'zwinne palce'],
 		],
 		'abilities' : [
-			'przemawianie ',
+			'przemawianie',
 		],
 		'optional_abilities' : [[
 			'bijatyka',
-			'łotrzyk',],
+			'łotrzyk'],
 		],
 		'trappings' : [
 			'plecak',
 			'1k1O gazet',
-			'tuba na zwoje ',
+			'tuba na zwoje',
 		],
 	},
 	'GIERMEK' : {
@@ -1116,16 +1131,16 @@ professions = {
 		],
 		'optional_skills' : [[
 			'nauka (genealogia/heraldyka)',
-			'wiedza (Bretonia)',],[
+			'wiedza (Bretonia)'],[
 			'przekonywanie',
-			'plotkowanie',],[
-			'znajomość języka (bretoński',
-			'staroświatowy) ',],
+			'plotkowanie'],[
+			'znajomość języka (bretoński)',
+			'znajomość języka (staroświatowy)'],
 		],
 		'abilities' : [
 			'broń specjalna (kawaleryjska)',
 			'etykieta',
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [
 		],
@@ -1134,7 +1149,7 @@ professions = {
 			'średni pancerz (kaftan kolczy',
 			'czepiec kolczy i skórzana kurta)',
 			'tarcza',
-			'koń z siodłem i uprzężą ',
+			'koń z siodłem i uprzężą',
 		],
 	},
 	'GLADIATOR' : {
@@ -1160,7 +1175,7 @@ professions = {
 		},
 		'skills' : [
 			'unik',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
@@ -1172,17 +1187,17 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'szybkie wyciągnięcie',
-			'morderczy atak ',],[
+			'morderczy atak'],[
 			'bardzo silny',
-			'odporność psychiczna',],[
+			'odporność psychiczna'],[
 			'rozbrajanie',
-			'zapasy',],
+			'zapasy'],
 		],
 		'trappings' : [
 			'korbacz albo broń dwuręczna',
 			'kastet',
 			'średni pancerz (kaftan kolczy i skórzana kurta)',
-			'tarcza albo puklerz ',
+			'tarcza albo puklerz',
 		],
 	},
 	'GONIEC' : {
@@ -1212,26 +1227,26 @@ professions = {
 			'sekretne znaki (zwiadowców)',
 			'spostrzegawczość',
 			'sztuka przetrwania',
-			'unik ',
+			'unik',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'błyskawiczne przeładowanie',
 			'chodu!',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [[
 			'bardzo szybki',
-			'szósty zmysł',],[
+			'szósty zmysł'],[
 			'bardzo wytrzymały',
-			'bardzo silny',],
+			'bardzo silny'],
 		],
 		'trappings' : [
 			'kusza i 10 bełtów',
 			'lekki pancerz (skórzana kurta)',
 			'mikstura lecznicza',
-			'talizman szczęścia ',
+			'talizman szczęścia',
 		],
 	},
 	'GÓRNIK' : {
@@ -1263,19 +1278,19 @@ professions = {
 		],
 		'optional_skills' : [[
 			'ukrywanie się',
-			'powożenie',],[
-			'rzemiosło (górnictwo',
-			'górnictwo odkrywkowe)',],[
+			'powożenie'],[
+			'rzemiosło (górnictwo)',
+			'rzemiosło (górnictwo odkrywkowe)'],[
 			'wycena',
-			'sztuka przetrwania ',],
+			'sztuka przetrwania'],
 		],
 		'abilities' : [
 			'broń specjalna (dwuręczna)',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [[
 			'bardzo wytrzymały',
-			'urodzony wojownik',],
+			'urodzony wojownik'],
 		],
 		'trappings' : [
 			'broń dwuręczna (dwuręczny kilof)',
@@ -1283,7 +1298,7 @@ professions = {
 			'kilof',
 			'łopata',
 			'latarnia sztormowa',
-			'olej do latarni ',
+			'olej do latarni',
 		],
 	},
 	'GRABARZ' : {
@@ -1315,21 +1330,21 @@ professions = {
 			'sztuka przetrwania',
 			'unik',
 			'wiedza (Imperium)',
-			'wycena ',
+			'wycena',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
-			'odporność na choroby ',
+			'odporność na choroby',
 		],
 		'optional_abilities' : [[
 			'bardzo silny',
-			'odwaga',],
+			'odwaga'],
 		],
 		'trappings' : [
 			'smród',
 			'szpadel',
-			'raczka ',
+			'raczka',
 		],
 	},
 	'GRABIEŻCA' : {
@@ -1359,30 +1374,29 @@ professions = {
 			'opieka nad zwierzętami',
 			'przeszukiwanie',
 			'spostrzegawczość',
-			'tropienie ',
+			'tropienie',
 		],
 		'optional_skills' : [[
 			'jeździectwo',
-			'żeglarstwo',],
+			'żeglarstwo'],
 		],
 		'abilities' : [
-			'broń specjalna (dwuręczna',
 			'morderczy atak',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [[
-			'kawaleryjska',
-			'korbacze)',],
+     		'broń specjalna (dwuręczna)',
+			'broń specjalna (kawaleryjska)',
+			'broń specjalna (korbacze)'],
 		],
 		'trappings' : [
 			'sztylet albo 2 oszczepy',
 			'korbacz',
 			'broń dwuręczna albo lanca',
 			'broń jednoręczna',
-			'lekki pancerz (hełm',
-			'skórzane nogawice)',
+			'lekki pancerz (hełm i skórzane nogawice)',
 			'tarcza',
-			'tatuaże ',
+			'tatuaże',
 		],
 	},
 	'GUŚLARZ' : {
@@ -1410,30 +1424,30 @@ professions = {
 			'przeszukiwanie',
 			'splatanie magii',
 			'spostrzegawczość',
-			'wykrywanie magii ',
+			'wykrywanie magii',
 		],
 		'optional_skills' : [[
 			'opieka nad zwierzętami',
-			'targowanie',],[
+			'targowanie'],[
 			'przekonywanie',
-			'zastraszanie',],[
+			'zastraszanie'],[
 			'oswajanie',
-			'rzemiosło (aptekarstwo)',],[
+			'rzemiosło (aptekarstwo)'],[
 			'leczenie',
-			'hipnoza',],
+			'hipnoza'],
 		],
 		'abilities' : [
 			'gusła',
-			'magia prosta (gusła) ',
+			'magia prosta (gusła)',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'mikstura lecznicza',
-			'płaszcz z kapturem ',
+			'płaszcz z kapturem',
 		],
 	},
-	'HANDLARZ KO�MI' : {
+	'HANDLARZ KOŃMI' : {
 		'atrributes_main' : {
 			'WW': 0, 
 			'US': 5, 
@@ -1462,11 +1476,11 @@ professions = {
 			'spostrzegawczość',
 			'targowanie',
 			'wycena',
-			'znajomość języka (kislevski) ',
+			'znajomość języka (kislevski)',
 		],
 		'optional_skills' : [[
 			'mocna głowa',
-			'przekonywanie',],
+			'przekonywanie'],
 		],
 		'abilities' : [
 			'broń specjalna (unieruchamiająca)',
@@ -1474,14 +1488,13 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'chodu!',
-			'rozjemca ',],
+			'rozjemca'],
 		],
 		'trappings' : [
-			'Nie można wyglądać byle jak',
-			'gdy próbuje się sprzedawać drogie towary',
-			'dlatego handlarze są zawsze wyposażeni w zestaw zdobionej odzieży. Wielu z nich nosi przy sobie również lasso lub bicz',
-			'by kontrolować swoje stada. Ponadto zawsze mają kilka koni gotowych na sprzedaż (1d5 o różnej jakości) i trochę monet na łapówki',
-			'karmę i stajnie (1d10 zk). ',
+			'ubranie dobrej jakości',
+			'lasso albo bicz',
+			'1k10/2 koni',
+			'1k10 zk',
 		],
 	},
 	'HARCOWNIK' : {
@@ -1511,7 +1524,7 @@ professions = {
 			'sztuka przetrwania',
 			'ukrywanie się',
 			'wiedza (skaveny)',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
@@ -1519,14 +1532,14 @@ professions = {
 			'artylerzysta',
 			'błyskawiczne przeładowanie',
 			'broń specjalna (palna)',
-			'grotołaz ',
+			'grotołaz',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'broń jednoręczna',
-			'muszkiet spaczeniowy albo 2 pistolety spaczeniowe albo 2 kule trującego wichru ',
+			'muszkiet spaczeniowy albo 2 pistolety spaczeniowe albo 2 kule trującego wichru',
 		],
 	},
 	'HIENA CMENTARNA' : {
@@ -1556,25 +1569,25 @@ professions = {
 			'spostrzegawczość',
 			'wspinaczka',
 			'wycena',
-			'znajomość języka (eltharin',
 		],
 		'optional_skills' : [[
 			'wiedza (Imperium)',
-			'sekretne znaki (złodziei)',],[
-			'khazalid',
-			'klasyczny) ',],[
+			'sekretne znaki (złodziei)'],[
+     		'znajomość języka (eltharin)',
+			'znajomość języka (khazalid)',
+			'znajomość języka (klasyczny)'],[
 			'ukrywanie się',
-			'sztuka przetrwania',],[
+			'sztuka przetrwania'],[
 			'otwieranie zamków',
-			'skradanie się',],
+			'skradanie się'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'szczęście',
-			'szósty zmysł',],[
+			'szósty zmysł'],[
 			'wykrywanie pułapek',
-			'grotołaz ',],
+			'grotołaz'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
@@ -1582,7 +1595,7 @@ professions = {
 			'latarnia',
 			'olej do latarni',
 			'10 metrów liny',
-			'2 worki ',
+			'2 worki',
 		],
 	},
 	'KADET' : {
@@ -1613,29 +1626,29 @@ professions = {
 			'nauka (strategia/taktyka)',
 			'sekretny język (bitewny)',
 			'spostrzegawczość',
-			'wiedza (Bretonia',
 			'znajomość języka (klasyczny)',
-			'znajomość języka (bretoński',
 		],
 		'optional_skills' : [[
-			'staroświatowy',
-			'tileański) ',],[
-			'Imperium',
-			'Tilea)',],
+     		'znajomość języka (bretoński)',
+			'znajomość języka (staroświatowy)',
+			'znajomość języka (tileański)'],[
+     		'wiedza (Bretonia)',
+			'wiedza (Imperium)',
+			'wiedza (Tilea)'],
 		],
 		'abilities' : [
 			'broń specjalna (szermiercza)',
-			'rozbrajanie ',
+			'rozbrajanie',
 		],
 		'optional_abilities' : [[
 			'błyskotliwość',
-			'urodzony wojownik',],
+			'urodzony wojownik'],
 		],
 		'trappings' : [
 			'floret albo rapier',
 			'lekki pancerz (pełna zbroja skórzana)',
 			'tarcza',
-			'mundur (kadeta) ',
+			'mundur (kadeta)',
 		],
 	},
 	'KANCIARZ' : {
@@ -1664,30 +1677,30 @@ professions = {
 			'przekonywanie',
 			'spostrzegawczość',
 			'wycena',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
 			'hazard',
-			'sekretne znaki (złodziei)',],[
-			'kuglarstwo (aktorstwo',
-			'gawędziarstwo)',],[
+			'sekretne znaki (złodziei)'],[
+			'kuglarstwo (aktorstwo)',
+			'kuglarstwo (gawędziarstwo)'],[
 			'plotkowanie',
-			'targowanie',],[
+			'targowanie'],[
 			'przeszukiwanie',
-			'sekretny język (złodziejski)',],
+			'sekretny język (złodziejski)'],
 		],
 		'abilities' : [
 			'przemawianie',
 		],
 		'optional_abilities' : [[
 			'chodu!',
-			'łotrzyk',],[
+			'łotrzyk'],[
 			'szczęście',
-			'szósty zmysł ',],
+			'szósty zmysł'],
 		],
 		'trappings' : [
 			'ubranie najlepszej jakości albo zestaw kości do gry albo talia kart',
-			'1d10 zk ',
+			'1d10 zk',
 		],
 	},
 	'KARTOGRAF' : {
@@ -1717,24 +1730,25 @@ professions = {
 			'nawigacja',
 			'rzemiosło (kartografia)',
 			'spostrzegawczość',
-			'znajomość języka (dowolne dwa) ',
+			'znajomość języka (dowolny)',
+     		'znajomość języka (dowolny)',
 		],
 		'optional_skills' : [[
 			'jeździectwo',
-			'sztuka przetrwania',],
+			'sztuka przetrwania'],
 		],
 		'abilities' : [
 			'bystry wzrok',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [[
 			'geniusz arytmetyczny',
-			'obieżyświat',],
+			'obieżyświat'],
 		],
 		'trappings' : [
 			'przybory do pisania',
 			'kuc z siodłem i uprzężą',
-			'1d10 opraw na mapy ',
+			'1d10 opraw na mapy',
 		],
 	},
 	'KLANBRAT' : {
@@ -1763,13 +1777,13 @@ professions = {
 			'sztuka przetrwania',
 			'ukrywanie się',
 			'wiedza (skaveny)',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'broń specjalna (proce)',
-			'grotołaz ',
+			'grotołaz',
 		],
 		'optional_abilities' : [
 		],
@@ -1777,7 +1791,7 @@ professions = {
 			'lekki pancerz (skórzana kurta i skórzany hełm)',
 			'broń jednoręczna',
 			'sztylet albo proca',
-			'tarcza ',
+			'tarcza',
 		],
 	},
 	'KOCZOWNIK' : {
@@ -1805,33 +1819,36 @@ professions = {
 			'jeździectwo',
 			'opieka nad zwierzętami',
 			'sztuka przetrwania',
-			'wiedza (Kraina Trolli) ',
+			'wiedza (Kraina Trolli)',
 		],
 		'optional_skills' : [[
 			'leczenie',
-			'ukrywanie się',],[
+			'ukrywanie się'],[
 			'tropienie',
-			'rzemiosło (łuczarstwo)',],[
+			'rzemiosło (łuczarstwo)'],[
 			'rzemiosło (gotowanie)',
-			'tresura',],[
+			'tresura'],[
 			'nawigacja',
-			'sekretne znaki (zwiadowców)',],[
+			'sekretne znaki (zwiadowców)'],[
 			'kuglarstwo (taniec)',
-			'spostrzegawczość',],[
+			'spostrzegawczość'],[
 			'mocna głowa',
-			'oswajanie',],
+			'oswajanie'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'twardziel',
-			'wędrowiec ',],
+			'wędrowiec'],
 		],
 		'trappings' : [
-			'Koczownicy są przyzwyczajeni do surowości ich krainy',
-			'dlatego są odpowiednio wyposażeni. Solidny kislevski koń z siodłem i uprzężą i zapasy na co najmniej tydzień',
-			'kilka bukłaków wody i kumysu oraz jurta zapewnia im przetrwanie wśród lodowatego zimowego wiatru. Step to równie dom dla drapieżnych bestii i przerażających potworów',
-			'dlatego nomadzi noszą skórzane kurty i nogawice oraz zawsze mają w zanadrzu kislevski łuk konny z zapasem 10 strzał. ',
+			'kislevski koń z siodłem i uprzężą',
+     		'zapasy na tydzień',
+			'kilka bukłaków wody i kumysu',
+     		'jurta',
+			'skórzana kurta i nogawice'
+     		'kislevski łuk konny',
+     		'10 strzał',
 		],
 	},
 	'KOMINIARZ' : {
@@ -1863,21 +1880,21 @@ professions = {
 			'spostrzegawczość',
 			'targowanie',
 			'wiedza (Imperium)',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
-			'łotrzyk ',
+			'łotrzyk',
 		],
 		'optional_abilities' : [[
 			'bardzo silny',
-			'człowiek-guma',],
+			'człowiek-guma'],
 		],
 		'trappings' : [
 			'szczota',
 			'hak',
-			'1O metrów liny ',
+			'1O metrów liny',
 		],
 	},
 	'KORSARZ' : {
@@ -1905,40 +1922,37 @@ professions = {
 			'mocna głowa',
 			'pływanie',
 			'unik',
-			'wiedza (Bretonia',
-			'Estalia',
-			'Jałowa Kraina',
-			'Krainy Południowe',
-			'Lustria',
 			'wioślarstwo',
 			'wspinaczka',
-			'znajomość języka (bretoński',
-			'estalijski',
-			'żeglarstwo ',
+			'żeglarstwo',
 		],
 		'optional_skills' : [[
-			'Norska',
-			'Tilea)',],[
-			'staroświatowy',
-			'tileański)',],
+     		'wiedza (Bretonia)',
+			'wiedza (Norska)',
+     		'wiedza (Estalia)',
+			'wiedza (Jałowa Kraina)',
+			'wiedza (Krainy Południowe)',
+			'wiedza (Lustria)',
+			'wiedza (Tilea)'],[
+     		'znajomość języka (bretoński)',
+			'znajomość języka (estalijski)',
+			'znajomość języka (staroświatowy)',
+			'znajomość języka (tileański)'],
 		],
 		'abilities' : [
-			'obieżyświat ',
+			'obieżyświat',
 		],
 		'optional_abilities' : [[
 			'groźny',
-			'silny cios',],[
+			'silny cios'],[
 			'bijatyka',
-			'twardziel',],
+			'twardziel'],
 		],
 		'trappings' : [
 			'broń jednoręczna',
-			'średni pancerz (hełm',
-			'kaftan kolczy',
-			'skórzany hełm',
-			'skórzane nogawice)',
+			'średni pancerz (hełm, kaftan kolczy, skórzany hełm, skórzane nogawice)',
 			'tarcza',
-			'tatuaże ',
+			'tatuaże',
 		],
 	},
 	'KOZAK KISLEVSKI' : {
@@ -1969,23 +1983,22 @@ professions = {
 			'sztuka przetrwania',
 			'unik',
 			'wiedza (Kislev)',
-			'znajomość języka (kislevski) ',
+			'znajomość języka (kislevski)',
 		],
 		'optional_skills' : [[
 			'hazard',
-			'targowanie',],
+			'targowanie'],
 		],
 		'abilities' : [
 			'broń specjalna (dwuręczna)',
-			'morderczy atak ',
+			'morderczy atak',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'łuk i 10 strzał',
 			'broń dwuręczna (dwuręczny topór)',
-			'średni pancerz (kolczuga',
-			'skórzana kurta i skórzane nogawice) ',
+			'średni pancerz (kolczuga, skórzana kurta i skórzane nogawice)',
 		],
 	},
 	'LATARNIK' : {
@@ -2015,25 +2028,25 @@ professions = {
 			'sztuka przetrwania',
 			'targowanie',
 			'wiedza (Imperium)',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [[
 			'mocna głowa',
-			'powożenie',],
+			'powożenie'],
 		],
 		'abilities' : [
 			'bijatyka',
-			'chodu! ',
+			'chodu!',
 		],
 		'optional_abilities' : [[
 			'błyskotliwość',
-			'bystry wzrok',],
+			'bystry wzrok'],
 		],
 		'trappings' : [
 			'latarnia (oraz latarnia sztormowa)',
 			'20 zapałek',
 			'hubka i krzesiwo',
-			'8 świec woskowych ',
+			'8 świec woskowych',
 		],
 	},
 	'LEŚNIK' : {
@@ -2063,27 +2076,27 @@ professions = {
 			'skradanie się',
 			'spostrzegawczość',
 			'ukrywanie się',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [[
 			'tropienie',
-			'zastawianie pułapek',],
+			'zastawianie pułapek'],
 		],
 		'abilities' : [
 			'broń specjalna (dwuręczna)',
-			'wędrowiec ',
+			'wędrowiec',
 		],
 		'optional_abilities' : [[
 			'bardzo szybki',
-			'niezwykle odporny',],
+			'niezwykle odporny'],
 		],
 		'trappings' : [
 			'broń dwuręczna (dwuręczny topór)',
 			'lekki pancerz (skórzana kurta)',
-			'odtrutki ',
+			'odtrutki',
 		],
 	},
-	'�OWCA' : {
+	'ŁOWCA' : {
 		'atrributes_main' : {
 			'WW': 0, 
 			'US': 15, 
@@ -2109,31 +2122,31 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwania',
 			'tropienie',
-			'ukrywanie się ',
+			'ukrywanie się',
 		],
 		'optional_skills' : [[
 			'przeszukiwanie',
-			'pływanie',],[
+			'pływanie'],[
 			'skradanie się',
-			'zastawianie pułapek',],
+			'zastawianie pułapek'],
 		],
 		'abilities' : [
 			'błyskawiczne przeładowanie',
 		],
 		'optional_abilities' : [[
-			'twardziel albo broń specjalna (długi łuk )',],[
+			'twardziel','broń specjalna (długi łuk )'],[
 			'strzelec wyborowy',
-			'wędrowiec',],[
+			'wędrowiec'],[
 			'szybki refleks',
-			'niezwykle odporny',],
+			'niezwykle odporny'],
 		],
 		'trappings' : [
 			'długi łuk i 10 strzał',
 			'2 potrzaski albo wnyki na zwierzęta',
-			'odtrutki ',
+			'odtrutki',
 		],
 	},
-	'�OWCA NAGRÓD' : {
+	'ŁOWCA NAGRÓD' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 10, 
@@ -2161,26 +2174,26 @@ professions = {
 			'sztuka przetrwania',
 			'śledzenie',
 			'tropienie',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'broń specjalna (unieruchamiająca)',
-			'wędrowiec ',
+			'wędrowiec',
 		],
 		'optional_abilities' : [[
 			'strzelec wyborowy',
-			'ogłuszanie',],[
+			'ogłuszanie'],[
 			'strzał mierzony',
-			'silny cios',],
+			'silny cios'],
 		],
 		'trappings' : [
 			'kusza i 10 bełtów',
 			'sieć',
 			'lekki pancerz (skórzany kaftan i skórzany hełm)',
 			'kajdany',
-			'10 metrów liny ',
+			'10 metrów liny',
 		],
 	},
 	'MIESZCZANIN' : {
@@ -2210,28 +2223,28 @@ professions = {
 			'spostrzegawczość',
 			'targowanie',
 			'wycena',
-			'znajomość języka (bretoński',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
-			'kislevski',
-			'tileański)',],[
+     		'znajomość języka (bretoński)',
+			'znajomość języka (kislevski)',
+			'znajomość języka (tileański)'],[
 			'plotkowanie',
-			'czytanie i pisanie',],[
+			'czytanie i pisanie'],[
 			'wiedza (Imperium)',
-			'mocna głowa',],
+			'mocna głowa'],
 		],
 		'abilities' : [
-			'żyłka handlowa ',
+			'żyłka handlowa',
 		],
 		'optional_abilities' : [[
 			'błyskotliwość',
-			'charyzmatyczny',],
+			'charyzmatyczny'],
 		],
 		'trappings' : [
 			'ubranie dobrej jakości',
 			'liczydło',
-			'latarnia ',
+			'latarnia',
 		],
 	},
 	'MYTNIK' : {
@@ -2261,26 +2274,26 @@ professions = {
 			'spostrzegawczość',
 			'unik',
 			'wycena',
-			'znajomość języka (bretoński',
 		],
 		'optional_skills' : [[
-			'kislevski',
-			'tileański) ',],[
+     		'znajomość języka (bretoński)',
+			'znajomość języka (kislevski)',
+			'znajomość języka (tileański)'],[
 			'plotkowanie',
-			'targowanie',],
+			'targowanie'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'szybki refleks',
-			'strzelec wyborowy ',],
+			'strzelec wyborowy'],
 		],
 		'trappings' : [
 			'kusza i 10 bełtów',
 			'średni pancerz (kaftan kolczy i skórzany kaftan)',
 			'tarcza',
 			'zamykana na kłódkę skrzynia',
-			'1k10 zk ',
+			'1k10 zk',
 		],
 	},
 	'NAJEMNIK' : {
@@ -2306,37 +2319,37 @@ professions = {
 		},
 		'skills' : [
 			'sekretny język (bitewny)',
-			'wiedza (Bretonia',
 		],
 		'optional_skills' : [[
 			'znajomość języka (tileański)',
-			'pływanie ',],[
+			'pływanie'],[
 			'plotkowanie',
-			'targowanie',],[
+			'targowanie'],[
 			'powożenie',
-			'jeździectwo',],[
+			'jeździectwo'],[
 			'spostrzegawczość',
-			'przeszukiwanie',],[
-			'Kislev',
-			'Tilea)',],[
+			'przeszukiwanie'],[
+     		'wiedza (Bretonia)',
+			'wiedza (Kislev)',
+			'wiedza (Tilea)'],[
 			'opieka nad zwierzętami',
-			'hazard',],
+			'hazard'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'strzał mierzony',
-			'ogłuszanie ',],[
+			'ogłuszanie'],[
 			'rozbrajanie',
-			'szybkie wyciągnięcie',],[
+			'szybkie wyciągnięcie'],[
 			'błyskawiczne przeładowanie',
-			'silny cios',],
+			'silny cios'],
 		],
 		'trappings' : [
 			'kusza i 10 bełtów',
 			'średni pancerz (kaftan kolczy i skórzana kurta)',
 			'tarcza',
-			'mikstura lecznicza ',
+			'mikstura lecznicza',
 		],
 	},
 	'NIEWOLNIK' : {
@@ -2366,7 +2379,7 @@ professions = {
 			'spostrzegawczość',
 			'ukrywanie się',
 			'wiedza (skaveny)',
-			'znajomość języka (queekish) ',
+			'znajomość języka (queekish)',
 		],
 		'optional_skills' : [
 		],
@@ -2374,12 +2387,12 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'bystry wzrok',
-			'czuły słuch',],[
+			'czuły słuch'],[
 			'chodu!',
-			'twardziel ',],
+			'twardziel'],
 		],
 		'trappings' : [
-			'brak ',
+			'brak',
 		],
 	},
 	'OCHOTNIK' : {
@@ -2409,25 +2422,25 @@ professions = {
 			'rzemiosło (dowolne)',
 			'spostrzegawczość',
 			'sztuka przetrwania',
-			'unik ',
+			'unik',
 		],
 		'optional_skills' : [[
 			'hazard',
-			'plotkowanie',],[
+			'plotkowanie'],[
 			'powożenie',
-			'pływanie',],
+			'pływanie'],
 		],
 		'abilities' : [
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [[
 			'broń specjalna (dwuręczna)',
-			'broń specjalna (błyskawiczne przeładowanie)',],
+			'błyskawiczne przeładowanie'],
 		],
 		'trappings' : [
 			'halabarda albo łuk i IO strzał',
 			'lekki pancerz (skórzana kurta i skórzany hełm)',
-			'mundur ',
+			'mundur',
 		],
 	},
 	'OCHRONIARZ' : {
@@ -2455,7 +2468,7 @@ professions = {
 			'leczenie',
 			'spostrzegawczość',
 			'unik',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
@@ -2464,19 +2477,19 @@ professions = {
 			'broń specjalna (parująca)',
 			'broń specjalna (rzucana)',
 			'ogłuszanie',
-			'ogłuszanie ',
+			'ogłuszanie',
 		],
 		'optional_abilities' : [[
 			'rozbrajanie',
-			'szybkie wyciągnięcie',],[
+			'szybkie wyciągnięcie'],[
 			'bardzo silny',
-			'niezwykle odporny',],
+			'niezwykle odporny'],
 		],
 		'trappings' : [
 			'dwa topory albo noże do rzucania',
 			'kastety',
 			'lekki pancerz (skórzana kurta)',
-			'puklerz ',
+			'puklerz',
 		],
 	},
 	'OPRYCH' : {
@@ -2505,28 +2518,28 @@ professions = {
 			'mocna głowa',
 			'sekretny język (złodziejski)',
 			'unik',
-			'zasuszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'ogłuszanie',
-			'rozbrajanie ',
+			'rozbrajanie',
 		],
 		'optional_abilities' : [[
 			'morderczy atak',
-			'zapasy',],[
+			'zapasy'],[
 			'odporność na trucizny',
-			'szybkie wyciągnie',],[
+			'szybkie wyciągnie'],[
 			'opanowanie',
-			'szybki refleks',],
+			'szybki refleks'],
 		],
 		'trappings' : [
 			'kastety',
-			'średni pancerz (kaftan kolczy i skórzany kaftan) ',
+			'średni pancerz (kaftan kolczy i skórzany kaftan)',
 		],
 	},
-	'PACHO�EK' : {
+	'PACHOŁEK' : {
 		'atrributes_main' : {
 			'WW': 10, 
 			'US': 0, 
@@ -2553,7 +2566,7 @@ professions = {
 			'plotkowanie',
 			'spostrzegawczość',
 			'unik',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
@@ -2561,7 +2574,7 @@ professions = {
 			'bijatyka',
 			'broń specjalna (dwuręczna)',
 			'morderczy atak',
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [
 		],
@@ -2569,7 +2582,7 @@ professions = {
 			'halabarda',
 			'lekki pancerz (skórzana kurta',
 			'skórzany hełm)',
-			'mundur z godłem lub znakiem przynależności do pocztu rycerza ',
+			'mundur z godłem lub znakiem przynależności do pocztu rycerza',
 		],
 	},
 	'PASTERZ Z CARCASSONNE' : {
@@ -2600,14 +2613,14 @@ professions = {
 			'spostrzegawczość',
 			'unik',
 			'wspinaczka',
-			'zastawianie pułapek ',
+			'zastawianie pułapek',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'bardzo szybki',
 			'chodu!',
-			'strzał mierzony ',
+			'strzał mierzony',
 		],
 		'optional_abilities' : [
 		],
@@ -2616,7 +2629,7 @@ professions = {
 			'łuk i 10 strzał',
 			'bretoński bosak (kij)',
 			'bretoński owczarek błękitny',
-			'stado owiec lub baranów ',
+			'stado owiec lub baranów',
 		],
 	},
 	'PAŹ' : {
@@ -2647,27 +2660,27 @@ professions = {
 			'przeszukiwanie',
 			'spostrzegawczość',
 			'targowanie',
-			'wycena ',
+			'wycena',
 		],
 		'optional_skills' : [[
 			'plotkowanie',
-			'znajomość języka (bretoński',
-			'staroświatowy)',],
+			'znajomość języka (bretoński)',
+			'znajomość języka (staroświatowy)'],
 		],
 		'abilities' : [
 			'etykieta',
 		],
 		'optional_abilities' : [[
 			'opanowanie',
-			'charyzmatyczny',],[
+			'charyzmatyczny'],[
 			'żyłka handlowa',
-			'obieżyświat ',],
+			'obieżyświat'],
 		],
 		'trappings' : [
 			'2 komplety ubrań najlepszej jakości',
 			'liberia',
 			'perfumy',
-			'mieszek ',
+			'mieszek',
 		],
 	},
 	'PIELGRZYM' : {
@@ -2697,23 +2710,23 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwania',
 			'targowanie',
-			'wiedza i znajomość języka (dowolne',
-			'związana z charakterem lub trasą pielgrzymki) ',
+			'wiedza (dowolna)',
+     		'znajomość języka (dowolny)',
 		],
 		'optional_skills' : [[
 			'nauka (teologia)',
-			'mocna głowa',],[
+			'mocna głowa'],[
 			'plotkowanie',
-			'nawigacja',],
+			'nawigacja'],
 		],
 		'abilities' : [
 			'niezwykle odporny',
-			'obieżyświat ',
+			'obieżyświat',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
-			'symbol religijny ',
+			'symbol religijny',
 		],
 	},
 	'PIELGRZYM GRAALA' : {
@@ -2743,7 +2756,7 @@ professions = {
 			'sztuka przetrwania',
 			'unik',
 			'wiedza (Bretonia)',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
@@ -2753,14 +2766,14 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'niezwykle odporny',
-			'twardziel',],[
+			'twardziel'],[
 			'odporność psychiczna',
-			'odwaga ',],
+			'odwaga'],
 		],
 		'trappings' : [
 			'halabarda',
 			'lekki pancerz (skórzana kurta)',
-			'relikwie (resztki ekwipunku rycerza Graala) ',
+			'relikwie (resztki ekwipunku rycerza Graala)',
 		],
 	},
 	'PIRAT RZECZNY' : {
@@ -2786,34 +2799,34 @@ professions = {
 		},
 		'skills' : [
 			'pływanie',
-			'wioślarstwo ',
+			'wioślarstwo',
 		],
 		'optional_skills' : [[
 			'przeszukiwanie',
-			'spostrzegawczość',],[
+			'spostrzegawczość'],[
 			'sekretne znaki (łowców)',
-			'znajomość języka (kislevski)',],[
-			'wiedza (Imperium',
-			'Kislev)',],[
+			'znajomość języka (kislevski)'],[
+			'wiedza (Imperium)',
+			'wiedza (Kislev)'],[
 			'mocna głowa',
-			'unik',],[
+			'unik'],[
 			'sztuka przetrwania',
-			'żeglarstwo',],[
+			'żeglarstwo'],[
 			'hazard',
-			'nawigacja',],
+			'nawigacja'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'wędrowiec',
-			'wyczucie kierunku ',],[
+			'wyczucie kierunku'],[
 			'ogłuszanie',
-			'strzał mierzony',],
+			'strzał mierzony'],
 		],
 		'trappings' : [
 			'łuk i 10 strzał',
 			'lekki pancerz (skórzana kurta)',
-			'łódź wiosłowa ',
+			'łódź wiosłowa',
 		],
 	},
 	'PODŻEGACZ' : {
@@ -2842,28 +2855,28 @@ professions = {
 			'przekonywanie',
 			'spostrzegawczość',
 			'ukrywanie się',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
 			'nauka (prawo)',
-			'wiedza (Imperium)',],[
-			'znajomość języka (bretoński',
-			'tileański)',],[
+			'wiedza (Imperium)'],[
+			'znajomość języka (bretoński)',
+			'znajomość języka (tileański)'],[
 			'nauka (historia)',
-			'plotkowanie',],
+			'plotkowanie'],
 		],
 		'abilities' : [
 			'chodu!',
-			'przemawianie ',
+			'przemawianie',
 		],
 		'optional_abilities' : [[
 			'opanowanie',
-			'bijatyka',],
+			'bijatyka'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'ubranie dobrej jakości',
-			'2k10 ulotek różnej treści ',
+			'2k10 ulotek różnej treści',
 		],
 	},
 	'POGANIACZ' : {
@@ -2895,7 +2908,7 @@ professions = {
 			'tresura',
 			'ukrywanie się',
 			'wiedza (skaveny)',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
@@ -2903,7 +2916,7 @@ professions = {
 			'broń specjalna (dwuręczna)',
 			'broń specjalna (unieruchamiająca)',
 			'grotołaz',
-			'mistrz tresury ',
+			'mistrz tresury',
 		],
 		'optional_abilities' : [
 		],
@@ -2912,10 +2925,10 @@ professions = {
 			'broń jednoręczna',
 			'bicz',
 			'łapacz',
-			'1 olbrzymi szczur ',
+			'1 olbrzymi szczur',
 		],
 	},
-	'POGANIACZ BYD�A' : {
+	'POGANIACZ BYDŁA' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 10, 
@@ -2943,13 +2956,15 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwanie',
 			'śledzenie',
-			'znajomość język (kislevski lub Ungołów) ',
 		],
 		'optional_skills' : [[
-			'wiedza (Kislev',
-			'Kraina Trolli)',],[
+			'wiedza (Kislev)',
+			'wiedza (Kraina Trolli)'],[
 			'oswajanie',
-			'tresura',],
+			'tresura'],[
+     		'znajomość języka (kislevski)',
+     		'znajomość języka (Ungołów)',
+      ]
 		],
 		'abilities' : [
 			'broń specjalna (unieruchamiająca)',
@@ -2957,16 +2972,18 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'obieżyświat',
-			'wędrowiec',],
+			'wędrowiec'],
 		],
 		'trappings' : [
-			'Wszyscy poganiacze posiadają co najmniej jednego psa pasterskiego i kislevskiego rumaka wraz z siodłem i uprzężą. Używają lassa',
-			'by zaganiać nieposłuszne stada. Dla własnego użytku zawsze mają przy sobie racje żywnościowe na kilka dni oraz kilka bukłaków z kwasem i wodą',
-			'a również jurtę',
-			'w której może się schronić. Kolejnym niezbędnym wyposażeniem jest pancerz: zwykle skórzana kurta i spodnie. ',
+			'pies pasterski',
+     		'kislevski rumak z siodłem i uprzężą',
+     		'lasso',
+     		'jurta',
+     		'lekki pancerz (skórzana kurta i spodnie)',
+     		'racje żywnościowe na kilka dni oraz kilka bukłaków z kwasem i wodą'
 		],
 	},
-	'POGANIACZ MU�ÓW' : {
+	'POGANIACZ MUŁÓW' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 10, 
@@ -2996,20 +3013,20 @@ professions = {
 			'targowanie',
 			'wiedza (Złe Ziemie)',
 			'wycena',
-			'znajomość języka (dowolny) ',
+			'znajomość języka (dowolny)',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'obieżyświat',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'trzy muły',
-			'łuk ',
+			'łuk',
 		],
 	},
 	'POGRANICZNIK' : {
@@ -3041,18 +3058,18 @@ professions = {
 			'sztuka przetrwania',
 			'tropienie',
 			'ukrywanie się',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'szósty zmysł',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
-			'sprzęt do wspinaczki ',
+			'sprzęt do wspinaczki',
 		],
 	},
 	'POKUTNIK' : {
@@ -3082,23 +3099,23 @@ professions = {
 			'nauka (teologia)',
 			'plotkowanie',
 			'torturowanie',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'niezwykle odporny',
 			'ogłuszanie',
-			'twardziel ',
+			'twardziel',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'kańczug',
-			'symbol religijny ',
+			'symbol religijny',
 		],
 	},
-	'PORYWACZ ZW�OK' : {
+	'PORYWACZ ZWŁOK' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 5, 
@@ -3125,26 +3142,26 @@ professions = {
 			'sekretne znaki (złodziei)',
 			'skradanie się',
 			'spostrzegawczość',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [[
 			'plotkowanie',
-			'targowanie',],
+			'targowanie'],
 		],
 		'abilities' : [
 			'chodu!',
-			'odporność na choroby ',
+			'odporność na choroby',
 		],
 		'optional_abilities' : [[
 			'łotrzyk',
-			'odporność psychiczna',],
+			'odporność psychiczna'],
 		],
 		'trappings' : [
 			'latarnia',
 			'olej do latarni',
 			'kilof',
 			'łopata',
-			'worek ',
+			'worek',
 		],
 	},
 	'POSKRAMIACZ NIEDŹWIEDZI' : {
@@ -3172,32 +3189,30 @@ professions = {
 			'opieka nad zwierzętami',
 			'oswajanie',
 			'tresura',
-			'znajomość języka (kislevski) ',
+			'znajomość języka (kislevski)',
 		],
 		'optional_skills' : [[
 			'kuglarstwo (dowolne)',
-			'spostrzegawczość',],[
+			'spostrzegawczość'],[
 			'mocna głowa',
-			'plotkowanie',],
+			'plotkowanie'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'niezwykle odporny',
-			'zapasy',],[
+			'zapasy'],[
 			'szybki refleks',
-			'przemawianie ',],[
+			'przemawianie'],[
 			'opanowanie',
-			'bardzo silny',],
+			'bardzo silny'],
 		],
 		'trappings' : [
-			'Bear tamers find that a bit of armour goes a long way towards deflecting the claws of an unruly or grouchy bear and so most wear at least leather jacks. As well',
-			'every bear tamer needs a collar and chain for his beast',
-			'and a whip or goad can’t hurt. A starting bear tamer must also have a bear',
-			'which he can train over the course of his career. ',
+			'lekki pancerz (skórzana kurta)',
+			'niedźwiedź'
 		],
 	},
-	'POS�ANIEC' : {
+	'POSŁANIEC' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 5, 
@@ -3226,16 +3241,16 @@ professions = {
 			'sekretne znaki (zwiadowców)',
 			'spostrzegawczość',
 			'sztuka przetrwania',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
-			'wiedza (Imperium',
-			'Jałowa Kraina)',
-			'plotkowanie',],
+			'wiedza (Imperium)',
+			'wiedza (Jałowa Kraina)',
+			'plotkowanie'],
 		],
 		'abilities' : [
 			'obieżyświat',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [
 		],
@@ -3243,10 +3258,10 @@ professions = {
 			'lekki pancerz (skórzana kurta)',
 			'tarcza',
 			'koń z siodłem i uprzężą (albo kuc dla niziołków)',
-			'tuba na mapy ',
+			'tuba na mapy',
 		],
 	},
-	'POS�ANIEC NOCY' : {
+	'POSŁANIEC NOCY' : {
 		'atrributes_main' : {
 			'WW': 10, 
 			'US': 10, 
@@ -3275,7 +3290,7 @@ professions = {
 			'ukrywanie się',
 			'unik',
 			'wiedza (skaveny)',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
@@ -3283,16 +3298,16 @@ professions = {
 			'bardzo szybki',
 			'grotołaz',
 			'wędrowiec',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [[
 			'broń specjalna (proce)',
-			'broń specjalna (rzucana)',],
+			'broń specjalna (rzucana)'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzany kaftan)',
 			'2 sztuki broni jednoręcznej',
-			'proca albo 4 gwiazdki do rzucania ',
+			'proca albo 4 gwiazdki do rzucania',
 		],
 	},
 	'PRAWNIK' : {
@@ -3322,29 +3337,29 @@ professions = {
 			'sekretny język (gildii)',
 			'spostrzegawczość',
 			'wiedza (Imperium)',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
-			'nauka (genealogia/heraldyka',
-			'historia)',],[
+			'nauka (genealogia/heraldyka)',
+			'nauka (historia)'],[
 			'plotkowanie',
-			'targowanie',],[
+			'targowanie'],[
 			'gadanina',
-			'przekonywanie',],
+			'przekonywanie'],
 		],
 		'abilities' : [
-			'przemawianie ',
+			'przemawianie',
 		],
 		'optional_abilities' : [[
 			'etykieta',
-			'żyłka handlowa',],[
+			'żyłka handlowa'],[
 			'błyskotliwość',
-			'charyzmatyczny',],
+			'charyzmatyczny'],
 		],
 		'trappings' : [
 			'broń jednoręczna',
 			'kodeks prawa Imperium',
-			'przybory do pisania ',
+			'przybory do pisania',
 		],
 	},
 	'PRZEMYTNIK' : {
@@ -3380,21 +3395,21 @@ professions = {
 		],
 		'optional_skills' : [[
 			'plotkowanie',
-			'sekretny język (złodziejski)',],[
-			'znajomość języka (bretoński',
-			'kislevski)',
-			'sekretne znaki złodziei ',],
+			'sekretny język (złodziejski)'],[
+			'znajomość języka (bretoński)',
+			'znajomość języka (kislevski)',
+			'sekretne znaki (złodziei)'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'żyłka handlowa',
-			'łotrzyk ',],
+			'łotrzyk'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'koń pociągowy i wóz albo łódź wiosłowa',
-			'2 pochodnie ',
+			'2 pochodnie',
 		],
 	},
 	'PRZEPATRYWACZ' : {
@@ -3425,17 +3440,17 @@ professions = {
 			'skradanie się',
 			'spostrzegawczość',
 			'sztuka przetrwania',
-			'tropienie ',
+			'tropienie',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'broń specjalna (unieruchamiająca)',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [[
 			'opanowanie',
-			'bardzo silny',],
+			'bardzo silny'],
 		],
 		'trappings' : [
 			'łuk albo kusza i 10 strzał albo bełtów',
@@ -3444,7 +3459,7 @@ professions = {
 			'lekki pancerz (skórzana kurta)',
 			'tarcza',
 			'koń z siodłem i uprzężą',
-			'10m liny ',
+			'10m liny',
 		],
 	},
 	'PRZEWOŹNIK' : {
@@ -3478,21 +3493,21 @@ professions = {
 		],
 		'optional_skills' : [[
 			'plotkowanie',
-			'zastraszanie',],[
+			'zastraszanie'],[
 			'wycena',
-			'sekretny język (łowców) ',],
+			'sekretny język (łowców)'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'strzelec wyborowy',
-			'charyzmatyczny ',],[
+			'charyzmatyczny'],[
 			'broń specjalna (dowolna)',
-			'broń specjalna (bijatyka)',],
+			'bijatyka'],
 		],
 		'trappings' : [
 			'kusza i 10 bełtów albo garłacz z zapasem amunicji na 10 strzałów',
-			'lekki pancerz (skórzana kurta) ',
+			'lekki pancerz (skórzana kurta)',
 		],
 	},
 	'PUSTELNIK' : {
@@ -3521,7 +3536,7 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwania',
 			'ukrywanie się',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
@@ -3530,15 +3545,15 @@ professions = {
 			'odporność na trucizny',
 			'odwaga',
 			'twardziel',
-			'wędrowiec ',
+			'wędrowiec',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
-			'brak ',
+			'brak',
 		],
 	},
-	'ROGATY �OWCA' : {
+	'ROGATY ŁOWCA' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 5, 
@@ -3565,24 +3580,24 @@ professions = {
 			'skradanie się',
 			'spostrzegawczość',
 			'ukrywanie się',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [[
 			'tropienie',
-			'zastawianie pułapek',],
+			'zastawianie pułapek'],
 		],
 		'abilities' : [
 			'szał bojowy',
-			'twardziel ',
+			'twardziel',
 		],
 		'optional_abilities' : [[
 			'bardzo szybki',
-			'niezwykle odporny',],
+			'niezwykle odporny'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'broń jednoręczna (topór)',
-			'zestaw odtrutek ',
+			'zestaw odtrutek',
 		],
 	},
 	'ROLNIK' : {
@@ -3614,24 +3629,24 @@ professions = {
 			'rzemiosło (rolnictwo)',
 			'targowanie',
 			'wycena',
-			'zastawianie pułapek ',
+			'zastawianie pułapek',
 		],
 		'optional_skills' : [[
 			'przekonywanie',
-			'zastraszanie',],
+			'zastraszanie'],
 		],
 		'abilities' : [
 			'twardziel',
-			'żyłka handlowa ',
+			'żyłka handlowa',
 		],
 		'optional_abilities' : [[
 			'broń specjalna (kosa)',
-			'broń specjalna (cep)',],
+			'broń specjalna (cep)'],
 		],
 		'trappings' : [
 			'wóz z koniem lub wołem',
 			'broń dwuręczna (kosa) albo cep',
-			'pies pasterski ',
+			'pies pasterski',
 		],
 	},
 	'ROZJEMCA' : {
@@ -3663,7 +3678,7 @@ professions = {
 			'targowanie',
 			'wiedza (Bretonia)',
 			'wycena',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
@@ -3671,12 +3686,12 @@ professions = {
 			'charyzmatyczny',
 			'obieżyświat',
 			'przemawianie',
-			'żyłka handlowa ',
+			'żyłka handlowa',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
-			'owieczka albo świnia ',
+			'owieczka albo świnia',
 		],
 	},
 	'RYBAK' : {
@@ -3705,30 +3720,30 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwania',
 			'wioślarstwo',
-			'żeglarstwo ',
+			'żeglarstwo',
 		],
 		'optional_skills' : [[
 			'nawigacja',
-			'rzemiosło (handel)',],[
-			'znajomość języka (staroświatowy',
-			'norski)',],[
+			'rzemiosło (handel)'],[
+			'znajomość języka (staroświatowy)',
+			'znajomość języka (norski)'],[
 			'mocna głowa',
-			'targowanie',],[
-			'wiedza (Imperium',
-			'Jałowa Kraina)',],
+			'targowanie'],[
+			'wiedza (Imperium)',
+			'wiedza (Jałowa Kraina)'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'twardziel',
-			'błyskotliwość',],[
+			'błyskotliwość'],[
 			'wyczucie kierunku',
-			'bijatyka ',],
+			'bijatyka'],
 		],
 		'trappings' : [
 			'włócznia',
 			'sieć',
-			'lina z kotwiczką ',
+			'lina z kotwiczką',
 		],
 	},
 	'RZECZNIK RODU' : {
@@ -3761,22 +3776,22 @@ professions = {
 			'sekretny język (gildii)',
 			'spostrzegawczość',
 			'targowanie',
-			'wycena ',
+			'wycena',
 		],
 		'optional_skills' : [[
-			'wiedza (Imperium',
-			'Jałowa Kraina)',],
+			'wiedza (Imperium)',
+			'wiedza (Jałowa Kraina)'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'obieżyświat',
-			'żyłka handlowa ',],
+			'żyłka handlowa'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'2 komplety ubrań dobrej jakości',
-			'przybory do pisania ',
+			'przybory do pisania',
 		],
 	},
 	'RZEMIEŚLNIK' : {
@@ -3803,25 +3818,26 @@ professions = {
 		'skills' : [
 			'czytanie i pisanie',
 			'powożenie',
-			'rzemiosło (dowolne dwa)',
+			'rzemiosło (dowolne)',
+     		'rzemiosło (dowolne)',
 			'sekretny język (gildii)',
 			'spostrzegawczość',
 			'targowanie',
-			'wycena ',
+			'wycena',
 		],
 		'optional_skills' : [[
 			'opieka nad zwierzętami',
-			'plotkowanie',],
+			'plotkowanie'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'żyłka handlowa',
-			'błyskotliwość ',],
+			'błyskotliwość'],
 		],
 		'trappings' : [
-			'lekki pancerz (skórzana kaftan)',
-			'1k10 zk ',
+			'lekki pancerz (skórzany kaftan)',
+			'1k10 zk',
 		],
 	},
 	'RZEZIMIESZEK' : {
@@ -3848,28 +3864,28 @@ professions = {
 		'skills' : [
 			'jeździectwo',
 			'unik',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [[
 			'plotkowanie',
-			'targowanie',],
+			'targowanie'],
 		],
 		'abilities' : [
 			'bijatyka',
 			'morderczy atak',
 			'ogłuszanie',
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [[
 			'rozbrajanie',
-			'szybkie wyciągnięcie',],[
+			'szybkie wyciągnięcie'],[
 			'groźny',
-			'charyzmatyczny',],
+			'charyzmatyczny'],
 		],
 		'trappings' : [
 			'średni pancerz (kaftan kolczy i skórzana kurta)',
 			'tarcza',
-			'koń z siodłem i uprzężą ',
+			'koń z siodłem i uprzężą',
 		],
 	},
 	'SKALD' : {
@@ -3895,24 +3911,25 @@ professions = {
 		},
 		'skills' : [
 			'gadanina',
-			'kuglarstwo (dowolne dwa)',
+			'kuglarstwo (dowolne)',
+     'kuglarstwo (dowolne)',
 			'nauka (historia)',
 			'plotkowanie',
 			'przekonywanie',
 			'spostrzegawczość',
 			'wiedza (Norska)',
 			'wiedza (Pustkowia Chaosu)',
-			'znajomość języka (norski) ',
+			'znajomość języka (norski)',
 		],
 		'optional_skills' : [[
 			'brzuchomówstwo',
-			'znajomość języka (dowolne dwa)',],
+			'znajomość języka (dowolny)'],
 		],
 		'abilities' : [
 			'błyskotliwość',
 			'charyzmatyczny',
 			'naśladowca',
-			'przemawianie ',
+			'przemawianie',
 		],
 		'optional_abilities' : [
 		],
@@ -3921,7 +3938,7 @@ professions = {
 			'tarcza',
 			'lekki pancerz (skórzana kurta i skórzany hełm)',
 			'sztandar',
-			'zwoje z zapisanymi kronikami klanu i plemienia ',
+			'zwoje z zapisanymi kronikami klanu i plemienia',
 		],
 	},
 	'SKARBNIK' : {
@@ -3952,25 +3969,25 @@ professions = {
 			'plotkowanie',
 			'przekonywanie',
 			'targowanie',
-			'wycena ',
+			'wycena',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'geniusz arytmetyczny',
 			'intrygant',
-			'żyłka handlowa ',
+			'żyłka handlowa',
 		],
 		'optional_abilities' : [[
 			'błyskotliwość',
-			'charyzmatyczny',],
+			'charyzmatyczny'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'broń jednoręczna',
 			'liczydło',
 			'przybory do pisania',
-			'1k10/2 zk ',
+			'1k10/2 zk',
 		],
 	},
 	'SKRYBA' : {
@@ -4005,12 +4022,12 @@ professions = {
 		],
 		'optional_skills' : [[
 			'wiedza (Imperium)',
-			'plotkowanie',],[
-			'znajomość języka (staroświatowy',
-			'tileański) ',],
+			'plotkowanie'],[
+			'znajomość języka (staroświatowy)',
+			'znajomość języka (tileański)'],
 		],
 		'abilities' : [
-			'poliglota ',
+			'poliglota',
 		],
 		'optional_abilities' : [
 		],
@@ -4020,10 +4037,10 @@ professions = {
 			'5 zapałek',
 			'ilustrowana księga',
 			'przybory do pisania',
-			'wosk do pieczęci ',
+			'wosk do pieczęci',
 		],
 	},
-	'S�UGA' : {
+	'SŁUGA' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 0, 
@@ -4048,34 +4065,34 @@ professions = {
 			'gadanina',
 			'plotkowanie',
 			'spostrzegawczość',
-			'unik ',
+			'unik',
 		],
 		'optional_skills' : [[
 			'opieka nad zwierzętami',
-			'rzemiosło (gotowanie)',],[
+			'rzemiosło (gotowanie)'],[
 			'targowanie',
-			'wycena',],[
+			'wycena'],[
 			'czytanie i pisanie',
-			'zwinne palce',],[
+			'zwinne palce'],[
 			'powożenie',
-			'przeszukiwanie',],
+			'przeszukiwanie'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'czuły słuch',
-			'chodu!',],[
+			'chodu!'],[
 			'bardzo wytrzymały',
-			'szybki refleks',],[
+			'szybki refleks'],[
 			'etykieta',
-			'twardziel ',],
+			'twardziel'],
 		],
 		'trappings' : [
 			'ubranie dobrej jakości',
 			'manierka',
 			'krzesiwo i hubka',
 			'latarnia sztormowa',
-			'olej do latarni ',
+			'olej do latarni',
 		],
 	},
 	'STRAŻNIK' : {
@@ -4106,25 +4123,25 @@ professions = {
 			'spostrzegawczość',
 			'tropienie',
 			'unik',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'ogłuszanie',
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [[
 			'opanowanie',
-			'błyskotliwość',],[
+			'błyskotliwość'],[
 			'rozbrajanie',
-			'bijatyka',],
+			'bijatyka'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'mundur',
 			'latarnia na drągu',
-			'olej do latarni ',
+			'olej do latarni',
 		],
 	},
 	'STRAŻNIK DRÓG' : {
@@ -4159,26 +4176,26 @@ professions = {
 		],
 		'optional_skills' : [[
 			'tropienie',
-			'sekretne znaki (zwiadowców)',],[
+			'sekretne znaki (zwiadowców)'],[
 			'wiedza (Imperium)',
-			'plotkowanie ',],
+			'plotkowanie'],
 		],
 		'abilities' : [
 			'broń specjalna (palna)',
 		],
 		'optional_abilities' : [[
 			'szybkie wyciągnięcie',
-			'błyskawiczne przeładowanie ',],
+			'błyskawiczne przeładowanie'],
 		],
 		'trappings' : [
 			'pistolet z 10 kulami i zapasem prochu',
 			'średni pancerz (kaftan kolczy i skórzana kurta)',
 			'tarcza',
 			'lekki koń bojowy z siodłem i uprzężą (albo kuc dla niziołka)',
-			'10 metrów liny ',
+			'10 metrów liny',
 		],
 	},
-	'STRAŻNIK KANA�ÓW' : {
+	'STRAŻNIK KANAŁÓW' : {
 		'atrributes_main' : {
 			'WW': 10, 
 			'US': 5, 
@@ -4204,28 +4221,28 @@ professions = {
 			'spostrzegawczość',
 			'ukrywanie się',
 			'unik',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [[
 			'tropienie',
-			'sekretne znaki (zwiadowców)',],[
+			'sekretne znaki (zwiadowców)'],[
 			'przeszukiwanie',
-			'pływanie',],
+			'pływanie'],
 		],
 		'abilities' : [
 			'grotołaz',
 		],
 		'optional_abilities' : [[
 			'szybkie wyciągnięcie',
-			'odporność na choroby ',],
+			'odporność na choroby'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
 			'kusza i 10 bełtów',
-			'latarnia ',
+			'latarnia',
 		],
 	},
-	'STRAŻNIK PÓ�' : {
+	'STRAŻNIK PÓL' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 10, 
@@ -4251,28 +4268,28 @@ professions = {
 			'nauka (dowolna)',
 			'spostrzegawczość',
 			'znajomość języka (klasyczny)',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
 			'leczenie',
-			'przeszukiwanie',],[
+			'przeszukiwanie'],[
 			'nauka (dowolna)',
-			'plotkowanie',],[
+			'plotkowanie'],[
 			'przekonywanie',
-			'mocna głowa',],
+			'mocna głowa'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'etykieta',
-			'poliglota',],[
+			'poliglota'],[
 			'obieżyświat',
-			'geniusz arytmetyczny ',],[
+			'geniusz arytmetyczny'],[
 			'błyskotliwość',
-			'charyzmatyczny',],
+			'charyzmatyczny'],
 		],
 		'trappings' : [
-			'dwie księgi związane z wybraną dziedziną nauki. przybory do pisania ',
+			'dwie księgi związane z wybraną dziedziną nauki. przybory do pisania',
 		],
 	},
 	'STRAŻNIK RZECZNY' : {
@@ -4302,30 +4319,30 @@ professions = {
 			'przeszukiwanie',
 			'sekretne znaki (zwiadowców)',
 			'spostrzegawczość',
-			'wioślarstwo ',
+			'wioślarstwo',
 		],
 		'optional_skills' : [[
 			'plotkowanie',
-			'znajomość języka (kislevski)',],[
-			'wiedza (Imperium',
-			'Kislev)',],[
+			'znajomość języka (kislevski)'],[
+			'wiedza (Imperium)',
+			'wiedza (Kislev)'],[
 			'sztuka przetrwania',
-			'żeglarstwo',],
+			'żeglarstwo'],
 		],
 		'abilities' : [
-			'broń specjalna (palna) ',
+			'broń specjalna (palna)',
 		],
 		'optional_abilities' : [[
 			'bardzo silny',
-			'wyczucie kierunku',],
+			'wyczucie kierunku'],
 		],
 		'trappings' : [
-			'pistolet z amunicją i zapasem prochu na IO strzałów',
+			'pistolet z amunicją i zapasem prochu na 1O strzałów',
 			'lekki pancerz (skórzana kurta)',
 			'łódź wiosłowa',
 			'tarcza',
 			'mundur',
-			'10 metrów liny ',
+			'10 metrów liny',
 		],
 	},
 	'STRAŻNIK ŚWIĄTYNNY' : {
@@ -4355,21 +4372,21 @@ professions = {
 			'spostrzegawczość',
 			'unik',
 			'wiedza (dowolna)',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'ogłuszanie',
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [[
 			'opanowanie',
-			'odwaga',],
+			'odwaga'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
-			'szaty albo mundur ',
+			'szaty albo mundur',
 		],
 	},
 	'STRAŻNIK TUNELI' : {
@@ -4400,7 +4417,7 @@ professions = {
 			'spostrzegawczość',
 			'unik',
 			'wspinaczka',
-			'wycena ',
+			'wycena',
 		],
 		'optional_skills' : [
 		],
@@ -4408,7 +4425,7 @@ professions = {
 			'grotołaz',
 			'odporność na choroby',
 			'odporność na trucizny',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [
 		],
@@ -4416,10 +4433,10 @@ professions = {
 			'lekki pancerz (skórzana kurta)',
 			'latarnia',
 			'olej do latarni',
-			'10 metrów liny ',
+			'10 metrów liny',
 		],
 	},
-	'STRAŻNIK WI�ZIENNY' : {
+	'STRAŻNIK WIĘZIENNY' : {
 		'atrributes_main' : {
 			'WW': 10, 
 			'US': 0, 
@@ -4446,28 +4463,27 @@ professions = {
 			'przeszukiwanie',
 			'spostrzegawczość',
 			'unik',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [[
 			'leczenie',
-			'zwinne palce',],
+			'zwinne palce'],
 		],
 		'abilities' : [
 			'broń specjalna (unieruchamiająca)',
 			'odporność na choroby',
 			'odporność na trucizny',
-			'zapasy ',
+			'zapasy',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
-			'jedna broń do wyboru spośród: bolas',
-			'sieć albo arkan',
+			'bolas, sieć albo arkan',
 			'butelka podłego wina',
-			'manierka ',
+			'manierka',
 		],
 	},
-	'STRZYGA�SKI MISTYK' : {
+	'STRZYGAŃSKI MISTYK' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 5, 
@@ -4489,33 +4505,33 @@ professions = {
 			'PP': 0, 
 		},
 		'skills' : [
-			'kuglarstwo (dowolne jedno)',
+			'kuglarstwo (dowolne)',
 			'nauka (nekromancja)',
 			'plotkowanie',
 			'przekonywanie',
 			'targowanie',
 			'wycena',
 			'znajomość języka (strzygański)',
-			'zwinne palce ',
+			'zwinne palce',
 		],
 		'optional_skills' : [[
 			'hipnoza',
-			'rzemiosło (aptekarstwo)',],[
+			'rzemiosło (aptekarstwo)'],[
 			'jeździectwo',
-			'powożenie',],[
-			'sekretne znaki (astrologów',
-			'łowców)',],
+			'powożenie'],[
+			'sekretne znaki (astrologów)',
+			'sekretne znaki (łowców)'],
 		],
 		'abilities' : [
-			'szósty zmysł ',
+			'szósty zmysł',
 		],
 		'optional_abilities' : [[
 			'obieżyświat',
-			'wędrowiec',],
+			'wędrowiec'],
 		],
 		'trappings' : [
 			'talia kart',
-			'dziwaczna biżuteria ',
+			'dziwaczna biżuteria',
 		],
 	},
 	'STRELTSI' : {
@@ -4542,13 +4558,13 @@ professions = {
 		'skills' : [
 			'mocna głowa',
 			'unik',
-			'znajomość języka (kislevski) ',
+			'znajomość języka (kislevski)',
 		],
 		'optional_skills' : [[
 			'hazard',
-			'plotkowanie',],[
+			'plotkowanie'],[
 			'spostrzegawczość',
-			'wiedza (Kislev)',],
+			'wiedza (Kislev)'],
 		],
 		'abilities' : [
 			'broń specjalna (palna',
@@ -4556,19 +4572,19 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'artylerzysta',
-			'szybkie wyciągnięcie',],[
+			'szybkie wyciągnięcie'],[
 			'strzał mierzony',
-			'strzelec wyborowy ',],[
+			'strzelec wyborowy'],[
 			'błyskawiczne przeładowanie',
-			'strzał precyzyjny',],
+			'strzał precyzyjny'],
 		],
 		'trappings' : [
-			'The streltsi are all distinguishable by the smart uniforms they wear beneath a leather jerkin',
-			'leggings',
-			'and helmet. They carry berdysh—special pole-arms designed to improve accuracy with the firearms they also carry. Streltsi keep enough powder and shot to shoot their firearm up to 10 times. ',
+			'lekki pancerz (skórzana kurta, nogawice i hełm)',
+     		'berdysz',
+     		'muszkiet i amunicja na 10 strzałów'
 		],
 	},
-	'SZURO�AP' : {
+	'SZCZUROŁAP' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 10, 
@@ -4596,7 +4612,7 @@ professions = {
 			'spostrzegawczość',
 			'tresura',
 			'ukrywanie się',
-			'zastawianie pułapek ',
+			'zastawianie pułapek',
 		],
 		'optional_skills' : [
 		],
@@ -4604,7 +4620,7 @@ professions = {
 			'broń specjalna (proca)',
 			'grotołaz',
 			'odporność na choroby',
-			'odporność na trucizny ',
+			'odporność na trucizny',
 		],
 		'optional_abilities' : [
 		],
@@ -4612,7 +4628,7 @@ professions = {
 			'proca z amunicją',
 			'4 pułapki na szczury',
 			'drąż z martwymi szczurami (1k10)',
-			'mały ale zajadły pies ',
+			'mały ale zajadły pies',
 		],
 	},
 	'SZEPTUCHA' : {
@@ -4642,39 +4658,33 @@ professions = {
 			'leczenie',
 			'spostrzegawczość',
 			'zmysł magii',
-			'znajomość języka (Ungołów) ',
+			'znajomość języka (Ungołów)',
 		],
 		'optional_skills' : [[
 			'mocna głowa',
-			'plotkowanie',],[
+			'plotkowanie'],[
 			'przekonywanie',
-			'zastraszanie',],[
-			'wiedza (Kislev',
-			'Kraina Trolli)',],[
-			'rzemiosło (aptekarstwo',
-			'zielarstwo)',
-			'ważenie trucizn',],[
-			'nauka (duchy',
-			'historia)',],
+			'zastraszanie'],[
+			'wiedza (Kislev)',
+			'wiedza (Kraina Trolli)'],[
+			'rzemiosło (aptekarstwo)',
+			'rzemiosło (zielarstwo)',
+			'ważenie trucizn'],[
+			'nauka (duchy)',
+			'nauka (historia)'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'błyskotliwy',
-			'opanowanie ',],
+			'opanowanie'],
 		],
 		'trappings' : [
-			'Wise women are gifted healers',
-			'so they always have at least one antitoxin kit',
-			'healing draught',
-			'a healing poultice',
-			'and a skin of koumiss to ease other sorts of hurts. They are also quite superstitious and',
-			'thus',
-			'carry a number of small charms that include bits of bone',
-			'locks of hair',
-			'unusual stones',
-			'and so on. They mark their station with the tell-tale shawl',
-			'a beautifully woven length of cloth they wear draped from their heads or around their necks. ',
+			'odtrutki',
+			'mikstura lecznicza',
+			'okład leczniczy',
+			'kumys',
+			'talizmany',
 		],
 	},
 	'SZERMIERZ ESTALIJSKI' : {
@@ -4703,7 +4713,7 @@ professions = {
 			'nauka (anatomia)',
 			'unik',
 			'wiedza (Estalia)',
-			'znajomość języka (estalijski) ',
+			'znajomość języka (estalijski)',
 		],
 		'optional_skills' : [
 		],
@@ -4713,15 +4723,15 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'brawura',
-			'szybki refleks',],[
+			'szybki refleks'],[
 			'szybkie wyciągnięcie',
-			'morderczy atak ',],
+			'morderczy atak'],
 		],
 		'trappings' : [
 			'szpada albo rapier',
 			'ubranie najlepszej jakości',
 			'perfumy',
-			'mikstura leczenia ',
+			'mikstura leczenia',
 		],
 	},
 	'SZLACHCIC' : {
@@ -4750,25 +4760,25 @@ professions = {
 			'jeździectwo',
 			'przekonywanie',
 			'wiedza (Imperium)',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
 			'hazard',
-			'plotkowanie',],[
+			'plotkowanie'],[
 			'mocna głowa',
-			'kuglarstwo (muzykalność)',],[
+			'kuglarstwo (muzykalność)'],[
 			'gadanina',
-			'dowodzenie',],
+			'dowodzenie'],
 		],
 		'abilities' : [
 			'etykieta',
 		],
 		'optional_abilities' : [[
 			'broń specjalna (parująca)',
-			'broń specjalna (intrygant)',],[
-			'błyskotliwość albo broń specjalna (szermiercza)',],[
+			'intrygant'],[
+			'błyskotliwość','broń specjalna (szermiercza)'],[
 			'szczęście',
-			'przemawianie ',],
+			'przemawianie'],
 		],
 		'trappings' : [
 			'szpada',
@@ -4776,7 +4786,7 @@ professions = {
 			'strój szlachecki z herbem rodu',
 			'koń z siodłem i uprzężą',
 			'1k10 zk',
-			'biżuteria o wartości 6k10 zk ',
+			'biżuteria o wartości 6k10 zk',
 		],
 	},
 	'SZPERACZ' : {
@@ -4808,19 +4818,19 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwania',
 			'tropienie',
-			'ukrywanie się ',
+			'ukrywanie się',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'odporność na choroby',
-			'szósty zmysł ',
+			'szósty zmysł',
 		],
 		'optional_abilities' : [
 		],
 		'trappings' : [
 			'duży worek',
-			'mocne buty za kolana ',
+			'mocne buty za kolana',
 		],
 	},
 	'SZULER' : {
@@ -4849,26 +4859,26 @@ professions = {
 			'hazard',
 			'przekonywanie',
 			'spostrzegawczość',
-			'zwinne palce ',
+			'zwinne palce',
 		],
 		'optional_skills' : [[
 			'czytanie i pisanie',
-			'sekretne znaki (złodziei)',],[
+			'sekretne znaki (złodziei)'],[
 			'plotkowanie',
-			'sekretny język (złodziejski)',],
+			'sekretny język (złodziejski)'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'chodu!',
-			'szczęście',],[
+			'szczęście'],[
 			'etykieta',
-			'łotrzyk ',],
+			'łotrzyk'],
 		],
 		'trappings' : [
 			'kości do gry',
 			'talia kart',
-			'lekki pancerz (skórzany kaftan) ',
+			'lekki pancerz (skórzany kaftan)',
 		],
 	},
 	'ŚMIECIARZ' : {
@@ -4899,23 +4909,23 @@ professions = {
 			'spostrzegawczość',
 			'targowanie',
 			'wiedza (Imperium)',
-			'wycena ',
+			'wycena',
 		],
 		'optional_skills' : [[
 			'przekonywanie',
-			'plotkowanie',],
+			'plotkowanie'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'twardziel',
-			'odporność na choroby ',],[
+			'odporność na choroby'],[
 			'opanowanie',
-			'łotrzyk',],
+			'łotrzyk'],
 		],
 		'trappings' : [
 			'wózek',
-			'3 worki ',
+			'3 worki',
 		],
 	},
 	'TARCZOWNIK' : {
@@ -4944,7 +4954,7 @@ professions = {
 			'spostrzegawczość',
 			'śledzenie',
 			'unik',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [
 		],
@@ -4952,19 +4962,18 @@ professions = {
 			'morderczy atak',
 			'ogłuszanie',
 			'silny cios',
-			'wyczucie kierunku ',
+			'wyczucie kierunku',
 		],
 		'optional_abilities' : [[
 			'czuły słuch',
-			'opanowanie',],
+			'opanowanie'],
 		],
 		'trappings' : [
 			'kusza i 10 bełtów',
-			'średni pancerz (kolczuga',
-			'skórzana kurta i skórzane nogawice)',
+			'średni pancerz (kolczuga, skórzana kurta i skórzane nogawice)',
 			'tarcza',
 			'10 metrów liny z kotwiczką',
-			'bukłak z wodą ',
+			'bukłak z wodą',
 		],
 	},
 	'UCZENNICA LODOWEJ WIEDŹMY' : {
@@ -4993,32 +5002,29 @@ professions = {
 			'splatanie magii',
 			'sztuka przetrwania',
 			'wiedza (Kislev)',
-			'znajomość języka (kislevski) ',
+			'znajomość języka (kislevski)',
 		],
 		'optional_skills' : [[
 			'nauka (magia)',
-			'zastraszanie',],[
+			'zastraszanie'],[
 			'nawigacja',
-			'spostrzegawczość',],
+			'spostrzegawczość'],
 		],
 		'abilities' : [
 			'magia prosta (lodowa)',
 		],
 		'optional_abilities' : [[
 			'magia powszechna (dowolna)',
-			'magia powszechna (zmysł magii)',],[
+			'zmysł magii'],[
 			'niezwykle odporny',
-			'twardziel ',],
+			'twardziel'],
 		],
 		'trappings' : [
-			'Ze względu na trudne warunki szkolenia',
-			'uczennice potrzebują odpowiedniego ekwipunku',
-			'na ogół składającego się z solidnej odzieży zimowej',
-			'plecaka lub torby',
-			'butelki kwasu do ogrzania kości i racji podróżnej na kilka dni. ',
+			'odzież zimowa',
+			'butelki kwasu i racja podróżna na kilka dni.',
 		],
 	},
-	'UCZE� CZARODZIEJA' : {
+	'UCZEŃ CZARODZIEJA' : {
 		'atrributes_main' : {
 			'WW': 0, 
 			'US': 0, 
@@ -5047,7 +5053,7 @@ professions = {
 			'splatanie magii',
 			'spostrzegawczość',
 			'wykrywanie magii',
-			'znajomość języka (klasyczny) ',
+			'znajomość języka (klasyczny)',
 		],
 		'optional_skills' : [
 		],
@@ -5056,17 +5062,17 @@ professions = {
 		],
 		'optional_abilities' : [[
 			'zmysł magii',
-			'dotyk mocy ',],[
+			'dotyk mocy'],[
 			'błyskotliwość',
-			'niezwykle odporny',],
+			'niezwykle odporny'],
 		],
 		'trappings' : [
 			'kij',
 			'plecak',
-			'księga wiedzy tajemnej ',
+			'księga wiedzy tajemnej',
 		],
 	},
-	'UCZE� GUŚLARZA' : {
+	'UCZEŃ GUŚLARZA' : {
 		'atrributes_main' : {
 			'WW': 0, 
 			'US': 0, 
@@ -5090,42 +5096,42 @@ professions = {
 		'skills' : [
 			'leczenie',
 			'spostrzegawczość',
-			'zmysł magii ',
+			'zmysł magii',
 		],
 		'optional_skills' : [[
 			'czytanie i pisanie',
-			'język tajemny (magiczny)',],[
+			'język tajemny (magiczny)'],[
 			'sztuka przetrwania',
-			'targowanie',],[
+			'targowanie'],[
 			'warzenie trucizn',
-			'zmysł magii',],[
-			'rzemiosło (aptekarstwo',
-			'zielarstwo)',],[
+			'zmysł magii'],[
+			'rzemiosło (aptekarstwo)',
+			'rzemiosło (zielarstwo)'],[
 			'skradanie się',
-			'zastawianie pułapek',],[
+			'zastawianie pułapek'],[
 			'oswajanie',
-			'ukrywanie się',],[
+			'ukrywanie się'],[
 			'opieka nad zwierzętami',
-			'splatanie magii',],[
+			'splatanie magii'],[
 			'mocna głowa',
-			'plotkowanie',],
+			'plotkowanie'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'dotyk mocy',
-			'opanowanie',],[
+			'opanowanie'],[
 			'magia prosta (gusła)',
-			'magia prosta (wędrowiec )',],
+			'magia prosta (wędrowiec )'],
 		],
 		'trappings' : [
 			'odtrutki',
 			'mikstura lecznicza',
 			'napar kojący',
-			'talizman szczęścia ',
+			'talizman szczęścia',
 		],
 	},
-	'W�GLARZ' : {
+	'WĘGLARZ' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 0, 
@@ -5152,25 +5158,25 @@ professions = {
 			'spostrzegawczość',
 			'sztuka przetrwania',
 			'targowanie',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [[
 			'wiedza (Imperium)',
-			'ukrywanie się',],[
+			'ukrywanie się'],[
 			'powożenie',
-			'plotkowanie',],
+			'plotkowanie'],
 		],
 		'abilities' : [
-			'chodu! ',
+			'chodu!',
 		],
 		'optional_abilities' : [[
 			'błyskotliwość',
-			'bardzo silny',],
+			'bardzo silny'],
 		],
 		'trappings' : [
 			'broń jednoręczna (topór albo pałka)',
 			'3 pochodnie',
-			'krzesiwo i hubka ',
+			'krzesiwo i hubka',
 		],
 	},
 	'WIELORYBNIK' : {
@@ -5200,7 +5206,7 @@ professions = {
 			'pływanie',
 			'spostrzegawczość',
 			'wioślarstwo',
-			'żeglarstwo ',
+			'żeglarstwo',
 		],
 		'optional_skills' : [
 		],
@@ -5209,7 +5215,7 @@ professions = {
 			'bystry wzrok',
 			'obieżyświat',
 			'opanowanie',
-			'twardziel ',
+			'twardziel',
 		],
 		'optional_abilities' : [
 		],
@@ -5219,7 +5225,7 @@ professions = {
 			'lekki pancerz (skórzana kurta)',
 			'fajka',
 			'włócznia (harpun)',
-			'butelka gorzałki dobrej jakości ',
+			'butelka gorzałki dobrej jakości',
 		],
 	},
 	'WOJ' : {
@@ -5247,30 +5253,29 @@ professions = {
 			'hazard',
 			'mocna głowa',
 			'plotkowanie',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'groźny',
 			'odwaga',
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [[
 			'broń specjalna (dwuręczna)',
-			'broń specjalna (szybkie wyciągnięcie)',],[
+			'szybkie wyciągnięcie'],[
 			'błyskotliwość',
-			'opanowanie',],
+			'opanowanie'],
 		],
 		'trappings' : [
 			'broń dwuręczna albo broń jednoręczna i tarcza',
-			'średni pancerz (skórznia',
-			'kaftan kolczy)',
+			'średni pancerz (skórznia i kaftan kolczy)',
 			'manierka z piwem lub miodem',
-			'trzy dary od jarla (każdy warty 1k10/2 zk) ',
+			'trzy dary od jarla (każdy warty 1k10/2 zk)',
 		],
 	},
-	'W�ÓCZYKIJ' : {
+	'WŁÓCZYKIJ' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 10, 
@@ -5292,41 +5297,42 @@ professions = {
 			'PP': 0, 
 		},
 		'skills' : [
-			'kuglarstwo (gawędziarstwo',
 			'nawigacja',
 			'skradanie się',
 			'sztuka przetrwania',
-			'wiedza (Bretonia',
-			'Estalia',
 		],
 		'optional_skills' : [[
-			'śpiew lub taniec)',
-			'sekretne znaki (łowców',
-			'złodziei)',],[
+     		'kuglarstwo (gawędziarstwo)',
+			'kuglarstwo (śpiew)',
+     		'kuglarstwo (taniec)',
+			'sekretne znaki (łowców)',
+			'sekretne znaki (złodziei)'],[
 			'plotkowanie',
-			'sekretny język (łowców',
-			'złodziejski)',],[
+			'sekretny język (łowców)',
+			'sekretny język (złodziejski)'],[
 			'targowanie',
-			'pływanie',],[
+			'pływanie'],[
 			'leczenie',
-			'spostrzegawczość',],[
-			'Kislev',
-			'Tilea) ',],
+			'spostrzegawczość'],[
+     		'wiedza (Imperium)',
+     		'wiedza (Estalia)'
+			'wiedza (Kislev)',
+			'wiedza (Tilea)'],
 		],
 		'abilities' : [
 			'obieżyświat',
 		],
 		'optional_abilities' : [[
 			'bardzo szybki',
-			'wędrowiec',],[
+			'wędrowiec'],[
 			'strzelec wyborowy',
-			'wyczucie kierunku ',],
+			'wyczucie kierunku'],
 		],
 		'trappings' : [
 			'plecak',
 			'prowiant (1 tydzień)',
 			'namiot',
-			'bukłak z wodą ',
+			'bukłak z wodą',
 		],
 	},
 	'WOJOWNIK KLANOWY' : {
@@ -5357,23 +5363,23 @@ professions = {
 			'tropienie',
 			'ukrywanie się',
 			'unik',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [[
 			'leczenie',
-			'przeszukiwanie',],
+			'przeszukiwanie'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'błyskawiczne przeładowanie',
-			'urodzony wojownik',],[
+			'urodzony wojownik'],[
 			'strzelec wyborowy',
-			'wędrowiec ',],
+			'wędrowiec'],
 		],
 		'trappings' : [
 			'elfi luk i 10 strzał',
-			'lekki pancerz (skórzana kurta) ',
+			'lekki pancerz (skórzana kurta)',
 		],
 	},
 	'WOŹNICA' : {
@@ -5403,27 +5409,27 @@ professions = {
 			'powożenie',
 			'sekretne znaki (łowców)',
 			'spostrzegawczość',
-			'znajomość języka (bretoński',
 		],
 		'optional_skills' : [[
-			'kislevski',
-			'tileański) ',],[
+     		'znajomość języka (bretoński)',
+			'znajomość języka (kislevski)',
+			'znajomość języka (tileański)'],[
 			'leczenie',
-			'jeździectwo',],[
+			'jeździectwo'],[
 			'plotkowanie',
-			'targowanie',],
+			'targowanie'],
 		],
 		'abilities' : [
 			'broń specjalna (palna)',
 		],
 		'optional_abilities' : [[
 			'szybkie wyciągnięcie',
-			'obieżyświat ',],
+			'obieżyświat'],
 		],
 		'trappings' : [
 			'garłacz z zapasem amunicji na 10 strzałów',
 			'średni pancerz (kaftan kolczy i skórzana kurta)',
-			'instrument muzyczny (róg woźnicy) ',
+			'instrument muzyczny (róg woźnicy)',
 		],
 	},
 	'WRÓŻBITA' : {
@@ -5451,28 +5457,28 @@ professions = {
 		],
 		'optional_skills' : [[
 			'gadanina',
-			'język tajemny (demoniczny',
-			'magiczny)',],[
+			'język tajemny (demoniczny)',
+			'język tajemny (magiczny)'],[
 			'przekonywanie',
-			'tresura',],[
+			'tresura'],[
 			'kuglarstwo (wróżenie z dłoni)',
-			'splatanie magii',],[
+			'splatanie magii'],[
 			'spostrzegawczość',
-			'wykrywanie magii ',],
+			'wykrywanie magii'],
 		],
 		'abilities' : [
-			'przemawianie ',
+			'przemawianie',
 		],
 		'optional_abilities' : [[
 			'gusła',
-			'wyostrzanie zmysły',],[
+			'wyostrzanie zmysły'],[
 			'magia prosta (gusła)',
-			'magia prosta (szczęście)',],
+			'magia prosta (szczęście)'],
 		],
 		'trappings' : [
 			'karty',
 			'kości',
-			'żywe zwierzęta lub inne przedmioty do wróżenia ',
+			'żywe zwierzęta lub inne przedmioty do wróżenia',
 		],
 	},
 	'ZABÓJCA TROLLI' : {
@@ -5499,7 +5505,7 @@ professions = {
 		'skills' : [
 			'mocna głowa',
 			'unik',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [
 		],
@@ -5507,18 +5513,18 @@ professions = {
 			'bijatyka',
 			'broń specjalna (dwuręczna)',
 			'silny cios',
-			'twardziel ',
+			'twardziel',
 		],
 		'optional_abilities' : [[
 			'rozbrajanie',
-			'szybkie wyciągnięcie',],[
+			'szybkie wyciągnięcie'],[
 			'szybki refleks',
-			'niezwykle odporny',],
+			'niezwykle odporny'],
 		],
 		'trappings' : [
 			'broń dwuręczna',
 			'lekki pancerz (skórzany kaftan)',
-			'butelka spirytusu lub gorzałki kiepskiej jakości ',
+			'butelka spirytusu lub gorzałki kiepskiej jakości',
 		],
 	},
 	'ZARZĄDCA' : {
@@ -5551,23 +5557,23 @@ professions = {
 		],
 		'optional_skills' : [[
 			'dowodzenie',
-			'nawigacja',],[
+			'nawigacja'],[
 			'opieka nad zwierzętami',
-			'plotkowanie',],[
+			'plotkowanie'],[
 			'zastraszanie',
-			'wiedza (Imperium) ',],
+			'wiedza (Imperium)'],
 		],
 		'abilities' : [
-			'przemawianie ',
+			'przemawianie',
 		],
 		'optional_abilities' : [[
 			'etykieta',
-			'geniusz arytmetyczny',],
+			'geniusz arytmetyczny'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzany kurta i skórzany hełm)',
 			'ubranie dobrej jakości',
-			'koń z siodłem i uprzężą ',
+			'koń z siodłem i uprzężą',
 		],
 	},
 	'ZAKAPTURZONY' : {
@@ -5597,30 +5603,30 @@ professions = {
 			'sztuka przetrwania',
 			'ukrywanie się',
 			'unik',
-			'wspinaczka ',
+			'wspinaczka',
 		],
 		'optional_skills' : [[
 			'plotkowanie',
-			'sekretny język (łowców)',],[
+			'sekretny język (łowców)'],[
 			'opieka nad zwierzętami',
-			'przekonywanie',],
+			'przekonywanie'],
 		],
 		'abilities' : [
 			'obieżyświat',
-			'wędrowiec ',
+			'wędrowiec',
 		],
 		'optional_abilities' : [[
 			'broń specjalna (długi luk)',
-			'broń specjalna (strzelec wyborowy)',],
+			'strzelec wyborowy'],
 		],
 		'trappings' : [
 			'luk albo długi luk (jeśli posiada odpowiednią zdolność)',
 			'10 strzał',
 			'lekki pancerz (skórzany kaftan)',
-			'tarcza ',
+			'tarcza',
 		],
 	},
-	'ZBIERACZ �AJNA' : {
+	'ZBIERACZ ŁAJNA' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 0, 
@@ -5648,25 +5654,25 @@ professions = {
 			'przeszukiwanie',
 			'spostrzegawczość',
 			'targowanie',
-			'wiedza (Imperium) ',
+			'wiedza (Imperium)',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
-			'opanowanie ',
+			'opanowanie',
 		],
 		'optional_abilities' : [[
 			'nieustraszony',
-			'odporność na choroby',],
+			'odporność na choroby'],
 		],
 		'trappings' : [
 			'taczka',
 			'szufla',
 			'torba z robakami',
-			'kilka porcji wyschniętego łajna ',
+			'kilka porcji wyschniętego łajna',
 		],
 	},
-	'Z�ODZIEJ' : {
+	'ZŁODZIEJ' : {
 		'atrributes_main' : {
 			'WW': 5, 
 			'US': 5, 
@@ -5695,29 +5701,29 @@ professions = {
 		],
 		'optional_skills' : [[
 			'wycena',
-			'charakteryzacja ',],[
+			'charakteryzacja'],[
 			'czytanie i pisanie',
-			'zwinne palce',],[
+			'zwinne palce'],[
 			'przekonywanie',
-			'wspinaczka',],[
+			'wspinaczka'],[
 			'sekretny język (złodziejski)',
-			'sekretne znaki (złodziei)',],[
+			'sekretne znaki (złodziei)'],[
 			'hazard',
-			'otwieranie zamków',],
+			'otwieranie zamków'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'ulicznik',
-			'łotrzyk ',],[
+			'łotrzyk'],[
 			'geniusz arytmetyczny',
-			'wykrywanie pułapek',],
+			'wykrywanie pułapek'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzany kaftan)',
 			'worek',
 			'wytrychy',
-			'10 metrów liny ',
+			'10 metrów liny',
 		],
 	},
 	'ŻABIARKA' : {
@@ -5748,24 +5754,24 @@ professions = {
 			'spostrzegawczość',
 			'targowanie',
 			'wiedza (dowolna)',
-			'wycena ',
+			'wycena',
 		],
 		'optional_skills' : [
 		],
 		'abilities' : [
 			'łotrzyk',
 			'odwaga',
-			'żyłka handlowa ',
+     		'żyłka handlowa',
 		],
 		'optional_abilities' : [[
 			'twardziel',
-			'wędrowiec',],
+			'wędrowiec'],
 		],
 		'trappings' : [
 			'wiadro z wnętrznościami',
 			'żabie trzewia',
 			'ślimacze skorupy',
-			'ostry nóż ',
+			'ostry nóż',
 		],
 	},
 	'ŻAK' : {
@@ -5794,29 +5800,29 @@ professions = {
 			'nauka (dowolna)',
 			'spostrzegawczość',
 			'znajomość języka (klasyczny)',
-			'znajomość języka (staroświatowy) ',
+			'znajomość języka (staroświatowy)',
 		],
 		'optional_skills' : [[
 			'leczenie',
-			'przeszukiwanie',],[
+			'przeszukiwanie'],[
 			'nauka (dowolna)',
-			'plotkowanie',],[
+			'plotkowanie'],[
 			'przekonywanie',
-			'mocna głowa',],
+			'mocna głowa'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'etykieta',
-			'poliglota',],[
+			'poliglota'],[
 			'obieżyświat',
-			'geniusz arytmetyczny ',],[
+			'geniusz arytmetyczny'],[
 			'błyskotliwość',
-			'charyzmatyczny',],
+			'charyzmatyczny'],
 		],
 		'trappings' : [
 			'dwie księgi związane z wybraną dziedziną nauki',
-			'przybory do pisania ',
+			'przybory do pisania',
 		],
 	},
 	'ŻEGLARZ' : {
@@ -5843,36 +5849,38 @@ professions = {
 		'skills' : [
 			'pływanie',
 			'unik',
-			'wiedza (Bretonia',
-			'Norska',
+
 			'wioślarstwo',
 			'wspinaczka',
-			'znajomość języka (bretoński',
-			'żeglarstwo ',
+			
+			'żeglarstwo',
 		],
 		'optional_skills' : [[
-			'Tilea',
-			'Jałowa Kraina)',],[
+     		'wiedza (Bretonia)',
+			'wiedza (Norska)',
+			'wiedza (Tilea)',
+			'wiedza (Jałowa Kraina)'],[
 			'mocna głowa',
-			'spostrzegawczość',],[
-			'norski',
-			'tileański)',],
+			'spostrzegawczość'],[
+     		'znajomość języka (bretoński)',
+			'znajomość języka (norski)',
+			'(tileański)'],
 		],
 		'abilities' : [
 			'obieżyświat',
 		],
 		'optional_abilities' : [[
 			'silny cios',
-			'brawura',],[
+			'brawura'],[
 			'twardziel',
-			'bijatyka ',],
+			'bijatyka'],
 		],
 		'trappings' : [
 			'lekki pancerz (skórzana kurta)',
-			'butelka gorzałki kiepskiej jakości ',
+			'butelka gorzałki kiepskiej jakości',
 		],
 	},
-	'ŻO�NIERZ' : {
+	'ŻOŁNIERZ' : {
 		'atrributes_main' : {
 			'WW': 10, 
 			'US': 10, 
@@ -5895,40 +5903,40 @@ professions = {
 		},
 		'skills' : [
 			'unik',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [[
 			'opieka nad zwierzętami',
-			'leczenie',],[
+			'leczenie'],[
 			'hazard',
-			'plotkowanie',],[
+			'plotkowanie'],[
 			'powożenie',
-			'jeździectwo',],[
+			'jeździectwo'],[
 			'wiedza (Imperium)',
-			'spostrzegawczość',],
+			'spostrzegawczość'],
 		],
 		'abilities' : [
 		],
 		'optional_abilities' : [[
 			'rozbrajanie',
-			'szybkie wyciągnięcie',],[
+			'szybkie wyciągnięcie'],[
 			'broń specjalna (palna)',
-			'broń specjalna (dwuręczna)',],[
+			'broń specjalna (dwuręczna)'],[
 			'strzał mierzony',
-			'silny cios ',],[
+			'silny cios'],[
 			'ogłuszanie',
-			'strzał precyzyjny',],[
+			'strzał precyzyjny'],[
 			'morderczy atak',
-			'błyskawiczne przeładowanie',],
+			'błyskawiczne przeładowanie'],
 		],
 		'trappings' : [
 			'broń dwuręczna (halabarda) albo rusznica z amunicją na 10 strzałów',
 			'lekki pancerz (skórznia)',
 			'mundur',
-			'tarcza ',
+			'tarcza',
 		],
 	},
-	'ŻO�NIERZ OKR�TOWY' : {
+	'ŻOŁNIERZ OKRĘTOWY' : {
 		'atrributes_main' : {
 			'WW': 10, 
 			'US': 10, 
@@ -5954,27 +5962,27 @@ professions = {
 			'pływanie',
 			'unik',
 			'wioślarstwo',
-			'zastraszanie ',
+			'zastraszanie',
 		],
 		'optional_skills' : [[
 			'wiedza (Jałowa Kraina)',
-			'hazard',],[
+			'hazard'],[
 			'plotkowanie',
-			'sekretny język (bitewny)',],
+			'sekretny język (bitewny)'],
 		],
 		'abilities' : [
 			'ogłuszanie',
-			'silny cios ',
+			'silny cios',
 		],
 		'optional_abilities' : [[
 			'rozbrajanie',
-			'szybkie wyciągnięcie',],
+			'szybkie wyciągnięcie'],
 		],
 		'trappings' : [
 			'łuk albo kusza i 10 strzał/bełtów',
 			'lekki pancerz (skórzana kurta)',
 			'tarcza',
-			'10 metrów liny z kotwiczką ',
+			'10 metrów liny z kotwiczką',
 		],
 	},
 }
