@@ -52,9 +52,9 @@ class atrribute:
 
 class Character(object):
     def __init__(self):
-        self.race = None  # 'human' | 'halfling' | 'dwarf' | 'elf'
+        self.race = None
         self.profession = None
-        self.sex = None  # 'Kobieta' | 'Mężczyzna'
+        self.sex = None
         self.name = None
         self.age = None
         self.eye = None
@@ -67,7 +67,7 @@ class Character(object):
         self.special = None
         self.xp = None
         self.attributes_main = {
-            "WW": atrribute(0, 0, 0),  # [start_value, potential_growth, final_value]
+            "WW": atrribute(0, 0, 0),
             "US": atrribute(0, 0, 0),
             "K": atrribute(0, 0, 0),
             "Odp": atrribute(0, 0, 0),
@@ -92,11 +92,11 @@ class Character(object):
 
     def roll_race(self):
         roll = d100()
-        if roll < 26:  # == 1:
+        if roll == 1:
             output = "elf"
-        elif roll < 51:  # 6:
+        elif roll < 6:
             output = "dwarf"
-        elif roll < 76:  # 11:
+        elif roll < 11:
             output = "halfling"
         else:
             output = "human"
