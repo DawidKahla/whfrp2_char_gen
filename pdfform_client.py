@@ -60,13 +60,41 @@ def parse_fields(char, fields) -> dict:
     """
     for field in fields:
         fields[field] = ""
-        print(field)
-    fields["Rasa"] = race_translate(char.race)
-    fields["Obecna profesja"] = char.profession
-    fields["Wiek"] = char.age
-    fields["Kolor oczu"] = char.eye
-    fields["Waga"] = char.weight
-    fields["Wzrost"] = char.height
-    fields["Znak gwiezdny"] = char.star
-    fields["Znaki szczególne"] = char.special
+    fields["Text1"] = char.name
+    fields["Text2"] = race_translate(char.race)
+    fields["Text3"] = char.profession.capitalize()
+    fields["Text5"] = char.age
+    fields["Text6"] = char.eye
+    fields["Text7"] = char.hair
+    fields["Text8"] = char.star
+    fields["Text9"] = char.birthplace
+    fields["Text10"] = char.special
+    fields["Text11"] = char.sex
+    fields["Text12"] = char.weight
+    fields["Text13"] = char.height
+    fields["Text14"] = char.siblings
+    temp_iter = 0
+    for attribute in char.attributes_main:
+        fields[f"Text{19+temp_iter}"] = char.attributes_main[attribute].initial
+        if char.attributes_main[attribute].potential != 0:
+            fields[
+                f"Text{38+temp_iter}"
+            ] = f"+{char.attributes_main[attribute].potential}"
+        temp_iter += 1
+        if attribute == "Int":
+            break
+    fields["Text25"] = char.attributes_main["Ogd"].initial
+    fields["Text26"] = char.attributes_main["SW"].initial
+    if char.attributes_main["Ogd"].potential != 0:
+        fields["Text45"] = f"+{char.attributes_main['Ogd'].potential}"
+    if char.attributes_main["SW"].potential != 0:
+        fields["Text46"] = f"+{char.attributes_main['SW'].potential}"
+    temp_iter = 0
+    for attribute in char.attributes_sec:
+        fields[f"Text{55+temp_iter}"] = char.attributes_sec[attribute].initial
+        if char.attributes_sec[attribute].potential != 0:
+            fields[
+                f"Text{63+temp_iter}"
+            ] = f"+{char.attributes_sec[attribute].potential}"
+        temp_iter += 1
     return fields
