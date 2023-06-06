@@ -4,22 +4,6 @@ import professions
 from dataclasses import dataclass
 
 
-def d10():
-    return rand.randint(1, 10)
-
-
-def d100():
-    return rand.randint(1, 100)
-
-
-def d1000():
-    return rand.randint(1, 1000)
-
-
-def r20_2d10():
-    return 20 + d10() + d10()
-
-
 def random_choose(list):
     return list[rand.randint(0, len(list) - 1)]
 
@@ -91,7 +75,7 @@ class Character(object):
         self.trappings = []
 
     def roll_race(self):
-        roll = d100()
+        roll = rand.randint(1, 100)
         if roll == 1:
             output = "elf"
         elif roll < 6:
@@ -114,17 +98,18 @@ class Character(object):
         else:
             raise Exception(f"Wrong race in roll_profession {self.race}")
 
-        roll = d1000()
+        roll = rand.randint(1, 1000)
         self.profession = mapping_roll(roll, mapping)
 
     def roll_attributes(self):
         self.attributes_main = {
-            attr: atrribute(r20_2d10(), 0, 0) for attr in self.attributes_main
+            attr: atrribute(20 + rand.randint(1, 10) + rand.randint(1, 10), 0, 0)
+            for attr in self.attributes_main
         }
         self.attributes_sec["A"].initial = 1
         self.attributes_sec["Sz"].initial = 4
 
-        roll = d10()
+        roll = rand.randint(1, 10)
         if roll < 4:
             self.attributes_sec["Żyw"].initial = 10
         elif roll < 7:
@@ -134,7 +119,7 @@ class Character(object):
         else:
             self.attributes_sec["Żyw"].initial = 13
 
-        pp_roll = d10()
+        pp_roll = rand.randint(1, 10)
         if pp_roll < 5:
             self.attributes_sec["PP"].initial = 2
         else:
@@ -175,7 +160,7 @@ class Character(object):
             mapping = constants.human_ability_mapping
         else:
             raise Exception(f"Wrong race in roll_ability {self.race}")
-        return mapping_roll(d100(), mapping)
+        return mapping_roll(rand.randint(1, 100), mapping)
 
     def set_default_skills_and_abilities(self):
         if self.race == "human":
@@ -357,13 +342,13 @@ class Character(object):
 
     def roll_sex(self):
         if self.sex == None:
-            if d10() < 6:
+            if rand.randint(1, 10) < 6:
                 self.sex = "Mężczyzna"
             else:
                 self.sex = "Kobieta"
 
     def roll_height(self):
-        self.height = 100 + d10() + d10()
+        self.height = 100 + rand.randint(1, 10) + rand.randint(1, 10)
         if self.sex == "Mężczyzna":
             self.height += 10
         if self.race == "dwarf":
@@ -376,7 +361,7 @@ class Character(object):
             self.height += 60
 
     def roll_weight(self):
-        roll = d100()
+        roll = rand.randint(1, 100)
         if self.race == "halfling":
             mapping = constants.halfling_weight_mapping
         else:
@@ -398,7 +383,7 @@ class Character(object):
             hair_list = constants.halfling_hair_list
         if self.race == "elf":
             hair_list = constants.elf_hair_list
-        self.hair = hair_list[d10() - 1]
+        self.hair = hair_list[rand.randint(1, 10) - 1]
 
     def roll_eye(self):
         if self.race == "human":
@@ -409,17 +394,17 @@ class Character(object):
             eye_list = constants.halfling_eye_list
         if self.race == "elf":
             eye_list = constants.elf_eye_list
-        self.eye = eye_list[d10() - 1]
+        self.eye = eye_list[rand.randint(1, 10) - 1]
 
     def roll_special(self):
-        roll = d100()
+        roll = rand.randint(1, 100)
         for key in constants.special_mapping.keys():
             minimum, maximum = key
             if roll >= minimum and roll <= maximum:
                 self.special = constants.special_mapping[key]
 
     def roll_siblings(self):
-        roll = d10()
+        roll = rand.randint(1, 10)
         if self.race == "dwarf":
             mapping = constants.siblings_dwarf_mapping
         elif self.race == "elf":
@@ -434,14 +419,14 @@ class Character(object):
             self.siblings += 1
 
     def roll_star(self):
-        roll = d100()
+        roll = rand.randint(1, 100)
         for key in constants.star_mapping.keys():
             minimum, maximum = key
             if roll >= minimum and roll <= maximum:
                 self.star = constants.star_mapping[key]
 
     def roll_age(self):
-        roll = d100()
+        roll = rand.randint(1, 100)
         x = (roll - 1) // 5
         if self.race == "human":
             self.age = 16 + x
@@ -456,16 +441,18 @@ class Character(object):
 
     def roll_birthplace(self):
         if self.race == "dwarf":
-            if d100() > 30:
+            if rand.randint(1, 100) > 30:
                 self.birthplace = random_choose(constants.dwarf_birthplace_list)
         elif self.race == "elf":
-            self.birthplace = mapping_roll(d100(), constants.elf_birthplace_dict)
+            self.birthplace = mapping_roll(
+                rand.randint(1, 100), constants.elf_birthplace_dict
+            )
         elif self.race == "halfling":
-            if d100() < 50:
+            if rand.randint(1, 100) < 50:
                 self.birthplace = "Kraina Zgromadzenia"
         if self.birthplace == None:
             province = random_choose(list(constants.town_dict.keys()))
-            town = mapping_roll(d100(), constants.town_dict[province])
+            town = mapping_roll(rand.randint(1, 100), constants.town_dict[province])
             self.birthplace = f"{province}, {town}"
 
     def roll_name(self):
@@ -484,7 +471,7 @@ class Character(object):
                 surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}sdotr"
         if self.race == "elf":
             surname = random_choose(constants.elf_surname_list)
-            if d10() < 6:
+            if rand.randint(1, 10) < 6:
                 connector = random_choose(constants.elf_name_connector_list)
             else:
                 connector = ""
@@ -541,4 +528,4 @@ class Character(object):
         print(self.attributes_main)
         print(self.attributes_sec)
         print(self.trappings)
-        print(d10() + d10())
+        print(rand.randint(1, 10) + rand.randint(1, 10))
