@@ -2459,3 +2459,26 @@ any_ability = {
         "magia powszechna (uciszenie)",
     ],
 }
+
+basic_skills = [
+    "charakteryzacja",
+    "dowodzenie",
+    "hazard",
+    "jeździectwo",
+    "mocna głowa",
+    "opieka nad zwierzętami",
+    "plotkowanie",
+    "pływanie",
+    "powożenie",
+    "przekonywanie",
+    "przeszukiwanie",
+    "skradanie się",
+    "spostrzegawczość",
+    "sztuka przetrwania",
+    "targowanie",
+    "ukrywanie się",
+    "wioślarstwo",
+    "wspinaczka",
+    "wycena",
+    "zastraszanie"
+]

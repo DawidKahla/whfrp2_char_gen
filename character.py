@@ -67,7 +67,6 @@ class Character(object):
         self.siblings = None
         self.birthplace = None
         self.special = None
-        self.exp = None
         self.attributes_main = {
             "WW": atrribute(0, 0, 0),
             "US": atrribute(0, 0, 0),
@@ -91,6 +90,7 @@ class Character(object):
         self.skills = {}
         self.abilities = []
         self.trappings = []
+        self.money = None
 
     def roll_race(self):
         roll = rand.randint(1, 100)
