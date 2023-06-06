@@ -1,10 +1,21 @@
+"""
+This module provides rolling pseudo-random numbers.
+"""
 import random as rand
+from dataclasses import dataclass
 import constants
 import professions
-from dataclasses import dataclass
 
 
 def random_choose(list):
+    """
+    Returns one random element of list.
+
+    :param list: List to roll element from
+    :type list: list
+    :return: a one element of list
+    :rtype: not defined
+    """
     return list[rand.randint(0, len(list) - 1)]
 
 
@@ -23,8 +34,15 @@ def race_translate(race):
         "elf": "Elf",
     }
     if race not in mapping:
-        raise Exception(f"Wrong race in translation: {race}")
+        raise ValueError(f"Wrong race in translation: {race}.")
     return mapping[race]
+
+
+def sex_translate(sex):
+    mapping = {"male": "Mężczyzna", "female": "Kobieta"}
+    if sex not in mapping:
+        raise ValueError(f"Wrong sex in sex translation: {sex}.")
+    return mapping[sex]
 
 
 @dataclass
@@ -49,7 +67,7 @@ class Character(object):
         self.siblings = None
         self.birthplace = None
         self.special = None
-        self.xp = None
+        self.exp = None
         self.attributes_main = {
             "WW": atrribute(0, 0, 0),
             "US": atrribute(0, 0, 0),
@@ -343,17 +361,17 @@ class Character(object):
     def roll_sex(self):
         if self.sex == None:
             if rand.randint(1, 10) < 6:
-                self.sex = "Mężczyzna"
+                self.sex = "male"
             else:
-                self.sex = "Kobieta"
+                self.sex = "female"
 
     def roll_height(self):
         self.height = 100 + rand.randint(1, 10) + rand.randint(1, 10)
-        if self.sex == "Mężczyzna":
+        if self.sex == "male":
             self.height += 10
         if self.race == "dwarf":
             self.height += 30
-            if self.sex == "Mężczyzna":
+            if self.sex == "male":
                 self.height += 5
         if self.race == "human":
             self.height += 50
@@ -458,12 +476,12 @@ class Character(object):
     def roll_name(self):
         if self.race == "human":
             surname = random_choose(constants.human_surname_list)
-            if self.sex == "Mężczyzna":
+            if self.sex == "male":
                 firstname = random_choose(constants.human_male_name_list)
             else:
                 firstname = random_choose(constants.human_female_name_list)
         if self.race == "dwarf":
-            if self.sex == "Mężczyzna":
+            if self.sex == "male":
                 firstname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}"
                 surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}son"
             else:
@@ -475,13 +493,13 @@ class Character(object):
                 connector = random_choose(constants.elf_name_connector_list)
             else:
                 connector = ""
-            if self.sex == "Mężczyzna":
+            if self.sex == "male":
                 firstname = f"{random_choose(constants.elf_name1_list)}{connector}{random_choose(constants.elf_male_name2_list)}"
             else:
                 firstname = f"{random_choose(constants.elf_name1_list)}{connector}{random_choose(constants.elf_female_name2_list)}"
         if self.race == "halfling":
             surname = random_choose(constants.halfling_surname_list)
-            if self.sex == "Mężczyzna":
+            if self.sex == "male":
                 firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_male_name2_list)}"
             else:
                 firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_female_name2_list)}"

@@ -1,11 +1,7 @@
 from character import Character
-import pdfform_client
+from imagefiller import fill_character_card
 
 npc = Character()
 npc.roll_all()
-# npc.print_character()
-fields = pdfform_client.get_form_fields("baseform.pdf")
-fields = pdfform_client.parse_fields(npc, fields)
-pdfform_client.generate_character_card_pdf_file(
-    "baseform.pdf", "outputfile.pdf", fields
-)
+npc.print_character()
+fill_character_card("baseform-1.png", "output1.png", npc)
