@@ -2460,6 +2460,7 @@ any_ability = {
     ],
 }
 
+# here order matters
 basic_skills = [
     "charakteryzacja",
     "dowodzenie",
@@ -2482,3 +2483,66 @@ basic_skills = [
     "wycena",
     "zastraszanie"
 ]
+
+starting_human_skills = [
+    "plotkowanie",
+    "wiedza (Imperium)",
+    "znajomość języka (staroświatowy)",
+    ]
+
+starting_halfling_skills = [
+    "plotkowanie",
+    "wiedza (niziołki)",
+    "znajomość języka (staroświatowy)",
+    "znajomość języka (niziołków)",
+    "nauka (genealogia/heraldyka)",
+]
+
+starting_halfling_skills_optional = [
+    "rzemiosło (gotowanie)", 
+    "rzemiosło (uprawa ziemi)"
+    ]
+
+starting_halfling_abilities = [
+    "broń specjalna (proca)",
+    "odporność na Chaos",
+    "widzenie w ciemności",
+]
+
+starting_dwarf_skills = [
+    "wiedza (krasnoludy)",
+    "znajomość języka (khazalid)",
+    "znajomość języka (staroświatowy)",
+]
+
+starting_dwarf_skills_optional = [
+    "rzemiosło (górnictwo)",
+    "rzemiosło (kamieniarstwo)",
+    "rzemiosło (kowalstwo)",
+]
+
+starting_dwarf_abilities = [
+    "krasnoludzki fach",
+    "krzepki",
+    "odporność na magię",
+    "odwaga",
+    "widzenie w ciemności",
+    "zapiekła nienawiść",
+]
+
+starting_elf_skills = [
+    "wiedza (elfy)",
+    "znajomość języka (eltharin)",
+    "znajomość języka (staroświatowy)",
+]
+
+starting_elf_ablities = [
+    "bystry wzrok",
+    "widzenie w ciemności",
+]
+
+starting_elf_ablities_optional1 = ["broń specjalna (długi łuk)", "zmysł magii"]
+
+starting_elf_ablities_optional2 = ["opanowanie", "błyskotliwość"]
+
+halfling_most_common_birthplace = "Kraina Zgromadzenia"

@@ -1,5 +1,5 @@
 """
-This module provides rolling pseudo-random numbers.
+This module provides character class and generating all stats.
 """
 import random as rand
 from dataclasses import dataclass
@@ -9,40 +9,33 @@ import professions
 
 def random_choose(list):
     """
-    Returns one random element of list.
+    Roll one random element of list.
 
-    :param list: List to roll element from
+    :param list: List to roll element from.
     :type list: list
-    :return: a one element of list
+    :return: One element of list.
     :rtype: not defined
     """
     return list[rand.randint(0, len(list) - 1)]
 
 
 def mapping_roll(roll, mapping):
+    """
+    Get value from mapping depends on input roll.
+
+    :param roll: Number in mapping keys.
+    :type roll: int
+    :param mapping: Containing two numbers tuples as keys and strings as values.
+    :type mapping: dict
+    :return: Value from mapping
+    :r type: str
+    :raises ValueError: If roll not in mapping keys.
+    """
     for key in mapping.keys():
         minimum, maximum = key
         if roll >= minimum and roll <= maximum:
             return mapping[key]
-
-
-def race_translate(race):
-    mapping = {
-        "human": "Człowiek",
-        "halfling": "Niziołek",
-        "dwarf": "Krasnolud",
-        "elf": "Elf",
-    }
-    if race not in mapping:
-        raise ValueError(f"Wrong race in translation: {race}.")
-    return mapping[race]
-
-
-def sex_translate(sex):
-    mapping = {"male": "Mężczyzna", "female": "Kobieta"}
-    if sex not in mapping:
-        raise ValueError(f"Wrong sex in sex translation: {sex}.")
-    return mapping[sex]
+    raise ValueError(f"Roll: ({roll}) not in mapping: ({mapping})")
 
 
 @dataclass
@@ -182,12 +175,7 @@ class Character(object):
 
     def set_default_skills_and_abilities(self):
         if self.race == "human":
-            skills = {
-                "plotkowanie",
-                "wiedza (Imperium)",
-                "znajomość języka (staroświatowy)",
-            }
-
+            skills = constants.starting_human_skills
             ab1 = self.roll_ability()
             ab2 = self.roll_ability()
             while ab1 == ab2:
@@ -195,71 +183,42 @@ class Character(object):
             abilities = [ab1, ab2]
 
         if self.race == "halfling":
-            skills = [
-                "plotkowanie",
-                "wiedza (niziołki)",
-                "znajomość języka (staroświatowy)",
-                "znajomość języka (niziołków)",
-                "nauka (genealogia/heraldyka)",
-                random_choose(["rzemiosło (gotowanie)", "rzemiosło (uprawa ziemi)"]),
-            ]
-            abilities = [
-                "broń specjalna (proca)",
-                "odporność na Chaos",
-                "widzenie w ciemności",
-                self.roll_ability(),
-            ]
-
+            skills = constants.starting_halfling_skills.extend(
+                random_choose(constants.starting_halfling_skills_optional)
+                )
+            abilities = constants.starting_halfling_ablities.extend(
+                self.roll_ability()
+            )
+                
         if self.race == "dwarf":
-            skills = [
-                "wiedza (krasnoludy)",
-                "znajomość języka (khazalid)",
-                "znajomość języka (staroświatowy)",
-                random_choose(
-                    [
-                        "rzemiosło (górnictwo)",
-                        "rzemiosło (kamieniarstwo)",
-                        "rzemiosło (kowalstwo)",
-                    ]
-                ),
-            ]
-            abilities = [
-                "krasnoludzki fach",
-                "krzepki",
-                "odporność na magię",
-                "odwaga",
-                "widzenie w ciemności",
-                "zapiekła nienawiść",
-            ]
+            skills = starting_dwarf_skills.extend(
+                random_choose(starting_dwarf_skills_optional)
+            )
+            abilities = starting_dwarf_abilities
 
         if self.race == "elf":
-            skills = [
-                "wiedza (elfy)",
-                "znajomość języka (eltharin)",
-                "znajomość języka (staroświatowy)",
-            ]
-            abilities = [
-                "bystry wzrok",
-                "widzenie w ciemności",
-                random_choose(["broń specjalna (długi łuk)", "zmysł magii"]),
-                random_choose(["opanowanie", "błyskotliwość"]),
-            ]
+            skills = starting_elf_skills
+            abilities = starting_elf_ablities.extend(
+                random_choose(starting_elf_ablities_optional1)
+            ).extend(
+                random_choose(starting_elf_ablities_optional2)
+            )
 
-        self.skills = {skill: "Wykupione" for skill in skills}
+        self.skills = {skill: "bought" for skill in skills}
         self.abilities = abilities
 
     def add_skill(self, new_skill):
         if new_skill in self.skills.keys():
-            if self.skills[new_skill] == "Wykupione":
+            if self.skills[new_skill] == "bought":
                 self.skills[new_skill] = "+10"
             elif self.skills[new_skill] == "+10":
                 self.skills[new_skill] = "+20"
             elif self.skills[new_skill] == "+20":
                 return False  # skill is maxed out
             else:
-                raise Exception("Wrong value of skill in add_skill function.")
+                raise ValueError("Wrong value of skill in add_skill function.")
         else:
-            self.skills[new_skill] = "Wykupione"
+            self.skills[new_skill] = "bought"
         return True
 
     def add_ability(self, new_ability):
@@ -467,7 +426,7 @@ class Character(object):
             )
         elif self.race == "halfling":
             if rand.randint(1, 100) < 50:
-                self.birthplace = "Kraina Zgromadzenia"
+                self.birthplace = constants.halfling_most_common_birthlplace
         if self.birthplace == None:
             province = random_choose(list(constants.town_dict.keys()))
             town = mapping_roll(rand.randint(1, 100), constants.town_dict[province])
@@ -529,7 +488,7 @@ class Character(object):
 
     def print_character(self):
         print(f"Imię i nazwisko/przydomek: {self.name}")
-        print(f"Rasa: {race_translate(self.race)}")
+        print(f"Rasa: {self.race}")
         print(f"Profesja: {self.profession}")
         print(f"Płeć: {self.sex}")
         print(f"Wiek: {self.age}")
