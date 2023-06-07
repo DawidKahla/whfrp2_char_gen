@@ -1,8 +1,9 @@
 """
 This module provides functions for fill baseform png files
 """
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 from constants import basic_skills
+import translations
 
 
 def fill_character_card_front(input_file_name, output_file_name, char):
@@ -21,42 +22,59 @@ def fill_character_card_front(input_file_name, output_file_name, char):
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
         # positions and font need to be adjusted
-        writer.text((10, 10), char.name, "black")
-        writer.text((10, 10), char.race, "black")
-        writer.text((10, 10), char.profession, "black")
-        writer.text((10, 10), str(char.age), "black")
-        writer.text((10, 10), char.eye, "black")
-        writer.text((10, 10), char.hair, "black")
-        writer.text((10, 10), char.star, "black")
-        writer.text((10, 10), char.sex, "black")
-        writer.text((10, 10), str(char.weight), "black")
-        writer.text((10, 10), str(char.height), "black")
-        writer.text((10, 10), str(char.siblings), "black")
-        writer.text((10, 10), char.birthplace, "black")
-        writer.text((10, 10), char.special, "black")
+        font = ImageFont.truetype("Vera.ttf", 20)
+        max_x = base.size[0]
+        max_y = base.size[1]
+        writer.text((0.07 * max_x, 0.049 * max_y), char.name, "black", font=font)
+        writer.text(
+            (0.07 * max_x, 0.07 * max_y),
+            translations.race_translate(char.race),
+            "black",
+            font=font,
+        )
+        writer.text(
+            (0.125 * max_x, 0.091 * max_y),
+            char.profession.capitalize(),
+            "black",
+            font=font,
+        )
+        writer.text((10, 10), str(char.age), "black", font=font)
+        writer.text((10, 10), char.eye, "black", font=font)
+        writer.text((10, 10), char.hair, "black", font=font)
+        writer.text((10, 10), char.star, "black", font=font)
+        writer.text((10, 10), char.sex, "black", font=font)
+        writer.text((10, 10), str(char.weight), "black", font=font)
+        writer.text((10, 10), str(char.height), "black", font=font)
+        writer.text((10, 10), str(char.siblings), "black", font=font)
+        writer.text((10, 10), char.birthplace, "black", font=font)
+        writer.text((10, 10), char.special, "black", font=font)
         for idx, attribute in enumerate(char.attributes_main):
             writer.text(
-                (10, 10 + 10 * idx),
+                (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.358),
                 str(char.attributes_main[attribute].initial),
                 "black",
+                font=font,
             )
             if char.attributes_main[attribute].potential != 0:
                 writer.text(
-                    (20, 10 + 10 * idx),
+                    (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.38),
                     str(char.attributes_main[attribute].potential),
                     "black",
+                    font=font,
                 )
         for idx, attribute in enumerate(char.attributes_sec):
             writer.text(
-                (10, 10 + 10 * idx),
+                (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.448),
                 str(char.attributes_sec[attribute].initial),
                 "black",
+                font=font,
             )
             if char.attributes_sec[attribute].potential != 0:
                 writer.text(
-                    (20, 10 + 10 * idx),
+                    (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.47),
                     str(char.attributes_sec[attribute].potential),
                     "black",
+                    font=font,
                 )
 
         base.save(output_file_name)
@@ -80,7 +98,7 @@ def fill_character_card_back(input_file_name, output_file_name, char):
         writer = ImageDraw.Draw(base)
         # positions and font need to be adjusted
         number_of_advanced_skills = 0
-        for skill in character.skills:
+        for skill in char.skills:
             if skill in basic_skills:
                 y = 10 + 10 * basic_skills.index(skill)
             else:
@@ -89,9 +107,9 @@ def fill_character_card_back(input_file_name, output_file_name, char):
                 writer.text((10, y), skill, "black")
                 number_of_advanced_skills += 1
             writer.text((10, y), "X", "black")
-            if character.skills[skills] == "+10":
+            if char.skills[skill] == "+10":
                 writer.text((20, y), "X", "black")
-            if character.skills[skills] == "+20":
+            if char.skills[skill] == "+20":
                 writer.text((20, y), "X", "black")
                 writer.text((30, y), "X", "black")
         for idx, ability in enumerate(char.abilities):

@@ -25,7 +25,7 @@ def mapping_roll(roll, mapping):
 
     :param roll: Number in mapping keys.
     :type roll: int
-    :param mapping: Containing two numbers tuples as keys and strings as values.
+    :param mapping: Containing 2 numbers tuples as keys and strings as values.
     :type mapping: dict
     :return: Value from mapping
     :r type: str
@@ -181,7 +181,7 @@ class Character(object):
         elif self.race == "human":
             mapping = constants.human_ability_mapping
         else:
-            raise Exception(f"Wrong race in roll_ability {self.race}")
+            raise ValueError(f"Wrong race in roll_ability {self.race}")
         return mapping_roll(rand.randint(1, 100), mapping)
 
     def set_default_skills_and_abilities(self):
@@ -194,7 +194,7 @@ class Character(object):
             abilities = [ab1, ab2]
 
         if self.race == "halfling":
-            skills = constants.starting_halfling_skills.extend(
+            skills = constants.starting_halfling_skills.add(
                 random_choose(constants.starting_halfling_skills_optional)
             )
             abilities = constants.starting_halfling_abilities.extend(
@@ -202,7 +202,7 @@ class Character(object):
             )
 
         if self.race == "dwarf":
-            skills = constants.starting_dwarf_skills.extend(
+            skills = constants.starting_dwarf_skills.add(
                 random_choose(constants.starting_dwarf_skills_optional)
             )
             abilities = constants.starting_dwarf_abilities
@@ -259,24 +259,24 @@ class Character(object):
         return self.add_ability(random_choose(new_abilities))
 
     def update_any_skill(self):
-        for skill in constants.any_skills.keys():
+        for skill, value in constants.any_skills.items():
             if skill in self.skills:
                 if self.skills[skill] == "+20":
-                    self.add_skill(random_choose(constants.any_skills[skill]))
-                    self.add_skill(random_choose(constants.any_skills[skill]))
-                    self.add_skill(random_choose(constants.any_skills[skill]))
+                    self.add_skill(random_choose(value))
+                    self.add_skill(random_choose(value))
+                    self.add_skill(random_choose(value))
                 elif self.skills[skill] == "+10":
-                    self.add_skill(random_choose(constants.any_skills[skill]))
-                    self.add_skill(random_choose(constants.any_skills[skill]))
+                    self.add_skill(random_choose(value))
+                    self.add_skill(random_choose(value))
                 else:
-                    self.add_skill(random_choose(constants.any_skills[skill]))
+                    self.add_skill(random_choose(value))
                 self.skills.pop(skill)
 
     def update_any_ability(self):
-        for ability in constants.any_ability.keys():
+        for ability, values in constants.any_ability.items():
             if ability in self.abilities:
                 while True:
-                    if self.add_ability(random_choose(constants.any_ability[ability])):
+                    if self.add_ability(random_choose(values)):
                         self.abilities.remove(ability)
                         break
 
@@ -306,19 +306,12 @@ class Character(object):
 
     def update_attr_by_abilities(self):
         for ability in self.abilities:
-            for key in constants.ability_modify_attr:
+            for key, value in constants.ability_modify_attr.items():
                 if key == ability:
-                    if (
-                        constants.ability_modify_attr[key]
-                        in self.attributes_main.keys()
-                    ):
-                        self.attributes_main[
-                            constants.ability_modify_attr[key]
-                        ].initial += 5
-                    if constants.ability_modify_attr[key] in self.attributes_sec.keys():
-                        self.attributes_sec[
-                            constants.ability_modify_attr[key]
-                        ].initial += 1
+                    if value in self.attributes_main.keys():
+                        self.attributes_main[value].initial += 5
+                    if value in self.attributes_sec.keys():
+                        self.attributes_sec[value].initial += 1
 
     def set_S_Wt(self):
         self.attributes_sec["S"].initial = self.attributes_main["K"].initial // 10
@@ -384,10 +377,7 @@ class Character(object):
 
     def roll_special(self):
         roll = rand.randint(1, 100)
-        for key in constants.special_mapping.keys():
-            minimum, maximum = key
-            if roll >= minimum and roll <= maximum:
-                self.special = constants.special_mapping[key]
+        self.special = mapping_roll(roll, constants.special_mapping)
 
     def roll_siblings(self):
         roll = rand.randint(1, 10)
@@ -397,19 +387,13 @@ class Character(object):
             mapping = constants.siblings_elf_mapping
         else:
             mapping = constants.siblings_human_mapping
-        for key in mapping:
-            minimum, maximum = key
-            if roll >= minimum and roll <= maximum:
-                self.siblings = mapping[key]
+        self.siblings = mapping_roll(roll, mapping)
         if self.race == "halfling":
             self.siblings += 1
 
     def roll_star(self):
         roll = rand.randint(1, 100)
-        for key in constants.star_mapping.keys():
-            minimum, maximum = key
-            if roll >= minimum and roll <= maximum:
-                self.star = constants.star_mapping[key]
+        self.star = mapping_roll(roll, constants.star_mapping)
 
     def roll_age(self):
         roll = rand.randint(1, 100)
@@ -436,7 +420,7 @@ class Character(object):
         elif self.race == "halfling":
             if rand.randint(1, 100) < 50:
                 self.birthplace = constants.halfling_most_common_birthplace
-        if self.birthplace == None:
+        if self.birthplace is None:
             province = random_choose(list(constants.town_dict.keys()))
             town = mapping_roll(rand.randint(1, 100), constants.town_dict[province])
             self.birthplace = f"{province}, {town}"

@@ -1,6 +1,8 @@
 """
 This module contains translations.
 """
+
+
 def race_translate(race):
     """
     Translate race from english to polish.
@@ -23,7 +25,7 @@ def race_translate(race):
 
 
 def sex_translate(sex):
-        """
+    """
     Translate sex from english to polish.
 
     :param sex: Sex to translate.

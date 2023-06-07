@@ -2493,13 +2493,13 @@ starting_human_skills = {
     "znajomość języka (staroświatowy)",
 }
 
-starting_halfling_skills = [
+starting_halfling_skills = {
     "plotkowanie",
     "wiedza (niziołki)",
     "znajomość języka (staroświatowy)",
     "znajomość języka (niziołków)",
     "nauka (genealogia/heraldyka)",
-]
+}
 
 starting_halfling_skills_optional = [
     "rzemiosło (gotowanie)",
@@ -2512,11 +2512,11 @@ starting_halfling_abilities = [
     "widzenie w ciemności",
 ]
 
-starting_dwarf_skills = [
+starting_dwarf_skills = {
     "wiedza (krasnoludy)",
     "znajomość języka (khazalid)",
     "znajomość języka (staroświatowy)",
-]
+}
 
 starting_dwarf_skills_optional = [
     "rzemiosło (górnictwo)",
@@ -2533,11 +2533,11 @@ starting_dwarf_abilities = [
     "zapiekła nienawiść",
 ]
 
-starting_elf_skills = [
+starting_elf_skills = {
     "wiedza (elfy)",
     "znajomość języka (eltharin)",
     "znajomość języka (staroświatowy)",
-]
+}
 
 starting_elf_ablities = [
     "bystry wzrok",
