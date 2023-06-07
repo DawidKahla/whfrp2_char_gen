@@ -50,6 +50,7 @@ class attribute:
     :param final: The final value of attribute.
     :type final: int
     """
+
     initial: int
     potential: int
     final: int
@@ -195,25 +196,23 @@ class Character(object):
         if self.race == "halfling":
             skills = constants.starting_halfling_skills.extend(
                 random_choose(constants.starting_halfling_skills_optional)
-                )
-            abilities = constants.starting_halfling_ablities.extend(
+            )
+            abilities = constants.starting_halfling_abilities.extend(
                 self.roll_ability()
             )
-                
+
         if self.race == "dwarf":
-            skills = starting_dwarf_skills.extend(
-                random_choose(starting_dwarf_skills_optional)
+            skills = constants.starting_dwarf_skills.extend(
+                random_choose(constants.starting_dwarf_skills_optional)
             )
-            abilities = starting_dwarf_abilities
+            abilities = constants.starting_dwarf_abilities
 
         if self.race == "elf":
-            skills = starting_elf_skills
-            abilities = starting_elf_ablities.extend(
-                random_choose(starting_elf_ablities_optional1)
-            ).extend(
-                random_choose(starting_elf_ablities_optional2)
-            )
-
+            skills = constants.starting_elf_skills
+            abilities = constants.starting_elf_ablities.extend(
+                random_choose(constants.starting_elf_ablities_optional1)
+            ).extend(random_choose(constants.starting_elf_ablities_optional2))
+        print(skills)
         self.skills = {skill: "bought" for skill in skills}
         self.abilities = abilities
 
@@ -436,7 +435,7 @@ class Character(object):
             )
         elif self.race == "halfling":
             if rand.randint(1, 100) < 50:
-                self.birthplace = constants.halfling_most_common_birthlplace
+                self.birthplace = constants.halfling_most_common_birthplace
         if self.birthplace == None:
             province = random_choose(list(constants.town_dict.keys()))
             town = mapping_roll(rand.randint(1, 100), constants.town_dict[province])

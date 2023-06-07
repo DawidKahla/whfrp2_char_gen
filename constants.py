@@ -49,7 +49,7 @@ human_profession_mapping = {
     (405, 420): "OCHRONIARZ",
     (421, 432): "OPRYCH",
     (433, 444): "PACHOŁEK",
-    (445, 448): "PASTERZ Z CARCASONNE",
+    (445, 448): "PASTERZ Z CARCASSONNE",
     (449, 456): "PAŹ",
     (457, 468): "PIELGRZYM",
     (469, 476): "PIELGRZYM GRAALA",
@@ -2484,14 +2484,14 @@ basic_skills = [
     "wioślarstwo",
     "wspinaczka",
     "wycena",
-    "zastraszanie"
+    "zastraszanie",
 ]
 
-starting_human_skills = [
+starting_human_skills = {
     "plotkowanie",
     "wiedza (Imperium)",
     "znajomość języka (staroświatowy)",
-    ]
+}
 
 starting_halfling_skills = [
     "plotkowanie",
@@ -2502,9 +2502,9 @@ starting_halfling_skills = [
 ]
 
 starting_halfling_skills_optional = [
-    "rzemiosło (gotowanie)", 
-    "rzemiosło (uprawa ziemi)"
-    ]
+    "rzemiosło (gotowanie)",
+    "rzemiosło (uprawa ziemi)",
+]
 
 starting_halfling_abilities = [
     "broń specjalna (proca)",

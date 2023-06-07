@@ -1,10 +1,10 @@
 """
 This module contains all base professions.
-Include their main and secondary atrributes, skills, abilities and trappings.
+Include their main and secondary attributes, skills, abilities and trappings.
 """
 professions = {
     "AKOLITA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -14,7 +14,7 @@ professions = {
             "SW": 10,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -49,7 +49,7 @@ professions = {
         ],
     },
     "APTEKARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -59,7 +59,7 @@ professions = {
             "SW": 10,
             "Ogd": 15,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -92,7 +92,7 @@ professions = {
         ],
     },
     "BAGIENNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -102,7 +102,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 3,
             "S": 0,
@@ -139,7 +139,7 @@ professions = {
         ],
     },
     "BAJARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 0,
@@ -149,7 +149,7 @@ professions = {
             "SW": 10,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -183,7 +183,7 @@ professions = {
         ],
     },
     "BALSAMISTA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 5,
@@ -193,7 +193,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -232,7 +232,7 @@ professions = {
         ],
     },
     "BANITA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 10,
             "K": 0,
@@ -242,7 +242,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -277,7 +277,7 @@ professions = {
         ],
     },
     "BERSERKER Z NORSKI": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 15,
             "US": 0,
             "K": 10,
@@ -287,7 +287,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -320,7 +320,7 @@ professions = {
         ],
     },
     "BŁĘDNY RYCERZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 15,
             "US": 0,
             "K": 5,
@@ -330,7 +330,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -370,7 +370,7 @@ professions = {
         ],
     },
     "BYŁY WIĘZIEŃ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -380,7 +380,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -412,7 +412,7 @@ professions = {
         ],
     },
     "CENOBITA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -422,7 +422,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -453,7 +453,7 @@ professions = {
         ],
     },
     "CHŁOP": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 5,
@@ -463,7 +463,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -497,7 +497,7 @@ professions = {
         ],
     },
     "CIURA OBOZOWA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -507,7 +507,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -559,7 +559,7 @@ professions = {
         ],
     },
     "CYRKOWIEC": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -569,7 +569,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -633,7 +633,7 @@ professions = {
         ],
     },
     "CYRULIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 0,
@@ -643,7 +643,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -680,7 +680,7 @@ professions = {
         ],
     },
     "CZCICIEL ZARAZY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -690,7 +690,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -725,7 +725,7 @@ professions = {
         ],
     },
     "CZEKISTA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -735,7 +735,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -773,7 +773,7 @@ professions = {
         ],
     },
     "CZELADNIK RUN": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -783,7 +783,7 @@ professions = {
             "SW": 15,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -812,7 +812,7 @@ professions = {
         ],
     },
     "DOKER": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 5,
             "K": 10,
@@ -822,7 +822,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -857,7 +857,7 @@ professions = {
         ],
     },
     "DYLETANT": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 5,
@@ -867,7 +867,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -904,7 +904,7 @@ professions = {
         ],
     },
     "FANATYK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -914,7 +914,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -947,7 +947,7 @@ professions = {
         ],
     },
     "FLISAK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -957,7 +957,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -991,7 +991,7 @@ professions = {
         ],
     },
     "GAZECIARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -1001,7 +1001,7 @@ professions = {
             "SW": 0,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1036,7 +1036,7 @@ professions = {
         ],
     },
     "GIERMEK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -1046,7 +1046,7 @@ professions = {
             "SW": 0,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -1082,7 +1082,7 @@ professions = {
         ],
     },
     "GLADIATOR": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 15,
             "US": 0,
             "K": 0,
@@ -1092,7 +1092,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1126,7 +1126,7 @@ professions = {
         ],
     },
     "GONIEC": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -1136,7 +1136,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1172,7 +1172,7 @@ professions = {
         ],
     },
     "GÓRNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 10,
@@ -1182,7 +1182,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1220,7 +1220,7 @@ professions = {
         ],
     },
     "GRABARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 10,
@@ -1230,7 +1230,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1264,7 +1264,7 @@ professions = {
         ],
     },
     "GRABIEŻCA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -1274,7 +1274,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -1317,7 +1317,7 @@ professions = {
         ],
     },
     "GUŚLARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -1327,7 +1327,7 @@ professions = {
             "SW": 10,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1360,7 +1360,7 @@ professions = {
         ],
     },
     "HANDLARZ KOŃMI": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 5,
             "K": 5,
@@ -1370,7 +1370,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1408,7 +1408,7 @@ professions = {
         ],
     },
     "HARCOWNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -1418,7 +1418,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1451,7 +1451,7 @@ professions = {
         ],
     },
     "HIENA CMENTARNA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 0,
@@ -1461,7 +1461,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1503,7 +1503,7 @@ professions = {
         ],
     },
     "KADET": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -1513,7 +1513,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1555,7 +1555,7 @@ professions = {
         ],
     },
     "KANCIARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -1565,7 +1565,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1601,7 +1601,7 @@ professions = {
         ],
     },
     "KARTOGRAF": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 0,
@@ -1611,7 +1611,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1647,7 +1647,7 @@ professions = {
         ],
     },
     "KLANBRAT": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -1657,7 +1657,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1688,7 +1688,7 @@ professions = {
         ],
     },
     "KOCZOWNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 10,
             "K": 0,
@@ -1698,7 +1698,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1736,7 +1736,7 @@ professions = {
         ],
     },
     "KOMINIARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -1746,7 +1746,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1780,7 +1780,7 @@ professions = {
         ],
     },
     "KORSARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -1790,7 +1790,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -1840,7 +1840,7 @@ professions = {
         ],
     },
     "KOZAK KISLEVSKI": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 10,
             "K": 0,
@@ -1850,7 +1850,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1884,7 +1884,7 @@ professions = {
         ],
     },
     "LATARNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -1894,7 +1894,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -1930,7 +1930,7 @@ professions = {
         ],
     },
     "LEŚNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 10,
@@ -1940,7 +1940,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 3,
             "S": 0,
@@ -1975,7 +1975,7 @@ professions = {
         ],
     },
     "ŁOWCA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 15,
             "K": 0,
@@ -1985,7 +1985,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 3,
             "S": 0,
@@ -2021,7 +2021,7 @@ professions = {
         ],
     },
     "ŁOWCA NAGRÓD": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 5,
@@ -2031,7 +2031,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2068,7 +2068,7 @@ professions = {
         ],
     },
     "MIESZCZANIN": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 0,
@@ -2078,7 +2078,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2118,7 +2118,7 @@ professions = {
         ],
     },
     "MYTNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -2128,7 +2128,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2166,7 +2166,7 @@ professions = {
         ],
     },
     "NAJEMNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 10,
             "K": 5,
@@ -2176,7 +2176,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -2211,7 +2211,7 @@ professions = {
         ],
     },
     "NIEWOLNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 5,
@@ -2221,7 +2221,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 4,
             "S": 0,
@@ -2250,7 +2250,7 @@ professions = {
         ],
     },
     "OCHOTNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -2260,7 +2260,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2295,7 +2295,7 @@ professions = {
         ],
     },
     "OCHRONIARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -2305,7 +2305,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -2341,7 +2341,7 @@ professions = {
         ],
     },
     "OPRYCH": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -2351,7 +2351,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -2384,7 +2384,7 @@ professions = {
         ],
     },
     "PACHOŁEK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -2394,7 +2394,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2428,7 +2428,7 @@ professions = {
         ],
     },
     "PASTERZ Z CARCASSONNE": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -2438,7 +2438,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -2473,7 +2473,7 @@ professions = {
         ],
     },
     "PAŹ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -2483,7 +2483,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2524,7 +2524,7 @@ professions = {
         ],
     },
     "PIELGRZYM": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 5,
@@ -2534,7 +2534,7 @@ professions = {
             "SW": 10,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 4,
             "S": 0,
@@ -2567,7 +2567,7 @@ professions = {
         ],
     },
     "PIELGRZYM GRAALA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -2577,7 +2577,7 @@ professions = {
             "SW": 0,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2611,7 +2611,7 @@ professions = {
         ],
     },
     "PIRAT RZECZNY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -2621,7 +2621,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2655,7 +2655,7 @@ professions = {
         ],
     },
     "PODŻEGACZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -2665,7 +2665,7 @@ professions = {
             "SW": 0,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2701,7 +2701,7 @@ professions = {
         ],
     },
     "POGANIACZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -2711,7 +2711,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 3,
             "S": 0,
@@ -2748,7 +2748,7 @@ professions = {
         ],
     },
     "POGANIACZ BYDŁA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 10,
@@ -2758,7 +2758,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2801,7 +2801,7 @@ professions = {
         ],
     },
     "POGANIACZ MUŁÓW": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -2811,7 +2811,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2845,7 +2845,7 @@ professions = {
         ],
     },
     "POGRANICZNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 10,
@@ -2855,7 +2855,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -2886,7 +2886,7 @@ professions = {
         ],
     },
     "POKUTNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 10,
@@ -2896,7 +2896,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 3,
             "S": 0,
@@ -2927,7 +2927,7 @@ professions = {
         ],
     },
     "PORYWACZ ZWŁOK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -2937,7 +2937,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 3,
             "S": 0,
@@ -2974,7 +2974,7 @@ professions = {
         ],
     },
     "POSKRAMIACZ NIEDŹWIEDZI": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 10,
@@ -2984,7 +2984,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3013,7 +3013,7 @@ professions = {
         "trappings": ["lekki pancerz (skórzana kurta)", "niedźwiedź"],
     },
     "POSŁANIEC": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -3023,7 +3023,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3059,7 +3059,7 @@ professions = {
         ],
     },
     "POSŁANIEC NOCY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 10,
             "K": 0,
@@ -3069,7 +3069,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3106,7 +3106,7 @@ professions = {
         ],
     },
     "PRAWNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -3116,7 +3116,7 @@ professions = {
             "SW": 10,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3153,7 +3153,7 @@ professions = {
         ],
     },
     "PRZEMYTNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -3163,7 +3163,7 @@ professions = {
             "SW": 0,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3202,7 +3202,7 @@ professions = {
         ],
     },
     "PRZEPATRYWACZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -3212,7 +3212,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3250,7 +3250,7 @@ professions = {
         ],
     },
     "PRZEWOŹNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 10,
@@ -3260,7 +3260,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3293,7 +3293,7 @@ professions = {
         ],
     },
     "PUSTELNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 5,
             "K": 5,
@@ -3303,7 +3303,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3334,7 +3334,7 @@ professions = {
         ],
     },
     "ROGATY ŁOWCA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 10,
@@ -3344,7 +3344,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 3,
             "S": 0,
@@ -3379,7 +3379,7 @@ professions = {
         ],
     },
     "ROLNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 10,
@@ -3389,7 +3389,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3426,7 +3426,7 @@ professions = {
         ],
     },
     "ROZJEMCA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -3436,7 +3436,7 @@ professions = {
             "SW": 10,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3469,7 +3469,7 @@ professions = {
         ],
     },
     "RYBAK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 5,
             "K": 10,
@@ -3479,7 +3479,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3514,7 +3514,7 @@ professions = {
         ],
     },
     "RZECZNIK RODU": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -3524,7 +3524,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3559,7 +3559,7 @@ professions = {
         ],
     },
     "RZEMIEŚLNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 5,
@@ -3569,7 +3569,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3602,7 +3602,7 @@ professions = {
         ],
     },
     "RZEZIMIESZEK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 10,
@@ -3612,7 +3612,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -3647,7 +3647,7 @@ professions = {
         ],
     },
     "SKALD": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -3657,7 +3657,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3698,7 +3698,7 @@ professions = {
         ],
     },
     "SKARBNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 0,
@@ -3708,7 +3708,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3745,7 +3745,7 @@ professions = {
         ],
     },
     "SKRYBA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -3755,7 +3755,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3792,7 +3792,7 @@ professions = {
         ],
     },
     "SŁUGA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -3802,7 +3802,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3839,7 +3839,7 @@ professions = {
         ],
     },
     "STRAŻNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -3849,7 +3849,7 @@ professions = {
             "SW": 0,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3885,7 +3885,7 @@ professions = {
         ],
     },
     "STRAŻNIK DRÓG": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 10,
             "K": 5,
@@ -3895,7 +3895,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3933,7 +3933,7 @@ professions = {
         ],
     },
     "STRAŻNIK KANAŁÓW": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 0,
@@ -3943,7 +3943,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -3977,7 +3977,7 @@ professions = {
         ],
     },
     "STRAŻNIK PÓL": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -3987,7 +3987,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4020,7 +4020,7 @@ professions = {
         ],
     },
     "STRAŻNIK RZECZNY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 10,
             "K": 10,
@@ -4030,7 +4030,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4069,7 +4069,7 @@ professions = {
         ],
     },
     "STRAŻNIK ŚWIĄTYNNY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -4079,7 +4079,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4111,7 +4111,7 @@ professions = {
         ],
     },
     "STRAŻNIK TUNELI": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -4121,7 +4121,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -4156,7 +4156,7 @@ professions = {
         ],
     },
     "STRAŻNIK WIĘZIENNY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 10,
@@ -4166,7 +4166,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 3,
             "S": 0,
@@ -4201,7 +4201,7 @@ professions = {
         ],
     },
     "STRZYGAŃSKI MISTYK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -4211,7 +4211,7 @@ professions = {
             "SW": 10,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4248,7 +4248,7 @@ professions = {
         ],
     },
     "STRELTSI": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -4258,7 +4258,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4293,7 +4293,7 @@ professions = {
         ],
     },
     "SZCZUROŁAP": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -4303,7 +4303,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4338,7 +4338,7 @@ professions = {
         ],
     },
     "SZEPTUCHA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -4348,7 +4348,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4386,7 +4386,7 @@ professions = {
         ],
     },
     "SZERMIERZ ESTALIJSKI": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 15,
             "US": 0,
             "K": 5,
@@ -4396,7 +4396,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4430,7 +4430,7 @@ professions = {
         ],
     },
     "SZLACHCIC": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 0,
@@ -4440,7 +4440,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4480,7 +4480,7 @@ professions = {
         ],
     },
     "SZPERACZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -4490,7 +4490,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4522,7 +4522,7 @@ professions = {
         ],
     },
     "SZULER": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -4532,7 +4532,7 @@ professions = {
             "SW": 0,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4565,7 +4565,7 @@ professions = {
         ],
     },
     "ŚMIECIARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -4575,7 +4575,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4608,7 +4608,7 @@ professions = {
         ],
     },
     "TARCZOWNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -4618,7 +4618,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -4654,7 +4654,7 @@ professions = {
         ],
     },
     "UCZENNICA LODOWEJ WIEDŹMY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -4664,7 +4664,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4698,7 +4698,7 @@ professions = {
         ],
     },
     "UCZEŃ CZARODZIEJA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -4708,7 +4708,7 @@ professions = {
             "SW": 15,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4743,7 +4743,7 @@ professions = {
         ],
     },
     "UCZEŃ GUŚLARZA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 5,
@@ -4753,7 +4753,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4791,7 +4791,7 @@ professions = {
         ],
     },
     "WĘGLARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -4801,7 +4801,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4836,7 +4836,7 @@ professions = {
         ],
     },
     "WIELORYBNIK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 10,
@@ -4846,7 +4846,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4883,7 +4883,7 @@ professions = {
         ],
     },
     "WOJ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 5,
@@ -4893,7 +4893,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -4927,7 +4927,7 @@ professions = {
         ],
     },
     "WŁÓCZYKIJ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -4937,7 +4937,7 @@ professions = {
             "SW": 0,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -4984,7 +4984,7 @@ professions = {
         ],
     },
     "WOJOWNIK KLANOWY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -4994,7 +4994,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -5027,7 +5027,7 @@ professions = {
         ],
     },
     "WOŹNICA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -5037,7 +5037,7 @@ professions = {
             "SW": 5,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -5076,7 +5076,7 @@ professions = {
         ],
     },
     "WRÓŻBITA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -5086,7 +5086,7 @@ professions = {
             "SW": 10,
             "Ogd": 15,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -5117,7 +5117,7 @@ professions = {
         ],
     },
     "ZABÓJCA TROLLI": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 0,
             "K": 5,
@@ -5127,7 +5127,7 @@ professions = {
             "SW": 10,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 3,
             "S": 0,
@@ -5160,7 +5160,7 @@ professions = {
         ],
     },
     "ZARZĄDCA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 5,
@@ -5170,7 +5170,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -5205,7 +5205,7 @@ professions = {
         ],
     },
     "ZAKAPTURZONY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 10,
             "K": 0,
@@ -5215,7 +5215,7 @@ professions = {
             "SW": 0,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -5252,7 +5252,7 @@ professions = {
         ],
     },
     "ZBIERACZ ŁAJNA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 0,
             "K": 5,
@@ -5262,7 +5262,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -5296,7 +5296,7 @@ professions = {
         ],
     },
     "ZŁODZIEJ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 5,
             "US": 5,
             "K": 0,
@@ -5306,7 +5306,7 @@ professions = {
             "SW": 0,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -5342,7 +5342,7 @@ professions = {
         ],
     },
     "ŻABIARKA": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -5352,7 +5352,7 @@ professions = {
             "SW": 10,
             "Ogd": 5,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -5388,7 +5388,7 @@ professions = {
         ],
     },
     "ŻAK": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 0,
             "US": 0,
             "K": 0,
@@ -5398,7 +5398,7 @@ professions = {
             "SW": 5,
             "Ogd": 10,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 0,
             "Żyw": 2,
             "S": 0,
@@ -5432,7 +5432,7 @@ professions = {
         ],
     },
     "ŻEGLARZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 5,
             "K": 10,
@@ -5442,7 +5442,7 @@ professions = {
             "SW": 0,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -5486,7 +5486,7 @@ professions = {
         ],
     },
     "ŻOŁNIERZ": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 10,
             "K": 0,
@@ -5496,7 +5496,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 2,
             "S": 0,
@@ -5532,7 +5532,7 @@ professions = {
         ],
     },
     "ŻOŁNIERZ OKRĘTOWY": {
-        "atrributes_main": {
+        "attributes_main": {
             "WW": 10,
             "US": 10,
             "K": 10,
@@ -5542,7 +5542,7 @@ professions = {
             "SW": 5,
             "Ogd": 0,
         },
-        "atrributes_sec": {
+        "attributes_sec": {
             "A": 1,
             "Żyw": 3,
             "S": 0,
