@@ -39,7 +39,17 @@ def mapping_roll(roll, mapping):
 
 
 @dataclass
-class atrribute:
+class attribute:
+    """
+    Represents attribute with initial, potential and final values.
+
+    :param initial: The initial value of the attribute, depends on race and rolls.
+    :type initial: int
+    :param potential: The value of potential attribute growth, depends on profession.
+    :type potential: int
+    :param final: The final value of attribute.
+    :type final: int
+    """
     initial: int
     potential: int
     final: int
@@ -61,24 +71,24 @@ class Character(object):
         self.birthplace = None
         self.special = None
         self.attributes_main = {
-            "WW": atrribute(0, 0, 0),
-            "US": atrribute(0, 0, 0),
-            "K": atrribute(0, 0, 0),
-            "Odp": atrribute(0, 0, 0),
-            "Zr": atrribute(0, 0, 0),
-            "Int": atrribute(0, 0, 0),
-            "SW": atrribute(0, 0, 0),
-            "Ogd": atrribute(0, 0, 0),
+            "WW": attribute(0, 0, 0),
+            "US": attribute(0, 0, 0),
+            "K": attribute(0, 0, 0),
+            "Odp": attribute(0, 0, 0),
+            "Zr": attribute(0, 0, 0),
+            "Int": attribute(0, 0, 0),
+            "SW": attribute(0, 0, 0),
+            "Ogd": attribute(0, 0, 0),
         }
         self.attributes_sec = {
-            "A": atrribute(0, 0, 0),
-            "Żyw": atrribute(0, 0, 0),
-            "S": atrribute(0, 0, 0),
-            "Wt": atrribute(0, 0, 0),
-            "Sz": atrribute(0, 0, 0),
-            "Mag": atrribute(0, 0, 0),
-            "PO": atrribute(0, 0, 0),
-            "PP": atrribute(0, 0, 0),
+            "A": attribute(0, 0, 0),
+            "Żyw": attribute(0, 0, 0),
+            "S": attribute(0, 0, 0),
+            "Wt": attribute(0, 0, 0),
+            "Sz": attribute(0, 0, 0),
+            "Mag": attribute(0, 0, 0),
+            "PO": attribute(0, 0, 0),
+            "PP": attribute(0, 0, 0),
         }
         self.skills = {}
         self.abilities = []
@@ -114,7 +124,7 @@ class Character(object):
 
     def roll_attributes(self):
         self.attributes_main = {
-            attr: atrribute(20 + rand.randint(1, 10) + rand.randint(1, 10), 0, 0)
+            attr: attribute(20 + rand.randint(1, 10) + rand.randint(1, 10), 0, 0)
             for attr in self.attributes_main
         }
         self.attributes_sec["A"].initial = 1
@@ -272,14 +282,14 @@ class Character(object):
                         break
 
     def set_starting_profession(self):
-        for atrr in professions.professions[self.profession]["atrributes_main"]:
+        for atrr in professions.professions[self.profession]["attributes_main"]:
             self.attributes_main[atrr].potential = professions.professions[
                 self.profession
-            ]["atrributes_main"][atrr]
-        for atrr in professions.professions[self.profession]["atrributes_sec"]:
+            ]["attributes_main"][atrr]
+        for atrr in professions.professions[self.profession]["attributes_sec"]:
             self.attributes_sec[atrr].potential = professions.professions[
                 self.profession
-            ]["atrributes_sec"][atrr]
+            ]["attributes_sec"][atrr]
         for skill in professions.professions[self.profession]["skills"]:
             self.add_skill(skill)  # return False here doesn't have effect
         for ability in professions.professions[self.profession]["abilities"]:
@@ -465,6 +475,9 @@ class Character(object):
 
         self.name = f"{firstname} {surname}"
 
+    def roll_money(self):
+        self.money = rand.randint(1, 10) + rand.randint(1, 10)
+
     def roll_all(self):
         self.roll_race()
         self.roll_profession()
@@ -480,6 +493,7 @@ class Character(object):
         self.roll_age()
         self.roll_birthplace()
         self.roll_attributes()
+        self.roll_money()
         self.set_default_skills_and_abilities()
         self.set_starting_profession()
         self.update_any_skill()
@@ -505,4 +519,4 @@ class Character(object):
         print(self.attributes_main)
         print(self.attributes_sec)
         print(self.trappings)
-        print(rand.randint(1, 10) + rand.randint(1, 10))
+        print(f"{self.money} zk")

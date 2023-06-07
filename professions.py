@@ -1,5 +1,5 @@
 """
-This dictionary contains all base professions.
+This module contains all base professions.
 Include their main and secondary atrributes, skills, abilities and trappings.
 """
 professions = {

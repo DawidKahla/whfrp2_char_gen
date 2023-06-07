@@ -1,3 +1,6 @@
+"""
+This module contains constant values to character generating.
+"""
 human_profession_mapping = {
     (1, 16): "AKOLITA",
     (17, 28): "APTEKARZ",
