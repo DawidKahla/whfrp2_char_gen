@@ -194,25 +194,29 @@ class Character(object):
             abilities = [ab1, ab2]
 
         if self.race == "halfling":
-            skills = constants.starting_halfling_skills.add(
+            skills = constants.starting_halfling_skills
+            skills.add(
                 random_choose(constants.starting_halfling_skills_optional)
             )
-            abilities = constants.starting_halfling_abilities.extend(
+            abilities = constants.starting_halfling_abilities
+            abilities.extend(
                 self.roll_ability()
             )
 
         if self.race == "dwarf":
-            skills = constants.starting_dwarf_skills.add(
+            skills = constants.starting_dwarf_skills
+            skills.add(
                 random_choose(constants.starting_dwarf_skills_optional)
             )
             abilities = constants.starting_dwarf_abilities
 
         if self.race == "elf":
             skills = constants.starting_elf_skills
-            abilities = constants.starting_elf_ablities.extend(
-                random_choose(constants.starting_elf_ablities_optional1)
-            ).extend(random_choose(constants.starting_elf_ablities_optional2))
-        print(skills)
+            abilities = constants.starting_elf_ablities
+            abilities.extend([
+                random_choose(constants.starting_elf_ablities_optional1),
+                random_choose(constants.starting_elf_ablities_optional2)
+            ])
         self.skills = {skill: "bought" for skill in skills}
         self.abilities = abilities
 

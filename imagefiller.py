@@ -22,9 +22,8 @@ def fill_character_card_front(input_file_name, output_file_name, char):
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
         # positions and font need to be adjusted
-        font = ImageFont.truetype("Vera.ttf", 20)
-        max_x = base.size[0]
-        max_y = base.size[1]
+        font = ImageFont.truetype("Vera.ttf", 23, encoding="utf-8")
+        max_x, max_y = base.size
         writer.text((0.07 * max_x, 0.049 * max_y), char.name, "black", font=font)
         writer.text(
             (0.07 * max_x, 0.07 * max_y),
@@ -38,16 +37,16 @@ def fill_character_card_front(input_file_name, output_file_name, char):
             "black",
             font=font,
         )
-        writer.text((10, 10), str(char.age), "black", font=font)
-        writer.text((10, 10), char.eye, "black", font=font)
-        writer.text((10, 10), char.hair, "black", font=font)
-        writer.text((10, 10), char.star, "black", font=font)
-        writer.text((10, 10), char.sex, "black", font=font)
-        writer.text((10, 10), str(char.weight), "black", font=font)
-        writer.text((10, 10), str(char.height), "black", font=font)
-        writer.text((10, 10), str(char.siblings), "black", font=font)
-        writer.text((10, 10), char.birthplace, "black", font=font)
-        writer.text((10, 10), char.special, "black", font=font)
+        writer.text((0.068*max_x, 0.169*max_y), str(char.age), "black", font=font)
+        writer.text((0.09*max_x, 0.191*max_y), char.eye, "black", font=font)
+        writer.text((0.1*max_x, 0.213*max_y), char.hair, "black", font=font)
+        writer.text((0.106*max_x, 0.235*max_y), char.star, "black", font=font)
+        writer.text((0.27*max_x, 0.169*max_y), translations.sex_translate(char.sex), "black", font=font)
+        writer.text((0.275*max_x, 0.191*max_y), str(char.weight), "black", font=font)
+        writer.text((0.29*max_x, 0.213*max_y), str(char.height), "black", font=font)
+        writer.text((0.31*max_x, 0.235*max_y), str(char.siblings), "black", font=font)
+        writer.text((0.125*max_x, 0.257*max_y), char.birthplace, "black", font=font)
+        writer.text((0.123*max_x, 0.279*max_y), char.special, "black", font=font)
         for idx, attribute in enumerate(char.attributes_main):
             writer.text(
                 (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.358),
@@ -57,22 +56,36 @@ def fill_character_card_front(input_file_name, output_file_name, char):
             )
             if char.attributes_main[attribute].potential != 0:
                 writer.text(
-                    (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.38),
-                    str(char.attributes_main[attribute].potential),
+                    (0.095 * max_x + 0.043 * max_x * idx, max_y * 0.38),
+                    f"+{char.attributes_main[attribute].potential}",
+                    "black",
+                    font=font,
+                )
+            else:
+                writer.text(
+                    (0.105 * max_x + 0.043 * max_x * idx, max_y * 0.47),
+                    "-",
                     "black",
                     font=font,
                 )
         for idx, attribute in enumerate(char.attributes_sec):
             writer.text(
-                (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.448),
+                (0.103 * max_x + 0.043 * max_x * idx, max_y * 0.448),
                 str(char.attributes_sec[attribute].initial),
                 "black",
                 font=font,
             )
             if char.attributes_sec[attribute].potential != 0:
                 writer.text(
-                    (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.47),
-                    str(char.attributes_sec[attribute].potential),
+                    (0.098 * max_x + 0.043 * max_x * idx, max_y * 0.47),
+                    f"+{char.attributes_sec[attribute].potential}",
+                    "black",
+                    font=font,
+                )
+            else:
+                writer.text(
+                    (0.105 * max_x + 0.043 * max_x * idx, max_y * 0.47),
+                    "-",
                     "black",
                     font=font,
                 )
