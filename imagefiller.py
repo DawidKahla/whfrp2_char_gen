@@ -2,6 +2,7 @@
 This module provides functions for fill baseform png files
 """
 from PIL import Image, ImageDraw, ImageFont
+from fpdf import FPDF
 from constants import basic_skills
 import translations
 
@@ -16,7 +17,8 @@ def fill_character_card_front(input_file_name, output_file_name, char):
     :type output_file_name: str
     :param char: Character containing fields to fill PNG file.
     :type char: Character
-    :return: None
+    :return: The name of the filled PNG file.
+    :r type: str
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
@@ -99,7 +101,7 @@ def fill_character_card_front(input_file_name, output_file_name, char):
                 )
 
         base.save(output_file_name)
-        base.show()
+        return output_file_name
 
 
 def fill_character_card_back(input_file_name, output_file_name, char):
@@ -112,7 +114,8 @@ def fill_character_card_back(input_file_name, output_file_name, char):
     :type output_file_name: str
     :param char: Character containing fields to fill PNG file.
     :type char: Character
-    :return: None
+    :return: The name of the filled PNG file.
+    :r type: str
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
@@ -163,3 +166,28 @@ def fill_character_card_back(input_file_name, output_file_name, char):
         writer.text((0.64 * max_x, 0.882 * max_y), str(char.money), "black", font=font)
         base.save(output_file_name)
         base.show()
+        return output_file_name
+
+
+def generate_pdf(output_file_name, char):
+    """
+    Generate complete 2 pages character sheet as pdf file.
+
+    :param output_file_name: The name of the pdf file with character sheet.
+    :type output_file_name: str
+    :param char: Character containing fields to fill pdf file.
+    :type char: Character
+    :return: None
+    """
+    pdf = FPDF()
+    front_char_sheet = fill_character_card_front(
+        input_file_name="baseform-1.png", output_file_name="output1.png", char=char
+    )
+    back_char_sheet = fill_character_card_back(
+        input_file_name="baseform-2.png", output_file_name="output2.png", char=char
+    )
+    imagelist = [front_char_sheet, back_char_sheet]
+    for image in imagelist:
+        pdf.add_page()
+        pdf.image(image, w=190, h=266)
+    pdf.output(output_file_name, "F")

@@ -100,7 +100,7 @@ class Character(object):
         roll = rand.randint(1, 100)
         if roll == 1:
             output = "elf"
-        elif roll < 6:
+        elif roll < 5:
             output = "dwarf"
         elif roll < 11:
             output = "halfling"
@@ -121,8 +121,7 @@ class Character(object):
             raise Exception(f"Wrong race in roll_profession {self.race}")
 
         roll = rand.randint(1, 1000)
-        # self.profession = mapping_roll(roll, mapping)
-        self.profession = "CYRKOWIEC"
+        self.profession = mapping_roll(roll, mapping)
 
     def roll_attributes(self):
         self.attributes_main = {
@@ -198,7 +197,7 @@ class Character(object):
             skills = constants.starting_halfling_skills
             skills.add(random_choose(constants.starting_halfling_skills_optional))
             abilities = constants.starting_halfling_abilities
-            abilities.extend(self.roll_ability())
+            abilities.append(self.roll_ability())
 
         if self.race == "dwarf":
             skills = constants.starting_dwarf_skills
