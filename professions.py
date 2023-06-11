@@ -1728,7 +1728,8 @@ professions = {
             "zapasy na tydzień",
             "kilka bukłaków wody i kumysu",
             "jurta",
-            "skórzana kurta i nogawice" "kislevski łuk konny",
+            "skórzana kurta i nogawice",
+            "kislevski łuk konny",
             "10 strzał",
         ],
     },
@@ -2769,7 +2770,7 @@ professions = {
             "nawigacja",
             "opieka nad zwierzętami",
             "spostrzegawczość",
-            "sztuka przetrwanie",
+            "sztuka przetrwania",
             "śledzenie",
         ],
         "optional_skills": [
@@ -4961,7 +4962,8 @@ professions = {
             ["leczenie", "spostrzegawczość"],
             [
                 "wiedza (Imperium)",
-                "wiedza (Estalia)" "wiedza (Kislev)",
+                "wiedza (Estalia)",
+                "wiedza (Kislev)",
                 "wiedza (Tilea)",
             ],
         ],

@@ -7,7 +7,7 @@ import constants
 import professions
 
 
-def random_choose(list):
+def random_choose(some_list):
     """
     Roll one random element of list.
 
@@ -16,7 +16,7 @@ def random_choose(list):
     :return: One element of list.
     :rtype: not defined
     """
-    return list[rand.randint(0, len(list) - 1)]
+    return some_list[rand.randint(0, len(some_list) - 1)]
 
 
 def mapping_roll(roll, mapping):
@@ -118,7 +118,7 @@ class Character(object):
         elif self.race == "human":
             mapping = constants.human_profession_mapping
         else:
-            raise Exception(f"Wrong race in roll_profession {self.race}")
+            raise ValueError(f"Wrong race in roll_profession {self.race}")
 
         roll = rand.randint(1, 1000)
         self.profession = mapping_roll(roll, mapping)
@@ -320,7 +320,7 @@ class Character(object):
         self.attributes_sec["Wt"].final = self.attributes_main["Odp"].final // 10
 
     def roll_sex(self):
-        if self.sex == None:
+        if self.sex is None:
             if rand.randint(1, 10) < 6:
                 self.sex = "male"
             else:
@@ -397,15 +397,15 @@ class Character(object):
 
     def roll_age(self):
         roll = rand.randint(1, 100)
-        x = (roll - 1) // 5
+        additional_weight = (roll - 1) // 5
         if self.race == "human":
-            self.age = 16 + x
+            self.age = 16 + additional_weight
         elif self.race == "halfling":
-            self.age = 20 + 2 * x
+            self.age = 20 + 2 * additional_weight
             if roll > 70:
                 self.age += 2
         else:
-            self.age = 20 + 5 * x  # dwarf
+            self.age = 20 + 5 * additional_weight  # dwarf
             if self.race == "elf":
                 self.age += 10
 

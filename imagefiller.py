@@ -23,7 +23,7 @@ def fill_character_card_front(input_file_name, output_file_name, char):
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
         # positions and font need to be adjusted
-        font = ImageFont.truetype("Anonymous_Pro.ttf", 23, encoding="utf-8")
+        font = ImageFont.truetype("Anonymous_Pro.ttf", 18, encoding="utf-8")
         max_x, max_y = base.size
         writer.text((0.07 * max_x, 0.049 * max_y), char.name, "black", font=font)
         writer.text(
@@ -73,7 +73,7 @@ def fill_character_card_front(input_file_name, output_file_name, char):
                 )
             else:
                 writer.text(
-                    (0.105 * max_x + 0.043 * max_x * idx, max_y * 0.47),
+                    (0.105 * max_x + 0.043 * max_x * idx, max_y * 0.38),
                     "-",
                     "black",
                     font=font,
@@ -119,7 +119,7 @@ def fill_character_card_back(input_file_name, output_file_name, char):
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
-        font = ImageFont.truetype("Anonymous_Pro.ttf", 23, encoding="utf-8")
+        font = ImageFont.truetype("Anonymous_Pro.ttf", 18, encoding="utf-8")
         max_x, max_y = base.size
         number_of_advanced_skills = 0
         for skill in char.skills:
@@ -134,7 +134,7 @@ def fill_character_card_back(input_file_name, output_file_name, char):
                 x_10 = 0.324 * max_x
                 x_20 = 0.373 * max_x
                 if len(skill) > 18:
-                    font_for_skill = font.font_variant(size=int(23 - len(skill) / 4))
+                    font_for_skill = font.font_variant(size=int(18 - len(skill) / 4))
                 else:
                     font_for_skill = font
                 writer.text((0.1 * max_x, y_skill), skill, "black", font=font_for_skill)
@@ -154,7 +154,7 @@ def fill_character_card_back(input_file_name, output_file_name, char):
             )
         for idx, trapping in enumerate(char.trappings):
             if len(trapping) > 45:
-                font_for_trapping = font.font_variant(size=int(23 - len(trapping) / 9))
+                font_for_trapping = font.font_variant(size=int(18 - len(trapping) / 9))
             else:
                 font_for_trapping = font
             writer.text(
@@ -165,7 +165,6 @@ def fill_character_card_back(input_file_name, output_file_name, char):
             )
         writer.text((0.64 * max_x, 0.882 * max_y), str(char.money), "black", font=font)
         base.save(output_file_name)
-        base.show()
         return output_file_name
 
 
@@ -180,6 +179,7 @@ def generate_pdf(output_file_name, char):
     :return: None
     """
     pdf = FPDF()
+    pdf.set_margins(0, 0, 0)
     front_char_sheet = fill_character_card_front(
         input_file_name="baseform-1.png", output_file_name="output1.png", char=char
     )
@@ -189,5 +189,5 @@ def generate_pdf(output_file_name, char):
     imagelist = [front_char_sheet, back_char_sheet]
     for image in imagelist:
         pdf.add_page()
-        pdf.image(image, w=190, h=266)
+        pdf.image(image, w=210, h=276)
     pdf.output(output_file_name, "F")
