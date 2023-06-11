@@ -360,10 +360,7 @@ professions = {
         ],
         "optional_abilities": [],
         "trappings": [
-            "średni pancerz (kaftan kolczy",
-            "czepiec kolczy",
-            "skórzana kurta",
-            "hełm)",
+            "średni pancerz (kaftan kolczy, czepiec kolczy, skórzana kurta, hełm)",
             "kopia",
             "tarcza",
             "lekki koń bojowy z siodłem i uprzężą",
@@ -2422,8 +2419,7 @@ professions = {
         "optional_abilities": [],
         "trappings": [
             "halabarda",
-            "lekki pancerz (skórzana kurta",
-            "skórzany hełm)",
+            "lekki pancerz (skórzana kurta, skórzany hełm)",
             "mundur z godłem lub znakiem przynależności do pocztu rycerza",
         ],
     },

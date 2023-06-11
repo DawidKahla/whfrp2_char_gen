@@ -121,7 +121,8 @@ class Character(object):
             raise Exception(f"Wrong race in roll_profession {self.race}")
 
         roll = rand.randint(1, 1000)
-        self.profession = mapping_roll(roll, mapping)
+        # self.profession = mapping_roll(roll, mapping)
+        self.profession = "CYRKOWIEC"
 
     def roll_attributes(self):
         self.attributes_main = {
@@ -195,28 +196,24 @@ class Character(object):
 
         if self.race == "halfling":
             skills = constants.starting_halfling_skills
-            skills.add(
-                random_choose(constants.starting_halfling_skills_optional)
-            )
+            skills.add(random_choose(constants.starting_halfling_skills_optional))
             abilities = constants.starting_halfling_abilities
-            abilities.extend(
-                self.roll_ability()
-            )
+            abilities.extend(self.roll_ability())
 
         if self.race == "dwarf":
             skills = constants.starting_dwarf_skills
-            skills.add(
-                random_choose(constants.starting_dwarf_skills_optional)
-            )
+            skills.add(random_choose(constants.starting_dwarf_skills_optional))
             abilities = constants.starting_dwarf_abilities
 
         if self.race == "elf":
             skills = constants.starting_elf_skills
             abilities = constants.starting_elf_ablities
-            abilities.extend([
-                random_choose(constants.starting_elf_ablities_optional1),
-                random_choose(constants.starting_elf_ablities_optional2)
-            ])
+            abilities.extend(
+                [
+                    random_choose(constants.starting_elf_ablities_optional1),
+                    random_choose(constants.starting_elf_ablities_optional2),
+                ]
+            )
         self.skills = {skill: "bought" for skill in skills}
         self.abilities = abilities
 
@@ -294,9 +291,9 @@ class Character(object):
                 self.profession
             ]["attributes_sec"][atrr]
         for skill in professions.professions[self.profession]["skills"]:
-            self.add_skill(skill)  # return False here doesn't have effect
+            self.add_skill(skill)
         for ability in professions.professions[self.profession]["abilities"]:
-            self.add_ability(ability)  # return False here doesn't have effect
+            self.add_ability(ability)
         for skills in professions.professions[self.profession]["optional_skills"]:
             self.add_optional_skill(skills)
         for abilities in professions.professions[self.profession]["optional_abilities"]:
