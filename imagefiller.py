@@ -23,7 +23,7 @@ def fill_character_card_front(input_file_name, output_file_name, char):
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
         # positions and font need to be adjusted
-        font = ImageFont.truetype("Anonymous_Pro.ttf", 18, encoding="utf-8")
+        font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 18, encoding="utf-8")
         max_x, max_y = base.size
         writer.text((0.07 * max_x, 0.049 * max_y), char.name, "black", font=font)
         writer.text(
@@ -49,9 +49,11 @@ def fill_character_card_front(input_file_name, output_file_name, char):
             font=font,
         )
         writer.text(
-            (0.275 * max_x, 0.191 * max_y), str(char.weight), "black", font=font
+            (0.275 * max_x, 0.191 * max_y), f"{char.weight} kg", "black", font=font
         )
-        writer.text((0.29 * max_x, 0.213 * max_y), str(char.height), "black", font=font)
+        writer.text(
+            (0.29 * max_x, 0.213 * max_y), f"{char.height} cm", "black", font=font
+        )
         writer.text(
             (0.31 * max_x, 0.235 * max_y), str(char.siblings), "black", font=font
         )
@@ -119,7 +121,7 @@ def fill_character_card_back(input_file_name, output_file_name, char):
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
-        font = ImageFont.truetype("Anonymous_Pro.ttf", 18, encoding="utf-8")
+        font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 18, encoding="utf-8")
         max_x, max_y = base.size
         number_of_advanced_skills = 0
         for skill in char.skills:
@@ -154,7 +156,7 @@ def fill_character_card_back(input_file_name, output_file_name, char):
             )
         for idx, trapping in enumerate(char.trappings):
             if len(trapping) > 45:
-                font_for_trapping = font.font_variant(size=int(18 - len(trapping) / 9))
+                font_for_trapping = font.font_variant(size=int(18 - len(trapping) / 8))
             else:
                 font_for_trapping = font
             writer.text(
@@ -181,10 +183,14 @@ def generate_pdf(output_file_name, char):
     pdf = FPDF()
     pdf.set_margins(0, 0, 0)
     front_char_sheet = fill_character_card_front(
-        input_file_name="baseform-1.png", output_file_name="output1.png", char=char
+        input_file_name="imgs\\baseform-1.png",
+        output_file_name="imgs\\output1.png",
+        char=char,
     )
     back_char_sheet = fill_character_card_back(
-        input_file_name="baseform-2.png", output_file_name="output2.png", char=char
+        input_file_name="imgs\\baseform-2.png",
+        output_file_name="imgs\\output2.png",
+        char=char,
     )
     imagelist = [front_char_sheet, back_char_sheet]
     for image in imagelist:

@@ -21,6 +21,7 @@ Note:
 Author:
     Dawid Kahla
 """
+import webbrowser
 from character import Character
 import imagefiller
 
@@ -28,4 +29,8 @@ if __name__ == "__main__":
     npc = Character()
     npc.roll_all()
     npc.print_character()
-    imagefiller.generate_pdf("output.pdf", npc)
+    imagefiller.generate_pdf("imgs\\output.pdf", npc)
+    webbrowser.open("imgs\\output.pdf")
+
+# to create with nuitka:
+# python -m nuitka --standalone --include-data-dir=imgs=imgs --include-data-dir=fonts=fonts main.py

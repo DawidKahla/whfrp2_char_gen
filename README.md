@@ -7,6 +7,7 @@ The goal of this project is to create an application in python3 for generating r
 The concept is to get a completed random character sheet according to the rules in the manual in a few clicks.
 The application is for self-development and is for personal use only.
 The application creates a character sheet in Polish.
+<img src="https://github.com/DawidKahla/whfrp2_char_gen/blob/main/imgs/example1.png" width="300" height="400> <img src="https://github.com/DawidKahla/whfrp2_char_gen/blob/main/imgs/example2.png" width="300" height="400>
 
 ## Project Status
 The application is under development.
@@ -16,15 +17,4 @@ Console application that creates a randomly generated pdf character sheet.
 Make UI.
 
 ## How to run 
-First, make sure you have the python (ver. 3.11.0) language interpreter installed. Then clone repository and go to whfrp2_char_gen directory.
-
-To ensure proper operation of the application, make sure that versions of the relevant modules are installed on the device, according to the requirements.txt file, which can be done with the following command (using the package manager [pip](https://pip.pypa.io/en/stable/)):
-
-```bash
-pip install -r requirements.txt
-```
-
-and finally, run main.py:
-```bash
-python3 main.py
-```
+Run ...\main.dist\main.exe file. Created pdf will be save in ...\main.dist\imgs\output.pdf. 

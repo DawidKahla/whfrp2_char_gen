@@ -2,6 +2,8 @@
 /__pycache__/
 /venv/
 /replit.nix
+/.vscode
+/main.build/
 output1.png
 output2.png
 output.pdf
