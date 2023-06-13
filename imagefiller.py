@@ -41,7 +41,13 @@ def fill_character_card_front(input_file_name, output_file_name, char):
         writer.text((0.068 * max_x, 0.169 * max_y), str(char.age), "black", font=font)
         writer.text((0.09 * max_x, 0.191 * max_y), char.eye, "black", font=font)
         writer.text((0.1 * max_x, 0.213 * max_y), char.hair, "black", font=font)
-        writer.text((0.106 * max_x, 0.235 * max_y), char.star, "black", font=font)
+        if len(char.star) > 15:
+            font_for_star = font.font_variant(size=int(font.size - 1))
+        else:
+            font_for_star = font
+        writer.text(
+            (0.106 * max_x, 0.235 * max_y), char.star, "black", font=font_for_star
+        )
         writer.text(
             (0.27 * max_x, 0.169 * max_y),
             translations.sex_translate(char.sex),

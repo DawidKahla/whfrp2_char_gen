@@ -299,10 +299,17 @@ class Character(object):
             self.add_optional_ability(abilities)
         for trapping in professions.professions[self.profession]["trappings"]:
             self.trappings.append(trapping)
+        if "optional_trappings" in professions.professions[self.profession]:
+            for trapping in professions.professions[self.profession][
+                "optional_trappings"
+            ]:
+                self.trappings.append(random_choose(trapping))
 
     def update(self):
         self.update_attr_by_abilities()
         self.set_S_Wt()
+        self.roll_in_trappings()
+        self.take_money_from_trappings()
 
     def update_attr_by_abilities(self):
         for ability in self.abilities:
@@ -318,6 +325,30 @@ class Character(object):
         self.attributes_sec["Wt"].initial = self.attributes_main["Odp"].initial // 10
         self.attributes_sec["S"].final = self.attributes_main["K"].final // 10
         self.attributes_sec["Wt"].final = self.attributes_main["Odp"].final // 10
+
+    def roll_in_trappings(self):
+        for idx, trapping in enumerate(self.trappings):
+            self.trappings[idx] = trapping.replace("1k10/2", f"{rand.randint(1, 5)}")
+            self.trappings[idx] = self.trappings[idx].replace(
+                "2k10", f"{rand.randint(1, 10)+rand.randint(1, 10)}"
+            )
+            self.trappings[idx] = self.trappings[idx].replace(
+                "3k10", f"{rand.randint(1, 10)+rand.randint(1, 10)+rand.randint(1, 10)}"
+            )
+            self.trappings[idx] = self.trappings[idx].replace(
+                "6k10",
+                f"{rand.randint(1, 10) + rand.randint(1, 10) + rand.randint(1, 10) + rand.randint(1, 10) + rand.randint(1, 10) + rand.randint(1, 10)}",
+            )
+            self.trappings[idx] = self.trappings[idx].replace(
+                "1k10", f"{rand.randint(1, 10)}"
+            )
+
+    def take_money_from_trappings(self):
+        for trapping in self.trappings:
+            if " zk" in trapping and len(trapping) < 6:
+                additional_money = int(trapping.replace(" zk", ""))
+                self.trappings.remove(trapping)
+                self.money += additional_money
 
     def roll_sex(self):
         if self.sex is None:

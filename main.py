@@ -6,6 +6,7 @@ It generates a character sheet in PDF format.
 
 Usage:
     python main.py
+    or /main.dist/main.exe
 
 Arguments:
     None

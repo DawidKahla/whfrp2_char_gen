@@ -134,7 +134,7 @@ professions = {
             "sieć",
             "włócznia",
             "worek",
-            "1k10 kurzajek",
+            "kurzajki (1k10)",
             "zezwolenie od lokalnego szlachcica",
         ],
     },
@@ -271,7 +271,8 @@ professions = {
             ["wędrowiec", "łotrzyk"],
         ],
         "trappings": [
-            "łuk i 10 strzał",
+            "łuk",
+            "10 strzał",
             "lekki pancerz (skórzany kaftan)",
             "tarcza",
         ],
@@ -314,9 +315,11 @@ professions = {
         ],
         "optional_abilities": [],
         "trappings": [
-            "broń dwuręczna albo tarcza",
             "lekki pancerz (skórzany kaftan)",
             "butelka gorzałki",
+        ],
+        "optional_trappings": [
+            ["broń dwuręczna", "tarcza"],
         ],
     },
     "BŁĘDNY RYCERZ": {
@@ -446,7 +449,8 @@ professions = {
         ],
         "optional_abilities": [],
         "trappings": [
-            "brudna włosienica i tunika",
+            "brudna włosienica",
+            "tunika",
         ],
     },
     "CHŁOP": {
@@ -489,8 +493,10 @@ professions = {
             ["chodu!", "broń specjalna (proca)"],
         ],
         "trappings": [
-            "proca albo kij",
             "skórzany bukłak",
+        ],
+        "optional_trappings": [
+            ["proca, kij"],
         ],
     },
     "CIURA OBOZOWA": {
@@ -553,6 +559,12 @@ professions = {
             "talizman szczęścia albo narzędzia (rzemieślnika)",
             "sakiewka",
             "namiot",
+        ],
+        "optional_trappings": [
+            [
+                "talizman szczęścia",
+                "narzędzia (rzemieślnika)",
+            ]
         ],
     },
     "CYRKOWIEC": {
@@ -625,8 +637,18 @@ professions = {
         ],
         "trappings": [
             "lekki pancerz (skórzany kaftan)",
-            "3 noże do rzucania albo 2 topory do rzucania albo instrument muzyczny (dowolny) albo narzędzia (kuglarza)",
-            "kostium cyrkowca (dowolny) albo ubranie dobrej jakości",
+        ],
+        "optional_trappings": [
+            [
+                "3 noże do rzucania",
+                "2 topory do rzucania",
+                "instrument muzyczny (dowolny)",
+                "narzędzia (kuglarza)",
+            ],
+            [
+                "kostium cyrkowca (dowolny)",
+                "ubranie dobrej jakości",
+            ],
         ],
     },
     "CYRULIK": {
@@ -718,7 +740,7 @@ professions = {
             "2 sztuki broni jednoręcznej",
             "choroba (wybór MG)",
             "larwy",
-            "3k10 much",
+            "muchy (3k10)",
         ],
     },
     "CZEKISTA": {
@@ -766,7 +788,8 @@ professions = {
             "okuta brązem maczuga (broń jednoręczna)",
             "czarny kislevski rumak",
             "siodło",
-            "uprząż i juki",
+            "uprząż",
+            "juki",
         ],
     },
     "CZELADNIK RUN": {
@@ -850,7 +873,7 @@ professions = {
             "lekki pancerz (skórzana kurta)",
             "czapka w kolorach gangu",
             "1O metrów liny",
-            "1k10 drewnianych kołków",
+            "drewniane kołki (1k10)",
         ],
     },
     "DYLETANT": {
@@ -938,9 +961,17 @@ professions = {
             ["opanowanie", "bardzo silny"],
         ],
         "trappings": [
-            "korbacz albo morgensztern",
             "lekki pancerz (skórzana kurta)",
-            "butelka spirytusu lub gorzałki dobrej jakości",
+        ],
+        "optional_trappings": [
+            [
+                "korbacz",
+                "morgensztern",
+            ],
+            [
+                "butelka spirytusu dobrej jakości",
+                "gorzałka dobrej jakości",
+            ],
         ],
     },
     "FLISAK": {
@@ -1028,7 +1059,7 @@ professions = {
         ],
         "trappings": [
             "plecak",
-            "1k1O gazet",
+            "gazety (1k10)",
             "tuba na zwoje",
         ],
     },
@@ -1072,8 +1103,7 @@ professions = {
         "optional_abilities": [],
         "trappings": [
             "lanca",
-            "średni pancerz (kaftan kolczy",
-            "czepiec kolczy i skórzana kurta)",
+            "średni pancerz (kaftan kolczy, czepiec kolczy i skórzana kurta)",
             "tarcza",
             "koń z siodłem i uprzężą",
         ],
@@ -1116,10 +1146,18 @@ professions = {
             ["rozbrajanie", "zapasy"],
         ],
         "trappings": [
-            "korbacz albo broń dwuręczna",
             "kastet",
             "średni pancerz (kaftan kolczy i skórzana kurta)",
-            "tarcza albo puklerz",
+        ],
+        "optional_trappings": [
+            [
+                "korbacz",
+                "broń dwuręczna",
+            ],
+            [
+                "tarcza",
+                "puklerz",
+            ],
         ],
     },
     "GONIEC": {
@@ -1162,7 +1200,8 @@ professions = {
             ["bardzo wytrzymały", "bardzo silny"],
         ],
         "trappings": [
-            "kusza i 10 bełtów",
+            "kusza",
+            "10 bełtów",
             "lekki pancerz (skórzana kurta)",
             "mikstura lecznicza",
             "talizman szczęścia",
@@ -1304,13 +1343,21 @@ professions = {
             ],
         ],
         "trappings": [
-            "sztylet albo 2 oszczepy",
             "korbacz",
-            "broń dwuręczna albo lanca",
             "broń jednoręczna",
             "lekki pancerz (hełm i skórzane nogawice)",
             "tarcza",
             "tatuaże",
+        ],
+        "optional_trappings": [
+            [
+                "sztylet",
+                "2 oszczepy",
+            ],
+            [
+                "broń dwuręczna",
+                "lanca",
+            ],
         ],
     },
     "GUŚLARZ": {
@@ -1399,9 +1446,14 @@ professions = {
         ],
         "trappings": [
             "ubranie dobrej jakości",
-            "lasso albo bicz",
-            "1k10/2 koni",
+            "konie (1k10/2)",
             "1k10 zk",
+        ],
+        "optional_trappings": [
+            [
+                "lasso",
+                "bicz",
+            ]
         ],
     },
     "HARCOWNIK": {
@@ -1444,7 +1496,13 @@ professions = {
         "trappings": [
             "lekki pancerz (skórzana kurta)",
             "broń jednoręczna",
-            "muszkiet spaczeniowy albo 2 pistolety spaczeniowe albo 2 kule trującego wichru",
+        ],
+        "optional_trappings": [
+            [
+                "muszkiet spaczeniowy",
+                "2 pistolety spaczeniowe",
+                "2 kule trującego wichru",
+            ]
         ],
     },
     "HIENA CMENTARNA": {
@@ -1545,10 +1603,15 @@ professions = {
             ["błyskotliwość", "urodzony wojownik"],
         ],
         "trappings": [
-            "floret albo rapier",
             "lekki pancerz (pełna zbroja skórzana)",
             "tarcza",
             "mundur (kadeta)",
+        ],
+        "optional_trappings": [
+            [
+                "floret",
+                "rapier",
+            ]
         ],
     },
     "KANCIARZ": {
@@ -1593,8 +1656,14 @@ professions = {
             ["szczęście", "szósty zmysł"],
         ],
         "trappings": [
-            "ubranie najlepszej jakości albo zestaw kości do gry albo talia kart",
-            "1d10 zk",
+            "1k10 zk",
+        ],
+        "optional_trappings": [
+            [
+                "ubranie najlepszej jakości",
+                "zestaw kości do gry",
+                "talia kart",
+            ]
         ],
     },
     "KARTOGRAF": {
@@ -1640,7 +1709,7 @@ professions = {
         "trappings": [
             "przybory do pisania",
             "kuc z siodłem i uprzężą",
-            "1d10 opraw na mapy",
+            "oprawy na mapy (1k10)",
         ],
     },
     "KLANBRAT": {
@@ -1680,8 +1749,13 @@ professions = {
         "trappings": [
             "lekki pancerz (skórzana kurta i skórzany hełm)",
             "broń jednoręczna",
-            "sztylet albo proca",
             "tarcza",
+        ],
+        "optional_trappings": [
+            [
+                "sztylet",
+                "proca",
+            ]
         ],
     },
     "KOCZOWNIK": {
@@ -2014,9 +2088,9 @@ professions = {
         ],
         "trappings": [
             "długi łuk i 10 strzał",
-            "2 potrzaski albo wnyki na zwierzęta",
             "odtrutki",
         ],
+        "optional_trappings": [["2 potrzaski", "wnyki na zwierzęta"]],
     },
     "ŁOWCA NAGRÓD": {
         "attributes_main": {
@@ -2243,9 +2317,7 @@ professions = {
             ["bystry wzrok", "czuły słuch"],
             ["chodu!", "twardziel"],
         ],
-        "trappings": [
-            "brak",
-        ],
+        "trappings": [],
     },
     "OCHOTNIK": {
         "attributes_main": {
@@ -2287,9 +2359,14 @@ professions = {
             ["broń specjalna (dwuręczna)", "błyskawiczne przeładowanie"],
         ],
         "trappings": [
-            "halabarda albo łuk i IO strzał",
             "lekki pancerz (skórzana kurta i skórzany hełm)",
             "mundur",
+        ],
+        "optional_trappings": [
+            [
+                "halabarda",
+                "łuk i 10 strzał",
+            ]
         ],
     },
     "OCHRONIARZ": {
@@ -2332,10 +2409,15 @@ professions = {
             ["bardzo silny", "niezwykle odporny"],
         ],
         "trappings": [
-            "dwa topory albo noże do rzucania",
             "kastety",
             "lekki pancerz (skórzana kurta)",
             "puklerz",
+        ],
+        "optional_trappings": [
+            [
+                "2 topory do rzucania",
+                "2 noże do rzucania",
+            ]
         ],
     },
     "OPRYCH": {
@@ -2421,7 +2503,7 @@ professions = {
         "trappings": [
             "halabarda",
             "lekki pancerz (skórzana kurta, skórzany hełm)",
-            "mundur z godłem lub znakiem przynależności do pocztu rycerza",
+            "mundur z znakiem przynależności do pocztu rycerza",
         ],
     },
     "PASTERZ Z CARCASSONNE": {
@@ -2466,7 +2548,12 @@ professions = {
             "łuk i 10 strzał",
             "bretoński bosak (kij)",
             "bretoński owczarek błękitny",
-            "stado owiec lub baranów",
+        ],
+        "optional_trappings": [
+            [
+                "stado owiec",
+                " stado baranów",
+            ]
         ],
     },
     "PAŹ": {
@@ -2694,7 +2781,7 @@ professions = {
         "trappings": [
             "lekki pancerz (skórzana kurta)",
             "ubranie dobrej jakości",
-            "2k10 ulotek różnej treści",
+            "ulotki różnej treści (2k10)",
         ],
     },
     "POGANIACZ": {
@@ -2794,7 +2881,8 @@ professions = {
             "lasso",
             "jurta",
             "lekki pancerz (skórzana kurta i spodnie)",
-            "racje żywnościowe na kilka dni oraz kilka bukłaków z kwasem i wodą",
+            "racje żywnościowe na kilka dni",
+            "kilka bukłaków z kwasem i wodą",
         ],
     },
     "POGANIACZ MUŁÓW": {
@@ -3051,7 +3139,7 @@ professions = {
         "trappings": [
             "lekki pancerz (skórzana kurta)",
             "tarcza",
-            "koń z siodłem i uprzężą (albo kuc dla niziołków)",
+            "koń z siodłem i uprzężą",
             "tuba na mapy",
         ],
     },
@@ -3099,7 +3187,12 @@ professions = {
         "trappings": [
             "lekki pancerz (skórzany kaftan)",
             "2 sztuki broni jednoręcznej",
-            "proca albo 4 gwiazdki do rzucania",
+        ],
+        "optional_trappings": [
+            [
+                "proca",
+                "4 gwiazdki do rzucania",
+            ]
         ],
     },
     "PRAWNIK": {
@@ -3194,8 +3287,13 @@ professions = {
         ],
         "trappings": [
             "lekki pancerz (skórzana kurta)",
-            "koń pociągowy i wóz albo łódź wiosłowa",
             "2 pochodnie",
+        ],
+        "optional_trappings": [
+            [
+                "koń pociągowy i wóz",
+                "łódź wiosłowa",
+            ]
         ],
     },
     "PRZEPATRYWACZ": {
@@ -3237,13 +3335,21 @@ professions = {
             ["opanowanie", "bardzo silny"],
         ],
         "trappings": [
-            "łuk albo kusza i 10 strzał albo bełtów",
-            "bicz albo arkan",
             "sieć",
             "lekki pancerz (skórzana kurta)",
             "tarcza",
             "koń z siodłem i uprzężą",
             "10m liny",
+        ],
+        "optional_trappings": [
+            [
+                "łuk i 10 strzał",
+                "kusza i 10 bełtów",
+            ],
+            [
+                "bicz",
+                "arkan",
+            ],
         ],
     },
     "PRZEWOŹNIK": {
@@ -3285,8 +3391,13 @@ professions = {
             ["broń specjalna (dowolna)", "bijatyka"],
         ],
         "trappings": [
-            "kusza i 10 bełtów albo garłacz z zapasem amunicji na 10 strzałów",
             "lekki pancerz (skórzana kurta)",
+        ],
+        "optional_trappings": [
+            [
+                "kusza i 10 bełtów",
+                "garłacz z zapasem amunicji na 10 strzałów",
+            ]
         ],
     },
     "PUSTELNIK": {
@@ -3326,9 +3437,7 @@ professions = {
             "wędrowiec",
         ],
         "optional_abilities": [],
-        "trappings": [
-            "brak",
-        ],
+        "trappings": [],
     },
     "ROGATY ŁOWCA": {
         "attributes_main": {
@@ -3417,9 +3526,17 @@ professions = {
             ["broń specjalna (kosa)", "broń specjalna (cep)"],
         ],
         "trappings": [
-            "wóz z koniem lub wołem",
-            "broń dwuręczna (kosa) albo cep",
             "pies pasterski",
+        ],
+        "optional_trappings": [
+            [
+                "wóz z koniem",
+                "wóz z wołem",
+            ],
+            [
+                "broń dwuręczna (kosa)",
+                "cep",
+            ],
         ],
     },
     "ROZJEMCA": {
@@ -3461,8 +3578,12 @@ professions = {
             "żyłka handlowa",
         ],
         "optional_abilities": [],
-        "trappings": [
-            "owieczka albo świnia",
+        "trappings": [],
+        "optional_trappings": [
+            [
+                "owieczka",
+                "świnia",
+            ]
         ],
     },
     "RYBAK": {
@@ -3925,7 +4046,7 @@ professions = {
             "pistolet z 10 kulami i zapasem prochu",
             "średni pancerz (kaftan kolczy i skórzana kurta)",
             "tarcza",
-            "lekki koń bojowy z siodłem i uprzężą (albo kuc dla niziołka)",
+            "lekki koń bojowy z siodłem i uprzężą",
             "10 metrów liny",
         ],
     },
@@ -4013,7 +4134,8 @@ professions = {
             ["błyskotliwość", "charyzmatyczny"],
         ],
         "trappings": [
-            "dwie księgi związane z wybraną dziedziną nauki. przybory do pisania",
+            "dwie księgi związane z wybraną dziedziną nauki",
+            "przybory do pisania",
         ],
     },
     "STRAŻNIK RZECZNY": {
@@ -4104,7 +4226,12 @@ professions = {
         ],
         "trappings": [
             "lekki pancerz (skórzana kurta)",
-            "szaty albo mundur",
+        ],
+        "optional_trappings": [
+            [
+                "szaty",
+                "mundur",
+            ]
         ],
     },
     "STRAŻNIK TUNELI": {
@@ -4192,10 +4319,10 @@ professions = {
         ],
         "optional_abilities": [],
         "trappings": [
-            "bolas, sieć albo arkan",
             "butelka podłego wina",
             "manierka",
         ],
+        "optional_trappings": [["bolas", "sieć", "arkan"]],
     },
     "STRZYGAŃSKI MISTYK": {
         "attributes_main": {
@@ -4420,10 +4547,14 @@ professions = {
             ["szybkie wyciągnięcie", "morderczy atak"],
         ],
         "trappings": [
-            "szpada albo rapier",
             "ubranie najlepszej jakości",
             "perfumy",
             "mikstura leczenia",
+        ],
+        "optional_trappings": [
+            [
+                "szpada albo rapier",
+            ]
         ],
     },
     "SZLACHCIC": {
@@ -4827,9 +4958,11 @@ professions = {
             ["błyskotliwość", "bardzo silny"],
         ],
         "trappings": [
-            "broń jednoręczna (topór albo pałka)",
             "3 pochodnie",
             "krzesiwo i hubka",
+        ],
+        "optional_trappings": [
+            ["broń jednoręczna (topór)", "broń jednoręczna (pałka)"]
         ],
     },
     "WIELORYBNIK": {
@@ -4917,10 +5050,20 @@ professions = {
             ["błyskotliwość", "opanowanie"],
         ],
         "trappings": [
-            "broń dwuręczna albo broń jednoręczna i tarcza",
             "średni pancerz (skórznia i kaftan kolczy)",
-            "manierka z piwem lub miodem",
-            "trzy dary od jarla (każdy warty 1k10/2 zk)",
+            "dar od jarla (wart 1k10/2 zk)",
+            "dar od jarla (wart 1k10/2 zk)",
+            "dar od jarla (wart 1k10/2 zk)",
+        ],
+        "optional_trappings": [
+            [
+                "broń dwuręczna",
+                "broń jednoręczna i tarcza",
+            ],
+            [
+                "manierka z piwem",
+                "manierka z miodem",
+            ],
         ],
     },
     "WŁÓCZYKIJ": {
@@ -5154,7 +5297,12 @@ professions = {
         "trappings": [
             "broń dwuręczna",
             "lekki pancerz (skórzany kaftan)",
-            "butelka spirytusu lub gorzałki kiepskiej jakości",
+        ],
+        "optional_trappings": [
+            [
+                "butelka spirytusu",
+                "gorzałki kiepskiej jakości",
+            ]
         ],
     },
     "ZARZĄDCA": {
@@ -5243,11 +5391,11 @@ professions = {
             ["broń specjalna (długi luk)", "strzelec wyborowy"],
         ],
         "trappings": [
-            "luk albo długi luk (jeśli posiada odpowiednią zdolność)",
             "10 strzał",
             "lekki pancerz (skórzany kaftan)",
             "tarcza",
         ],
+        "optional_trappings": [["łuk", "długi łuk"]],
     },
     "ZBIERACZ ŁAJNA": {
         "attributes_main": {
@@ -5523,10 +5671,15 @@ professions = {
             ["morderczy atak", "błyskawiczne przeładowanie"],
         ],
         "trappings": [
-            "broń dwuręczna (halabarda) albo rusznica z amunicją na 10 strzałów",
             "lekki pancerz (skórznia)",
             "mundur",
             "tarcza",
+        ],
+        "optional_trappings": [
+            [
+                "broń dwuręczna (halabarda)",
+                "rusznica z amunicją na 10 strzałów",
+            ]
         ],
     },
     "ŻOŁNIERZ OKRĘTOWY": {
@@ -5569,10 +5722,10 @@ professions = {
             ["rozbrajanie", "szybkie wyciągnięcie"],
         ],
         "trappings": [
-            "łuk albo kusza i 10 strzał/bełtów",
             "lekki pancerz (skórzana kurta)",
             "tarcza",
             "10 metrów liny z kotwiczką",
         ],
+        "optional_trappings": [["łuk i 10 strzał", "kusza i 10 bełtów"]],
     },
 }
