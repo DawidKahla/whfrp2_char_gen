@@ -7,8 +7,8 @@ The goal of this project is to create an application in python3 for generating r
 The concept is to get a completed random character sheet according to the rules in the manual in a few clicks.
 The application is for self-development and is for personal use only.
 The application creates a character sheet in Polish.
-<img src="https://github.com/DawidKahla/whfrp2_char_gen/blob/main/imgs/example1.png" width="300" height="400/> 
-<img src="https://github.com/DawidKahla/whfrp2_char_gen/blob/main/imgs/example2.png" width="300" height="400/>
+![Example of output front](https://github.com/DawidKahla/whfrp2_char_gen/blob/main/imgs/example1.png)
+![Example of output back](https://github.com/DawidKahla/whfrp2_char_gen/blob/main/imgs/example2.png)
 
 ## Project Status
 The application is under development.
