@@ -71,8 +71,8 @@ class Character(object):
         eye (str): The eye color of the character.
         hair (str): The hair color of the character.
         star (str): The star sign of the character.
-        weight (float): The weight of the character in kilograms.
-        height (float): The height of the character in centimeters.
+        weight (int): The weight of the character in kilograms.
+        height (int): The height of the character in centimeters.
         siblings (int): The number of siblings the character has.
         birthplace (str): The birthplace of the character.
         special (str): Special characteristics of the character.
