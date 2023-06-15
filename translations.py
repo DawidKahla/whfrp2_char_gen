@@ -5,13 +5,17 @@ This module contains translations.
 
 def race_translate(race):
     """
-    Translate race from english to polish.
+    Translate race from English to Polish.
 
-    :param race: Race to translate.
-    :type race: str
-    :return: Translated race.
-    :r type: str
-    :raises ValueError: If race is not human, halfling, dwarf or elf.
+    Parameters:
+        race (str): Race to translate.
+
+    Returns:
+        str: Translated race.
+
+    Raises:
+        ValueError: If race is not human, halfling, dwarf or elf.
+
     """
     mapping = {
         "human": "Człowiek",
@@ -26,13 +30,17 @@ def race_translate(race):
 
 def sex_translate(sex):
     """
-    Translate sex from english to polish.
+    Translate sex from English to Polish.
 
-    :param sex: Sex to translate.
-    :type race: str
-    :return: Translated sex.
-    :r type: str
-    :raises ValueError: If sex is not male or female.
+    Parameters:
+        sex (str): Sex to translate.
+
+    Returns:
+        str: Translated sex.
+
+    Raises:
+        ValueError: If sex is not male or female.
+
     """
     mapping = {"male": "Mężczyzna", "female": "Kobieta"}
     if sex not in mapping:

@@ -7,18 +7,18 @@ from constants import basic_skills
 import translations
 
 
-def fill_character_card_front(input_file_name, output_file_name, char):
+def fill_character_card_front(input_file_name, output_file_name, char) -> str:
     """
-    Fills front character card PNG file with character fields.
+    Fills the front character card PNG file with character fields.
 
-    :param input_file_name: The name of the PNG file to fill.
-    :type input_file_name: str
-    :param output_file_name: The name of the filled PNG file.
-    :type output_file_name: str
-    :param char: Character containing fields to fill PNG file.
-    :type char: Character
-    :return: The name of the filled PNG file.
-    :r type: str
+    Parameters:
+        input_file_name (str): The name of the PNG file to fill.
+        output_file_name (str): The name of the filled PNG file.
+        char (Character): Character containing fields to fill PNG file.
+
+    Returns:
+        str: The name of the filled PNG file.
+
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
@@ -112,18 +112,18 @@ def fill_character_card_front(input_file_name, output_file_name, char):
         return output_file_name
 
 
-def fill_character_card_back(input_file_name, output_file_name, char):
+def fill_character_card_back(input_file_name, output_file_name, char) -> str:
     """
-    Fills back character card PNG file with character fields.
+    Fills the back character card PNG file with character fields.
 
-    :param input_file_name: The name of the PNG file to fill.
-    :type input_file_name: str
-    :param output_file_name: The name of the filled PNG file.
-    :type output_file_name: str
-    :param char: Character containing fields to fill PNG file.
-    :type char: Character
-    :return: The name of the filled PNG file.
-    :r type: str
+    Parameters:
+        input_file_name (str): The name of the PNG file to fill.
+        output_file_name (str): The name of the filled PNG file.
+        char (Character): Character containing fields to fill PNG file.
+
+    Returns:
+        str: The name of the filled PNG file.
+
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
@@ -178,13 +178,15 @@ def fill_character_card_back(input_file_name, output_file_name, char):
 
 def generate_pdf(output_file_name, char):
     """
-    Generate complete 2 pages character sheet as pdf file.
+    Generate a complete 2-page character sheet as a PDF file.
 
-    :param output_file_name: The name of the pdf file with character sheet.
-    :type output_file_name: str
-    :param char: Character containing fields to fill pdf file.
-    :type char: Character
-    :return: None
+    Parameters:
+        output_file_name (str): The name of the PDF file with the character sheet.
+        char (Character): Character containing fields to fill the PDF file.
+
+    Returns:
+        None
+
     """
     pdf = FPDF()
     pdf.set_margins(0, 0, 0)

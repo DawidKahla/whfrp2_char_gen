@@ -16,9 +16,9 @@ Output:
     Also generates PNG files which it was composed from ("output1.png", "output2.png").
 
 Note:
-    Make sure to have the necessary dependencies installed, such as Python 3.
-    Required packages in file: "requirements.txt".
-
+    to create with nuitka:
+    python -m nuitka --standalone --include-data-dir=imgs=imgs --include-data-dir=fonts=fonts main.py
+    
 Author:
     Dawid Kahla
 """
@@ -33,5 +33,4 @@ if __name__ == "__main__":
     imagefiller.generate_pdf("imgs\\output.pdf", npc)
     webbrowser.open("imgs\\output.pdf")
 
-# to create with nuitka:
-# python -m nuitka --standalone --include-data-dir=imgs=imgs --include-data-dir=fonts=fonts main.py
+
