@@ -2231,7 +2231,7 @@ professions = {
         ],
         "trappings": [
             "kusza i 10 bełtów",
-            "średni pancerz (kaftan kolczy i skórzany kaftan)",
+            "średni pancerz (kaftan kolczy, skórzany kaftan)",
             "tarcza",
             "zamykana na kłódkę skrzynia",
             "1k10 zk",
@@ -2277,7 +2277,7 @@ professions = {
         ],
         "trappings": [
             "kusza i 10 bełtów",
-            "średni pancerz (kaftan kolczy i skórzana kurta)",
+            "średni pancerz (kaftan kolczy, skórzana kurta)",
             "tarcza",
             "mikstura lecznicza",
         ],
@@ -2460,7 +2460,7 @@ professions = {
         ],
         "trappings": [
             "kastety",
-            "średni pancerz (kaftan kolczy i skórzany kaftan)",
+            "średni pancerz (kaftan kolczy, skórzany kaftan)",
         ],
     },
     "PACHOŁEK": {
@@ -3759,7 +3759,7 @@ professions = {
             ["groźny", "charyzmatyczny"],
         ],
         "trappings": [
-            "średni pancerz (kaftan kolczy i skórzana kurta)",
+            "średni pancerz (kaftan kolczy, skórzana kurta)",
             "tarcza",
             "koń z siodłem i uprzężą",
         ],
@@ -4044,7 +4044,7 @@ professions = {
         ],
         "trappings": [
             "pistolet z 10 kulami i zapasem prochu",
-            "średni pancerz (kaftan kolczy i skórzana kurta)",
+            "średni pancerz (kaftan kolczy, skórzana kurta)",
             "tarcza",
             "lekki koń bojowy z siodłem i uprzężą",
             "10 metrów liny",
@@ -4775,7 +4775,7 @@ professions = {
         ],
         "trappings": [
             "kusza i 10 bełtów",
-            "średni pancerz (kolczuga, skórzana kurta i skórzane nogawice)",
+            "średni pancerz (kolczuga, skórzana kurta, skórzane nogawice)",
             "tarcza",
             "10 metrów liny z kotwiczką",
             "bukłak z wodą",
@@ -5050,7 +5050,7 @@ professions = {
             ["błyskotliwość", "opanowanie"],
         ],
         "trappings": [
-            "średni pancerz (skórznia i kaftan kolczy)",
+            "średni pancerz (skórznia, kaftan kolczy)",
             "dar od jarla (wart 1k10/2 zk)",
             "dar od jarla (wart 1k10/2 zk)",
             "dar od jarla (wart 1k10/2 zk)",
@@ -5212,7 +5212,7 @@ professions = {
         ],
         "trappings": [
             "garłacz z zapasem amunicji na 10 strzałów",
-            "średni pancerz (kaftan kolczy i skórzana kurta)",
+            "średni pancerz (kaftan kolczy, skórzana kurta)",
             "instrument muzyczny (róg woźnicy)",
         ],
     },

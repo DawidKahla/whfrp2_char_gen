@@ -87,6 +87,15 @@ class Character(object):
         trappings (list): The trappings of the character.
             Format: [trapping1, trapping2, ...].
         money (int): The money owned by the character in golden corons.
+        basic_armor (int):
+            Character armor points for basic rules.
+        advanced_armor (dict):
+            Character armor points for advanced rules.
+            The keys represent body parts (head, body, arms, legs),
+            and the values represent the armor values for each body part.
+        armor_list (list):
+            List that contains character armor.
+
 
     """
     def __init__(self):
@@ -130,6 +139,15 @@ class Character(object):
         self.abilities = []
         self.trappings = []
         self.money = None
+        self.basic_armor = None
+        self.advanced_armor = {
+            'head': 0,
+            'body': 0,
+            'arms': 0,
+            'legs': 0,
+        }
+        self.armor_list = []
+
 
     def roll_race(self):
         """
@@ -532,6 +550,40 @@ class Character(object):
                 additional_money = int(trapping.replace(" zk", ""))
                 self.trappings.remove(trapping)
                 self.money += additional_money
+
+    def take_armor_from_trappings(self):
+        """
+        Extracts armor from trappings and assigns it.
+
+        The function iterates over the trappings list of the character.
+        If a trapping contains the keyword 'pancerz', it checks for the type of armor and assigns it accordingly.
+        The function also updates the character's advanced_armor dictionary based on the armor details.
+
+        Raises:
+            ValueError: If an unrecognized type of armor is found in the trappings.
+
+        """
+        for trapping in self.trappings:
+            if "pancerz" in trapping:
+                if "lekki pancerz" in trappings:
+                    self.basic_armor = 1
+                elif "średni pancerz" in trapping:
+                    self.basic_armor = 3
+                else:
+                    raise ValueError("Unrecognized type of armor: {trapping}.")
+                for armor_name, armor_detail in constants.armor:
+                    if armor_name in trapping:
+                        if "głowa" in armor_detail[0]:
+                            self.advanced_armor['head'] += armor_detail[1]
+                        if "korpus" in armor_detail[0]:
+                            self.advanced_armor['body'] += armor_detail[1]
+                        if "nogi" in armor_detail[0]:
+                            self.advanced_armor['legs'] += armor_detail[1]
+                        if "ręce" in armor_detail[0]:
+                            self.advanced_armor['arms'] += armor_detail[1]
+                        self.armor_list.append(armor_name)
+                self.trappings.remove(trapping)
+
 
     def roll_sex(self):
         """
