@@ -2550,14 +2550,14 @@ starting_elf_ablities_optional2 = ["opanowanie", "błyskotliwość"]
 
 halfling_most_common_birthplace = "Kraina Zgromadzenia"
 
-armor = {
-    "kaftan kolczy": ["korpus", 2],
-    "kolczuga": [["korpus","nogi"], 2],
+armors = {
+    "kaftan kolczy": [["korpus"], 2],
+    "kolczuga": [["korpus", "nogi"], 2],
     "czepiec kolczy": [["głowa"], 2],
     "hełm": [["głowa"], 1],
     "skórzane nogawice": [["nogi"], 1],
     "skórzany kaftan": [["korpus"], 1],
     "skórzana kurta": [["korpus", "ręce"], 1],
     "skórzany hełm": [["głowa"], 1],
-    "skórznia": [["głowa", "korpus", "ręce","nogi"], 1],
+    "skórznia": [["głowa", "korpus", "ręce", "nogi"], 1],
 }

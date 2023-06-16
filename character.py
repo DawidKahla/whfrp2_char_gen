@@ -98,6 +98,7 @@ class Character(object):
 
 
     """
+
     def __init__(self):
         """
         Initializes a new instance of the Character class.
@@ -141,13 +142,12 @@ class Character(object):
         self.money = None
         self.basic_armor = None
         self.advanced_armor = {
-            'head': 0,
-            'body': 0,
-            'arms': 0,
-            'legs': 0,
+            "head": 0,
+            "body": 0,
+            "arms": 0,
+            "legs": 0,
         }
         self.armor_list = []
-
 
     def roll_race(self):
         """
@@ -323,14 +323,14 @@ class Character(object):
         Raises:
             ValueError: If the value of the skill in `self.skills` is not recognized.
 
-        """        
+        """
         if new_skill in self.skills.keys():
             if self.skills[new_skill] == "bought":
                 self.skills[new_skill] = "+10"
             elif self.skills[new_skill] == "+10":
                 self.skills[new_skill] = "+20"
             elif self.skills[new_skill] == "+20":
-                return False  
+                return False
             else:
                 raise ValueError("Wrong value of skill in add_skill function.")
         else:
@@ -347,7 +347,7 @@ class Character(object):
         Returns:
             bool: True if the ability was successfully added, False if character has it.
 
-        """        
+        """
         if new_ability in self.abilities:
             return False
         self.abilities.append(new_ability)
@@ -387,7 +387,7 @@ class Character(object):
         Returns:
             bool: True if an optional ability was successfully added, False if no more optional abilities are available.
 
-        """        
+        """
         for ability in self.abilities:
             if ability in new_abilities:
                 new_abilities.remove(ability)
@@ -402,7 +402,7 @@ class Character(object):
         The method replaces format skill(any) that matches the predefined skills in `constants.any_skills` with random skills
         chosen from the corresponding skill options. The number of replacements depends on the current skill value.
 
-        """        
+        """
         for skill, value in constants.any_skills.items():
             if skill in self.skills:
                 if self.skills[skill] == "+20":
@@ -474,12 +474,14 @@ class Character(object):
         2. Set values for attributes "S" and "Wt" using the `set_S_Wt` method.
         3. Roll random values in trappings using the `roll_in_trappings` method.
         4. Extract money from trappings using the `take_money_from_trappings` method.
+        5. Extract armor from trappings using the `take_armor_from_trappings` method.
 
         """
         self.update_attr_by_abilities()
         self.set_S_Wt()
         self.roll_in_trappings()
         self.take_money_from_trappings()
+        self.take_armor_from_trappings()
 
     def update_attr_by_abilities(self):
         """
@@ -565,31 +567,30 @@ class Character(object):
         """
         for trapping in self.trappings:
             if "pancerz" in trapping:
-                if "lekki pancerz" in trappings:
+                if "lekki pancerz" in trapping:
                     self.basic_armor = 1
                 elif "średni pancerz" in trapping:
                     self.basic_armor = 3
                 else:
                     raise ValueError("Unrecognized type of armor: {trapping}.")
-                for armor_name, armor_detail in constants.armor:
+                for armor_name, armor_detail in constants.armors.items():
                     if armor_name in trapping:
                         if "głowa" in armor_detail[0]:
-                            self.advanced_armor['head'] += armor_detail[1]
+                            self.advanced_armor["head"] += armor_detail[1]
                         if "korpus" in armor_detail[0]:
-                            self.advanced_armor['body'] += armor_detail[1]
+                            self.advanced_armor["body"] += armor_detail[1]
                         if "nogi" in armor_detail[0]:
-                            self.advanced_armor['legs'] += armor_detail[1]
+                            self.advanced_armor["legs"] += armor_detail[1]
                         if "ręce" in armor_detail[0]:
-                            self.advanced_armor['arms'] += armor_detail[1]
+                            self.advanced_armor["arms"] += armor_detail[1]
                         self.armor_list.append(armor_name)
                 self.trappings.remove(trapping)
-
 
     def roll_sex(self):
         """
         Roll the character's sex if it is not already set.
 
-        Randomly determines the sex of the character based on a dice roll. 
+        Randomly determines the sex of the character based on a dice roll.
         If the sex is already set, no action is taken.
         """
         if self.sex is None:

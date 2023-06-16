@@ -3,7 +3,7 @@ This module provides functions for fill baseform png files
 """
 from PIL import Image, ImageDraw, ImageFont
 from fpdf import FPDF
-from constants import basic_skills
+from constants import basic_skills, armors
 import translations
 
 
@@ -108,68 +108,74 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                     font=font,
                 )
         if char.basic_armor == 1:
-            writer.text((0.1 * max_x, 0.7 * max_y ), "Lekki", "black", font=font)
+            writer.text((0.1 * max_x, 0.754 * max_y), "Lekki", "black", font=font)
         elif char.basic_armor == 3:
-            writer.text((0.1 * max_x, 0.7 * max_y ), "Średni", "black", font=font)
-        writer.text((0.3 * max_x, 0.7 * max_y ), f"{char.basic_armor}", "black", font=font)
-        for idx, armor in enumerate(char.armor_list):
+            writer.text((0.1 * max_x, 0.754 * max_y), "Średni", "black", font=font)
+        if char.basic_armor:
             writer.text(
-                (0.05*max_x, 0.8*max_y+0.022*max_y*idx),
+                (0.3 * max_x, 0.754 * max_y), f"{char.basic_armor}", "black", font=font
+            )
+        for idx, armor in enumerate(char.armor_list):
+            font_for_name = font
+            font_for_location = font
+            if len(armor) > 14:
+                font_for_name = font.font_variant(size=int(font.size - 3))
+            if len(", ".join(armors[armor][0])) > 24:
+                font_for_location = font.font_variant(size=int(font.size - 2))
+            writer.text(
+                (0.03 * max_x, 0.81 * max_y + 0.022 * max_y * idx),
                 armor,
                 "black",
-                font=font
+                font=font_for_name,
             )
             writer.text(
-                (0.2*max_x, 0.8*max_y+0.022*max_y*idx),
-                ", ".join(constants.armor[armor][0]),
+                (0.195 * max_x, 0.81 * max_y + 0.022 * max_y * idx),
+                ", ".join(armors[armor][0]),
                 "black",
-                font=font               
+                font=font_for_location,
             )
             writer.text(
-                (0.4*max_x, 0.8*max_y+0.022*max_y*idx),
-                constants.armor[armor][1],
+                (0.41 * max_x, 0.81 * max_y + 0.022 * max_y * idx),
+                f"{armors[armor][1]}",
                 "black",
-                font=font               
+                font=font,
             )
         writer.text(
-            (0.6*max_x,0.4*max_y),
-            f"{char.advanced_armor['head']+char.attributes_sec["Wt"].initial}",
+            (0.513 * max_x, 0.37 * max_y),
+            f"{char.advanced_armor['head'] + char.attributes_sec['Wt'].initial}",
             "black",
-            font=font
+            font=font,
         )
         writer.text(
-            (0.8*max_x,0.4*max_y),
-            f"{char.advanced_armor['body']+char.attributes_sec["Wt"].initial}",
+            (0.827 * max_x, 0.37 * max_y),
+            f"{char.advanced_armor['body'] + char.attributes_sec['Wt'].initial}",
             "black",
-            font=font
+            font=font,
         )
         writer.text(
-            (0.6*max_x,0.6*max_y),
-            f"{char.advanced_armor['arms']+char.attributes_sec["Wt"].initial}",
+            (0.513 * max_x, 0.5265 * max_y),
+            f"{char.advanced_armor['arms'] + char.attributes_sec['Wt'].initial}",
             "black",
-            font=font
+            font=font,
         )
         writer.text(
-            (0.8*max_x,0.6*max_y),
-            f"{char.advanced_armor['arms']+char.attributes_sec["Wt"].initial}",
+            (0.827 * max_x, 0.5265 * max_y),
+            f"{char.advanced_armor['arms'] + char.attributes_sec['Wt'].initial}",
             "black",
-            font=font
+            font=font,
         )
         writer.text(
-            (0.6*max_x,0.8*max_y),
-            f"{char.advanced_armor['legs']+char.attributes_sec["Wt"].initial}",
+            (0.513 * max_x, 0.69 * max_y),
+            f"{char.advanced_armor['legs']+char.attributes_sec['Wt'].initial}",
             "black",
-            font=font
+            font=font,
         )
         writer.text(
-            (0.8*max_x,0.8*max_y),
-            f"{char.advanced_armor['legs']+char.attributes_sec["Wt"].initial}",
+            (0.827 * max_x, 0.69 * max_y),
+            f"{char.advanced_armor['legs']+char.attributes_sec['Wt'].initial}",
             "black",
-            font=font
+            font=font,
         )
-
-            
-
 
         base.save(output_file_name)
         return output_file_name

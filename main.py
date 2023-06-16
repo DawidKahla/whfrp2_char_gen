@@ -32,5 +32,3 @@ if __name__ == "__main__":
     npc.print_character()
     imagefiller.generate_pdf("imgs\\output.pdf", npc)
     webbrowser.open("imgs\\output.pdf")
-
-
