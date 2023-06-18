@@ -556,7 +556,6 @@ professions = {
             ["twardziel", "charyzmatyczny"],
         ],
         "trappings": [
-            "talizman szczęścia albo narzędzia (rzemieślnika)",
             "sakiewka",
             "namiot",
         ],

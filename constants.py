@@ -307,7 +307,7 @@ ability_modify_attr = {
     "urodzony wojownik": "WW",
     "strzelec wyborowy": "US",
     "bardzo silny": "K",
-    "niezywkle odporny": "Odp",
+    "niezwykle odporny": "Odp",
     "szybki refleks": "Zr",
     "błyskotliwość": "Int",
     "opanowanie": "SW",
