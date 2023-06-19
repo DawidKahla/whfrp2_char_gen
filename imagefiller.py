@@ -3,7 +3,7 @@ This module provides functions for fill baseform png files
 """
 from PIL import Image, ImageDraw, ImageFont
 from fpdf import FPDF
-from constants import basic_skills, armors
+from constants import basic_skills, armors, weapons
 import translations
 
 
@@ -23,7 +23,7 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
         # positions and font need to be adjusted
-        font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 18, encoding="utf-8")
+        font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 14, encoding="utf-8")
         max_x, max_y = base.size
         writer.text((0.07 * max_x, 0.049 * max_y), char.name, "black", font=font)
         writer.text(
@@ -107,6 +107,27 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                     "black",
                     font=font,
                 )
+        for idx, weapon in enumerate(char.weapon_list):
+            writer.text(
+                (0.03 * max_x, 0.57 * max_y + idx * 0.22 * max_y),
+                weapon,
+                "black",
+                font=font,
+            )
+            for idx_det, detail in enumerate(weapons[weapon]):
+                if detail:
+                    if isinstance(detail, list):
+                        detail = ", ".join(detail)
+                    writer.text(
+                        (
+                            0.143 * max_x + 0.043 * max_x * idx_det,
+                            0.57 * max_y + idx * 0.22 * max_y,
+                        ),
+                        str(detail),
+                        "black",
+                        font,
+                    )
+
         if char.basic_armor == 1:
             writer.text((0.1 * max_x, 0.754 * max_y), "Lekki", "black", font=font)
         elif char.basic_armor == 3:
@@ -196,7 +217,7 @@ def fill_character_card_back(input_file_name, output_file_name, char) -> str:
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
-        font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 18, encoding="utf-8")
+        font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 14, encoding="utf-8")
         max_x, max_y = base.size
         number_of_advanced_skills = 0
         for skill in char.skills:
@@ -211,7 +232,9 @@ def fill_character_card_back(input_file_name, output_file_name, char) -> str:
                 x_10 = 0.324 * max_x
                 x_20 = 0.373 * max_x
                 if len(skill) > 18:
-                    font_for_skill = font.font_variant(size=int(18 - len(skill) / 4))
+                    font_for_skill = font.font_variant(
+                        size=int(font.size - len(skill) / 6)
+                    )
                 else:
                     font_for_skill = font
                 writer.text((0.1 * max_x, y_skill), skill, "black", font=font_for_skill)
@@ -231,7 +254,9 @@ def fill_character_card_back(input_file_name, output_file_name, char) -> str:
             )
         for idx, trapping in enumerate(char.trappings):
             if len(trapping) > 45:
-                font_for_trapping = font.font_variant(size=int(18 - len(trapping) / 8))
+                font_for_trapping = font.font_variant(
+                    size=int(font.size - len(trapping) / 14)
+                )
             else:
                 font_for_trapping = font
             writer.text(

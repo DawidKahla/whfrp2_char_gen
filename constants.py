@@ -2550,6 +2550,8 @@ starting_elf_ablities_optional2 = ["opanowanie", "błyskotliwość"]
 
 halfling_most_common_birthplace = "Kraina Zgromadzenia"
 
+# dict pattern:
+# name: [[locations], armor_points]
 armors = {
     "kaftan kolczy": [["korpus"], 2],
     "kolczuga": [["korpus", "nogi"], 2],
@@ -2560,4 +2562,48 @@ armors = {
     "skórzana kurta": [["korpus", "ręce"], 1],
     "skórzany hełm": [["głowa"], 1],
     "skórznia": [["głowa", "korpus", "ręce", "nogi"], 1],
+}
+
+# dict pattern:
+# name: [category, load, power, range, overload, atrributes]
+weapons = {
+    "broń dwuręczna": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
+    "włócznia": [],
+    "łuk": [],  #
+    "tarcza": [],  #
+    "kopia": [],
+    "broń improwizowana": [],
+    "proca": [],
+    "kij": [],
+    "nóż do rzucania": [],
+    "topór do rzucania": [],  #
+    "broń jednoręczna": [],  #
+    "korbacz": [],
+    "morgensztern": [],
+    "lanca": [],
+    "puklerz": [],
+    "kusza": [],  #
+    "sztylet": [],
+    "oszczep": [],  #
+    "lasso": [],
+    "bicz": [],
+    "floret": [],
+    "rapier": [],
+    "kislevski łuk konny": [],
+    "długi łuk": [],
+    "halabarda": [],
+    "kastety": [],
+    "kańczug": [],
+    "sieć": [],
+    "arkan": [],
+    "garłacz": [],  #
+    "cep": [],
+    "pistolet": [],  #
+    "bolas": [],
+    "berdysz": [],
+    "muszkiet": [],  #
+    "szpada": [],
+    "lewak": [],
+    "elfi łuk": [],  #
+    "rusznica": [],  #
 }

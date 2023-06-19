@@ -95,6 +95,8 @@ class Character(object):
             and the values represent the armor values for each body part.
         armor_list (list):
             List that contains character armor.
+        weapon_list (list):
+            List that contains character weapons.
 
 
     """
@@ -148,6 +150,7 @@ class Character(object):
             "legs": 0,
         }
         self.armor_list = []
+        self.weapon_list = []
 
     def roll_race(self):
         """
@@ -475,6 +478,7 @@ class Character(object):
         3. Roll random values in trappings using the `roll_in_trappings` method.
         4. Extract money from trappings using the `take_money_from_trappings` method.
         5. Extract armor from trappings using the `take_armor_from_trappings` method.
+        5. Extract weapons from trappings using the `take_weapon_from_trappings` method.
 
         """
         self.update_attr_by_abilities()
@@ -482,6 +486,7 @@ class Character(object):
         self.roll_in_trappings()
         self.take_money_from_trappings()
         self.take_armor_from_trappings()
+        self.take_weapon_from_trappings()
 
     def update_attr_by_abilities(self):
         """
@@ -585,6 +590,19 @@ class Character(object):
                             self.advanced_armor["arms"] += armor_detail[1]
                         self.armor_list.append(armor_name)
                 self.trappings.remove(trapping)
+
+    def take_weapon_from_trappings(self):
+        """
+        Extracts weapons from trappings and assigns it.
+
+        The function iterates over the trappings list of the character.
+        If trapping contain weapon it's removed from trappings and asigned to weapon_list.
+        """
+        for trapping in self.trappings:
+            for weapon_name, weapon_detail in constants.weapons.items():
+                if weapon_name in trapping:
+                    self.weapon_list.append(weapon_name)
+                    self.trappings.remove(trapping)
 
     def roll_sex(self):
         """

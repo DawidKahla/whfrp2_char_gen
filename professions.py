@@ -2131,7 +2131,8 @@ professions = {
             ["strzał mierzony", "silny cios"],
         ],
         "trappings": [
-            "kusza i 10 bełtów",
+            "kusza",
+            "10 bełtów",
             "sieć",
             "lekki pancerz (skórzany kaftan i skórzany hełm)",
             "kajdany",
@@ -2229,7 +2230,8 @@ professions = {
             ["szybki refleks", "strzelec wyborowy"],
         ],
         "trappings": [
-            "kusza i 10 bełtów",
+            "kusza",
+            "10 bełtów",
             "średni pancerz (kaftan kolczy, skórzany kaftan)",
             "tarcza",
             "zamykana na kłódkę skrzynia",
@@ -2551,7 +2553,7 @@ professions = {
         "optional_trappings": [
             [
                 "stado owiec",
-                " stado baranów",
+                "stado baranów",
             ]
         ],
     },
