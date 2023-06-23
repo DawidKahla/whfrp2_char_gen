@@ -4044,7 +4044,7 @@ professions = {
             ["szybkie wyciągnięcie", "błyskawiczne przeładowanie"],
         ],
         "trappings": [
-            "pistolet z 10 kulami i zapasem prochu",
+            "pistolet z amunicją i zapasem prochu na 1O strzałów",
             "średni pancerz (kaftan kolczy, skórzana kurta)",
             "tarcza",
             "lekki koń bojowy z siodłem i uprzężą",
@@ -5164,7 +5164,7 @@ professions = {
             ["strzelec wyborowy", "wędrowiec"],
         ],
         "trappings": [
-            "elfi luk i 10 strzał",
+            "elfi łuk i 10 strzał",
             "lekki pancerz (skórzana kurta)",
         ],
     },

@@ -602,11 +602,22 @@ class Character(object):
         for trapping in self.trappings:
             for weapon_name, weapon_detail in constants.weapons.items():
                 if weapon_name in trapping:
+                    if weapon_name == "broń jednoręczna" and "(" in trapping:
+                        new_weapon == weapon_name[weapon_name.find("(")+1:weapon_name.find(")")]
+                        constants.weapons[new_weapon] = weapon_detail
+                        weapon_name = new_weapon
                     if weapon_name == "łuk":
                         if "długi łuk" in trapping or "elfi łuk" in trapping:
                             continue
                     self.weapon_list.append(weapon_name)
                     trappings_to_remove.append(trapping)
+                    if "strzał" in trapping:
+                        if weapon_detail[1] == "palna":
+                            self.trappings.append("proch i amunicja na 10 strzałów")
+                        else:
+                            self.trappings.append("10 strzał")
+                    if "bełt" in trapping:
+                        self.trappings.append("10 bełtów")
         for trapping in trappings_to_remove:
             self.trappings.remove(trapping)
 
