@@ -2453,7 +2453,7 @@ any_ability = {
     ],
     "magia powszechna (dowolna)": [
         "magia powszechna (dotyk na odległość)",
-        "magia powszechna (magicnzy alarm)",
+        "magia powszechna (magiczny alarm)",
         "magia powszechna (magiczna broń)",
         "magia powszechna (magiczny zamek)",
         "magia powszechna (pancerz Eteru)",
@@ -2565,45 +2565,45 @@ armors = {
 }
 
 # dict pattern:
-# name: [category, load, power, range, overload, atrributes]
+# name: [load, category, power, range, overload, atrributes]
 weapons = {
     "broń dwuręczna": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
-    "włócznia": [],
-    "łuk": [],  #
-    "tarcza": [],  #
-    "kopia": [],
-    "broń improwizowana": [],
-    "proca": [],
-    "kij": [],
-    "nóż do rzucania": [],
-    "topór do rzucania": [],  #
-    "broń jednoręczna": [],  #
-    "korbacz": [],
-    "morgensztern": [],
-    "lanca": [],
-    "puklerz": [],
-    "kusza": [],  #
-    "sztylet": [],
-    "oszczep": [],  #
+    "włócznia": [50, "zwykła", "S", "-", "-", "szybki"], #
+    "łuk": [80, "zwykła", "3", "24/48", "akcja", "brak"],  #
+    "tarcza": [50, "zwykła", "S-2", "-","-", ["parujący", "specjalny"]],  #
+    "kopia": [100, "kawaleryjska", "S+1","-","-",["ciężki","druzgocący","szybki"]],
+    "broń improwizowana": [35, "zwykła", "S-4", "-", "-", "brak"],
+    "proca": [10, "proca", "3", "16/32", "akcja", "brak"],
+    "kij": [50, "zwykła", "S-2", "-", "-", ["ogłuszający","parujący"]],
+    "nóż do rzucania": [10, "rzucana", "S-3", "6/12", "akcja", "brak"],
+    "topór do rzucania": [40, "rzucana", "S-2", "8/-", "akcja", "brak"],  #
+    "broń jednoręczna": [50, "zwykła", "S", "-", "-", "brak"],  #
+    "korbacz": [95, "korbacz", "S+1", "-", "-", "druzgocący"],
+    "morgensztern": [60, "korbacz", "S", "-","-", "druzgocący"],
+    "lanca": [75, "kawaleryjska", "S", "-", "-", ["ciężki","druzgocący","szybki"]],
+    "puklerz": [15, "parująca","S-3", "-","-", ["ogłuszający","parujący","wyważony"]],
+    "kusza": [120, "zwykła", "4", "30/60", "runda", "brak"],  #
+    "sztylet": [10, "zwykła", "S-3", "-", "-", "brak"],
+    "oszczep": [50, "zwykła", "S", "8/-", "akcja", "brak"],  #
     "lasso": [],
-    "bicz": [],
+    "bicz": [40, "unieruchamiająca", "S-4", "6/-", "akcja", ["szybki", "unieruchamiający"]],
     "floret": [],
-    "rapier": [],
+    "rapier": [15, "szermiercza", "S-1", "-","-","szybki"],
     "kislevski łuk konny": [],
-    "długi łuk": [],
-    "halabarda": [],
-    "kastety": [],
+    "długi łuk": [90, "długi łuk", "3", "30/60", "akcja", "przebijający zbroję"],
+    "halabarda": [175, "dwuręczna", "S", "-", "-", "specjalny"],
+    "kastet": [1, "zwykła", "S-3", "-","-", "ogłuszający"],
     "kańczug": [],
-    "sieć": [],
-    "arkan": [],
-    "garłacz": [],  #
+    "sieć": [60, "unieruchamiająca", "-", "4/8", "runda", "unieruchamiający"],
+    "arkan": [10, "unieruchamiająca", "-", "8/-", "akcja", "unieruchamiający"],
+    "garłacz": [50, "palna", "3", "32/-", "3 rundy", "odłamkowy"],  #
     "cep": [],
-    "pistolet": [],  #
-    "bolas": [],
+    "pistolet": [25, "palna", "4", "8/16", "2 rundy", ["druzgocący", "zawodny"]],  #
+    "bolas": [20, "unieruchamiająca", "1", "8/16", "akcja", "unieruchamiający"],
     "berdysz": [],
     "muszkiet": [],  #
-    "szpada": [],
-    "lewak": [],
-    "elfi łuk": [],  #
-    "rusznica": [],  #
+    "szpada": [10, "szermiercza", "S-2", "-","-",["precyzyjny", "szybki"]],
+    "lewak": [10, "parująca", "S-4", "-","-", ["parujący","wyważony"]],
+    "elfi łuk": [75, "długi łuk", "3", "36/72", "akcja", "przebijający zbroję"],  #
+    "rusznica": [30, "palna", "4", "24/48", "2 rundy", ["druzgocący", "zawodny"]],  #
 }

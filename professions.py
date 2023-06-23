@@ -2410,7 +2410,7 @@ professions = {
             ["bardzo silny", "niezwykle odporny"],
         ],
         "trappings": [
-            "kastety",
+            "kastet",
             "lekki pancerz (skórzana kurta)",
             "puklerz",
         ],
@@ -2460,7 +2460,7 @@ professions = {
             ["opanowanie", "szybki refleks"],
         ],
         "trappings": [
-            "kastety",
+            "kastet",
             "średni pancerz (kaftan kolczy, skórzany kaftan)",
         ],
     },
