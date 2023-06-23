@@ -598,11 +598,17 @@ class Character(object):
         The function iterates over the trappings list of the character.
         If trapping contain weapon it's removed from trappings and asigned to weapon_list.
         """
+        trappings_to_remove = []
         for trapping in self.trappings:
             for weapon_name, weapon_detail in constants.weapons.items():
                 if weapon_name in trapping:
+                    if weapon_name == "łuk":
+                        if "długi łuk" in trapping or "elfi łuk" in trapping:
+                            continue
                     self.weapon_list.append(weapon_name)
-                    self.trappings.remove(trapping)
+                    trappings_to_remove.append(trapping)
+        for trapping in trappings_to_remove:
+            self.trappings.remove(trapping)
 
     def roll_sex(self):
         """

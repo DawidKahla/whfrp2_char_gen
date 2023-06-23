@@ -108,25 +108,65 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                     font=font,
                 )
         for idx, weapon in enumerate(char.weapon_list):
+            if len(weapon) > 12:
+                font_for_weapon = font.font_variant(
+                    size=int(font.size - len(weapon) / 7)
+                )
+            else:
+                font_for_weapon = font
             writer.text(
-                (0.03 * max_x, 0.57 * max_y + idx * 0.22 * max_y),
+                (0.03 * max_x, 0.57 * max_y + idx * 0.022 * max_y),
                 weapon,
                 "black",
-                font=font,
+                font=font_for_weapon,
             )
             for idx_det, detail in enumerate(weapons[weapon]):
                 if detail:
                     if isinstance(detail, list):
-                        detail = ", ".join(detail)
-                    writer.text(
-                        (
-                            0.143 * max_x + 0.043 * max_x * idx_det,
-                            0.57 * max_y + idx * 0.22 * max_y,
-                        ),
-                        str(detail),
-                        "black",
-                        font,
-                    )
+                        for temp_idx, attr in enumerate(detail):
+                            font_for_attr = font.font_variant(
+                                size=int(font.size - 1.8 * len(detail))
+                            )
+                            writer.text(
+                                (
+                                    0.143 * max_x + 0.043 * max_x * idx_det,
+                                    0.5635 * max_y
+                                    + max_y * 0.02 * temp_idx / len(detail)
+                                    + idx * 0.022 * max_y,
+                                ),
+                                str(attr),
+                                "black",
+                                font_for_attr,
+                            )
+                    else:
+                        font_for_detail = font
+                        if idx_det == 4:
+                            font_for_detail = font.font_variant(size=int(font.size - 4))
+                        elif idx_det == 5 and len(detail) > 9:
+                            font_for_detail = font.font_variant(
+                                size=int(font.size - len(detail) / 4)
+                            )
+                            if len(detail) > 14:
+                                font_for_detail = font.font_variant(
+                                    size=int(font.size - len(detail) / 3.5)
+                                )
+                            if len(detail) > 18:
+                                font_for_detail = font.font_variant(
+                                    size=int(font.size - len(detail) / 2.7)
+                                )
+                        elif idx_det == 3 and len(detail) > 4:
+                            font_for_detail = font.font_variant(size=int(font.size - 3))
+                        elif isinstance(detail, str) and len(detail) > 5:
+                            detail = detail[:3] + "."
+                        writer.text(
+                            (
+                                0.143 * max_x + 0.043 * max_x * idx_det,
+                                0.57 * max_y + idx * 0.022 * max_y,
+                            ),
+                            str(detail),
+                            "black",
+                            font_for_detail,
+                        )
 
         if char.basic_armor == 1:
             writer.text((0.1 * max_x, 0.754 * max_y), "Lekki", "black", font=font)
