@@ -2556,7 +2556,7 @@ armors = {
     "kaftan kolczy": [["korpus"], 2, 60],
     "kolczuga": [["korpus", "nogi"], 2, 80],
     "czepiec kolczy": [["głowa"], 2, 30],
-    "hełm": [["głowa"], 10],
+    "hełm": [["głowa"], 1, 10],
     "skórzane nogawice": [["nogi"], 1, 20],
     "skórzany kaftan": [["korpus"], 1, 40],
     "skórzana kurta": [["korpus", "ręce"], 1, 50],
@@ -2568,7 +2568,7 @@ armors = {
 # name: [load, category, power, range, overload, atrributes]
 weapons = {
     "broń dwuręczna": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
-    "włócznia": [50, "zwykła", "S", "-", "-", "szybki"],  #
+    "włócznia": [50, "zwykła", "S", "-", "-", "szybki"],
     "łuk": [80, "zwykła", "3", "24/48", "akcja", "brak"],
     "tarcza": [50, "zwykła", "S-2", "-", "-", ["parujący", "specjalny"]],  #
     "kopia": [100, "kawaleryjska", "S+1", "-", "-", ["ciężki", "druzgocący", "szybki"]],
@@ -2578,7 +2578,6 @@ weapons = {
     "2 noże do rzucania": ["2x10", "rzucana", "S-3", "6/12", "akcja", "brak"],
     "3 noże do rzucania": ["3x10", "rzucana", "S-3", "6/12", "akcja", "brak"],
     "2 topory do rzucania": ["2x40", "rzucana", "S-2", "8/-", "akcja", "brak"],  #
-    "broń jednoręczna": [50, "zwykła", "S", "-", "-", "brak"],  #
     "korbacz": [95, "korbacz", "S+1", "-", "-", "druzgocący"],
     "morgensztern": [60, "korbacz", "S", "-", "-", "druzgocący"],
     "lanca": [75, "kawaleryjska", "S", "-", "-", ["ciężki", "druzgocący", "szybki"]],
@@ -2621,10 +2620,16 @@ weapons = {
     "lewak": [10, "parująca", "S-4", "-", "-", ["parujący", "wyważony"]],
     "elfi łuk": [75, "długi łuk", "3", "36/72", "akcja", "przebijający zbroję"],
     "rusznica": [30, "palna", "4", "24/48", "2 rundy", ["druzgocący", "zawodny"]],
+    "broń jednoręczna": [50, "zwykła", "S", "-", "-", "brak"],
     "topór": [50, "zwykła", "S", "-", "-", "brak"],
     "pałka": [50, "zwykła", "S", "-", "-", "brak"],
+    "młot": [50, "zwykła", "S", "-", "-", "brak"],
+    "miecz": [50, "zwykła", "S", "-", "-", "brak"],
+    "maczuga": [50, "zwykła", "S", "-", "-", "brak"],
     "okuta brązem maczuga": [50, "zwykła", "S", "-", "-", "brak"],
     "dwuręczny topór": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
     "dwuręczny kilof": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
     "kosa": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
+    "harpun": [50, "zwykła", "S", "8/-", "akcja", "brak"],
 }
+onehand_random_weapon = ["topór", "pałka", "młot", "miecz", "maczuga"]

@@ -616,7 +616,12 @@ class Character(object):
                     if weapon_name == "topór":
                         if "dwuręczny topór" in trapping:
                             continue
-                    self.weapon_list.append(weapon_name)
+                    if weapon_name == "broń jednoręczna":
+                        self.weapon_list.append(
+                            random_choose(constants.onehand_random_weapon)
+                        )
+                    else:
+                        self.weapon_list.append(weapon_name)
                     trappings_to_remove.append(trapping)
                     if "strzał" in trapping:
                         if weapon_detail[1] == "palna":

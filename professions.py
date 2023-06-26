@@ -5008,7 +5008,7 @@ professions = {
             "latarnia i 2 litry oleju wielorybiego",
             "lekki pancerz (skórzana kurta)",
             "fajka",
-            "włócznia (harpun)",
+            "harpun",
             "butelka gorzałki dobrej jakości",
         ],
     },

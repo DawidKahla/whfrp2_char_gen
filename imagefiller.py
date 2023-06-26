@@ -42,7 +42,7 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
         writer.text((0.09 * max_x, 0.191 * max_y), char.eye, "black", font=font)
         writer.text((0.1 * max_x, 0.213 * max_y), char.hair, "black", font=font)
         if len(char.star) > 15:
-            font_for_star = font.font_variant(size=int(font.size - 1))
+            font_for_star = font.font_variant(size=int(font.size - len(char.star) / 8))
         else:
             font_for_star = font
         writer.text(
