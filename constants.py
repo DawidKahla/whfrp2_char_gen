@@ -2569,7 +2569,7 @@ armors = {
 weapons = {
     "broń dwuręczna": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
     "włócznia": [50, "zwykła", "S", "-", "-", "szybki"],  #
-    "łuk": [80, "zwykła", "3", "24/48", "akcja", "brak"],  
+    "łuk": [80, "zwykła", "3", "24/48", "akcja", "brak"],
     "tarcza": [50, "zwykła", "S-2", "-", "-", ["parujący", "specjalny"]],  #
     "kopia": [100, "kawaleryjska", "S+1", "-", "-", ["ciężki", "druzgocący", "szybki"]],
     "broń improwizowana": [35, "zwykła", "S-4", "-", "-", "brak"],
@@ -2589,7 +2589,7 @@ weapons = {
         "-",
         ["ogłuszający", "parujący", "wyważony"],
     ],
-    "kusza": [120, "zwykła", "4", "30/60", "runda", "brak"],  
+    "kusza": [120, "zwykła", "4", "30/60", "runda", "brak"],
     "sztylet": [10, "zwykła", "S-3", "-", "-", "brak"],
     "oszczep": [50, "zwykła", "S", "8/-", "akcja", "brak"],  #
     "lasso": [],
@@ -2610,14 +2610,20 @@ weapons = {
     "kańczug": [],
     "sieć": [60, "unieruchamiająca", "-", "4/8", "runda", "unieruchamiający"],
     "arkan": [10, "unieruchamiająca", "-", "8/-", "akcja", "unieruchamiający"],
-    "garłacz": [50, "palna", "3", "32/-", "3 rundy", "odłamkowy"],  
+    "garłacz": [50, "palna", "3", "32/-", "3 rundy", "odłamkowy"],
     "cep": [],
-    "pistolet": [25, "palna", "4", "8/16", "2 rundy", ["druzgocący", "zawodny"]],  
+    "pistolet": [25, "palna", "4", "8/16", "2 rundy", ["druzgocący", "zawodny"]],
     "bolas": [20, "unieruchamiająca", "1", "8/16", "akcja", "unieruchamiający"],
     "berdysz": [],
-    "muszkiet": [60, "palna", "3", "24/72", "2 rundy", "brak"],  
+    "muszkiet": [60, "palna", "3", "24/72", "2 rundy", "brak"],
     "szpada": [10, "szermiercza", "S-2", "-", "-", ["precyzyjny", "szybki"]],
     "lewak": [10, "parująca", "S-4", "-", "-", ["parujący", "wyważony"]],
-    "elfi łuk": [75, "długi łuk", "3", "36/72", "akcja", "przebijający zbroję"],  
-    "rusznica": [30, "palna", "4", "24/48", "2 rundy", ["druzgocący", "zawodny"]],  
+    "elfi łuk": [75, "długi łuk", "3", "36/72", "akcja", "przebijający zbroję"],
+    "rusznica": [30, "palna", "4", "24/48", "2 rundy", ["druzgocący", "zawodny"]],
+    "topór": [50, "zwykła", "S", "-", "-", "brak"],
+    "pałka": [50, "zwykła", "S", "-", "-", "brak"],
+    "okuta brązem maczuga": [50, "zwykła", "S", "-", "-", "brak"],
+    "dwuręczny topór": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
+    "dwuręczny kilof": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
+    "kosa": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
 }

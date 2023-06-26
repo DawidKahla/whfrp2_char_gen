@@ -496,7 +496,7 @@ professions = {
             "skórzany bukłak",
         ],
         "optional_trappings": [
-            ["proca, kij"],
+            ["proca", "kij"],
         ],
     },
     "CIURA OBOZOWA": {
@@ -784,7 +784,7 @@ professions = {
         ],
         "trappings": [
             "czarny skórzany mundur (kurta i spodnie)",
-            "okuta brązem maczuga (broń jednoręczna)",
+            "okuta brązem maczuga",
             "czarny kislevski rumak",
             "siodło",
             "uprząż",
@@ -1246,7 +1246,7 @@ professions = {
             ["bardzo wytrzymały", "urodzony wojownik"],
         ],
         "trappings": [
-            "broń dwuręczna (dwuręczny kilof)",
+            "dwuręczny kilof",
             "lekki pancerz (skórzana kurta)",
             "kilof",
             "łopata",
@@ -1950,7 +1950,7 @@ professions = {
         "optional_abilities": [],
         "trappings": [
             "łuk i 10 strzał",
-            "broń dwuręczna (dwuręczny topór)",
+            "dwuręczny topór",
             "średni pancerz (kolczuga, skórzana kurta i skórzane nogawice)",
         ],
     },
@@ -2040,7 +2040,7 @@ professions = {
             ["bardzo szybki", "niezwykle odporny"],
         ],
         "trappings": [
-            "broń dwuręczna (dwuręczny topór)",
+            "dwuręczny topór",
             "lekki pancerz (skórzana kurta)",
             "odtrutki",
         ],
@@ -3481,7 +3481,7 @@ professions = {
         ],
         "trappings": [
             "lekki pancerz (skórzana kurta)",
-            "broń jednoręczna (topór)",
+            "topór",
             "zestaw odtrutek",
         ],
     },
@@ -3535,7 +3535,7 @@ professions = {
                 "wóz z wołem",
             ],
             [
-                "broń dwuręczna (kosa)",
+                "kosa",
                 "cep",
             ],
         ],
@@ -4554,7 +4554,8 @@ professions = {
         ],
         "optional_trappings": [
             [
-                "szpada albo rapier",
+                "szpada",
+                "rapier",
             ]
         ],
     },
@@ -4962,9 +4963,7 @@ professions = {
             "3 pochodnie",
             "krzesiwo i hubka",
         ],
-        "optional_trappings": [
-            ["broń jednoręczna (topór)", "broń jednoręczna (pałka)"]
-        ],
+        "optional_trappings": [["topór", "pałka"]],
     },
     "WIELORYBNIK": {
         "attributes_main": {
@@ -5057,10 +5056,7 @@ professions = {
             "dar od jarla (wart 1k10/2 zk)",
         ],
         "optional_trappings": [
-            [
-                "broń dwuręczna",
-                "broń jednoręczna i tarcza",
-            ],
+            ["broń dwuręczna", ["broń jednoręczna", "tarcza"]],
             [
                 "manierka z piwem",
                 "manierka z miodem",
@@ -5678,7 +5674,7 @@ professions = {
         ],
         "optional_trappings": [
             [
-                "broń dwuręczna (halabarda)",
+                "halabarda",
                 "rusznica z amunicją na 10 strzałów",
             ]
         ],

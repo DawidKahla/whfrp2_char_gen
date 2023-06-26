@@ -465,7 +465,11 @@ class Character(object):
             for trapping in professions.professions[self.profession][
                 "optional_trappings"
             ]:
-                self.trappings.append(random_choose(trapping))
+                new_trapping = random_choose(trapping)
+                if isinstance(new_trapping, list):
+                    self.trappings.extend(new_trapping)
+                else:
+                    self.trappings.append(new_trapping)
 
     def update(self):
         """
@@ -602,12 +606,15 @@ class Character(object):
         for trapping in self.trappings:
             for weapon_name, weapon_detail in constants.weapons.items():
                 if weapon_name in trapping:
-                    if weapon_name == "broń jednoręczna" and "(" in trapping:
-                        new_weapon == weapon_name[weapon_name.find("(")+1:weapon_name.find(")")]
-                        constants.weapons[new_weapon] = weapon_detail
-                        weapon_name = new_weapon
                     if weapon_name == "łuk":
-                        if "długi łuk" in trapping or "elfi łuk" in trapping:
+                        if (
+                            "długi łuk" in trapping
+                            or "elfi łuk" in trapping
+                            or "kislevski łuk konny"
+                        ):
+                            continue
+                    if weapon_name == "topór":
+                        if "dwuręczny topór" in trapping:
                             continue
                     self.weapon_list.append(weapon_name)
                     trappings_to_remove.append(trapping)
@@ -835,29 +842,88 @@ class Character(object):
         """
         self.money = rand.randint(1, 10) + rand.randint(1, 10)
 
-    def roll_all(self):
+    def roll_all(
+        self,
+        race=None,
+        profession=None,
+        sex=None,
+        name=None,
+        height=None,
+        weight=None,
+        hair=None,
+        eye=None,
+        special=None,
+        siblings=None,
+        star=None,
+        age=None,
+        birthplace=None,
+        money=None,
+    ):
         """
         Roll all character attributes and generate a complete character.
 
         Rolls all character attributes including race, profession, sex, name, height, weight, hair color, eye color,
         special characteristics, siblings, star sign, age, birthplace, attributes, money, skills, abilities, and updates them accordingly.
+        You can also set all by yourself.
         This method generates a complete character with all the attributes and stores them in the respective attributes of the character.
         """
-        self.roll_race()
-        self.roll_profession()
-        self.roll_sex()
-        self.roll_name()
-        self.roll_height()
-        self.roll_weight()
-        self.roll_hair()
-        self.roll_eye()
-        self.roll_special()
-        self.roll_siblings()
-        self.roll_star()
-        self.roll_age()
-        self.roll_birthplace()
+        if race:
+            self.race = race
+        else:
+            self.roll_race()
+        if profession:
+            self.profession = profession
+        else:
+            self.roll_profession()
+        if sex:
+            self.sex = sex
+        else:
+            self.roll_sex()
+        if name:
+            self.name = name
+        else:
+            self.roll_name()
+        if height:
+            self.height = height
+        else:
+            self.roll_height()
+        if weight:
+            self.weight = weight
+        else:
+            self.roll_weight()
+        if hair:
+            self.hair = hair
+        else:
+            self.roll_hair()
+        if eye:
+            self.eye = eye
+        else:
+            self.roll_eye()
+        if special:
+            self.special = special
+        else:
+            self.roll_special()
+        if siblings:
+            self.siblings = siblings
+        else:
+            self.roll_siblings()
+        if star:
+            self.star = star
+        else:
+            self.roll_star()
+        if age:
+            self.age = age
+        else:
+            self.roll_age()
+        if birthplace:
+            self.birthplace = birthplace
+        else:
+            self.roll_birthplace()
         self.roll_attributes()
-        self.roll_money()
+        if money:
+            self.money = money
+        else:
+            self.roll_money()
         self.set_default_skills_and_abilities()
         self.set_starting_profession()
         self.update_any_skill()
