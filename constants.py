@@ -2551,17 +2551,17 @@ starting_elf_ablities_optional2 = ["opanowanie", "błyskotliwość"]
 halfling_most_common_birthplace = "Kraina Zgromadzenia"
 
 # dict pattern:
-# name: [[locations], armor_points]
+# name: [[locations], armor_points, load]
 armors = {
-    "kaftan kolczy": [["korpus"], 2],
-    "kolczuga": [["korpus", "nogi"], 2],
-    "czepiec kolczy": [["głowa"], 2],
-    "hełm": [["głowa"], 1],
-    "skórzane nogawice": [["nogi"], 1],
-    "skórzany kaftan": [["korpus"], 1],
-    "skórzana kurta": [["korpus", "ręce"], 1],
-    "skórzany hełm": [["głowa"], 1],
-    "skórznia": [["głowa", "korpus", "ręce", "nogi"], 1],
+    "kaftan kolczy": [["korpus"], 2, 60],
+    "kolczuga": [["korpus", "nogi"], 2, 80],
+    "czepiec kolczy": [["głowa"], 2, 30],
+    "hełm": [["głowa"], 10],
+    "skórzane nogawice": [["nogi"], 1, 20],
+    "skórzany kaftan": [["korpus"], 1, 40],
+    "skórzana kurta": [["korpus", "ręce"], 1, 50],
+    "skórzany hełm": [["głowa"], 1, 10],
+    "skórznia": [["głowa", "korpus", "ręce", "nogi"], 1, 80],
 }
 
 # dict pattern:
@@ -2575,8 +2575,9 @@ weapons = {
     "broń improwizowana": [35, "zwykła", "S-4", "-", "-", "brak"],
     "proca": [10, "proca", "3", "16/32", "akcja", "brak"],
     "kij": [50, "zwykła", "S-2", "-", "-", ["ogłuszający", "parujący"]],
-    "nóż do rzucania": [10, "rzucana", "S-3", "6/12", "akcja", "brak"],
-    "topór do rzucania": [40, "rzucana", "S-2", "8/-", "akcja", "brak"],  #
+    "2 noże do rzucania": ["2x10", "rzucana", "S-3", "6/12", "akcja", "brak"],
+    "3 noże do rzucania": ["3x10", "rzucana", "S-3", "6/12", "akcja", "brak"],
+    "2 topory do rzucania": ["2x40", "rzucana", "S-2", "8/-", "akcja", "brak"],  #
     "broń jednoręczna": [50, "zwykła", "S", "-", "-", "brak"],  #
     "korbacz": [95, "korbacz", "S+1", "-", "-", "druzgocący"],
     "morgensztern": [60, "korbacz", "S", "-", "-", "druzgocący"],
@@ -2591,7 +2592,7 @@ weapons = {
     ],
     "kusza": [120, "zwykła", "4", "30/60", "runda", "brak"],
     "sztylet": [10, "zwykła", "S-3", "-", "-", "brak"],
-    "oszczep": [50, "zwykła", "S", "8/-", "akcja", "brak"],  #
+    "2 oszczepy": ["2x50", "zwykła", "S", "8/-", "akcja", "brak"],  #
     "lasso": [],
     "bicz": [
         40,

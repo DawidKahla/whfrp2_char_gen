@@ -22,9 +22,9 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
-        # positions and font need to be adjusted
         font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 14, encoding="utf-8")
         max_x, max_y = base.size
+        # basics
         writer.text((0.07 * max_x, 0.049 * max_y), char.name, "black", font=font)
         writer.text(
             (0.07 * max_x, 0.07 * max_y),
@@ -65,6 +65,7 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
         )
         writer.text((0.125 * max_x, 0.257 * max_y), char.birthplace, "black", font=font)
         writer.text((0.123 * max_x, 0.279 * max_y), char.special, "black", font=font)
+        # attributes
         for idx, attribute in enumerate(char.attributes_main):
             writer.text(
                 (0.1 * max_x + 0.043 * max_x * idx, max_y * 0.358),
@@ -107,10 +108,15 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                     "black",
                     font=font,
                 )
+        # weapons
         for idx, weapon in enumerate(char.weapon_list):
-            if len(weapon) > 12:
+            if len(weapon) > 12 and len(weapon) < 19:
                 font_for_weapon = font.font_variant(
-                    size=int(font.size - len(weapon) / 7)
+                    size=int(font.size - len(weapon) / 5)
+                )
+            elif len(weapon) >= 19:
+                font_for_weapon = font.font_variant(
+                    size=int(font.size - len(weapon) / 3.3)
                 )
             else:
                 font_for_weapon = font
@@ -129,7 +135,7 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                             )
                             writer.text(
                                 (
-                                    0.143 * max_x + 0.043 * max_x * idx_det,
+                                    0.141 * max_x + 0.043 * max_x * idx_det,
                                     0.5635 * max_y
                                     + max_y * 0.02 * temp_idx / len(detail)
                                     + idx * 0.022 * max_y,
@@ -140,7 +146,7 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                             )
                     else:
                         font_for_detail = font
-                        if idx_det == 4:
+                        if idx_det == 4 and len(detail) > 4:
                             font_for_detail = font.font_variant(size=int(font.size - 4))
                         elif idx_det == 5 and len(detail) > 9:
                             font_for_detail = font.font_variant(
@@ -148,7 +154,7 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                             )
                             if len(detail) > 14:
                                 font_for_detail = font.font_variant(
-                                    size=int(font.size - len(detail) / 3.5)
+                                    size=int(font.size - len(detail) / 3)
                                 )
                             if len(detail) > 18:
                                 font_for_detail = font.font_variant(
@@ -156,18 +162,18 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                                 )
                         elif idx_det == 3 and len(detail) > 4:
                             font_for_detail = font.font_variant(size=int(font.size - 3))
-                        elif isinstance(detail, str) and len(detail) > 5:
+                        elif idx_det == 1 and len(detail) > 5:
                             detail = detail[:3] + "."
                         writer.text(
                             (
-                                0.143 * max_x + 0.043 * max_x * idx_det,
+                                0.141 * max_x + 0.043 * max_x * idx_det,
                                 0.57 * max_y + idx * 0.022 * max_y,
                             ),
                             str(detail),
                             "black",
                             font_for_detail,
                         )
-
+        # armors
         if char.basic_armor == 1:
             writer.text((0.1 * max_x, 0.754 * max_y), "Lekki", "black", font=font)
         elif char.basic_armor == 3:
@@ -201,39 +207,64 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                 "black",
                 font=font,
             )
+            writer.text(
+                (0.16 * max_x, 0.81 * max_y + 0.022 * max_y * idx),
+                f"{armors[armor][2]}",
+                "black",
+                font=font,
+            )
         writer.text(
             (0.513 * max_x, 0.37 * max_y),
-            f"{char.advanced_armor['head'] + char.attributes_sec['Wt'].initial}",
+            f"{char.advanced_armor['head']}",
             "black",
             font=font,
         )
         writer.text(
             (0.827 * max_x, 0.37 * max_y),
-            f"{char.advanced_armor['body'] + char.attributes_sec['Wt'].initial}",
+            f"{char.advanced_armor['body']}",
             "black",
             font=font,
         )
         writer.text(
-            (0.513 * max_x, 0.5265 * max_y),
-            f"{char.advanced_armor['arms'] + char.attributes_sec['Wt'].initial}",
+            (0.513 * max_x, 0.526 * max_y),
+            f"{char.advanced_armor['arms']}",
             "black",
             font=font,
         )
         writer.text(
-            (0.827 * max_x, 0.5265 * max_y),
-            f"{char.advanced_armor['arms'] + char.attributes_sec['Wt'].initial}",
+            (0.827 * max_x, 0.526 * max_y),
+            f"{char.advanced_armor['arms']}",
             "black",
             font=font,
         )
         writer.text(
             (0.513 * max_x, 0.69 * max_y),
-            f"{char.advanced_armor['legs']+char.attributes_sec['Wt'].initial}",
+            f"{char.advanced_armor['legs']}",
             "black",
             font=font,
         )
         writer.text(
             (0.827 * max_x, 0.69 * max_y),
-            f"{char.advanced_armor['legs']+char.attributes_sec['Wt'].initial}",
+            f"{char.advanced_armor['legs']}",
+            "black",
+            font=font,
+        )
+        # movement
+        writer.text(
+            (0.545 * max_x, 0.28 * max_y),
+            f"{char.attributes_sec['Sz'].initial*2}m",
+            "black",
+            font=font,
+        )
+        writer.text(
+            (0.64 * max_x, 0.28 * max_y),
+            f"{char.attributes_sec['Sz'].initial*4}m",
+            "black",
+            font=font,
+        )
+        writer.text(
+            (0.775 * max_x, 0.28 * max_y),
+            f"{char.attributes_sec['Sz'].initial*6}m",
             "black",
             font=font,
         )

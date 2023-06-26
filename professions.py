@@ -5246,7 +5246,7 @@ professions = {
         ],
         "optional_abilities": [
             ["gusła", "wyostrzanie zmysły"],
-            ["magia prosta (gusła)", "magia prosta (szczęście)"],
+            ["magia prosta (gusła)", "szczęście"],
         ],
         "trappings": [
             "karty",
