@@ -2570,14 +2570,14 @@ weapons = {
     "broń dwuręczna": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
     "włócznia": [50, "zwykła", "S", "-", "-", "szybki"],
     "łuk": [80, "zwykła", "3", "24/48", "akcja", "brak"],
-    "tarcza": [50, "zwykła", "S-2", "-", "-", ["parujący", "specjalny"]],  #
+    "tarcza": [50, "zwykła", "S-2", "-", "-", ["parujący", "specjalny"]],
     "kopia": [100, "kawaleryjska", "S+1", "-", "-", ["ciężki", "druzgocący", "szybki"]],
     "broń improwizowana": [35, "zwykła", "S-4", "-", "-", "brak"],
     "proca": [10, "proca", "3", "16/32", "akcja", "brak"],
     "kij": [50, "zwykła", "S-2", "-", "-", ["ogłuszający", "parujący"]],
     "2 noże do rzucania": ["2x10", "rzucana", "S-3", "6/12", "akcja", "brak"],
     "3 noże do rzucania": ["3x10", "rzucana", "S-3", "6/12", "akcja", "brak"],
-    "2 topory do rzucania": ["2x40", "rzucana", "S-2", "8/-", "akcja", "brak"],  #
+    "2 topory do rzucania": ["2x40", "rzucana", "S-2", "8/-", "akcja", "brak"],
     "korbacz": [95, "korbacz", "S+1", "-", "-", "druzgocący"],
     "morgensztern": [60, "korbacz", "S", "-", "-", "druzgocący"],
     "lanca": [75, "kawaleryjska", "S", "-", "-", ["ciężki", "druzgocący", "szybki"]],
@@ -2591,8 +2591,7 @@ weapons = {
     ],
     "kusza": [120, "zwykła", "4", "30/60", "runda", "brak"],
     "sztylet": [10, "zwykła", "S-3", "-", "-", "brak"],
-    "2 oszczepy": ["2x50", "zwykła", "S", "8/-", "akcja", "brak"],  #
-    "lasso": [],
+    "2 oszczepy": ["2x50", "zwykła", "S", "8/-", "akcja", "brak"],
     "bicz": [
         40,
         "unieruchamiająca",
@@ -2601,20 +2600,20 @@ weapons = {
         "akcja",
         ["szybki", "unieruchamiający"],
     ],
-    "floret": [],
+    "floret": [7, "szermiercza", "S-2", "-", "-", ["precyzyjny", "szybki"]],
     "rapier": [15, "szermiercza", "S-1", "-", "-", "szybki"],
-    "kislevski łuk konny": [],
+    "kislevski łuk konny": [80, "zwykła", "3", "24/48", "akcja", "brak"],
     "długi łuk": [90, "długi łuk", "3", "30/60", "akcja", "przebijający zbroję"],
     "halabarda": [175, "dwuręczna", "S", "-", "-", "specjalny"],
     "kastet": [1, "zwykła", "S-3", "-", "-", "ogłuszający"],
-    "kańczug": [],
     "sieć": [60, "unieruchamiająca", "-", "4/8", "runda", "unieruchamiający"],
     "arkan": [10, "unieruchamiająca", "-", "8/-", "akcja", "unieruchamiający"],
+    "lasso": [10, "unieruchamiająca", "-", "8/-", "akcja", "unieruchamiający"],
     "garłacz": [50, "palna", "3", "32/-", "3 rundy", "odłamkowy"],
-    "cep": [],
+    "cep": [[95, "cep", "S+1", "-", "-", "druzgocący"]],
     "pistolet": [25, "palna", "4", "8/16", "2 rundy", ["druzgocący", "zawodny"]],
     "bolas": [20, "unieruchamiająca", "1", "8/16", "akcja", "unieruchamiający"],
-    "berdysz": [],
+    "berdysz": [175, "dwuręczna", "S", "-", "-", "specjalny"],
     "muszkiet": [60, "palna", "3", "24/72", "2 rundy", "brak"],
     "szpada": [10, "szermiercza", "S-2", "-", "-", ["precyzyjny", "szybki"]],
     "lewak": [10, "parująca", "S-4", "-", "-", ["parujący", "wyważony"]],
@@ -2632,4 +2631,5 @@ weapons = {
     "kosa": [200, "dwuręczna", "S", "-", "-", ["druzgocący", "powolny"]],
     "harpun": [50, "zwykła", "S", "8/-", "akcja", "brak"],
 }
+
 onehand_random_weapon = ["topór", "pałka", "młot", "miecz", "maczuga"]

@@ -7,6 +7,16 @@ import constants
 import professions
 
 
+def d10():
+    """
+    Represent a projection of a ten-sided dice.
+
+    Returns:
+        Random number from 1 to 10.
+    """
+    return rand.randint(1, 10)
+
+
 def random_choose(some_list):
     """
     Rolls a random element from a list.
@@ -26,7 +36,8 @@ def mapping_roll(roll, mapping) -> str:
 
     Parameters:
         roll (int): The number corresponding to a key in the mapping.
-        mapping (dict): A dictionary containing 2-number tuples as keys and strings as values.
+        mapping (dict): A dictionary containing 2-number tuples
+            as keys and strings as values.
 
     Returns:
         The value associated with the input roll in the mapping.
@@ -36,19 +47,21 @@ def mapping_roll(roll, mapping) -> str:
     """
     for key in mapping.keys():
         minimum, maximum = key
-        if roll >= minimum and roll <= maximum:
+        if minimum <= roll <= maximum:
             return mapping[key]
     raise ValueError(f"Roll: ({roll}) not in mapping: ({mapping})")
 
 
 @dataclass
-class attribute:
+class CharAttribute:
     """
     Represents an attribute with initial, potential, and final values.
 
     Parameters:
-        initial (int): The initial value of the attribute, which depends on race and rolls.
-        potential (int): The value of potential attribute growth, which depends on profession.
+        initial (int): The initial value of the attribute,
+            which depends on race and rolls.
+        potential (int): The value of potential attribute growth,
+            which depends on profession.
         final (int): The final value of the attribute.
 
     """
@@ -58,7 +71,7 @@ class attribute:
     final: int
 
 
-class Character(object):
+class Character:
     """
     Represents a character.
 
@@ -119,24 +132,24 @@ class Character(object):
         self.birthplace = None
         self.special = None
         self.attributes_main = {
-            "WW": attribute(0, 0, 0),
-            "US": attribute(0, 0, 0),
-            "K": attribute(0, 0, 0),
-            "Odp": attribute(0, 0, 0),
-            "Zr": attribute(0, 0, 0),
-            "Int": attribute(0, 0, 0),
-            "SW": attribute(0, 0, 0),
-            "Ogd": attribute(0, 0, 0),
+            "WW": CharAttribute(0, 0, 0),
+            "US": CharAttribute(0, 0, 0),
+            "K": CharAttribute(0, 0, 0),
+            "Odp": CharAttribute(0, 0, 0),
+            "Zr": CharAttribute(0, 0, 0),
+            "Int": CharAttribute(0, 0, 0),
+            "SW": CharAttribute(0, 0, 0),
+            "Ogd": CharAttribute(0, 0, 0),
         }
         self.attributes_sec = {
-            "A": attribute(0, 0, 0),
-            "Żyw": attribute(0, 0, 0),
-            "S": attribute(0, 0, 0),
-            "Wt": attribute(0, 0, 0),
-            "Sz": attribute(0, 0, 0),
-            "Mag": attribute(0, 0, 0),
-            "PO": attribute(0, 0, 0),
-            "PP": attribute(0, 0, 0),
+            "A": CharAttribute(0, 0, 0),
+            "Żyw": CharAttribute(0, 0, 0),
+            "S": CharAttribute(0, 0, 0),
+            "Wt": CharAttribute(0, 0, 0),
+            "Sz": CharAttribute(0, 0, 0),
+            "Mag": CharAttribute(0, 0, 0),
+            "PO": CharAttribute(0, 0, 0),
+            "PP": CharAttribute(0, 0, 0),
         }
         self.skills = {}
         self.abilities = []
@@ -205,13 +218,13 @@ class Character(object):
 
         """
         self.attributes_main = {
-            attr: attribute(20 + rand.randint(1, 10) + rand.randint(1, 10), 0, 0)
+            attr: CharAttribute(20 + d10() + d10(), 0, 0)
             for attr in self.attributes_main
         }
         self.attributes_sec["A"].initial = 1
         self.attributes_sec["Sz"].initial = 4
 
-        roll = rand.randint(1, 10)
+        roll = d10()
         if roll < 4:
             self.attributes_sec["Żyw"].initial = 10
         elif roll < 7:
@@ -221,7 +234,7 @@ class Character(object):
         else:
             self.attributes_sec["Żyw"].initial = 13
 
-        pp_roll = rand.randint(1, 10)
+        pp_roll = d10()
         if pp_roll < 5:
             self.attributes_sec["PP"].initial = 2
         else:
@@ -276,7 +289,8 @@ class Character(object):
 
     def set_default_skills_and_abilities(self):
         """
-        Sets the default skills and abilities for the character based on the character's race.
+        Sets the default skills and abilities for the character
+            based on the character's race.
 
         Returns:
             None
@@ -292,7 +306,8 @@ class Character(object):
 
         if self.race == "halfling":
             skills = constants.starting_halfling_skills
-            skills.add(random_choose(constants.starting_halfling_skills_optional))
+            skills.add(random_choose(
+                constants.starting_halfling_skills_optional))
             abilities = constants.starting_halfling_abilities
             abilities.append(self.roll_ability())
 
@@ -315,16 +330,19 @@ class Character(object):
 
     def add_skill(self, new_skill) -> bool:
         """
-        Adds a new skill to the character's skills or increases the level of an existing skill.
+        Adds a new skill to the character's skills
+            or increases the level of an existing skill.
 
         Args:
             new_skill (str): The name of the skill to add or increase.
 
         Returns:
-            bool: True if the skill was successfully added or increased, False if the skill is already at the maximum level.
+            bool: True if the skill was successfully added or increased,
+                False if the skill is already at the maximum level.
 
         Raises:
-            ValueError: If the value of the skill in `self.skills` is not recognized.
+            ValueError: If the value of the skill in `self.skills`
+                is not recognized.
 
         """
         if new_skill in self.skills.keys():
@@ -348,7 +366,8 @@ class Character(object):
             new_ability (str): The name of the ability to add.
 
         Returns:
-            bool: True if the ability was successfully added, False if character has it.
+            bool: True if the ability was successfully added,
+                False if character has it.
 
         """
         if new_ability in self.abilities:
@@ -364,7 +383,8 @@ class Character(object):
             new_skills (list): A list of optional skills to choose from.
 
         Returns:
-            bool: True if an optional skill was successfully added, False if no more optional skills are available.
+            bool: True if an optional skill was successfully added,
+                False if no more optional skills are available.
 
         """
         temp_skills = list()
@@ -388,7 +408,8 @@ class Character(object):
             new_abilities (list): A list of optional abilities to choose from.
 
         Returns:
-            bool: True if an optional ability was successfully added, False if no more optional abilities are available.
+            bool: True if an optional ability was successfully added,
+                False if no more optional abilities are available.
 
         """
         for ability in self.abilities:
@@ -400,10 +421,13 @@ class Character(object):
 
     def update_any_skill(self):
         """
-        Updates skill(any) in the character's skills with random choices from the corresponding value options.
+        Updates skill(any) in the character's skills with random choices
+            from the corresponding value options.
 
-        The method replaces format skill(any) that matches the predefined skills in `constants.any_skills` with random skills
-        chosen from the corresponding skill options. The number of replacements depends on the current skill value.
+        The method replaces format skill(any) that matches
+            the predefined skills in `constants.any_skills` with random skills
+            chosen from the corresponding skill options.
+            The number of replacements depends on the current skill value.
 
         """
         for skill, value in constants.any_skills.items():
@@ -421,10 +445,12 @@ class Character(object):
 
     def update_any_ability(self):
         """
-        Updates ability(any) in the character's abilities with random choices from the corresponding value options.
+        Updates ability(any) in the character's abilities with
+            random choices from the corresponding value options.
 
-        The method replaces format ability(any) that matches the predefined abilities in `constants.any_ability` with random
-        abilities chosen from the corresponding ability options.
+        The method replaces format ability(any) that matches
+            the predefined abilities in `constants.any_ability` with random
+            abilities chosen from the corresponding ability options.
 
         """
         for ability, values in constants.any_ability.items():
@@ -436,14 +462,19 @@ class Character(object):
 
     def set_starting_profession(self):
         """
-        Sets the starting attributes, skills, abilities, trappings based on the chosen profession.
+        Sets the starting attributes, skills, abilities, trappings
+            based on the chosen profession.
 
-        The method initializes the character's attributes, skills, abilities, and trappings based on the selected
-        profession. It retrieves the attributes, skills, abilities, and trappings information from the
-        `professions.professions` dictionary and assigns them to the character.
+        The method initializes the character's attributes, skills,
+            abilities, and trappings based on the selected
+            profession. It retrieves the attributes, skills, abilities,
+            and trappings information from the `professions.professions`
+            dictionary and assigns them to the character.
 
         """
-        for atrr in professions.professions[self.profession]["attributes_main"]:
+        for atrr in professions.professions[self.profession][
+            "attributes_main"
+        ]:
             self.attributes_main[atrr].potential = professions.professions[
                 self.profession
             ]["attributes_main"][atrr]
@@ -455,9 +486,13 @@ class Character(object):
             self.add_skill(skill)
         for ability in professions.professions[self.profession]["abilities"]:
             self.add_ability(ability)
-        for skills in professions.professions[self.profession]["optional_skills"]:
+        for skills in professions.professions[self.profession][
+            "optional_skills"
+        ]:
             self.add_optional_skill(skills)
-        for abilities in professions.professions[self.profession]["optional_abilities"]:
+        for abilities in professions.professions[self.profession][
+            "optional_abilities"
+        ]:
             self.add_optional_ability(abilities)
         for trapping in professions.professions[self.profession]["trappings"]:
             self.trappings.append(trapping)
@@ -475,18 +510,25 @@ class Character(object):
         """
         Perform updates and modifications to the character.
 
-        This method triggers a series of updates and modifications to the character based on their abilities and trappings.
+        This method triggers a series of updates and modifications to
+            the character based on their abilities and trappings.
         The following actions are performed in sequence:
-        1. Update attributes based on abilities using the `update_attr_by_abilities` method.
-        2. Set values for attributes "S" and "Wt" using the `set_S_Wt` method.
-        3. Roll random values in trappings using the `roll_in_trappings` method.
-        4. Extract money from trappings using the `take_money_from_trappings` method.
-        5. Extract armor from trappings using the `take_armor_from_trappings` method.
-        5. Extract weapons from trappings using the `take_weapon_from_trappings` method.
+        1. Update attributes based on abilities using
+            the `update_attr_by_abilities` method.
+        2. Set values for attributes "S" and "Wt" using
+            the `set_s_wt` method.
+        3. Roll random values in trappings using
+            the `roll_in_trappings` method.
+        4. Extract money from trappings using
+            the `take_money_from_trappings` method.
+        5. Extract armor from trappings using
+            the `take_armor_from_trappings` method.
+        5. Extract weapons from trappings using
+            the `take_weapon_from_trappings` method.
 
         """
         self.update_attr_by_abilities()
-        self.set_S_Wt()
+        self.set_s_wt()
         self.roll_in_trappings()
         self.take_money_from_trappings()
         self.take_armor_from_trappings()
@@ -496,63 +538,75 @@ class Character(object):
         """
         Update character's attributes based on their abilities.
 
-        The method iterates over the character's abilities and checks if they have a corresponding attribute modifier in
-        the `constants.ability_modify_attr` dictionary. If a match is found, the initial values of the corresponding
-        attributes in `attributes_main` and `attributes_sec` are increased by specific amounts.
+        The method iterates over the character's abilities and checks
+        if they have a corresponding attribute modifier in
+        the `constants.ability_modify_attr` dictionary.
+        If a match is found, the initial values of the corresponding
+        attributes in `attributes_main` and `attributes_sec`
+        are increased by specific amounts.
 
         """
         for ability in self.abilities:
             for key, value in constants.ability_modify_attr.items():
                 if key == ability:
-                    if value in self.attributes_main.keys():
+                    if value in self.attributes_main:
                         self.attributes_main[value].initial += 5
-                    if value in self.attributes_sec.keys():
+                    if value in self.attributes_sec:
                         self.attributes_sec[value].initial += 1
 
-    def set_S_Wt(self):
+    def set_s_wt(self):
         """
         Set values for attributes "S" and "Wt" based on other attributes.
 
-        The method calculates the initial and final values for attributes "S" and "Wt" based on the initial values of
+        The method calculates the initial and final values for attributes
+        "S" and "Wt" based on the initial values of
         attributes "K" and "Odp" respectively.
 
         """
-        self.attributes_sec["S"].initial = self.attributes_main["K"].initial // 10
-        self.attributes_sec["Wt"].initial = self.attributes_main["Odp"].initial // 10
+        self.attributes_sec["S"].initial = \
+            self.attributes_main["K"].initial // 10
+        self.attributes_sec["Wt"].initial = \
+            self.attributes_main["Odp"].initial // 10
         self.attributes_sec["S"].final = self.attributes_main["K"].final // 10
-        self.attributes_sec["Wt"].final = self.attributes_main["Odp"].final // 10
+        self.attributes_sec["Wt"].final = \
+            self.attributes_main["Odp"].final // 10
 
     def roll_in_trappings(self):
         """
         Roll random values in trappings.
 
-        The method iterates over the trappings list and replaces specific patterns with rolled values. The
-        patterns include "1k10/2", "2k10", "3k10", and "6k10" representing dice rolls. The rolled values are inserted
-        into the trappings list.
+        The method iterates over the trappings list and replaces
+        specific patterns with rolled values. The patterns include
+        "1k10/2", "2k10", "3k10", and "6k10" representing dice rolls.
+        The rolled values are inserted into the trappings list.
 
         """
-        for idx, trapping in enumerate(self.trappings):
-            self.trappings[idx] = trapping.replace("1k10/2", f"{rand.randint(1, 5)}")
+        for idx, trapping in enumerate(
+            self.trappings
+        ):
+            self.trappings[idx] = trapping.replace(
+                "1k10/2", f"{rand.randint(1, 5)}")
             self.trappings[idx] = self.trappings[idx].replace(
-                "2k10", f"{rand.randint(1, 10)+rand.randint(1, 10)}"
+                "2k10", f"{d10()+d10()}"
             )
             self.trappings[idx] = self.trappings[idx].replace(
-                "3k10", f"{rand.randint(1, 10)+rand.randint(1, 10)+rand.randint(1, 10)}"
+                "3k10", f"{d10()+d10()+d10()}"
             )
             self.trappings[idx] = self.trappings[idx].replace(
-                "6k10",
-                f"{rand.randint(1, 10) + rand.randint(1, 10) + rand.randint(1, 10) + rand.randint(1, 10) + rand.randint(1, 10) + rand.randint(1, 10)}",
+                "6k10", f"{d10() + d10() + d10() + d10() + d10() + d10()}",
             )
             self.trappings[idx] = self.trappings[idx].replace(
-                "1k10", f"{rand.randint(1, 10)}"
+                "1k10", f"{d10()}"
             )
 
     def take_money_from_trappings(self):
         """
         Extract money from trappings.
 
-        The method checks the trappings list for entries containing the string " zk" (e.g., "10 zk"). If a matching
-        entry is found, the corresponding amount is removed from the trappings list and added to the character's money.
+        The method checks the trappings list for entries
+        containing the string " zk" (e.g., "10 zk"). If a matching
+        entry is found, the corresponding amount is removed from
+        the trappings list and added to the character's money.
         Cap at "999 zk".
 
         """
@@ -567,11 +621,14 @@ class Character(object):
         Extracts armor from trappings and assigns it.
 
         The function iterates over the trappings list of the character.
-        If a trapping contains the keyword 'pancerz', it checks for the type of armor and assigns it accordingly.
-        The function also updates the character's advanced_armor dictionary based on the armor details.
+        If a trapping contains the keyword 'pancerz', it checks for the
+        type of armor and assigns it accordingly.
+        The function also updates the character's advanced_armor dictionary
+        based on the armor details.
 
         Raises:
-            ValueError: If an unrecognized type of armor is found in the trappings.
+            ValueError: If an unrecognized type of armor is found
+                in the trappings.
 
         """
         for trapping in self.trappings:
@@ -600,7 +657,8 @@ class Character(object):
         Extracts weapons from trappings and assigns it.
 
         The function iterates over the trappings list of the character.
-        If trapping contain weapon it's removed from trappings and asigned to weapon_list.
+        If trapping contain weapon it's removed from trappings
+        and asigned to weapon_list.
         """
         trappings_to_remove = []
         for trapping in self.trappings:
@@ -625,7 +683,9 @@ class Character(object):
                     trappings_to_remove.append(trapping)
                     if "strzał" in trapping:
                         if weapon_detail[1] == "palna":
-                            self.trappings.append("proch i amunicja na 10 strzałów")
+                            self.trappings.append(
+                                "proch i amunicja na 10 strzałów"
+                                )
                         else:
                             self.trappings.append("10 strzał")
                     if "bełt" in trapping:
@@ -641,7 +701,7 @@ class Character(object):
         If the sex is already set, no action is taken.
         """
         if self.sex is None:
-            if rand.randint(1, 10) < 6:
+            if d10() < 6:
                 self.sex = "male"
             else:
                 self.sex = "female"
@@ -650,10 +710,11 @@ class Character(object):
         """
         Roll the character's height based on race and sex.
 
-        Calculates the character's height based on random dice rolls and adjustments specific to their race and sex.
+        Calculates the character's height based on random dice rolls
+        and adjustments specific to their race and sex.
         The height value is stored in the 'height' attribute of the character.
         """
-        self.height = 100 + rand.randint(1, 10) + rand.randint(1, 10)
+        self.height = 100 + d10() + d10()
         if self.sex == "male":
             self.height += 10
         if self.race == "dwarf":
@@ -669,7 +730,8 @@ class Character(object):
         """
         Roll the character's weight based on race.
 
-        Calculates the character's weight based on a random dice roll and adjustments specific to their race.
+        Calculates the character's weight based on a random dice roll
+        and adjustments specific to their race.
         The weight value is stored in the 'weight' attribute of the character.
         """
         roll = rand.randint(1, 100)
@@ -689,8 +751,10 @@ class Character(object):
         """
         Roll the character's hair color based on race.
 
-        Randomly selects the character's hair color from a predefined list of hair colors specific to their race.
-        The selected hair color is stored in the 'hair' attribute of the character.
+        Randomly selects the character's hair color from a predefined
+        list of hair colors specific to their race.
+        The selected hair color is stored in the 'hair'
+        attribute of the character.
         """
         if self.race == "human":
             hair_list = constants.human_hair_list
@@ -700,14 +764,16 @@ class Character(object):
             hair_list = constants.halfling_hair_list
         if self.race == "elf":
             hair_list = constants.elf_hair_list
-        self.hair = hair_list[rand.randint(1, 10) - 1]
+        self.hair = hair_list[d10() - 1]
 
     def roll_eye(self):
         """
         Roll the character's eye color based on race.
 
-        Randomly selects the character's eye color from a predefined list of eye colors specific to their race.
-        The selected eye color is stored in the 'eye' attribute of the character.
+        Randomly selects the character's eye color from a predefined
+        list of eye colors specific to their race.
+        The selected eye color is stored
+        in the 'eye' attribute of the character.
         """
         if self.race == "human":
             eye_list = constants.human_eye_list
@@ -717,13 +783,14 @@ class Character(object):
             eye_list = constants.halfling_eye_list
         if self.race == "elf":
             eye_list = constants.elf_eye_list
-        self.eye = eye_list[rand.randint(1, 10) - 1]
+        self.eye = eye_list[d10() - 1]
 
     def roll_special(self):
         """
         Roll the character's special characteristic.
 
-        Generates a random value for the character's special characteristic based on a dice roll and a predefined mapping.
+        Generates a random value for the character's special characteristic
+        based on a dice roll and a predefined mapping.
         The value is stored in the 'special' attribute of the character.
         """
         roll = rand.randint(1, 100)
@@ -733,10 +800,12 @@ class Character(object):
         """
         Roll the number of character's siblings based on race.
 
-        Generates the number of siblings for the character based on a random dice roll and adjustments specific to their race.
-        The number of siblings is stored in the 'siblings' attribute of the character.
+        Generates the number of siblings for the character based on
+        a random dice roll and adjustments specific to their race.
+        The number of siblings is stored in the 'siblings' attribute
+        of the character.
         """
-        roll = rand.randint(1, 10)
+        roll = d10()
         if self.race == "dwarf":
             mapping = constants.siblings_dwarf_mapping
         elif self.race == "elf":
@@ -751,7 +820,8 @@ class Character(object):
         """
         Roll the character's star sign.
 
-        Generates the character's star sign based on a random dice roll and a predefined mapping.
+        Generates the character's star sign based on
+        a random dice roll and a predefined mapping.
         The star sign is stored in the 'star' attribute of the character.
         """
         roll = rand.randint(1, 100)
@@ -761,7 +831,8 @@ class Character(object):
         """
         Roll the character's age based on race.
 
-        Calculates the character's age based on a random dice roll and adjustments specific to their race.
+        Calculates the character's age based on a random dice roll
+        and adjustments specific to their race.
         The age value is stored in the 'age' attribute of the character.
         """
         roll = rand.randint(1, 100)
@@ -781,12 +852,16 @@ class Character(object):
         """
         Roll the character's birthplace based on race.
 
-        Generates the character's birthplace based on random dice rolls and adjustments specific to their race.
-        The birthplace is stored in the 'birthplace' attribute of the character.
+        Generates the character's birthplace based on random dice rolls
+        and adjustments specific to their race.
+        The birthplace is stored in the 'birthplace' attribute
+        of the character.
         """
         if self.race == "dwarf":
             if rand.randint(1, 100) > 30:
-                self.birthplace = random_choose(constants.dwarf_birthplace_list)
+                self.birthplace = random_choose(
+                    constants.dwarf_birthplace_list
+                )
         elif self.race == "elf":
             self.birthplace = mapping_roll(
                 rand.randint(1, 100), constants.elf_birthplace_dict
@@ -796,14 +871,18 @@ class Character(object):
                 self.birthplace = constants.halfling_most_common_birthplace
         if self.birthplace is None:
             province = random_choose(list(constants.town_dict.keys()))
-            town = mapping_roll(rand.randint(1, 100), constants.town_dict[province])
+            town = mapping_roll(
+                rand.randint(1, 100),
+                constants.town_dict[province]
+            )
             self.birthplace = f"{province}, {town}"
 
     def roll_name(self):
         """
         Roll the character's name based on race and sex.
 
-        Generates the character's name based on random selections from predefined name lists specific to their race and sex.
+        Generates the character's name based on random selections
+        from predefined name lists specific to their race and sex.
         The generated name is stored in the 'name' attribute of the character.
         """
         if self.race == "human":
@@ -814,27 +893,37 @@ class Character(object):
                 firstname = random_choose(constants.human_female_name_list)
         if self.race == "dwarf":
             if self.sex == "male":
-                firstname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}"
-                surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_male_name2_list)}son"
+                firstname = f"{random_choose(constants.dwarf_name1_list)}" \
+                    f"{random_choose(constants.dwarf_male_name2_list)}"
+                surname = f"{random_choose(constants.dwarf_name1_list)}" \
+                    f"{random_choose(constants.dwarf_male_name2_list)}son"
             else:
-                firstname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}"
-                surname = f"{random_choose(constants.dwarf_name1_list)}{random_choose(constants.dwarf_female_name2_list)}sdotr"
+                firstname = f"{random_choose(constants.dwarf_name1_list)}" \
+                    f"{random_choose(constants.dwarf_female_name2_list)}"
+                surname = f"{random_choose(constants.dwarf_name1_list)}" \
+                    f"{random_choose(constants.dwarf_female_name2_list)}sdotr"
         if self.race == "elf":
             surname = random_choose(constants.elf_surname_list)
-            if rand.randint(1, 10) < 6:
+            if d10() < 6:
                 connector = random_choose(constants.elf_name_connector_list)
             else:
                 connector = ""
             if self.sex == "male":
-                firstname = f"{random_choose(constants.elf_name1_list)}{connector}{random_choose(constants.elf_male_name2_list)}"
+                firstname = f"{random_choose(constants.elf_name1_list)}" \
+                    f"{connector}" \
+                    f"{random_choose(constants.elf_male_name2_list)}"
             else:
-                firstname = f"{random_choose(constants.elf_name1_list)}{connector}{random_choose(constants.elf_female_name2_list)}"
+                firstname = f"{random_choose(constants.elf_name1_list)}" \
+                    f"{connector}" \
+                    f"{random_choose(constants.elf_female_name2_list)}"
         if self.race == "halfling":
             surname = random_choose(constants.halfling_surname_list)
             if self.sex == "male":
-                firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_male_name2_list)}"
+                firstname = f"{random_choose(constants.halfling_name1_list)}" \
+                    f"{random_choose(constants.halfling_male_name2_list)}"
             else:
-                firstname = f"{random_choose(constants.halfling_name1_list)}{random_choose(constants.halfling_female_name2_list)}"
+                firstname = f"{random_choose(constants.halfling_name1_list)}" \
+                    f"{random_choose(constants.halfling_female_name2_list)}"
 
         self.name = f"{firstname} {surname}"
 
@@ -842,10 +931,11 @@ class Character(object):
         """
         Roll the character's starting money.
 
-        Generates the starting money for the character based on random dice rolls.
+        Generates the starting money for the character
+        based on random dice rolls.
         The money is stored in the 'money' attribute of the character.
         """
-        self.money = rand.randint(1, 10) + rand.randint(1, 10)
+        self.money = d10() + d10()
 
     def roll_all(
         self,
@@ -867,10 +957,13 @@ class Character(object):
         """
         Roll all character attributes and generate a complete character.
 
-        Rolls all character attributes including race, profession, sex, name, height, weight, hair color, eye color,
-        special characteristics, siblings, star sign, age, birthplace, attributes, money, skills, abilities, and updates them accordingly.
+        Rolls all character attributes including race, profession, sex, name,
+        height, weight, hair color, eye color,
+        special characteristics, siblings, star sign, age, birthplace,
+        attributes, money, skills, abilities, and updates them accordingly.
         You can also set all by yourself.
-        This method generates a complete character with all the attributes and stores them in the respective attributes of the character.
+        This method generates a complete character with all the attributes
+        and stores them in the respective attributes of the character.
         """
         if race:
             self.race = race
@@ -939,8 +1032,10 @@ class Character(object):
         """
         Print the character's attributes.
 
-        Prints all the character's attributes including name, race, profession, sex, age, eye color, hair color,
-        star sign, weight, height, number of siblings, birthplace, special characteristics, skills, abilities, main attributes,
+        Prints all the character's attributes including name, race,
+        profession, sex, age, eye color, hair color,
+        star sign, weight, height, number of siblings, birthplace,
+        special characteristics, skills, abilities, main attributes,
         secondary attributes, trappings, and starting money.
         """
         print(f"Imię i nazwisko/przydomek: {self.name}")

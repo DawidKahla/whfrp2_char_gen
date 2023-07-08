@@ -22,10 +22,19 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
-        font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 14, encoding="utf-8")
+        font = ImageFont.truetype(
+            "fonts\\Anonymous_Pro.ttf",
+            14,
+            encoding="utf-8"
+        )
         max_x, max_y = base.size
         # basics
-        writer.text((0.07 * max_x, 0.049 * max_y), char.name, "black", font=font)
+        writer.text((
+            0.07 * max_x, 0.049 * max_y),
+            char.name,
+            "black",
+            font=font
+        )
         writer.text(
             (0.07 * max_x, 0.07 * max_y),
             translations.race_translate(char.race),
@@ -38,15 +47,29 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
             "black",
             font=font,
         )
-        writer.text((0.068 * max_x, 0.169 * max_y), str(char.age), "black", font=font)
-        writer.text((0.09 * max_x, 0.191 * max_y), char.eye, "black", font=font)
-        writer.text((0.1 * max_x, 0.213 * max_y), char.hair, "black", font=font)
+        writer.text(
+            (0.068 * max_x, 0.169 * max_y),
+            str(char.age),
+            "black",
+            font=font
+        )
+        writer.text(
+            (0.09 * max_x, 0.191 * max_y), char.eye, "black", font=font
+        )
+        writer.text(
+            (0.1 * max_x, 0.213 * max_y), char.hair, "black", font=font
+            )
         if len(char.star) > 15:
-            font_for_star = font.font_variant(size=int(font.size - len(char.star) / 8))
+            font_for_star = font.font_variant(
+                size=int(font.size - len(char.star) / 8)
+            )
         else:
             font_for_star = font
         writer.text(
-            (0.106 * max_x, 0.235 * max_y), char.star, "black", font=font_for_star
+            (0.106 * max_x, 0.235 * max_y),
+            char.star,
+            "black",
+            font=font_for_star
         )
         writer.text(
             (0.27 * max_x, 0.169 * max_y),
@@ -55,16 +78,29 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
             font=font,
         )
         writer.text(
-            (0.275 * max_x, 0.191 * max_y), f"{char.weight} kg", "black", font=font
+            (0.275 * max_x, 0.191 * max_y),
+            f"{char.weight} kg",
+            "black",
+            font=font
         )
         writer.text(
-            (0.29 * max_x, 0.213 * max_y), f"{char.height} cm", "black", font=font
+            (0.29 * max_x, 0.213 * max_y),
+            f"{char.height} cm",
+            "black",
+            font=font
         )
         writer.text(
-            (0.31 * max_x, 0.235 * max_y), str(char.siblings), "black", font=font
+            (0.31 * max_x, 0.235 * max_y),
+            str(char.siblings),
+            "black",
+            font=font
         )
-        writer.text((0.125 * max_x, 0.257 * max_y), char.birthplace, "black", font=font)
-        writer.text((0.123 * max_x, 0.279 * max_y), char.special, "black", font=font)
+        writer.text(
+            (0.125 * max_x, 0.257 * max_y), char.birthplace, "black", font=font
+        )
+        writer.text(
+            (0.123 * max_x, 0.279 * max_y), char.special, "black", font=font
+        )
         # attributes
         for idx, attribute in enumerate(char.attributes_main):
             writer.text(
@@ -147,7 +183,9 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                     else:
                         font_for_detail = font
                         if idx_det == 4 and len(detail) > 4:
-                            font_for_detail = font.font_variant(size=int(font.size - 4))
+                            font_for_detail = font.font_variant(
+                                size=int(font.size - 4)
+                            )
                         elif idx_det == 5 and len(detail) > 9:
                             font_for_detail = font.font_variant(
                                 size=int(font.size - len(detail) / 4)
@@ -161,7 +199,9 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                                     size=int(font.size - len(detail) / 2.7)
                                 )
                         elif idx_det == 3 and len(detail) > 4:
-                            font_for_detail = font.font_variant(size=int(font.size - 3))
+                            font_for_detail = font.font_variant(
+                                size=int(font.size - 3)
+                            )
                         elif idx_det == 1 and len(detail) > 5:
                             detail = detail[:3] + "."
                         writer.text(
@@ -175,12 +215,19 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                         )
         # armors
         if char.basic_armor == 1:
-            writer.text((0.1 * max_x, 0.754 * max_y), "Lekki", "black", font=font)
+            writer.text(
+                (0.1 * max_x, 0.754 * max_y), "Lekki", "black", font=font
+            )
         elif char.basic_armor == 3:
-            writer.text((0.1 * max_x, 0.754 * max_y), "Średni", "black", font=font)
+            writer.text(
+                (0.1 * max_x, 0.754 * max_y), "Średni", "black", font=font
+            )
         if char.basic_armor:
             writer.text(
-                (0.3 * max_x, 0.754 * max_y), f"{char.basic_armor}", "black", font=font
+                (0.3 * max_x, 0.754 * max_y),
+                f"{char.basic_armor}",
+                "black",
+                font=font
             )
         for idx, armor in enumerate(char.armor_list):
             font_for_name = font
@@ -288,17 +335,21 @@ def fill_character_card_back(input_file_name, output_file_name, char) -> str:
     """
     with Image.open(input_file_name).convert("RGBA") as base:
         writer = ImageDraw.Draw(base)
-        font = ImageFont.truetype("fonts\\Anonymous_Pro.ttf", 14, encoding="utf-8")
+        font = ImageFont.truetype(
+            "fonts\\Anonymous_Pro.ttf", 14, encoding="utf-8"
+        )
         max_x, max_y = base.size
         number_of_advanced_skills = 0
         for skill in char.skills:
             if skill in basic_skills:
-                y_skill = 0.084 * max_y + 0.023 * max_y * basic_skills.index(skill)
+                y_skill = 0.084 * max_y + 0.023 * \
+                    max_y * basic_skills.index(skill)
                 x_bought = 0.2542 * max_x
                 x_10 = 0.306 * max_x
                 x_20 = 0.361 * max_x
             else:
-                y_skill = 0.591 * max_y + 0.023 * max_y * number_of_advanced_skills
+                y_skill = 0.591 * max_y + 0.023 * \
+                    max_y * number_of_advanced_skills
                 x_bought = 0.263 * max_x
                 x_10 = 0.324 * max_x
                 x_20 = 0.373 * max_x
@@ -308,7 +359,9 @@ def fill_character_card_back(input_file_name, output_file_name, char) -> str:
                     )
                 else:
                     font_for_skill = font
-                writer.text((0.1 * max_x, y_skill), skill, "black", font=font_for_skill)
+                writer.text(
+                    (0.1 * max_x, y_skill), skill, "black", font=font_for_skill
+                )
                 number_of_advanced_skills += 1
             writer.text((x_bought, y_skill), "X", "black", font=font)
             if char.skills[skill] == "+10":
@@ -336,7 +389,9 @@ def fill_character_card_back(input_file_name, output_file_name, char) -> str:
                 "black",
                 font=font_for_trapping,
             )
-        writer.text((0.64 * max_x, 0.882 * max_y), str(char.money), "black", font=font)
+        writer.text(
+            (0.64 * max_x, 0.882 * max_y), str(char.money), "black", font=font
+        )
         base.save(output_file_name)
         return output_file_name
 
@@ -346,7 +401,8 @@ def generate_pdf(output_file_name, char):
     Generate a complete 2-page character sheet as a PDF file.
 
     Parameters:
-        output_file_name (str): The name of the PDF file with the character sheet.
+        output_file_name (str): The name of the PDF file with
+            the character sheet.
         char (Character): Character containing fields to fill the PDF file.
 
     Returns:

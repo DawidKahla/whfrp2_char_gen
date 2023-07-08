@@ -12,13 +12,16 @@ Arguments:
     None
 
 Output:
-    The program generates a PDF file named "output.pdf" with the character sheet.
-    Also generates PNG files which it was composed from ("output1.png", "output2.png").
+    The program generates a PDF file named "output.pdf"
+        with the character sheet.
+    Also generates PNG files which it was composed from
+        ("output1.png", "output2.png").
 
 Note:
     to create with nuitka:
-    python -m nuitka --standalone --include-data-dir=imgs=imgs --include-data-dir=fonts=fonts main.py
-    
+    python -m nuitka --standalone --include-data-dir=imgs=imgs
+        --include-data-dir=fonts=fonts main.py
+
 Author:
     Dawid Kahla
 """
