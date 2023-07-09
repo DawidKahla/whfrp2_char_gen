@@ -71,7 +71,43 @@ class CharAttribute:
     final: int
 
 
-class Character:
+class Appearance:
+    def __init__(self) -> None:
+        self.race = None
+        self.sex = None
+        self.eye = None
+        self.hair = None
+        self.weight = None
+        self.height = None
+        self.special = None
+
+
+class Informations:
+    def __init__(self) -> None:
+        self.profession = None
+        self.name = None
+        self.age = None
+        self.star = None
+        self.siblings = None
+        self.birthplace = None
+
+
+class Equipment:
+    def __init__(self) -> None:
+        self.trappings = []
+        self.money = None
+        self.basic_armor = None
+        self.advanced_armor = {
+            "head": 0,
+            "body": 0,
+            "arms": 0,
+            "legs": 0,
+        }
+        self.armor_list = []
+        self.weapon_list = []
+
+
+class Character(Appearance, Informations, Equipment):
     """
     Represents a character.
 
@@ -118,19 +154,9 @@ class Character:
         """
         Initializes a new instance of the Character class.
         """
-        self.race = None
-        self.profession = None
-        self.sex = None
-        self.name = None
-        self.age = None
-        self.eye = None
-        self.hair = None
-        self.star = None
-        self.weight = None
-        self.height = None
-        self.siblings = None
-        self.birthplace = None
-        self.special = None
+        super().__init__()
+        super(Informations, self).__init__()
+        super(Equipment, self).__init__()
         self.attributes_main = {
             "WW": CharAttribute(0, 0, 0),
             "US": CharAttribute(0, 0, 0),
@@ -153,17 +179,6 @@ class Character:
         }
         self.skills = {}
         self.abilities = []
-        self.trappings = []
-        self.money = None
-        self.basic_armor = None
-        self.advanced_armor = {
-            "head": 0,
-            "body": 0,
-            "arms": 0,
-            "legs": 0,
-        }
-        self.armor_list = []
-        self.weapon_list = []
 
     def roll_race(self):
         """
