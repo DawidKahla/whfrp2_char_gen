@@ -5,6 +5,9 @@ import random as rand
 from dataclasses import dataclass
 import constants
 import professions
+from appearance import Appearance
+from informations import Informations
+from equipment import Equipment
 
 
 def d10():
@@ -69,42 +72,6 @@ class CharAttribute:
     initial: int
     potential: int
     final: int
-
-
-class Appearance:
-    def __init__(self) -> None:
-        self.race = None
-        self.sex = None
-        self.eye = None
-        self.hair = None
-        self.weight = None
-        self.height = None
-        self.special = None
-
-
-class Informations:
-    def __init__(self) -> None:
-        self.profession = None
-        self.name = None
-        self.age = None
-        self.star = None
-        self.siblings = None
-        self.birthplace = None
-
-
-class Equipment:
-    def __init__(self) -> None:
-        self.trappings = []
-        self.money = None
-        self.basic_armor = None
-        self.advanced_armor = {
-            "head": 0,
-            "body": 0,
-            "arms": 0,
-            "legs": 0,
-        }
-        self.armor_list = []
-        self.weapon_list = []
 
 
 class Character(Appearance, Informations, Equipment):
