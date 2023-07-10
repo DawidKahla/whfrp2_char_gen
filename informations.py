@@ -4,13 +4,14 @@ This module provides Informations class.
 from random import randint
 from myrandom import d10, random_choose, mapping_roll
 import constants
+from appearance import Appearance
 
-class Informations:
+
+class Informations(Appearance):
     """
     Includes a set of additional information on the character.
 
-    Atrributes:
-        race (str): The race of the character.
+    Extends the Appearance class with the following attributes:
         profession (str): The profession of the character.
         name (str): The name of the character.
         age (int): The age of the character.
@@ -19,37 +20,18 @@ class Informations:
         star (str): The star sign of the character.
 
     """
-    
+
     def __init__(self) -> None:
         """
         Initializes a new instance of the Informations class.
         """
-        self.race = None
+        super().__init__()
         self.profession = None
         self.name = None
         self.age = None
         self.star = None
         self.siblings = None
         self.birthplace = None
-
-    def roll_race(self):
-        """
-        Rolls the race for the character.
-
-        Randomly determines character race
-        which can be human, elf, dwarf or halfling.
-        Roll chances are set arbitrarily.
-        """
-        roll = randint(1, 100)
-        if roll == 1:
-            output = "elf"
-        elif roll < 5:
-            output = "dwarf"
-        elif roll < 11:
-            output = "halfling"
-        else:
-            output = "human"
-        self.race = output
 
     def roll_profession(self):
         """
@@ -177,7 +159,7 @@ class Informations:
         self.siblings = mapping_roll(roll, mapping)
         if self.race == "halfling":
             self.siblings += 1
-    
+
     def roll_birthplace(self):
         """
         Roll the character's birthplace based on race.

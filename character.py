@@ -5,9 +5,7 @@ from random import randint
 from dataclasses import dataclass
 import constants
 import professions
-from appearance import Appearance
 from informations import Informations
-from equipment import Equipment
 from myrandom import d10, random_choose, mapping_roll
 
 
@@ -30,16 +28,17 @@ class CharAttribute:
     final: int
 
 
-class Character(Appearance, Informations, Equipment):
+class Character(Informations):
     """
     Represents a character.
     Inheritance from base classes:
     Appearance, Informations, Equipment
-    and includes skills, ablities, 
+    and includes skills, ablities,
     main and secondary attributes.
 
     Attributes:
         Appearance:
+        race (str): The race of the character.
         sex (str): The sex of the character.
         eye (str): The eye color of the character.
         hair (str): The hair color of the character.
@@ -48,7 +47,6 @@ class Character(Appearance, Informations, Equipment):
         special (str): Special characteristics of the character.
 
         Informations
-        race (str): The race of the character.
         profession (str): The profession of the character.
         name (str): The name of the character.
         age (int): The age of the character.
@@ -88,8 +86,6 @@ class Character(Appearance, Informations, Equipment):
         Initializes a new instance of the Character class.
         """
         super().__init__()
-        super(Informations, self).__init__()
-        super(Equipment, self).__init__()
         self.attributes_main = {
             "WW": CharAttribute(0, 0, 0),
             "US": CharAttribute(0, 0, 0),

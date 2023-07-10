@@ -5,6 +5,7 @@ from random import randint
 from myrandom import d10, random_choose
 import constants
 
+
 class Equipment:
     """
     Represents the classified equipment of the character.
@@ -25,7 +26,7 @@ class Equipment:
             List that contains character weapons.
 
     """
-    
+
     def __init__(self) -> None:
         """
         Initializes a new instance of the Equipment class.

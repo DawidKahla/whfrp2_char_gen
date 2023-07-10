@@ -184,7 +184,7 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                         font_for_detail = font
                         if idx_det == 4 and len(detail) > 4:
                             font_for_detail = font.font_variant(
-                                size=int(font.size - 4)
+                                size=int(font.size - 5)
                             )
                         elif idx_det == 5 and len(detail) > 9:
                             font_for_detail = font.font_variant(
@@ -202,7 +202,7 @@ def fill_character_card_front(input_file_name, output_file_name, char) -> str:
                             font_for_detail = font.font_variant(
                                 size=int(font.size - 3)
                             )
-                        elif idx_det == 1 and len(detail) > 5:
+                        elif idx_det == 1 and len(detail) > 4:
                             detail = detail[:3] + "."
                         writer.text(
                             (

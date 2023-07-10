@@ -2,14 +2,16 @@
 This module provides Appearance class.
 """
 from random import randint
-from myrandom import d10, random_choose
+from myrandom import d10, mapping_roll
 import constants
+from equipment import Equipment
 
-class Appearance:
+
+class Appearance(Equipment):
     """
-    Represents a set of characteristics of a character's appearance
+    Represents a set of characteristics of a character's appearance.
 
-    Atrributes:
+    Extends the Equipment class with the following attributes:
         race (str): The race of the character.
         sex (str): The sex of the character.
         eye (str): The eye color of the character.
@@ -24,6 +26,7 @@ class Appearance:
         """
         Initializes a new instance of the Appearance class.
         """
+        super().__init__()
         self.race = None
         self.sex = None
         self.eye = None
@@ -31,7 +34,25 @@ class Appearance:
         self.weight = None
         self.height = None
         self.special = None
-    
+
+    def roll_race(self):
+        """
+        Rolls the race for the character.
+
+        Randomly determines character race
+        which can be human, elf, dwarf or halfling.
+        Roll chances are set arbitrarily.
+        """
+        roll = randint(1, 100)
+        if roll == 1:
+            output = "elf"
+        elif roll < 5:
+            output = "dwarf"
+        elif roll < 11:
+            output = "halfling"
+        else:
+            output = "human"
+        self.race = output
 
     def roll_sex(self):
         """
