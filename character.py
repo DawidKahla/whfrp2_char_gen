@@ -1,55 +1,12 @@
 """
 This module provides character class and generating all stats.
 """
-import random as rand
+from random import randint
 from dataclasses import dataclass
 import constants
 import professions
-
-
-def d10():
-    """
-    Represent a projection of a ten-sided dice.
-
-    Returns:
-        Random number from 1 to 10.
-    """
-    return rand.randint(1, 10)
-
-
-def random_choose(some_list):
-    """
-    Rolls a random element from a list.
-
-    Parameters:
-        some_list (list): The list to roll an element from.
-
-    Returns:
-        The randomly selected element from the list.
-    """
-    return some_list[rand.randint(0, len(some_list) - 1)]
-
-
-def mapping_roll(roll, mapping) -> str:
-    """
-    Get a value from a mapping based on the input roll.
-
-    Parameters:
-        roll (int): The number corresponding to a key in the mapping.
-        mapping (dict): A dictionary containing 2-number tuples
-            as keys and strings as values.
-
-    Returns:
-        The value associated with the input roll in the mapping.
-
-    Raises:
-        ValueError: If the roll is not present in the keys of the mapping.
-    """
-    for key in mapping.keys():
-        minimum, maximum = key
-        if minimum <= roll <= maximum:
-            return mapping[key]
-    raise ValueError(f"Roll: ({roll}) not in mapping: ({mapping})")
+from informations import Informations
+from myrandom import d10, random_choose, mapping_roll
 
 
 @dataclass
@@ -71,32 +28,33 @@ class CharAttribute:
     final: int
 
 
-class Character:
+class Character(Informations):
     """
     Represents a character.
+    Inheritance from base classes:
+    Appearance, Informations, Equipment
+    and includes skills, ablities,
+    main and secondary attributes.
 
     Attributes:
+        Appearance:
         race (str): The race of the character.
-        profession (str): The profession of the character.
         sex (str): The sex of the character.
-        name (str): The name of the character.
-        age (int): The age of the character.
         eye (str): The eye color of the character.
         hair (str): The hair color of the character.
-        star (str): The star sign of the character.
         weight (int): The weight of the character in kilograms.
         height (int): The height of the character in centimeters.
+        special (str): Special characteristics of the character.
+
+        Informations
+        profession (str): The profession of the character.
+        name (str): The name of the character.
+        age (int): The age of the character.
         siblings (int): The number of siblings the character has.
         birthplace (str): The birthplace of the character.
-        special (str): Special characteristics of the character.
-        attributes_main (dict): The main attributes of the character.
-            Format: {"attribute_name": attribute_object}.
-        attributes_sec (dict): The secondary attributes of the character.
-            Format: {"attribute_name": attribute_object}.
-        skills (dict): The skills of the character.
-            Format: {"skill_name": skill_level}.
-        abilities (list): The abilities of the character.
-            Format: [ability_name1, ability_name2, ...].
+        star (str): The star sign of the character.
+
+        Equipment:
         trappings (list): The trappings of the character.
             Format: [trapping1, trapping2, ...].
         money (int): The money owned by the character in golden corons.
@@ -111,6 +69,15 @@ class Character:
         weapon_list (list):
             List that contains character weapons.
 
+        attributes_main (dict): The main attributes of the character.
+            Format: {"attribute_name": attribute_object}.
+        attributes_sec (dict): The secondary attributes of the character.
+            Format: {"attribute_name": attribute_object}.
+        skills (dict): The skills of the character.
+            Format: {"skill_name": skill_level}.
+        abilities (list): The abilities of the character.
+            Format: [ability_name1, ability_name2, ...].
+
 
     """
 
@@ -118,19 +85,7 @@ class Character:
         """
         Initializes a new instance of the Character class.
         """
-        self.race = None
-        self.profession = None
-        self.sex = None
-        self.name = None
-        self.age = None
-        self.eye = None
-        self.hair = None
-        self.star = None
-        self.weight = None
-        self.height = None
-        self.siblings = None
-        self.birthplace = None
-        self.special = None
+        super().__init__()
         self.attributes_main = {
             "WW": CharAttribute(0, 0, 0),
             "US": CharAttribute(0, 0, 0),
@@ -153,61 +108,6 @@ class Character:
         }
         self.skills = {}
         self.abilities = []
-        self.trappings = []
-        self.money = None
-        self.basic_armor = None
-        self.advanced_armor = {
-            "head": 0,
-            "body": 0,
-            "arms": 0,
-            "legs": 0,
-        }
-        self.armor_list = []
-        self.weapon_list = []
-
-    def roll_race(self):
-        """
-        Rolls the race for the character.
-
-        Returns:
-            None
-
-        """
-        roll = rand.randint(1, 100)
-        if roll == 1:
-            output = "elf"
-        elif roll < 5:
-            output = "dwarf"
-        elif roll < 11:
-            output = "halfling"
-        else:
-            output = "human"
-        self.race = output
-
-    def roll_profession(self):
-        """
-        Rolls the profession for the character based on the character's race.
-
-        Raises:
-            ValueError: If the race is invalid.
-
-        Returns:
-            None
-
-        """
-        if self.race == "elf":
-            mapping = constants.elf_profession_mapping
-        elif self.race == "dwarf":
-            mapping = constants.dwarf_profession_mapping
-        elif self.race == "halfling":
-            mapping = constants.halfling_profession_mapping
-        elif self.race == "human":
-            mapping = constants.human_profession_mapping
-        else:
-            raise ValueError(f"Wrong race in roll_profession {self.race}")
-
-        roll = rand.randint(1, 1000)
-        self.profession = mapping_roll(roll, mapping)
 
     def roll_attributes(self):
         """
@@ -285,7 +185,7 @@ class Character:
             mapping = constants.human_ability_mapping
         else:
             raise ValueError(f"Wrong race in roll_ability {self.race}")
-        return mapping_roll(rand.randint(1, 100), mapping)
+        return mapping_roll(randint(1, 100), mapping)
 
     def set_default_skills_and_abilities(self):
         """
@@ -571,372 +471,6 @@ class Character:
         self.attributes_sec["Wt"].final = \
             self.attributes_main["Odp"].final // 10
 
-    def roll_in_trappings(self):
-        """
-        Roll random values in trappings.
-
-        The method iterates over the trappings list and replaces
-        specific patterns with rolled values. The patterns include
-        "1k10/2", "2k10", "3k10", and "6k10" representing dice rolls.
-        The rolled values are inserted into the trappings list.
-
-        """
-        for idx, trapping in enumerate(
-            self.trappings
-        ):
-            self.trappings[idx] = trapping.replace(
-                "1k10/2", f"{rand.randint(1, 5)}")
-            self.trappings[idx] = self.trappings[idx].replace(
-                "2k10", f"{d10()+d10()}"
-            )
-            self.trappings[idx] = self.trappings[idx].replace(
-                "3k10", f"{d10()+d10()+d10()}"
-            )
-            self.trappings[idx] = self.trappings[idx].replace(
-                "6k10", f"{d10() + d10() + d10() + d10() + d10() + d10()}",
-            )
-            self.trappings[idx] = self.trappings[idx].replace(
-                "1k10", f"{d10()}"
-            )
-
-    def take_money_from_trappings(self):
-        """
-        Extract money from trappings.
-
-        The method checks the trappings list for entries
-        containing the string " zk" (e.g., "10 zk"). If a matching
-        entry is found, the corresponding amount is removed from
-        the trappings list and added to the character's money.
-        Cap at "999 zk".
-
-        """
-        for trapping in self.trappings:
-            if " zk" in trapping and len(trapping) < 7:
-                additional_money = int(trapping.replace(" zk", ""))
-                self.trappings.remove(trapping)
-                self.money += additional_money
-
-    def take_armor_from_trappings(self):
-        """
-        Extracts armor from trappings and assigns it.
-
-        The function iterates over the trappings list of the character.
-        If a trapping contains the keyword 'pancerz', it checks for the
-        type of armor and assigns it accordingly.
-        The function also updates the character's advanced_armor dictionary
-        based on the armor details.
-
-        Raises:
-            ValueError: If an unrecognized type of armor is found
-                in the trappings.
-
-        """
-        for trapping in self.trappings:
-            if "pancerz" in trapping:
-                if "lekki pancerz" in trapping:
-                    self.basic_armor = 1
-                elif "średni pancerz" in trapping:
-                    self.basic_armor = 3
-                else:
-                    raise ValueError("Unrecognized type of armor: {trapping}.")
-                for armor_name, armor_detail in constants.armors.items():
-                    if armor_name in trapping:
-                        if "głowa" in armor_detail[0]:
-                            self.advanced_armor["head"] += armor_detail[1]
-                        if "korpus" in armor_detail[0]:
-                            self.advanced_armor["body"] += armor_detail[1]
-                        if "nogi" in armor_detail[0]:
-                            self.advanced_armor["legs"] += armor_detail[1]
-                        if "ręce" in armor_detail[0]:
-                            self.advanced_armor["arms"] += armor_detail[1]
-                        self.armor_list.append(armor_name)
-                self.trappings.remove(trapping)
-
-    def take_weapon_from_trappings(self):
-        """
-        Extracts weapons from trappings and assigns it.
-
-        The function iterates over the trappings list of the character.
-        If trapping contain weapon it's removed from trappings
-        and asigned to weapon_list.
-        """
-        trappings_to_remove = []
-        for trapping in self.trappings:
-            for weapon_name, weapon_detail in constants.weapons.items():
-                if weapon_name in trapping:
-                    if weapon_name == "łuk":
-                        if (
-                            "długi łuk" in trapping
-                            or "elfi łuk" in trapping
-                            or "kislevski łuk konny"
-                        ):
-                            continue
-                    if weapon_name == "topór":
-                        if "dwuręczny topór" in trapping:
-                            continue
-                    if weapon_name == "broń jednoręczna":
-                        self.weapon_list.append(
-                            random_choose(constants.onehand_random_weapon)
-                        )
-                    else:
-                        self.weapon_list.append(weapon_name)
-                    trappings_to_remove.append(trapping)
-                    if "strzał" in trapping:
-                        if weapon_detail[1] == "palna":
-                            self.trappings.append(
-                                "proch i amunicja na 10 strzałów"
-                                )
-                        else:
-                            self.trappings.append("10 strzał")
-                    if "bełt" in trapping:
-                        self.trappings.append("10 bełtów")
-        for trapping in trappings_to_remove:
-            self.trappings.remove(trapping)
-
-    def roll_sex(self):
-        """
-        Roll the character's sex if it is not already set.
-
-        Randomly determines the sex of the character based on a dice roll.
-        If the sex is already set, no action is taken.
-        """
-        if self.sex is None:
-            if d10() < 6:
-                self.sex = "male"
-            else:
-                self.sex = "female"
-
-    def roll_height(self):
-        """
-        Roll the character's height based on race and sex.
-
-        Calculates the character's height based on random dice rolls
-        and adjustments specific to their race and sex.
-        The height value is stored in the 'height' attribute of the character.
-        """
-        self.height = 100 + d10() + d10()
-        if self.sex == "male":
-            self.height += 10
-        if self.race == "dwarf":
-            self.height += 30
-            if self.sex == "male":
-                self.height += 5
-        if self.race == "human":
-            self.height += 50
-        if self.race == "elf":
-            self.height += 60
-
-    def roll_weight(self):
-        """
-        Roll the character's weight based on race.
-
-        Calculates the character's weight based on a random dice roll
-        and adjustments specific to their race.
-        The weight value is stored in the 'weight' attribute of the character.
-        """
-        roll = rand.randint(1, 100)
-        if self.race == "halfling":
-            mapping = constants.halfling_weight_mapping
-        else:
-            mapping = constants.common_weight_mapping
-        self.weight = mapping_roll(roll, mapping)
-        if self.race == "elf":
-            self.weight -= 5
-        if self.race == "human":
-            self.weight += 5
-            if roll == 100:
-                self.weight = 110
-
-    def roll_hair(self):
-        """
-        Roll the character's hair color based on race.
-
-        Randomly selects the character's hair color from a predefined
-        list of hair colors specific to their race.
-        The selected hair color is stored in the 'hair'
-        attribute of the character.
-        """
-        if self.race == "human":
-            hair_list = constants.human_hair_list
-        if self.race == "dwarf":
-            hair_list = constants.dwarf_hair_list
-        if self.race == "halfling":
-            hair_list = constants.halfling_hair_list
-        if self.race == "elf":
-            hair_list = constants.elf_hair_list
-        self.hair = hair_list[d10() - 1]
-
-    def roll_eye(self):
-        """
-        Roll the character's eye color based on race.
-
-        Randomly selects the character's eye color from a predefined
-        list of eye colors specific to their race.
-        The selected eye color is stored
-        in the 'eye' attribute of the character.
-        """
-        if self.race == "human":
-            eye_list = constants.human_eye_list
-        if self.race == "dwarf":
-            eye_list = constants.dwarf_eye_list
-        if self.race == "halfling":
-            eye_list = constants.halfling_eye_list
-        if self.race == "elf":
-            eye_list = constants.elf_eye_list
-        self.eye = eye_list[d10() - 1]
-
-    def roll_special(self):
-        """
-        Roll the character's special characteristic.
-
-        Generates a random value for the character's special characteristic
-        based on a dice roll and a predefined mapping.
-        The value is stored in the 'special' attribute of the character.
-        """
-        roll = rand.randint(1, 100)
-        self.special = mapping_roll(roll, constants.special_mapping)
-
-    def roll_siblings(self):
-        """
-        Roll the number of character's siblings based on race.
-
-        Generates the number of siblings for the character based on
-        a random dice roll and adjustments specific to their race.
-        The number of siblings is stored in the 'siblings' attribute
-        of the character.
-        """
-        roll = d10()
-        if self.race == "dwarf":
-            mapping = constants.siblings_dwarf_mapping
-        elif self.race == "elf":
-            mapping = constants.siblings_elf_mapping
-        else:
-            mapping = constants.siblings_human_mapping
-        self.siblings = mapping_roll(roll, mapping)
-        if self.race == "halfling":
-            self.siblings += 1
-
-    def roll_star(self):
-        """
-        Roll the character's star sign.
-
-        Generates the character's star sign based on
-        a random dice roll and a predefined mapping.
-        The star sign is stored in the 'star' attribute of the character.
-        """
-        roll = rand.randint(1, 100)
-        self.star = mapping_roll(roll, constants.star_mapping)
-
-    def roll_age(self):
-        """
-        Roll the character's age based on race.
-
-        Calculates the character's age based on a random dice roll
-        and adjustments specific to their race.
-        The age value is stored in the 'age' attribute of the character.
-        """
-        roll = rand.randint(1, 100)
-        additional_weight = (roll - 1) // 5
-        if self.race == "human":
-            self.age = 16 + additional_weight
-        elif self.race == "halfling":
-            self.age = 20 + 2 * additional_weight
-            if roll > 70:
-                self.age += 2
-        else:
-            self.age = 20 + 5 * additional_weight  # dwarf
-            if self.race == "elf":
-                self.age += 10
-
-    def roll_birthplace(self):
-        """
-        Roll the character's birthplace based on race.
-
-        Generates the character's birthplace based on random dice rolls
-        and adjustments specific to their race.
-        The birthplace is stored in the 'birthplace' attribute
-        of the character.
-        """
-        if self.race == "dwarf":
-            if rand.randint(1, 100) > 30:
-                self.birthplace = random_choose(
-                    constants.dwarf_birthplace_list
-                )
-        elif self.race == "elf":
-            self.birthplace = mapping_roll(
-                rand.randint(1, 100), constants.elf_birthplace_dict
-            )
-        elif self.race == "halfling":
-            if rand.randint(1, 100) < 50:
-                self.birthplace = constants.halfling_most_common_birthplace
-        if self.birthplace is None:
-            province = random_choose(list(constants.town_dict.keys()))
-            town = mapping_roll(
-                rand.randint(1, 100),
-                constants.town_dict[province]
-            )
-            self.birthplace = f"{province}, {town}"
-
-    def roll_name(self):
-        """
-        Roll the character's name based on race and sex.
-
-        Generates the character's name based on random selections
-        from predefined name lists specific to their race and sex.
-        The generated name is stored in the 'name' attribute of the character.
-        """
-        if self.race == "human":
-            surname = random_choose(constants.human_surname_list)
-            if self.sex == "male":
-                firstname = random_choose(constants.human_male_name_list)
-            else:
-                firstname = random_choose(constants.human_female_name_list)
-        if self.race == "dwarf":
-            if self.sex == "male":
-                firstname = f"{random_choose(constants.dwarf_name1_list)}" \
-                    f"{random_choose(constants.dwarf_male_name2_list)}"
-                surname = f"{random_choose(constants.dwarf_name1_list)}" \
-                    f"{random_choose(constants.dwarf_male_name2_list)}son"
-            else:
-                firstname = f"{random_choose(constants.dwarf_name1_list)}" \
-                    f"{random_choose(constants.dwarf_female_name2_list)}"
-                surname = f"{random_choose(constants.dwarf_name1_list)}" \
-                    f"{random_choose(constants.dwarf_female_name2_list)}sdotr"
-        if self.race == "elf":
-            surname = random_choose(constants.elf_surname_list)
-            if d10() < 6:
-                connector = random_choose(constants.elf_name_connector_list)
-            else:
-                connector = ""
-            if self.sex == "male":
-                firstname = f"{random_choose(constants.elf_name1_list)}" \
-                    f"{connector}" \
-                    f"{random_choose(constants.elf_male_name2_list)}"
-            else:
-                firstname = f"{random_choose(constants.elf_name1_list)}" \
-                    f"{connector}" \
-                    f"{random_choose(constants.elf_female_name2_list)}"
-        if self.race == "halfling":
-            surname = random_choose(constants.halfling_surname_list)
-            if self.sex == "male":
-                firstname = f"{random_choose(constants.halfling_name1_list)}" \
-                    f"{random_choose(constants.halfling_male_name2_list)}"
-            else:
-                firstname = f"{random_choose(constants.halfling_name1_list)}" \
-                    f"{random_choose(constants.halfling_female_name2_list)}"
-
-        self.name = f"{firstname} {surname}"
-
-    def roll_money(self):
-        """
-        Roll the character's starting money.
-
-        Generates the starting money for the character
-        based on random dice rolls.
-        The money is stored in the 'money' attribute of the character.
-        """
-        self.money = d10() + d10()
-
     def roll_all(
         self,
         race=None,
@@ -1027,33 +561,3 @@ class Character:
         self.update_any_skill()
         self.update_any_ability()
         self.update()
-
-    def print_character(self):
-        """
-        Print the character's attributes.
-
-        Prints all the character's attributes including name, race,
-        profession, sex, age, eye color, hair color,
-        star sign, weight, height, number of siblings, birthplace,
-        special characteristics, skills, abilities, main attributes,
-        secondary attributes, trappings, and starting money.
-        """
-        print(f"Imię i nazwisko/przydomek: {self.name}")
-        print(f"Rasa: {self.race}")
-        print(f"Profesja: {self.profession}")
-        print(f"Płeć: {self.sex}")
-        print(f"Wiek: {self.age}")
-        print(f"Kolor oczu: {self.eye}")
-        print(f"Kolor włosów: {self.hair}")
-        print(f"Znak gwiezdny: {self.star}")
-        print(f"Masa: {self.weight} kg")
-        print(f"Wzrost: {self.height} cm")
-        print(f"Ilość rodzeństwa: {self.siblings}")
-        print(f"Miejsce urodzenia: {self.birthplace}")
-        print(f"Znaki szczególne: {self.special}")
-        print(self.skills)
-        print(self.abilities)
-        print(self.attributes_main)
-        print(self.attributes_sec)
-        print(self.trappings)
-        print(f"{self.money} zk")
