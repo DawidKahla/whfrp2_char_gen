@@ -25,13 +25,12 @@ Note:
 Author:
     Dawid Kahla
 """
-from curses import wrapper
 from interface import interface
 
 
-def main(stdscr):
-    interface(stdscr)
+def main():
+    interface()
 
 
 if __name__ == "__main__":
-    wrapper(main)
+    main()
