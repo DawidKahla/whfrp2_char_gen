@@ -25,14 +25,13 @@ Note:
 Author:
     Dawid Kahla
 """
-import webbrowser
-from character import Character
-import imagefiller
+from curses import wrapper
+from interface import interface
+
+
+def main(stdscr):
+    interface(stdscr)
+
 
 if __name__ == "__main__":
-    npc = Character()
-    npc.roll_all(profession="STRAŻNIK DRÓG")
-    print("Generowanie karty postaci powinno zająć do 15 sekund.")
-    print("Proszę czekać...")
-    imagefiller.generate_pdf("imgs\\output.pdf", npc)
-    webbrowser.open("imgs\\output.pdf")
+    wrapper(main)
