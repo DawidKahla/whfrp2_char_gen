@@ -29,6 +29,9 @@ from interface import interface
 
 
 def main():
+    """
+    Opens UI.
+    """
     interface()
 
 
