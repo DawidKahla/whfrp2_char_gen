@@ -5,7 +5,7 @@ This module contains translations.
 
 def race_translate(race):
     """
-    Translate race from English to Polish.
+    Translate race from English to Polish and from Polish to English
 
     Parameters:
         race (str): Race to translate.
@@ -22,6 +22,10 @@ def race_translate(race):
         "halfling": "Niziołek",
         "dwarf": "Krasnolud",
         "elf": "Elf",
+        "Człowiek": "human",
+        "Niziołek": "halfling",
+        "Krasnolud": "dwarf",
+        "Elf": "elf",
     }
     if race not in mapping:
         raise ValueError(f"Wrong race in translation: {race}.")
@@ -42,7 +46,12 @@ def sex_translate(sex):
         ValueError: If sex is not male or female.
 
     """
-    mapping = {"male": "Mężczyzna", "female": "Kobieta"}
+    mapping = {
+        "male": "Mężczyzna",
+        "female": "Kobieta",
+        "Mężczyzna": "male",
+        "Kobieta": "female"
+        }
     if sex not in mapping:
         raise ValueError(f"Wrong sex in sex translation: {sex}.")
     return mapping[sex]

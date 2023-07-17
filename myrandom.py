@@ -5,6 +5,7 @@ and get value from specified dictionary base on roll.
 """
 from random import randint
 
+
 def d10():
     """
     Represent a projection of a ten-sided dice.

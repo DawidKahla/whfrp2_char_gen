@@ -486,7 +486,6 @@ class Character(Informations):
         star=None,
         age=None,
         birthplace=None,
-        money=None,
     ):
         """
         Roll all character attributes and generate a complete character.
@@ -552,10 +551,7 @@ class Character(Informations):
         else:
             self.roll_birthplace()
         self.roll_attributes()
-        if money:
-            self.money = money
-        else:
-            self.roll_money()
+        self.roll_money()
         self.set_default_skills_and_abilities()
         self.set_starting_profession()
         self.update_any_skill()
