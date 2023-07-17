@@ -91,31 +91,39 @@ def input_number(message):
             return int(user_input)
 
 
-def create_random_character(output_file_name):
+def create_character(output_file_name, char_info):
     """
     Generates a random character and creates a PDF character card.
 
     Args:
         output_file_name (str): File name for the generated character card.
+        char_info (list): Includes all optional args of 
+            character.roll_all() function in correct sequence.
 
     Returns:
         None
     """
     new_character = Character()
-    new_character.roll_all()
+    new_character.roll_all(*char_info)
     generate_pdf(output_file_name, new_character)
 
 
-def create_multiple_random_characters():
+def create_multiple_characters(
+        output_file_name,
+        char_info = [None for _ in range(13)]
+    ):
     """
-    Generates multiple random characters and creates PDF character cards.
+    Generates chosen number of character cards depending on char_info.
 
+    Args:
+        output_file_name (str): File name template 
+            for the generated character card.
+        char_info (list): Includes all optional args of 
+            character.roll_all() function in correct sequence.
+    
     Returns:
         None
     """
-    clear_screen()
-    print('Wybrano opcję automatycznej generacji kart postaci.')
-    output_file_path = specify_file_path()
     clear_screen()
     cards = input_number('Podaj liczbę kart do wygenerowania: ')
     if cards == 'losowe':
@@ -130,14 +138,27 @@ def create_multiple_random_characters():
         clear_screen()
         print(f'Generuje karty postaci ({cards})...')
         progress_bar(idx/int(cards))
-        create_random_character(f'{output_file_path}_{idx+1}.pdf')
+        create_character(f'{output_file_path}_{idx+1}.pdf', char_info)
     clear_screen()
     print(f'Wygenerowano karty postaci ({cards}).')
     print(f'Są zapisane w postaci: {output_file_path}_numer.pdf.')
     wait_for_input()
 
 
-def create_specified_character():
+def create_random_characters():
+    """
+    Generates multiple random characters and creates PDF character cards.
+
+    Returns:
+        None
+    """
+    clear_screen()
+    print('Wybrano opcję automatycznej generacji kart postaci.')
+    output_file_path = specify_file_path()
+    create_multiple_characters
+
+
+def create_specified_characters():
     """
     Allows the user to specify character attributes manually
     and generate a character card.
@@ -150,10 +171,6 @@ def create_specified_character():
     wait_for_input()
     clear_screen()
     output_file_path = specify_file_path()
-    # char_info: 0 - race, 1 - profession, 2 - sex,
-    # 3 - name, 4 - height, 5 - weight, 6 - hair,
-    # 7 - eye, 8 - special, 9 - siblings, 10 - star,
-    # 11 - age, 12 - birthplace
     char_info = [None for _ in range(13)]
 
     while char_info[0] not in [
@@ -236,14 +253,7 @@ def create_specified_character():
     for idx, value in enumerate(char_info):
         if value == 'losowe' or value == 'Losowe':
             char_info[idx] = None
-
-    new_character = Character()
-    new_character.roll_all(*char_info)
-    print("Rozpoczynam generację karty postaci.")
-    generate_pdf(f"{output_file_path}.pdf", new_character)
-    clear_screen()
-    print(f"Wygenerowana karta postaci jest zapisana w {output_file_path}.pdf")
-    wait_for_input()
+    create_multiple_characters(output_file_path, char_info)
 
 
 def interface():
@@ -272,9 +282,9 @@ def interface():
             print('lub zakończyć działanie aplikacji (3).')
             user_input = input('Wybierz opcję (1, 2 lub 3): ')
         if user_input == '1':
-            create_multiple_random_characters()
+            create_random_characters()
         if user_input == '2':
-            create_specified_character()
+            create_specified_characters()
         if user_input == '3':
             return
         user_input = None
