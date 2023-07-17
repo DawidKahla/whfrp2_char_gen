@@ -97,7 +97,7 @@ def create_character(output_file_name, char_info):
 
     Args:
         output_file_name (str): File name for the generated character card.
-        char_info (list): Includes all optional args of 
+        char_info (list): Includes all optional args of
             character.roll_all() function in correct sequence.
 
     Returns:
@@ -108,19 +108,16 @@ def create_character(output_file_name, char_info):
     generate_pdf(output_file_name, new_character)
 
 
-def create_multiple_characters(
-        output_file_name,
-        char_info = [None for _ in range(13)]
-    ):
+def create_multiple_characters(output_file_name, char_info):
     """
     Generates chosen number of character cards depending on char_info.
 
     Args:
-        output_file_name (str): File name template 
+        output_file_name (str): File name template
             for the generated character card.
-        char_info (list): Includes all optional args of 
+        char_info (list): Includes all optional args of
             character.roll_all() function in correct sequence.
-    
+
     Returns:
         None
     """
@@ -138,10 +135,10 @@ def create_multiple_characters(
         clear_screen()
         print(f'Generuje karty postaci ({cards})...')
         progress_bar(idx/int(cards))
-        create_character(f'{output_file_path}_{idx+1}.pdf', char_info)
+        create_character(f'{output_file_name}_{idx+1}.pdf', char_info)
     clear_screen()
-    print(f'Wygenerowano karty postaci ({cards}).')
-    print(f'Są zapisane w postaci: {output_file_path}_numer.pdf.')
+    print(f'Wygenerowano karty postaci ({idx+1}).')
+    print(f'Są zapisane w postaci: {output_file_name}_numer.pdf.')
     wait_for_input()
 
 
@@ -155,7 +152,8 @@ def create_random_characters():
     clear_screen()
     print('Wybrano opcję automatycznej generacji kart postaci.')
     output_file_path = specify_file_path()
-    create_multiple_characters
+    char_info = [None for _ in range(13)]
+    create_multiple_characters(output_file_path, char_info)
 
 
 def create_specified_characters():
